@@ -1,0 +1,13 @@
+* text=auto
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.cs text eol=lf
+*.md text eol=lf
+*.png binary
+*.ttf binary
+*.wav binary
+# Preserve whitespace emitted by Unity and supplied third-party assets.
+*.meta -whitespace
+*.asset -whitespace
+"Game/Assets/TextMesh Pro/**" -whitespace
+Game/Assets/FontLicenses/** -whitespace

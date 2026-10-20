@@ -1,0 +1,21 @@
+**/Library/
+**/Temp/
+**/Logs/
+**/Obj/
+**/UserSettings/
+**/MemoryCaptures/
+**/.vs/
+**/.vscode/
+*.csproj
+*.sln
+*.slnx
+*.user
+/tmp/
+/release/
+/Game/Assets/Scenes/Civi41.unity*
+/Game/Assets/Resources/Civi41FontMaterial.mat*
+/Game/Assets/Resources/Civi41UIMaterial.mat*
+*.zip
+*.exe
+*.dll
+!**/Assets/TextMesh Pro/Shaders/**
