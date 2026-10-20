@@ -1,0 +1,21 @@
+﻿CIVI / TRANG 17 KHÔNG TỒN TẠI
+Bản chơi thử Windows 0.41.1 - 20/10/2026
+
+1. Giải nén toàn bộ ZIP trước khi chơi.
+2. Mở CIVI-Trang17.exe. Không cần cài Unity.
+3. Chọn “Mở trang đầu” để bắt đầu.
+
+Space / Enter: hiện hết câu, rồi đọc tiếp.
+Bấm nút hoặc phím 1–3: chọn hành động khi lựa chọn đã mở.
+J: sổ tư liệu. H: lời vừa nói. Esc: tạm dừng.
+“Đặt dấu trang”: lưu vị trí và lựa chọn.
+“Về dấu đã lưu”: quay lại vị trí đã lưu.
+
+Giữ nguyên các thư mục và DLL đi cùng file exe.
+Đây là bản chơi thử có nội dung rút gọn, chưa nối AI hội thoại.
+
+Sau khi thử, bạn có thể ghi giúp:
+- Đoạn nào khiến bạn muốn đọc tiếp hoặc muốn bỏ qua?
+- Câu nào khó hiểu, thiếu tự nhiên?
+- Lựa chọn nào có hoặc chưa có ý nghĩa?
+- Nếu gặp lỗi, chụp màn hình và ghi thao tác vừa thực hiện.
