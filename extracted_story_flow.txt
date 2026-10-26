@@ -1,0 +1,196 @@
+Scene: E_A (Entry: E_A_OPEN, Steps: 2)
+  Step: E_A_OPEN
+    Choice E_A_FOUR -> step:E_A_CALLBACK | When: {"field": "final_new_asset", "op": "eq", "value": "PHOTO_NEW_FOUR"} | Dur: 0
+    Choice E_A_THREE -> step:E_A_CALLBACK | When: {"field": "final_new_asset", "op": "eq", "value": "PHOTO_NEW_THREE"} | Dur: 0
+  Step: E_A_CALLBACK
+    Choice E_A_CALLBACK_POSE_1 -> end | When: {"field": "opening_gesture", "op": "eq", "value": "pose_1"} | Dur: 0
+    Choice E_A_CALLBACK_POSE_2 -> end | When: {"field": "opening_gesture", "op": "eq", "value": "pose_2"} | Dur: 0
+    Choice E_A_CALLBACK_POSE_3 -> end | When: {"field": "opening_gesture", "op": "eq", "value": "pose_3"} | Dur: 0
+Scene: E_B (Entry: E_B_OPEN, Steps: 2)
+  Step: E_B_OPEN
+    Choice E_B_SHOW -> step:E_B_FINISH | When: {"all": []} | Dur: 0
+  Step: E_B_FINISH
+    Choice E_B_CLOSE -> end | When: {"all": []} | Dur: 0
+Scene: E_C (Entry: E_C_ARRIVE, Steps: 6)
+  Step: E_C_ARRIVE
+    Choice E_C_HAND_OLD -> step:E_C_DELIVER | When: {"all": []} | Dur: 0
+    Choice E_C_ASK_NEW -> step:E_C_CAPTURE | When: {"all": []} | Dur: 0
+  Step: E_C_CAPTURE
+    Choice E_C_CAPTURE -> step:E_C_PHOTO_RIGHTS | When: {"all": []} | Dur: 0
+  Step: E_C_PHOTO_RIGHTS
+    Choice E_C_LATER_USE -> step:E_C_PRINT | When: {"all": []} | Dur: 0
+    Choice E_C_LATER_PRIVATE -> step:E_C_DELIVER | When: {"all": []} | Dur: 0
+  Step: E_C_PRINT
+    Choice E_C_PRINT -> step:E_C_DELIVER | When: {"all": []} | Dur: 0
+  Step: E_C_DELIVER
+    Choice E_C_DELIVER -> step:E_C_FINISH | When: {"all": []} | Dur: 0
+  Step: E_C_FINISH
+    Choice E_C_FINISH -> end | When: {"field": "supplement_delivered", "op": "eq", "value": true} | Dur: 0
+Scene: S00 (Entry: S00_MACHINE, Steps: 5)
+  Step: S00_MACHINE
+    Choice S00_BOX -> step:S00_POSE | When: {"all": []} | Dur: 0
+    Choice S00_CLAMP -> step:S00_POSE | When: {"all": []} | Dur: 0
+    Choice S00_ASK -> step:S00_POSE | When: {"all": []} | Dur: 0
+  Step: S00_POSE
+    Choice S00_POSE1 -> step:S00_CAPTURE | When: {"all": []} | Dur: 0
+    Choice S00_POSE2 -> step:S00_CAPTURE | When: {"all": []} | Dur: 0
+    Choice S00_POSE3 -> step:S00_CAPTURE | When: {"all": []} | Dur: 0
+  Step: S00_CAPTURE
+    Choice S00_SHOOT -> step:S00_ALBUM | When: {"all": []} | Dur: 0
+  Step: S00_ALBUM
+    Choice S00_ALBUM1 -> step:S00_DIAGRAM | When: {"all": []} | Dur: 0
+    Choice S00_ALBUM2 -> step:S00_DIAGRAM | When: {"all": []} | Dur: 0
+    Choice S00_ALBUM3 -> step:S00_DIAGRAM | When: {"all": []} | Dur: 0
+  Step: S00_DIAGRAM
+    Choice S00_KEEP -> scene:S01 | When: {"all": []} | Dur: 0
+Scene: S01 (Entry: S01_OPEN, Steps: 2)
+  Step: S01_OPEN
+    Choice S01_CHAT -> step:S01_COMPARE | When: {"all": []} | Dur: 0
+  Step: S01_COMPARE
+    Choice S01_FIND -> scene:S02 | When: {"all": []} | Dur: 0
+Scene: S02 (Entry: S02_HUB, Steps: 1)
+  Step: S02_HUB
+    Choice S02_HELP -> step:S02_HUB | When: {"field": "nhi_contact", "op": "ne", "value": "help"} | Dur: 0
+    Choice S02_DIAGRAM -> step:S02_HUB | When: {"field": "early_nhi_understanding", "op": "eq", "value": false} | Dur: 0
+    Choice S02_CLAMP -> step:S02_HUB | When: {"not": {"field": "evidence_seen", "op": "contains", "value": "PROP_CLAMP"}} | Dur: 0
+    Choice S02_CLOCK -> step:S02_HUB | When: {"not": {"field": "evidence_seen", "op": "contains", "value": "PROP_SCHEDULE"}} | Dur: 0
+    Choice S02_ASK_CAMERA -> step:S02_HUB | When: {"field": "knows_handoff", "op": "eq", "value": false} | Dur: 0
+    Choice S02_CAPTION -> step:S02_HUB | When: {"not": {"field": "evidence_seen", "op": "contains", "value": "PROP_CAPTION_OLD"}} | Dur: 0
+    Choice S02_LEAVE -> scene:S03 | When: {"all": [{"field": "evidence_seen", "op": "contains", "value": "PROP_CLAMP"}, {"field": "evidence_seen", "op": "contains", "value": "PROP_SCHEDULE"}, {"field": "evidence_seen", "op": "contains", "value": "PROP_CAPTION_OLD"}]} | Dur: 0
+Scene: S03 (Entry: S03_DESK, Steps: 2)
+  Step: S03_DESK
+    Choice S03_LOOK_0441 -> step:S03_DESK | When: {"not": {"field": "evidence_seen", "op": "contains", "value": "PHOTO_0441"}} | Dur: 0
+    Choice S03_LOOK_0442 -> step:S03_DESK | When: {"not": {"field": "evidence_seen", "op": "contains", "value": "PHOTO_0442"}} | Dur: 0
+    Choice S03_LOOK_0443 -> step:S03_DESK | When: {"not": {"field": "evidence_seen", "op": "contains", "value": "PHOTO_0443"}} | Dur: 0
+    Choice S03_EMPTY -> step:S03_DESK | When: {"not": {"field": "evidence_seen", "op": "contains", "value": "PHOTO_CLAMP_EMPTY"}} | Dur: 0
+    Choice S03_WHY -> step:S03_REASON | When: {"all": []} | Dur: 0
+    Choice S03_SOURCE -> scene:S04 | When: {"all": [{"field": "evidence_seen", "op": "contains", "value": "PHOTO_0441"}, {"field": "evidence_seen", "op": "contains", "value": "PHOTO_0442"}, {"field": "evidence_seen", "op": "contains", "value": "PHOTO_0443"}, {"field": "evidence_seen", "op": "contains", "value": "PHOTO_CLAMP_EMPTY"}]} | Dur: 0
+  Step: S03_REASON
+    Choice S03_REASON_BACK -> step:S03_DESK | When: {"all": []} | Dur: 0
+Scene: S04 (Entry: S04_SOURCE, Steps: 2)
+  Step: S04_SOURCE
+    Choice S04_WATCH -> step:S04_AFTER | When: {"all": []} | Dur: 0
+    Choice S04_TESTIMONY -> step:S04_AFTER | When: {"field": "knows_handoff", "op": "eq", "value": true} | Dur: 0
+  Step: S04_AFTER
+    Choice S04_DRAFT -> scene:S05 | When: {"all": []} | Dur: 0
+Scene: S05 (Entry: S05_TEMPLATE, Steps: 2)
+  Step: S05_TEMPLATE
+    Choice S05_TYPE_TRIBUTE -> step:S05_RECIPIENT | When: {"all": []} | Dur: 0
+    Choice S05_TYPE_PAIRED -> step:S05_RECIPIENT | When: {"all": []} | Dur: 0
+    Choice S05_TYPE_MEMORY -> step:S05_RECIPIENT | When: {"all": []} | Dur: 0
+  Step: S05_RECIPIENT
+    Choice S05_SEND_NHI -> scene:S06 | When: {"all": []} | Dur: 0
+    Choice S05_SEND_GROUP_TRIBUTE -> scene:S06 | When: {"field": "draft_type", "op": "eq", "value": "tribute"} | Dur: 0
+    Choice S05_SEND_GROUP_OTHER -> scene:S06 | When: {"field": "draft_type", "op": "ne", "value": "tribute"} | Dur: 0
+    Choice S05_HOLD -> scene:S06 | When: {"all": []} | Dur: 0
+Scene: S06 (Entry: S06_TALK, Steps: 2)
+  Step: S06_TALK
+    Choice S06_OWN -> step:S06_PLACE | When: {"all": []} | Dur: 0
+    Choice S06_BLAME -> step:S06_PLACE | When: {"all": []} | Dur: 0
+    Choice S06_COMPARE -> step:S06_PLACE | When: {"all": []} | Dur: 0
+  Step: S06_PLACE
+    Choice S06_KEEP_AGREE -> scene:S07 | When: {"field": "an_owned_camera_choice", "op": "ne", "value": "deflected"} | Dur: 0
+    Choice S06_PRIVATE_AGREE -> scene:S07 | When: {"field": "an_owned_camera_choice", "op": "ne", "value": "deflected"} | Dur: 0
+    Choice S06_HANDOVER -> scene:S07 | When: {"all": []} | Dur: 0
+    Choice S06_KEEP_HANDOVER -> scene:S07 | When: {"field": "an_owned_camera_choice", "op": "eq", "value": "deflected"} | Dur: 0
+Scene: S07 (Entry: S07_SHOW, Steps: 4)
+  Step: S07_SHOW
+    Choice S07_SHOW_TRIBUTE -> step:S07_REACT | When: {"field": "draft_type", "op": "eq", "value": "tribute"} | Dur: 0
+    Choice S07_SHOW_OTHER -> step:S07_INVITE | When: {"field": "draft_type", "op": "ne", "value": "tribute"} | Dur: 0
+  Step: S07_REACT
+    Choice S07_STOP_SENT -> step:S07_INVITE | When: {"field": "draft_sent_to", "op": "eq", "value": "group_four"} | Dur: 0
+    Choice S07_STOP_PRIVATE -> step:S07_INVITE | When: {"field": "draft_sent_to", "op": "ne", "value": "group_four"} | Dur: 0
+    Choice S07_INSIST -> step:S07_INVITE | When: {"all": []} | Dur: 0
+    Choice S07_DISCUSS_AT_FIELD -> step:S07_INVITE | When: {"all": []} | Dur: 0
+  Step: S07_INVITE
+    Choice S07_INVITE_CLEAR -> step:S07_OLD_RIGHTS | When: {"field": "invite_pressure", "op": "eq", "value": false} | Dur: 0
+    Choice S07_ASK_AVAILABILITY -> step:S07_OLD_RIGHTS | When: {"field": "invite_pressure", "op": "eq", "value": false} | Dur: 0
+    Choice S07_INVITE_SHORT -> step:S07_OLD_RIGHTS | When: {"field": "invite_pressure", "op": "eq", "value": false} | Dur: 0
+    Choice S07_ACCEPT_DECLINE -> step:S07_OLD_RIGHTS | When: {"field": "invite_pressure", "op": "eq", "value": true} | Dur: 0
+  Step: S07_OLD_RIGHTS
+    Choice S07_OLD_OK -> scene:S08 | When: {"all": []} | Dur: 0
+Scene: S08 (Entry: S08_ASSIGN, Steps: 4)
+  Step: S08_ASSIGN
+    Choice S08_ASSIGN -> step:S08_PRINT | When: {"all": []} | Dur: 0
+    Choice S08_ASSUME -> step:S08_PRINT | When: {"all": []} | Dur: 0
+  Step: S08_PRINT
+    Choice S08_NORMAL -> step:S08_CHECK | When: {"all": []} | Dur: 0
+    Choice S08_EXTEND -> step:S08_CHECK | When: {"field": "courtyard_minute", "op": "lt", "value": 60} | Dur: 0
+  Step: S08_CHECK
+    Choice S08_READY -> step:S08_ROUTE | When: {"all": []} | Dur: 5
+    Choice S08_REPAIR_LATER -> step:S08_ROUTE | When: {"all": []} | Dur: 5
+  Step: S08_ROUTE
+    Choice S08_ARRIVE -> scene:S09_A | When: {"field": "nhi_invite_status", "op": "eq", "value": "accepted"} | Dur: 0
+    Choice S08_ABSENT -> scene:S09_B | When: {"field": "nhi_invite_status", "op": "ne", "value": "accepted"} | Dur: 0
+Scene: S09_A (Entry: S09_A_BOARD, Steps: 8)
+  Step: S09_A_BOARD
+    Choice S09_A_REMOVE_BOARD -> step:S09_A_FRAME | When: {"all": [{"field": "tribute_board_prepared", "op": "eq", "value": true}, {"field": "tribute_board_removed", "op": "eq", "value": false}]} | Dur: 0
+    Choice S09_A_LEAVE_BOARD -> step:S09_A_LEAVE | When: {"all": [{"field": "tribute_board_prepared", "op": "eq", "value": true}, {"field": "tribute_board_removed", "op": "eq", "value": false}]} | Dur: 0
+    Choice S09_A_NO_BOARD -> step:S09_A_FRAME | When: {"any": [{"field": "tribute_board_prepared", "op": "eq", "value": false}, {"field": "tribute_board_removed", "op": "eq", "value": true}]} | Dur: 0
+  Step: S09_A_FRAME
+    Choice S09_A_OPEN_FRAME -> step:S09_A_CAMERA | When: {"all": []} | Dur: 0
+    Choice S09_A_OLD_POSE -> step:S09_A_REFUSE | When: {"all": []} | Dur: 0
+    Choice S09_A_CHECK_SCOPE -> step:S09_A_CAMERA | When: {"all": []} | Dur: 0
+  Step: S09_A_REFUSE
+    Choice S09_A_CHANGE_FRAME -> step:S09_A_CAMERA | When: {"all": []} | Dur: 0
+    Choice S09_A_STOP_FRAME -> step:S09_A_LEAVE | When: {"all": []} | Dur: 0
+  Step: S09_A_CAMERA
+    Choice S09_A_FIX -> step:S09_A_CAPTURE | When: {"field": "equipment_ready", "op": "eq", "value": "repairable"} | Dur: 4
+    Choice S09_A_MOUNT -> step:S09_A_CAPTURE | When: {"field": "equipment_ready", "op": "eq", "value": "ready"} | Dur: 0
+    Choice S09_A_REBUILD -> step:S09_A_LEAVE | When: {"all": []} | Dur: 25
+  Step: S09_A_CAPTURE
+    Choice S09_A_CAPTURE -> step:S09_A_RIGHTS | When: {"all": [{"field": "attendance", "op": "eq", "value": "present"}, {"field": "nhi_wants_capture", "op": "eq", "value": true}, {"field": "courtyard_minute", "op": "lt", "value": 70}, {"field": "equipment_ready", "op": "eq", "value": "ready"}]} | Dur: 0
+    Choice S09_A_TIMEOUT -> step:S09_A_LEAVE | When: {"any": [{"field": "courtyard_minute", "op": "gte", "value": 70}, {"field": "attendance", "op": "ne", "value": "present"}]} | Dur: 0
+  Step: S09_A_RIGHTS
+    Choice S09_A_USE_PHOTO -> step:S09_A_PACK | When: {"all": []} | Dur: 0
+    Choice S09_A_PRIVATE_ONLY -> step:S09_A_PACK | When: {"all": []} | Dur: 0
+  Step: S09_A_PACK
+    Choice S09_A_PACK -> scene:S10 | When: {"all": []} | Dur: 0
+  Step: S09_A_LEAVE
+    Choice S09_A_TO_ABSENT -> scene:S09_B | When: {"all": []} | Dur: 0
+Scene: S09_B (Entry: S09_B_DECIDE, Steps: 5)
+  Step: S09_B_DECIDE
+    Choice S09_B_THREE -> step:S09_B_THREE | When: {"field": "courtyard_minute", "op": "lt", "value": 90} | Dur: 0
+    Choice S09_B_NO_PHOTO -> step:S09_B_PACK | When: {"all": []} | Dur: 0
+    Choice S09_B_LATER -> step:S09_B_LATER | When: {"all": []} | Dur: 0
+  Step: S09_B_THREE
+    Choice S09_B_TAKE_THREE -> step:S09_B_THREE_RIGHTS | When: {"field": "courtyard_minute", "op": "lt", "value": 86} | Dur: 4
+    Choice S09_B_TOO_LATE -> step:S09_B_PACK | When: {"field": "courtyard_minute", "op": "gte", "value": 86} | Dur: 0
+  Step: S09_B_THREE_RIGHTS
+    Choice S09_B_THREE_PRINT -> step:S09_B_PACK | When: {"all": []} | Dur: 0
+    Choice S09_B_THREE_PRIVATE -> step:S09_B_PACK | When: {"all": []} | Dur: 0
+  Step: S09_B_LATER
+    Choice S09_B_LATER_CLEAR -> step:S09_B_PACK | When: {"field": "invite_pressure", "op": "eq", "value": false} | Dur: 0
+    Choice S09_B_LATER_PENDING -> step:S09_B_PACK | When: {"all": []} | Dur: 0
+    Choice S09_B_LATER_REFUSED -> step:S09_B_PACK | When: {"field": "invite_pressure", "op": "eq", "value": true} | Dur: 0
+  Step: S09_B_PACK
+    Choice S09_B_PACK -> scene:S10 | When: {"all": []} | Dur: 0
+Scene: S10 (Entry: S10_WORK, Steps: 8)
+  Step: S10_WORK
+    Choice S10_WITH_HA -> step:S10_NOTICE | When: {"field": "ha_support", "op": "eq", "value": "collaborate"} | Dur: 0
+    Choice S10_ALONE -> step:S10_NOTICE | When: {"field": "ha_support", "op": "eq", "value": "handover_only"} | Dur: 0
+  Step: S10_NOTICE
+    Choice S10_STOP_REMAINING -> step:S10_OLD | When: {"all": [{"field": "draft_type", "op": "eq", "value": "tribute"}, {"field": "draft_retracted", "op": "ne", "value": "yes"}, {"field": "draft_sent_to", "op": "eq", "value": "group_four"}]} | Dur: 0
+    Choice S10_NOTICE_OK -> step:S10_OLD | When: {"any": [{"field": "draft_type", "op": "ne", "value": "tribute"}, {"field": "draft_retracted", "op": "eq", "value": "yes"}]} | Dur: 0
+    Choice S10_STOP_PRIVATE_REMAINING -> step:S10_OLD | When: {"all": [{"field": "draft_type", "op": "eq", "value": "tribute"}, {"field": "draft_retracted", "op": "ne", "value": "yes"}, {"field": "draft_sent_to", "op": "ne", "value": "group_four"}]} | Dur: 0
+  Step: S10_OLD
+    Choice S10_OLD_1 -> step:S10_NEW | When: {"all": []} | Dur: 0
+    Choice S10_OLD_2 -> step:S10_NEW | When: {"all": []} | Dur: 0
+    Choice S10_OLD_3 -> step:S10_NEW | When: {"all": []} | Dur: 0
+    Choice S10_OLD_4 -> step:S10_NEW | When: {"all": []} | Dur: 0
+  Step: S10_NEW
+    Choice S10_NEW_FOUR -> step:S10_0443 | When: {"all": [{"field": "captured_asset", "op": "eq", "value": "PHOTO_NEW_FOUR"}, {"field": "nhi_photo_consent", "op": "eq", "value": "yes"}]} | Dur: 0
+    Choice S10_NEW_THREE -> step:S10_0443 | When: {"all": [{"field": "captured_asset", "op": "eq", "value": "PHOTO_NEW_THREE"}, {"field": "new_photo_print_allowed", "op": "eq", "value": true}]} | Dur: 0
+    Choice S10_ONLY_OLD -> step:S10_0443 | When: {"all": []} | Dur: 0
+    Choice S10_SUPPLEMENT -> step:S10_0443 | When: {"field": "later_status", "op": "eq", "value": "accepted"} | Dur: 0
+  Step: S10_0443
+    Choice S10_ADD_0443 -> step:S10_RIGHTS | When: {"all": []} | Dur: 0
+    Choice S10_KEEP_0443_PRIVATE -> step:S10_RIGHTS | When: {"all": []} | Dur: 0
+  Step: S10_RIGHTS
+    Choice S10_RIGHTS_OK -> step:S10_PREVIEW | When: {"all": []} | Dur: 0
+  Step: S10_PREVIEW
+    Choice S10_PREVIEW -> step:S10_PUBLISH | When: {"all": []} | Dur: 0
+  Step: S10_PUBLISH
+    Choice S10_PUBLISH_NEW -> scene:E_A | When: {"all": [{"field": "page_previewed", "op": "eq", "value": true}, {"field": "final_mode", "op": "eq", "value": "new"}]} | Dur: 0
+    Choice S10_PUBLISH_OLD -> scene:E_B | When: {"all": [{"field": "page_previewed", "op": "eq", "value": true}, {"field": "final_mode", "op": "eq", "value": "old"}]} | Dur: 0
+    Choice S10_PUBLISH_SUPPLEMENT -> scene:E_C | When: {"all": [{"field": "page_previewed", "op": "eq", "value": true}, {"field": "final_mode", "op": "eq", "value": "supplement"}]} | Dur: 0

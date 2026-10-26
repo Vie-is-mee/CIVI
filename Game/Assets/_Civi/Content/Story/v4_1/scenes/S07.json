@@ -1,0 +1,348 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S07",
+  "title": "Một lời mời cụ thể",
+  "source_pages": [
+    7,
+    8,
+    9,
+    18
+  ],
+  "background_id": "BG_CORRIDOR",
+  "entry_step": "S07_SHOW",
+  "asset_ids": [
+    "PHOTO_S00_GOOD",
+    "PROP_DIAGRAM",
+    "PROP_TRIBUTE_BOARD"
+  ],
+  "production_notes": "Phản hồi nháp đi trước lời mời. Câu trả lời NPC là sự kiện, không phải choice tự đặt accepted. Quyền ảnh cũ hỏi riêng.",
+  "steps": [
+    {
+      "step_id": "S07_SHOW",
+      "stage_direction": "Nhi ra khỏi lớp. Nháp đã gửi mới được mở khi cô xem; bản giữ máy được An đưa trực tiếp.",
+      "lines": [
+        "S07_L001",
+        "S07_L002"
+      ],
+      "choices": [
+        {
+          "choice_id": "S07_SHOW_TRIBUTE",
+          "label": "Đưa bản tôn vinh cho Nhi xem",
+          "when": {
+            "field": "draft_type",
+            "op": "eq",
+            "value": "tribute"
+          },
+          "lines": [
+            "S07_L003",
+            "S07_L004",
+            "S07_L005"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "draft_seen_by",
+              "value": "NHI"
+            }
+          ],
+          "next": "step:S07_REACT",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S07_SHOW_OTHER",
+          "label": "Cùng xem ảnh trong bản nháp",
+          "when": {
+            "field": "draft_type",
+            "op": "ne",
+            "value": "tribute"
+          },
+          "lines": [
+            "S07_L006",
+            "S07_L007",
+            "S07_L008"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "draft_seen_by",
+              "value": "NHI"
+            }
+          ],
+          "next": "step:S07_INVITE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S07_REACT",
+      "stage_direction": "Không có cảnh giận bắt buộc khi đã chọn hướng khác. Nếu đã có bảng, việc gỡ sẽ là hành động riêng.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S07_STOP_SENT",
+          "label": "Dừng bản cũ và báo lại những người đã xem",
+          "when": {
+            "field": "draft_sent_to",
+            "op": "eq",
+            "value": "group_four"
+          },
+          "lines": [
+            "S07_L009",
+            "S07_L010",
+            "S07_L011"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_type",
+              "value": "memory"
+            },
+            {
+              "op": "set",
+              "field": "draft_version",
+              "value": 2
+            },
+            {
+              "op": "set",
+              "field": "draft_retracted",
+              "value": "yes"
+            },
+            {
+              "op": "add_unique",
+              "field": "retraction_notified_to",
+              "value": "NHI"
+            },
+            {
+              "op": "add_unique",
+              "field": "retraction_notified_to",
+              "value": "HA"
+            },
+            {
+              "op": "add_unique",
+              "field": "retraction_notified_to",
+              "value": "MINH"
+            }
+          ],
+          "next": "step:S07_INVITE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S07_STOP_PRIVATE",
+          "label": "Dừng nháp riêng và đổi sang hai ảnh",
+          "when": {
+            "field": "draft_sent_to",
+            "op": "ne",
+            "value": "group_four"
+          },
+          "lines": [
+            "S07_L012",
+            "S07_L013"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_type",
+              "value": "paired"
+            },
+            {
+              "op": "set",
+              "field": "draft_version",
+              "value": 2
+            },
+            {
+              "op": "set",
+              "field": "draft_retracted",
+              "value": "yes"
+            },
+            {
+              "op": "add_unique",
+              "field": "retraction_notified_to",
+              "value": "NHI"
+            }
+          ],
+          "next": "step:S07_INVITE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S07_INSIST",
+          "label": "Giải thích cả nhóm làm vậy vì Nhi",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S07_L014",
+            "S07_L015"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "invite_pressure",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "nhi_invite_status",
+              "value": "declined"
+            }
+          ],
+          "next": "step:S07_INVITE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S07_DISCUSS_AT_FIELD",
+          "label": "Ghi lại ý Nhi, để bàn cách gỡ với nhóm tại sân",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S07_L016",
+            "S07_L017"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "invite_pressure",
+              "value": false
+            }
+          ],
+          "next": "step:S07_INVITE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S07_INVITE",
+      "stage_direction": "Lời mời nêu rõ chụp cùng, ai cầm máy và giờ; lựa chọn không là điểm tình bạn.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S07_INVITE_CLEAR",
+          "label": "Mời 16:45, máy hẹn giờ, không ép tư thế cũ",
+          "when": {
+            "field": "invite_pressure",
+            "op": "eq",
+            "value": false
+          },
+          "lines": [
+            "S07_L018",
+            "S07_L019",
+            "S07_L020"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "nhi_invite_status",
+              "value": "accepted"
+            }
+          ],
+          "next": "step:S07_OLD_RIGHTS",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S07_ASK_AVAILABILITY",
+          "label": "Hỏi Nhi có thu xếp được ngày mai không",
+          "when": {
+            "field": "invite_pressure",
+            "op": "eq",
+            "value": false
+          },
+          "lines": [
+            "S07_L021",
+            "S07_L022",
+            "S07_L023"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "nhi_invite_status",
+              "value": "declined"
+            }
+          ],
+          "next": "step:S07_OLD_RIGHTS",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S07_INVITE_SHORT",
+          "label": "Gửi lời mời rồi để Nhi xem lịch trả lời sau",
+          "when": {
+            "field": "invite_pressure",
+            "op": "eq",
+            "value": false
+          },
+          "lines": [
+            "S07_L024",
+            "S07_L025",
+            "S07_L026"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "nhi_invite_status",
+              "value": "pending"
+            }
+          ],
+          "next": "step:S07_OLD_RIGHTS",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S07_ACCEPT_DECLINE",
+          "label": "Dừng chuyện mời và hỏi phần ảnh cũ",
+          "when": {
+            "field": "invite_pressure",
+            "op": "eq",
+            "value": true
+          },
+          "lines": [
+            "S07_L027"
+          ],
+          "effects": [],
+          "next": "step:S07_OLD_RIGHTS",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S07_OLD_RIGHTS",
+      "stage_direction": "An mở đúng PHOTO_S00_GOOD. Đây là câu hỏi quyền ảnh cũ, không là lời mời mới.",
+      "lines": [
+        "S07_L028",
+        "S07_L029"
+      ],
+      "choices": [
+        {
+          "choice_id": "S07_OLD_OK",
+          "label": "Ghi nhận quyền dùng đúng tấm vừa xem",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_S00_GOOD",
+              "subject_id": "NHI",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S07_OLD_OK"
+            }
+          ],
+          "next": "scene:S08",
+          "action_note": "Chưa cấp quyền hai ảnh hỏng, sơ đồ, clip hoặc mọi ảnh tương lai.",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

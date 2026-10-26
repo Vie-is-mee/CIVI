@@ -1,0 +1,153 @@
+{
+  "scene_id": "S02",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S02_L001",
+      "speaker_id": "PHUONG",
+      "text": "Hai cuộn dây, một kẹp. Cái nhỏ ở đâu nhỉ?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L002",
+      "speaker_id": "NHI",
+      "text": "Trong túi bên hông. An, tránh cái thùng giúp tao.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L003",
+      "speaker_id": "AN",
+      "text": "Hai cuộn? Cái này nữa là ba.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L004",
+      "speaker_id": "NHI",
+      "text": "Cái đấy dây hỏng. Để sang bên.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L005",
+      "speaker_id": "AN",
+      "text": "Ừ, tao giữ thùng.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L006",
+      "speaker_id": "AN",
+      "text": "Sơ đồ này mày vẽ nhỉ?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L007",
+      "speaker_id": "NHI",
+      "text": "Ừ. Bản bây giờ có giống cái đó đâu.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L008",
+      "speaker_id": "AN",
+      "text": "Mày sửa cái này à?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L009",
+      "speaker_id": "NHI",
+      "text": "Nó trượt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L010",
+      "speaker_id": "AN",
+      "text": "Mai dùng được không?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L011",
+      "speaker_id": "NHI",
+      "text": "Thì thử đi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L012",
+      "speaker_id": "NARRATOR",
+      "text": "16:45 chụp; 17:10 Nhi đi; 17:30 tháo quầy. Sáng thứ Bảy giao file lúc 10:00.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L013",
+      "speaker_id": "NHI",
+      "text": "Lịch tao nhắn từ trước rồi. Mai không chờ thêm được đâu.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L014",
+      "speaker_id": "AN",
+      "text": "Tấm ba đứa hôm hội chợ, ai chụp ấy nhỉ?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L015",
+      "speaker_id": "NHI",
+      "text": "Tao. Mày đưa máy cho tao mà. Bảo một tấm thôi, lát chụp đủ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L016",
+      "speaker_id": "AN",
+      "text": "Rồi tao quên.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L017",
+      "speaker_id": "NHI",
+      "text": "Rồi đông khách. Tao cũng không nhắc nữa.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L018",
+      "speaker_id": "NHI",
+      "text": "Tao bảo sửa lời tao, không bảo xóa cả trang. Câu kia tao đâu nói thế.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L019",
+      "speaker_id": "AN",
+      "text": "Còn tấm buổi tập?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L020",
+      "speaker_id": "NHI",
+      "text": "Mày định dùng thế nào thì cho tao xem.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S02_L021",
+      "speaker_id": "NARRATOR",
+      "text": "An ghim lịch cạnh album. Chiếc kẹp được đặt riêng trong ngăn đồ sẽ mang ra sân.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

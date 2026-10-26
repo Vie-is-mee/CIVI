@@ -1,0 +1,64 @@
+{
+  "status": "tv1_draft",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "past_dates": "Month only; do not fabricate day",
+  "events": [
+    {
+      "event_id": "DISCOVER_PAGE",
+      "datetime": "2026-05-07T10:00:00"
+    },
+    {
+      "event_id": "COURTYARD",
+      "datetime": "2026-05-08T16:45:00"
+    },
+    {
+      "event_id": "EXTENSION_CUTOFF",
+      "datetime": "2026-05-08T17:00:00"
+    },
+    {
+      "event_id": "NHI_DEPART",
+      "datetime": "2026-05-08T17:10:00"
+    },
+    {
+      "event_id": "DISMANTLE",
+      "datetime": "2026-05-08T17:30:00"
+    },
+    {
+      "event_id": "FILE_NORMAL",
+      "datetime": "2026-05-09T10:00:00"
+    },
+    {
+      "event_id": "FILE_EXTENDED",
+      "datetime": "2026-05-09T12:00:00",
+      "requires": "extension_confirmed"
+    },
+    {
+      "event_id": "BOOK_NORMAL",
+      "date": "2026-05-11",
+      "period": "afternoon"
+    },
+    {
+      "event_id": "BOOK_EXTENDED",
+      "date": "2026-05-12",
+      "period": "morning"
+    }
+  ],
+  "courtyard_clock": {
+    "epoch": "2026-05-08T16:00:00",
+    "nhi_depart_minute": 70,
+    "dismantle_minute": 90,
+    "advance_only_declared_actions": true
+  },
+  "new_authored_variants": [
+    {
+      "purpose": "later meeting proposal",
+      "datetime": "2026-05-11T16:30:00",
+      "valid_only_after": "S09_B_LATER_CLEAR response"
+    },
+    {
+      "purpose": "delivery after optional new photo printed",
+      "datetime": "2026-05-12T09:30:00",
+      "valid_only_after": "E_C_PRINT response"
+    }
+  ]
+}

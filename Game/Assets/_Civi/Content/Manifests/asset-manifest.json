@@ -1,0 +1,647 @@
+{
+  "status": "content_brief_not_runtime_catalog",
+  "assets": [
+    {
+      "asset_id": "BG_COURTYARD",
+      "description": "Sân/quầy tập và sân chụp hiện tại",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S00",
+        "S08",
+        "S09_A",
+        "S09_B"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "BG_DESIGN_ROOM",
+      "description": "Phòng thiết kế/kỷ yếu",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S01",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S10",
+        "E_A",
+        "E_B"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "BG_EQUIPMENT_CORNER",
+      "description": "Góc kiểm đồ; có thể tái sử dụng nền phòng với đạo cụ",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S02"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "BG_CORRIDOR",
+      "description": "Hành lang/cửa lớp; có thể dùng crop nền có sẵn",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S07"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "BG_STONE_BENCH",
+      "description": "Ghế đá cho cuộc gặp đã xác nhận, không có quầy HẸN",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "E_C"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_S00_GOOD",
+      "description": "Ảnh đủ bốn ở buổi tập, đèn HẸN, tư thế không hoàn toàn khớp",
+      "subjects": [
+        "AN",
+        "NHI",
+        "HA",
+        "MINH"
+      ],
+      "rights_holders": [
+        "AN",
+        "HA",
+        "MINH",
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "AN"
+      ],
+      "scenes": [
+        "S00",
+        "S05",
+        "S07",
+        "S09_B",
+        "S10",
+        "E_A",
+        "E_B",
+        "E_C"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_S00_BAD_01",
+      "description": "Lần đèn tắt lúc Nhi chạy vào, vẫn đủ bốn trong khung gốc",
+      "subjects": [
+        "AN",
+        "NHI",
+        "HA",
+        "MINH"
+      ],
+      "rights_holders": [
+        "AN",
+        "HA",
+        "MINH",
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "AN"
+      ],
+      "scenes": [
+        "S00",
+        "S10"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_S00_BAD_02",
+      "description": "Minh cúi nhặt bìa, Hạ cười, cả bốn trong khung gốc",
+      "subjects": [
+        "AN",
+        "NHI",
+        "HA",
+        "MINH"
+      ],
+      "rights_holders": [
+        "AN",
+        "HA",
+        "MINH",
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "AN"
+      ],
+      "scenes": [
+        "S00",
+        "S10"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_0441",
+      "description": "Đèn tắt, Nhi mép ảnh cầm dây; không chứng minh mọi phần việc",
+      "subjects": [
+        "AN",
+        "NHI",
+        "HA",
+        "MINH"
+      ],
+      "rights_holders": [
+        "AN",
+        "HA",
+        "MINH",
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "HA"
+      ],
+      "scenes": [
+        "S03"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_0442",
+      "description": "Đèn sáng, ổ chia ghế đỏ, Nhi nhìn An",
+      "subjects": [
+        "AN",
+        "NHI",
+        "HA",
+        "MINH"
+      ],
+      "rights_holders": [
+        "AN",
+        "HA",
+        "MINH",
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "HA"
+      ],
+      "scenes": [
+        "S03"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_0443",
+      "description": "An, Hạ, Minh thật sự vui; Nhi không có trong ảnh gốc",
+      "subjects": [
+        "AN",
+        "HA",
+        "MINH"
+      ],
+      "rights_holders": [
+        "AN",
+        "HA",
+        "MINH"
+      ],
+      "story_owner_ids": [
+        "HA"
+      ],
+      "scenes": [
+        "S01",
+        "S03",
+        "S04",
+        "S06",
+        "S10"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_CLAMP_EMPTY",
+      "description": "Cận chiếc kẹp trống trong bối cảnh liên tiếp, không tự chứng minh ai cầm máy",
+      "subjects": [],
+      "rights_holders": [
+        "HA"
+      ],
+      "story_owner_ids": [
+        "HA"
+      ],
+      "scenes": [
+        "S03"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "VIDEO_VY",
+      "description": "Nguồn clip/animatic có cảnh muộn, giao máy, lời lát và hai vế Nhi nói",
+      "subjects": [
+        "AN",
+        "NHI",
+        "HA",
+        "MINH"
+      ],
+      "rights_holders": [
+        "AN",
+        "HA",
+        "MINH",
+        "NHI",
+        "VY"
+      ],
+      "story_owner_ids": [
+        "VY"
+      ],
+      "scenes": [
+        "S04"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": false,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "TESTIMONY_NHI",
+      "description": "Lời Nhi xác nhận An đã đưa máy; không là quyền phát hành clip",
+      "subjects": [],
+      "rights_holders": [
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "NHI"
+      ],
+      "scenes": [],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": false,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_DIAGRAM",
+      "description": "Hai ô, bốn tên, tia chớp; Nhi vẽ; không bảng ca",
+      "subjects": [],
+      "rights_holders": [
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "NHI"
+      ],
+      "scenes": [
+        "S00",
+        "S01",
+        "S02",
+        "S06",
+        "S07",
+        "S09_B",
+        "S10",
+        "E_B"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_SIGN_HEN",
+      "description": "Bảng HẸN chưa sáng đủ ở mở đầu; sáng đủ hiện tại",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S00",
+        "S09_A"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_CLAMP",
+      "description": "Kẹp điện thoại thêm cao su, có thể cần thử và kê",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S00",
+        "S02",
+        "S04",
+        "S08",
+        "S09_A",
+        "S09_B"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_BATTERY",
+      "description": "Pin dự phòng Minh, bàn giao thực tế chứ không vật phẩm phép",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S00",
+        "S08"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_PROOF_16_18",
+      "description": "Bản thử có 16 rồi 18; trang 17 được tạm giữ",
+      "subjects": [],
+      "rights_holders": [
+        "MINH"
+      ],
+      "story_owner_ids": [
+        "MINH"
+      ],
+      "scenes": [
+        "S01"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_CHAT_REMOVE",
+      "description": "Chat Minh hỏi và An trả lời mơ hồ",
+      "subjects": [],
+      "rights_holders": [
+        "AN",
+        "MINH"
+      ],
+      "story_owner_ids": [
+        "AN",
+        "MINH"
+      ],
+      "scenes": [
+        "S01"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": false,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_THREE_LAYOUT",
+      "description": "Bản dựng ba vị trí, chưa là ảnh mới đã chụp",
+      "subjects": [],
+      "rights_holders": [
+        "HA"
+      ],
+      "story_owner_ids": [
+        "HA"
+      ],
+      "scenes": [
+        "S01"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_SCHEDULE",
+      "description": "16:45/17:10/17:30 và hạn file sáng thứ Bảy",
+      "subjects": [],
+      "rights_holders": [
+        "MINH"
+      ],
+      "story_owner_ids": [
+        "MINH"
+      ],
+      "scenes": [
+        "S02",
+        "S08"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_CAPTION_OLD",
+      "description": "Câu gán bị Nhi phản đối; chỉ xem đối chiếu, không cho xuất",
+      "subjects": [],
+      "rights_holders": [
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "NHI"
+      ],
+      "scenes": [
+        "S02"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": false,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PROP_TRIBUTE_BOARD",
+      "description": "Chỉ dựng khi Hạ đã chuẩn bị theo nháp được gửi và chưa gỡ",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S05",
+        "S07",
+        "S08",
+        "S09_A",
+        "S09_B"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "TEMPLATE_TRIBUTE",
+      "description": "Nháp tôn vinh đẹp nhưng phải hỏi đúng người và nội dung",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S05"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "TEMPLATE_PAIRED",
+      "description": "Nháp hai ảnh trước/sau chưa ép có ảnh mới",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S05"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "TEMPLATE_MEMORY",
+      "description": "Nháp ký ức với ảnh hỏng/sơ đồ đã được phép",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S05",
+        "S06"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_NEW_FOUR",
+      "description": "Ảnh chụp thật S09_A: An,Nhi,Hạ,Minh; callback gesture",
+      "subjects": [
+        "AN",
+        "NHI",
+        "HA",
+        "MINH"
+      ],
+      "rights_holders": [
+        "AN",
+        "HA",
+        "MINH",
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "AN"
+      ],
+      "scenes": [
+        "S09_A",
+        "S10",
+        "E_A"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_NEW_THREE",
+      "description": "Ảnh chụp thật S09_B: An,Hạ,Minh; không ghép Nhi",
+      "subjects": [
+        "AN",
+        "HA",
+        "MINH"
+      ],
+      "rights_holders": [
+        "AN",
+        "HA",
+        "MINH"
+      ],
+      "story_owner_ids": [
+        "AN"
+      ],
+      "scenes": [
+        "S09_B",
+        "S10",
+        "E_A"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PHOTO_LATER_TWO",
+      "description": "Ảnh tùy chọn ở buổi gặp sau: chỉ An,Nhi",
+      "subjects": [
+        "AN",
+        "NHI"
+      ],
+      "rights_holders": [
+        "AN",
+        "NHI"
+      ],
+      "story_owner_ids": [
+        "AN"
+      ],
+      "scenes": [
+        "E_C"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PAGE17_FINAL",
+      "description": "Trang tổng hợp runtime theo nguồn đã chọn, không ảnh cố định",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "S10",
+        "E_A",
+        "E_B"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    },
+    {
+      "asset_id": "PAGE17_SUPPLEMENT",
+      "description": "Tờ bổ sung có nguồn/ngày/người/quyền; in và giao sau xác nhận",
+      "subjects": [],
+      "rights_holders": [],
+      "story_owner_ids": [],
+      "scenes": [
+        "E_C"
+      ],
+      "file": null,
+      "status": "brief_only_not_produced",
+      "public_export_allowed_in_mvp": true,
+      "note": "rights_holders là yêu cầu theo câu chuyện, không xác nhận giấy phép tài nguyên sản xuất ngoài đời."
+    }
+  ]
+}

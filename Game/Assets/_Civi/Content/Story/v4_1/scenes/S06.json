@@ -1,0 +1,209 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S06",
+  "title": "Hai ký ức trên bàn",
+  "source_pages": [
+    8,
+    18
+  ],
+  "background_id": "BG_DESIGN_ROOM",
+  "entry_step": "S06_TALK",
+  "asset_ids": [
+    "PHOTO_0443",
+    "PROP_DIAGRAM",
+    "TEMPLATE_MEMORY"
+  ],
+  "production_notes": "Nói và làm là hai bước. Một câu nhận lỗi không tự đổi ha_support. Không khóa nguồn khi chỉ bàn giao.",
+  "steps": [
+    {
+      "step_id": "S06_TALK",
+      "stage_direction": "Hạ đặt 0443 bên cạnh sơ đồ hai ô, chưa xóa tấm nào.",
+      "lines": [
+        "S06_L001",
+        "S06_L002"
+      ],
+      "choices": [
+        {
+          "choice_id": "S06_OWN",
+          "label": "Nói rõ mình đã đưa máy cho Nhi",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S06_L003",
+            "S06_L004"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "an_owned_camera_choice",
+              "value": "yes"
+            }
+          ],
+          "next": "step:S06_PLACE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S06_BLAME",
+          "label": "Bảo Hạ đã chọn ảnh làm thiếu Nhi",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S06_L005",
+            "S06_L006"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "an_owned_camera_choice",
+              "value": "deflected"
+            }
+          ],
+          "next": "step:S06_PLACE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S06_COMPARE",
+          "label": "Chưa đáp, đặt hai ký ức cạnh nhau",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S06_L007"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "an_owned_camera_choice",
+              "value": "unresolved"
+            }
+          ],
+          "next": "step:S06_PLACE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S06_PLACE",
+      "stage_direction": "Kéo 0443 vào album riêng hoặc thử góc trang có caption đúng. Chỉ là thỏa thuận làm nháp; quyền in vẫn hỏi sau.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S06_KEEP_AGREE",
+          "label": "Thử giữ 0443; An tự viết lại phần chữ",
+          "when": {
+            "field": "an_owned_camera_choice",
+            "op": "ne",
+            "value": "deflected"
+          },
+          "lines": [
+            "S06_L008",
+            "S06_L009"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "photo0443_placement",
+              "value": "page17"
+            },
+            {
+              "op": "set",
+              "field": "ha_support",
+              "value": "collaborate"
+            }
+          ],
+          "next": "scene:S07",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S06_PRIVATE_AGREE",
+          "label": "Giữ 0443 ở album; nhờ Hạ thử trang hai ảnh",
+          "when": {
+            "field": "an_owned_camera_choice",
+            "op": "ne",
+            "value": "deflected"
+          },
+          "lines": [
+            "S06_L010",
+            "S06_L011"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "photo0443_placement",
+              "value": "private_album"
+            },
+            {
+              "op": "set",
+              "field": "ha_support",
+              "value": "collaborate"
+            }
+          ],
+          "next": "scene:S07",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S06_HANDOVER",
+          "label": "Nhận file gốc và tự dàn trang",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S06_L012",
+            "S06_L013"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "photo0443_placement",
+              "value": "private_album"
+            },
+            {
+              "op": "set",
+              "field": "ha_support",
+              "value": "handover_only"
+            }
+          ],
+          "next": "scene:S07",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S06_KEEP_HANDOVER",
+          "label": "Giữ ảnh để xin dùng sau; nhận file và tự làm",
+          "when": {
+            "field": "an_owned_camera_choice",
+            "op": "eq",
+            "value": "deflected"
+          },
+          "lines": [
+            "S06_L014"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "photo0443_placement",
+              "value": "page17"
+            },
+            {
+              "op": "set",
+              "field": "ha_support",
+              "value": "handover_only"
+            }
+          ],
+          "next": "scene:S07",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

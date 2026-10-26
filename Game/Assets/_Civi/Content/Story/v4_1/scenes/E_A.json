@@ -1,0 +1,141 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "E_A",
+  "title": "Tấm mới",
+  "source_pages": [
+    12,
+    13,
+    19
+  ],
+  "background_id": "BG_DESIGN_ROOM",
+  "entry_step": "E_A_OPEN",
+  "asset_ids": [
+    "PAGE17_FINAL",
+    "PHOTO_NEW_FOUR",
+    "PHOTO_NEW_THREE",
+    "PHOTO_S00_GOOD"
+  ],
+  "production_notes": "Ngày nhận sách theo print_slot. Không gọi ảnh ba người là kết kém hơn. Chưa tự hòa giải tất cả.",
+  "steps": [
+    {
+      "step_id": "E_A_OPEN",
+      "stage_direction": "An mở đúng trang đã chốt; dùng nguồn cũ đã chọn, không thay bằng ảnh khác ở cutscene.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "E_A_FOUR",
+          "label": "Mở trang có ảnh mới bốn người",
+          "when": {
+            "field": "final_new_asset",
+            "op": "eq",
+            "value": "PHOTO_NEW_FOUR"
+          },
+          "lines": [
+            "E_A_L001",
+            "E_A_L002",
+            "E_A_L003",
+            "E_A_L004"
+          ],
+          "effects": [],
+          "next": "step:E_A_CALLBACK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "E_A_THREE",
+          "label": "Mở trang có ảnh mới ba người",
+          "when": {
+            "field": "final_new_asset",
+            "op": "eq",
+            "value": "PHOTO_NEW_THREE"
+          },
+          "lines": [
+            "E_A_L005",
+            "E_A_L006"
+          ],
+          "effects": [],
+          "next": "step:E_A_CALLBACK",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "E_A_CALLBACK",
+      "stage_direction": "Chi tiết mở đầu trở lại theo gesture đã chọn, không tự sinh món đồ chưa giữ.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "E_A_CALLBACK_POSE_1",
+          "label": "Đặt trang vào cuốn sách",
+          "when": {
+            "field": "opening_gesture",
+            "op": "eq",
+            "value": "pose_1"
+          },
+          "lines": [
+            "E_A_L007"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "finished",
+              "value": true
+            }
+          ],
+          "next": "end",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "E_A_CALLBACK_POSE_2",
+          "label": "Đặt trang vào cuốn sách",
+          "when": {
+            "field": "opening_gesture",
+            "op": "eq",
+            "value": "pose_2"
+          },
+          "lines": [
+            "E_A_L008",
+            "E_A_L009"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "finished",
+              "value": true
+            }
+          ],
+          "next": "end",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "E_A_CALLBACK_POSE_3",
+          "label": "Đặt trang vào cuốn sách",
+          "when": {
+            "field": "opening_gesture",
+            "op": "eq",
+            "value": "pose_3"
+          },
+          "lines": [
+            "E_A_L010",
+            "E_A_L011"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "finished",
+              "value": true
+            }
+          ],
+          "next": "end",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

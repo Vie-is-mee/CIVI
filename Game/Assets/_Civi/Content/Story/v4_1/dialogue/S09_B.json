@@ -1,0 +1,230 @@
+{
+  "scene_id": "S09_B",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S09_B_L001",
+      "speaker_id": "HA",
+      "text": "Vậy… mình chụp không?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L002",
+      "speaker_id": "MINH",
+      "text": "Tao giữ máy thêm một lát được. Nhưng mấy giờ xong?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L003",
+      "speaker_id": "AN",
+      "text": "Chụp một tấm của ba đứa đang ở đây. Không gọi là đủ bốn.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L004",
+      "speaker_id": "HA",
+      "text": "Ừ. Hạ máy xuống chút, lấy cả cái bảng vào.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L005",
+      "speaker_id": "AN",
+      "text": "Thôi, hôm nay cất máy. Tao giữ sơ đồ, làm trang từ nguồn cũ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L006",
+      "speaker_id": "MINH",
+      "text": "Ừ. Cái chân bên kia gập trước.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L007",
+      "speaker_id": "AN",
+      "text": "Tao hỏi một buổi khác, ai được thì gặp. Chưa có trả lời thì hôm nay mình vẫn cất đồ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L008",
+      "speaker_id": "NARRATOR",
+      "text": "An kéo ghế thừa ra khỏi khung rồi chạy vào. Minh vừa nhìn pin thì máy bấm.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L009",
+      "speaker_id": "MINH",
+      "text": "Lại nhìn pin nữa rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L010",
+      "speaker_id": "HA",
+      "text": "Tao thích tấm này.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L011",
+      "speaker_id": "VY",
+      "text": "Sắp tháo quầy rồi, em nhận lại kẹp nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L012",
+      "speaker_id": "AN",
+      "text": "Ừ. Tao gập chân máy trước.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L016",
+      "speaker_id": "AN",
+      "text": "Mình giữ riêng tấm này nhé. Trang 17 tao dùng ảnh cũ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L017",
+      "speaker_id": "HA",
+      "text": "Ừ, gửi tao một bản.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L018",
+      "speaker_id": "MINH",
+      "text": "Được.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L019",
+      "speaker_id": "AN",
+      "text": "Thứ Hai 11/05, 16:30 ở ghế đá được không? Tao mang ảnh cũ với tờ bổ sung, không bắt buộc chụp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L020",
+      "speaker_id": "NHI",
+      "text": "16:30 được. Tao chỉ gặp mày thôi, Hạ với Minh có việc thì đừng kéo về. Mang cả tấm buổi tập nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L021",
+      "speaker_id": "AN",
+      "text": "Ừ. Tờ bổ sung tao gửi nhóm xem trước khi in.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L022",
+      "speaker_id": "AN",
+      "text": "Tuần sau mày muốn nhận ảnh lúc nào thì báo tao nhé. Không cần ra chụp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L023",
+      "speaker_id": "NARRATOR",
+      "text": "Chưa có trả lời nhận lời. An cất máy, không đánh dấu đã có cuộc gặp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L024",
+      "speaker_id": "AN",
+      "text": "Tuần sau mình gặp để tao nói rõ hơn nhé?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L025",
+      "speaker_id": "NHI",
+      "text": "Tao chưa muốn hẹn. Cứ làm bản từ ảnh cũ rồi gửi tao xem.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L026",
+      "speaker_id": "AN",
+      "text": "Ừ. Tao không đặt lịch thay mày.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L027",
+      "speaker_id": "MINH",
+      "text": "Tao cất máy nhé?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L028",
+      "speaker_id": "AN",
+      "text": "Để tao gập chân. Mày lấy pin.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L029",
+      "speaker_id": "HA",
+      "text": "Tờ sơ đồ đừng để dưới đất.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L030",
+      "speaker_id": "NARRATOR",
+      "text": "An gỡ bản dựng ba vị trí, cuộn dây, trả kẹp cho Vy. Sơ đồ bốn tên được đặt trong túi bìa.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L031",
+      "speaker_id": "HA",
+      "text": "Bản cuối mày gửi tao nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L032",
+      "speaker_id": "AN",
+      "text": "Ừ, tao làm tiếp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L033",
+      "speaker_id": "HA",
+      "text": "Dùng tấm này trong trang và album riêng được. Ghi đúng hôm nay và ba người nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L034",
+      "speaker_id": "MINH",
+      "text": "Tao đồng ý hai phạm vi đó.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S09_B_L035",
+      "speaker_id": "AN",
+      "text": "Tao cũng đồng ý. Không lấy nó thay lời hẹn đủ bốn.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

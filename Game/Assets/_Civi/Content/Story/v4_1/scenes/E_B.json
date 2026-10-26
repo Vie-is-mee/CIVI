@@ -1,0 +1,74 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "E_B",
+  "title": "Những gì được giữ lại",
+  "source_pages": [
+    13,
+    19
+  ],
+  "background_id": "BG_DESIGN_ROOM",
+  "entry_step": "E_B_OPEN",
+  "asset_ids": [
+    "PAGE17_FINAL",
+    "PROP_DIAGRAM",
+    "PHOTO_S00_GOOD"
+  ],
+  "production_notes": "Trang có nguồn cũ cụ thể đã được phép. Không bắt người chơi chờ tin nhắn tha thứ để kết thúc.",
+  "steps": [
+    {
+      "step_id": "E_B_OPEN",
+      "stage_direction": "Không còn ô chờ để trách người vắng. Cuốn sách mở được một trang hoàn chỉnh.",
+      "lines": [
+        "E_B_L001",
+        "E_B_L002",
+        "E_B_L003"
+      ],
+      "choices": [
+        {
+          "choice_id": "E_B_SHOW",
+          "label": "Lật lại trang vừa hoàn thành",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "E_B_L004",
+            "E_B_L005"
+          ],
+          "effects": [],
+          "next": "step:E_B_FINISH",
+          "action_note": "Câu Nhi xác nhận phản ánh grant nguồn cũ; không tự nhận cô đồng ý ảnh mới.",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "E_B_FINISH",
+      "stage_direction": "Người chơi cất sơ đồ/file vào đúng chỗ; không hiện điểm hoặc nhãn thất bại.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "E_B_CLOSE",
+          "label": "Lưu bản cho Nhi và khép sổ",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "E_B_L006"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "finished",
+              "value": true
+            }
+          ],
+          "next": "end",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

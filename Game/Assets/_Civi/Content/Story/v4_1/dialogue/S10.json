@@ -1,0 +1,300 @@
+{
+  "scene_id": "S10",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S10_L001",
+      "speaker_id": "HA",
+      "text": "Tao làm phần ảnh. Phần chữ mày tự chốt rồi gửi xem lại.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L002",
+      "speaker_id": "AN",
+      "text": "Ừ, tao không giữ câu gán cho Nhi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L003",
+      "speaker_id": "NARRATOR",
+      "text": "An mở mẫu một trang, kéo ảnh vào đúng ô. File Hạ bàn giao vẫn đủ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L004",
+      "speaker_id": "HA",
+      "text": "Bản chốt có ảnh tao thì gửi xem trước nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L005",
+      "speaker_id": "AN",
+      "text": "Bản cảm ơn trước dừng nhé. Trang này không dùng câu đó hay bảng đó. Người đã xem nhận giúp tao bản mới.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L006",
+      "speaker_id": "NHI",
+      "text": "Ừ. Gửi bản mới cho tao xem.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L007",
+      "speaker_id": "HA",
+      "text": "Tao không dùng bảng cũ nữa.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L008",
+      "speaker_id": "MINH",
+      "text": "Tao đổi bản xem trong thư mục rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L009",
+      "speaker_id": "NARRATOR",
+      "text": "Bản hiện tại được mở cạnh lịch giao sách; bản cũ vẫn nằm trong lịch sử.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L010",
+      "speaker_id": "AN",
+      "text": "Tao giữ tấm đủ bốn đã hỏi mày, đúng ảnh này trong trang.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L011",
+      "speaker_id": "NHI",
+      "text": "Ừ. Tấm này dùng được.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L012",
+      "speaker_id": "AN",
+      "text": "Còn tấm đèn tắt này, để trong trang 17 được không?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L013",
+      "speaker_id": "NHI",
+      "text": "Tấm đấy mặt tao buồn cười thật. Được, cứ để.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L014",
+      "speaker_id": "AN",
+      "text": "Tao muốn dùng tấm Minh cúi xuống này. Mày xem nhé?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L015",
+      "speaker_id": "NHI",
+      "text": "Được, tao thích tấm đó. Hỏi cả Minh nữa.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L016",
+      "speaker_id": "AN",
+      "text": "Dùng sơ đồ mày vẽ như một bản nháp cũ được không? Không coi ô trống là lời trách ai.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L017",
+      "speaker_id": "NHI",
+      "text": "Được. Để cả hình tia chớp nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L018",
+      "speaker_id": "NARRATOR",
+      "text": "Nguồn cũ bên trái, ảnh 08/05 gồm An, Nhi, Hạ, Minh bên phải. Caption ghi đúng ngày và người.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L019",
+      "speaker_id": "NARRATOR",
+      "text": "Ảnh mới ghi An, Hạ, Minh; không gọi là ảnh đủ bốn hay gán lời cho Nhi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L020",
+      "speaker_id": "NARRATOR",
+      "text": "An bỏ ô chờ, nới nguồn cũ ra. Nếu có ảnh mới giữ riêng, nó vẫn còn trong album đúng phạm vi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L021",
+      "speaker_id": "AN",
+      "text": "Sách chính để trang thông báo bổ sung phát riêng. Tờ ảnh này tao mang tới buổi đã hẹn, mọi người xem trước nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L022",
+      "speaker_id": "NHI",
+      "text": "Ừ. Nguồn cũ vừa xem dùng trong tờ bổ sung được.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L023",
+      "speaker_id": "HA",
+      "text": "Tao xem tờ đó trước khi in.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L024",
+      "speaker_id": "MINH",
+      "text": "Đừng dời cả lịch phát sách nếu chỉ giao tờ riêng.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L025",
+      "speaker_id": "AN",
+      "text": "Tao đặt tấm hội chợ ở góc này, đúng ba tên và ngày tháng Mười.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L026",
+      "speaker_id": "HA",
+      "text": "Ừ. Phần ảnh tao đồng ý, chữ thế này được.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L027",
+      "speaker_id": "MINH",
+      "text": "Tao cũng đồng ý.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L028",
+      "speaker_id": "AN",
+      "text": "Tao đồng ý dùng phần có mình.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L029",
+      "speaker_id": "AN",
+      "text": "Tấm hội chợ vẫn giữ trong album như đã thống nhất, trang này dùng nguồn vừa chọn.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L030",
+      "speaker_id": "HA",
+      "text": "Ừ. Gửi tao bản chốt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L031",
+      "speaker_id": "AN",
+      "text": "Đây là bản với nguồn cũ vừa chọn, chữ chỉ ngày và tên. Hạ, Minh xem phần có mình nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L032",
+      "speaker_id": "HA",
+      "text": "Bản này tao xem được, phần của tao dùng được.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L033",
+      "speaker_id": "MINH",
+      "text": "Ừ, dùng được. Tao không ở lại xuất file tối nay, bản hướng dẫn tao gửi rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L034",
+      "speaker_id": "AN",
+      "text": "Phần của tao đồng ý. Tao xuất và gửi bản chốt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L035",
+      "speaker_id": "MINH",
+      "text": "Bản này?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L036",
+      "speaker_id": "AN",
+      "text": "Ừ, đúng bản này.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L037",
+      "speaker_id": "NARRATOR",
+      "text": "An nhìn lại tên album, xóa chữ final khỏi tên file rồi lưu bản có ngày.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L038",
+      "speaker_id": "NARRATOR",
+      "text": "An xác nhận bản vừa xem để bàn giao. Một bản trang cuối được yêu cầu lưu cùng thông tin nguồn và ngày.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L039",
+      "speaker_id": "NARRATOR",
+      "text": "An xác nhận bản vừa xem để bàn giao. Một bản trang cuối được yêu cầu lưu cùng thông tin nguồn và ngày.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L040",
+      "speaker_id": "NARRATOR",
+      "text": "An xác nhận bản vừa xem để bàn giao. Một bản trang cuối được yêu cầu lưu cùng thông tin nguồn và ngày.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L041",
+      "speaker_id": "AN",
+      "text": "Bản cảm ơn riêng trước tao dừng. Nguồn cũ vừa chọn, tao sẽ cho mày xem chữ trước khi chốt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S10_L042",
+      "speaker_id": "NHI",
+      "text": "Ừ, gửi đúng bản mới nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

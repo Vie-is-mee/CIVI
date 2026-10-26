@@ -1,0 +1,104 @@
+{
+  "scene_id": "S06",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S06_L001",
+      "speaker_id": "HA",
+      "text": "Mày nói như cả tấm này phải bỏ đi ấy.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L002",
+      "speaker_id": "HA",
+      "text": "Hôm đó tụi mình cười thật. Mày muốn tao xóa hết à?",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L003",
+      "speaker_id": "AN",
+      "text": "Tao đưa máy cho Nhi. Phần đó tao phải nói.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L004",
+      "speaker_id": "HA",
+      "text": "Ừ. Nhưng tấm này thì sao?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L005",
+      "speaker_id": "AN",
+      "text": "Mày chọn tấm không có nó thì trang mới thành thế này.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L006",
+      "speaker_id": "HA",
+      "text": "Ảnh gốc ở đây. Đừng bắt tao nhận hết chuyện mày đã quên.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L007",
+      "speaker_id": "HA",
+      "text": "Mày muốn giữ cái nào? Hay cả hai, nhưng đừng gọi chúng là cùng một chuyện.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L008",
+      "speaker_id": "AN",
+      "text": "Để nó như ảnh hội chợ ba người. Tao viết chữ, gửi mày xem lại.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L009",
+      "speaker_id": "HA",
+      "text": "Được. Tao thử bố cục một buổi. Nhưng đừng gửi mỗi chữ bỏ nữa.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L010",
+      "speaker_id": "AN",
+      "text": "Ảnh này vẫn giữ. Trang 17 thử nguồn buổi tập trước, phần chữ để tao.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L011",
+      "speaker_id": "HA",
+      "text": "Tao gửi cả hai bản. Mình thử rồi hỏi Nhi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L012",
+      "speaker_id": "HA",
+      "text": "Tao gửi đủ file. Mẫu đơn giản ở đây, phần còn lại mày làm nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L013",
+      "speaker_id": "AN",
+      "text": "Ừ. Tối tao gửi bản chốt để mọi người xem.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S06_L014",
+      "speaker_id": "HA",
+      "text": "Ảnh thì tao đưa. Nhưng tao không dàn thêm hôm nay. Muốn dùng, gửi bản chữ cuối cho tao xem.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

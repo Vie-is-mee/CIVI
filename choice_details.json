@@ -1,0 +1,3287 @@
+[
+  {
+    "scene": "E_A",
+    "step": "E_A_OPEN",
+    "choice_id": "E_A_FOUR",
+    "next": "step:E_A_CALLBACK",
+    "when": {
+      "field": "final_new_asset",
+      "op": "eq",
+      "value": "PHOTO_NEW_FOUR"
+    },
+    "dur": 0,
+    "sample_text": "Nhi nhìn nguồn cũ lâu hơn ảnh mới. Minh kéo cuốn sách về phía mình.",
+    "effects": []
+  },
+  {
+    "scene": "E_A",
+    "step": "E_A_OPEN",
+    "choice_id": "E_A_THREE",
+    "next": "step:E_A_CALLBACK",
+    "when": {
+      "field": "final_new_asset",
+      "op": "eq",
+      "value": "PHOTO_NEW_THREE"
+    },
+    "dur": 0,
+    "sample_text": "Tấm hôm thứ Sáu tao lưu riêng rồi.",
+    "effects": []
+  },
+  {
+    "scene": "E_A",
+    "step": "E_A_CALLBACK",
+    "choice_id": "E_A_CALLBACK_POSE_1",
+    "next": "end",
+    "when": {
+      "field": "opening_gesture",
+      "op": "eq",
+      "value": "pose_1"
+    },
+    "dur": 0,
+    "sample_text": "An nhìn nét chữ HẸN trong ảnh cũ, bàn tay vẫn làm sai một nét. Minh chỉ vào đúng chỗ đó rồi cười.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "finished",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "E_A",
+    "step": "E_A_CALLBACK",
+    "choice_id": "E_A_CALLBACK_POSE_2",
+    "next": "end",
+    "when": {
+      "field": "opening_gesture",
+      "op": "eq",
+      "value": "pose_2"
+    },
+    "dur": 0,
+    "sample_text": "Cuối cùng vẫn mỗi đứa nhìn một hướng.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "finished",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "E_A",
+    "step": "E_A_CALLBACK",
+    "choice_id": "E_A_CALLBACK_POSE_3",
+    "next": "end",
+    "when": {
+      "field": "opening_gesture",
+      "op": "eq",
+      "value": "pose_3"
+    },
+    "dur": 0,
+    "sample_text": "Có tấm nào tao không nhìn pin không?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "finished",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "E_B",
+    "step": "E_B_OPEN",
+    "choice_id": "E_B_SHOW",
+    "next": "step:E_B_FINISH",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Nguồn cũ này dùng được. Gửi tao bản vừa chốt nhé.",
+    "effects": []
+  },
+  {
+    "scene": "E_B",
+    "step": "E_B_FINISH",
+    "choice_id": "E_B_CLOSE",
+    "next": "end",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "An chọn bản vừa được hỏi, gửi cho Nhi. Màn hình điện thoại tắt. Tiếng quạt ngoài phòng vẫn đều.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "finished",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "E_C",
+    "step": "E_C_ARRIVE",
+    "choice_id": "E_C_HAND_OLD",
+    "next": "step:E_C_DELIVER",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Nhi kéo ảnh trên điện thoại, dừng ở nguồn cũ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "later_purpose",
+        "value": "giao tờ bổ sung từ nguồn cũ"
+      }
+    ]
+  },
+  {
+    "scene": "E_C",
+    "step": "E_C_ARRIVE",
+    "choice_id": "E_C_ASK_NEW",
+    "next": "step:E_C_CAPTURE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Máy còn hẹn giờ. Mày muốn chụp một tấm ở đây không?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "later_purpose",
+        "value": "gặp, chụp hai người và giao bổ sung"
+      }
+    ]
+  },
+  {
+    "scene": "E_C",
+    "step": "E_C_CAPTURE",
+    "choice_id": "E_C_CAPTURE",
+    "next": "step:E_C_PHOTO_RIGHTS",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Máy bíp. Nhi dời cặp sang bên, An vẫn đang bước vào khi máy chụp.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "photo_result",
+        "value": "later"
+      },
+      {
+        "op": "set",
+        "field": "captured_asset",
+        "value": "PHOTO_LATER_TWO"
+      },
+      {
+        "op": "set",
+        "field": "photo_participants",
+        "value": [
+          "AN",
+          "NHI"
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "E_C",
+    "step": "E_C_PHOTO_RIGHTS",
+    "choice_id": "E_C_LATER_USE",
+    "next": "step:E_C_PRINT",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tấm này dùng trong tờ bổ sung được không? Tao gửi bản xem rồi mới giao.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "later_photo_consent",
+        "value": "yes"
+      },
+      {
+        "op": "set",
+        "field": "final_new_asset",
+        "value": "PHOTO_LATER_TWO"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_LATER_TWO",
+        "subject_id": "AN",
+        "scope": "supplement_delivery",
+        "status": "yes",
+        "source_event_id": "E_C_LATER_USE"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_LATER_TWO",
+        "subject_id": "NHI",
+        "scope": "supplement_delivery",
+        "status": "yes",
+        "source_event_id": "E_C_LATER_USE"
+      }
+    ]
+  },
+  {
+    "scene": "E_C",
+    "step": "E_C_PHOTO_RIGHTS",
+    "choice_id": "E_C_LATER_PRIVATE",
+    "next": "step:E_C_DELIVER",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tấm mới giữ riêng thôi nhé. Tờ cũ được rồi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "later_photo_consent",
+        "value": "no"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_LATER_TWO",
+        "subject_id": "AN",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "E_C_LATER_PRIVATE"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_LATER_TWO",
+        "subject_id": "NHI",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "E_C_LATER_PRIVATE"
+      }
+    ]
+  },
+  {
+    "scene": "E_C",
+    "step": "E_C_PRINT",
+    "choice_id": "E_C_PRINT",
+    "next": "step:E_C_DELIVER",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "An mang tờ bổ sung trở lại cuộc giao đã thống nhất. Hạ và Minh nhận bản riêng qua bàn giao, không xuất hiện trong ảnh hai người.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "supplement_delivery_datetime",
+        "value": "2026-05-12T09:30:00"
+      },
+      {
+        "op": "set",
+        "field": "supplement_delivery_place",
+        "value": "cửa lớp"
+      }
+    ]
+  },
+  {
+    "scene": "E_C",
+    "step": "E_C_DELIVER",
+    "choice_id": "E_C_DELIVER",
+    "next": "step:E_C_FINISH",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tờ ảnh nằm trong cuốn sách của Nhi. Bản xem đã gửi Hạ và Minh; ảnh mới nếu có vẫn ghi đúng người hiện diện.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "supplement_delivered",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "final_artifact_requested",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "E_C",
+    "step": "E_C_FINISH",
+    "choice_id": "E_C_FINISH",
+    "next": "end",
+    "when": {
+      "field": "supplement_delivered",
+      "op": "eq",
+      "value": true
+    },
+    "dur": 0,
+    "sample_text": "Nhi vuốt phẳng mép giấy rồi khép sách. Không ai đề nghị chụp thêm một tấm cho xong chuyện.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "finished",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_MACHINE",
+    "choice_id": "S00_BOX",
+    "next": "step:S00_POSE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Để tao giữ. Mày cài tiếp đi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "opening_support",
+        "value": "self"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_MACHINE",
+    "choice_id": "S00_CLAMP",
+    "next": "step:S00_POSE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Chân kẹp tao giữ rồi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "opening_support",
+        "value": "clamp"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_MACHINE",
+    "choice_id": "S00_ASK",
+    "next": "step:S00_POSE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Mày xem kẹp được không? Tao giữ dây.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "opening_support",
+        "value": "ask"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_POSE",
+    "choice_id": "S00_POSE1",
+    "next": "step:S00_CAPTURE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao nhận chữ dễ nhất.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "opening_gesture",
+        "value": "pose_1"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_POSE",
+    "choice_id": "S00_POSE2",
+    "next": "step:S00_CAPTURE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Bên này. Minh, bên này cơ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "opening_gesture",
+        "value": "pose_2"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_POSE",
+    "choice_id": "S00_POSE3",
+    "next": "step:S00_CAPTURE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Lần này cấm nhìn pin.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "opening_gesture",
+        "value": "pose_3"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_CAPTURE",
+    "choice_id": "S00_SHOOT",
+    "next": "step:S00_ALBUM",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tiếng bíp. Hạ vẫn đang cười khi máy bấm lần thứ ba.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "opening_photos_created",
+        "value": true
+      },
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PHOTO_S00_GOOD"
+      },
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PHOTO_S00_BAD_01"
+      },
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PHOTO_S00_BAD_02"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_ALBUM",
+    "choice_id": "S00_ALBUM1",
+    "next": "step:S00_DIAGRAM",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": [
+      {
+        "op": "set",
+        "field": "album_name",
+        "value": "Một lần đủ bốn"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_ALBUM",
+    "choice_id": "S00_ALBUM2",
+    "next": "step:S00_DIAGRAM",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": [
+      {
+        "op": "set",
+        "field": "album_name",
+        "value": "Đèn chưa chịu sáng"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_ALBUM",
+    "choice_id": "S00_ALBUM3",
+    "next": "step:S00_DIAGRAM",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": [
+      {
+        "op": "set",
+        "field": "album_name",
+        "value": "Minh đừng nhìn pin"
+      }
+    ]
+  },
+  {
+    "scene": "S00",
+    "step": "S00_DIAGRAM",
+    "choice_id": "S00_KEEP",
+    "next": "scene:S01",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PROP_DIAGRAM"
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F01"
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F02"
+      }
+    ]
+  },
+  {
+    "scene": "S01",
+    "step": "S01_OPEN",
+    "choice_id": "S01_CHAT",
+    "next": "step:S01_COMPARE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Minh: “Trang chưa chốt, bỏ khỏi bản thử nhé?” Dưới đó là câu trả lời của An: “Ừ bỏ đi, mai tính”.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PROP_CHAT_REMOVE"
+      },
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PROP_PROOF_16_18"
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F03"
+      }
+    ]
+  },
+  {
+    "scene": "S01",
+    "step": "S01_COMPARE",
+    "choice_id": "S01_FIND",
+    "next": "scene:S02",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PROP_THREE_LAYOUT"
+      }
+    ]
+  },
+  {
+    "scene": "S02",
+    "step": "S02_HUB",
+    "choice_id": "S02_HELP",
+    "next": "step:S02_HUB",
+    "when": {
+      "field": "nhi_contact",
+      "op": "ne",
+      "value": "help"
+    },
+    "dur": 0,
+    "sample_text": "Hai cuộn? Cái này nữa là ba.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "nhi_contact",
+        "value": "help"
+      }
+    ]
+  },
+  {
+    "scene": "S02",
+    "step": "S02_HUB",
+    "choice_id": "S02_DIAGRAM",
+    "next": "step:S02_HUB",
+    "when": {
+      "field": "early_nhi_understanding",
+      "op": "eq",
+      "value": false
+    },
+    "dur": 0,
+    "sample_text": "Sơ đồ này mày vẽ nhỉ?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "early_nhi_understanding",
+        "value": true
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F01"
+      }
+    ]
+  },
+  {
+    "scene": "S02",
+    "step": "S02_HUB",
+    "choice_id": "S02_CLAMP",
+    "next": "step:S02_HUB",
+    "when": {
+      "not": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PROP_CLAMP"
+      }
+    },
+    "dur": 0,
+    "sample_text": "Mày sửa cái này à?",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PROP_CLAMP"
+      }
+    ]
+  },
+  {
+    "scene": "S02",
+    "step": "S02_HUB",
+    "choice_id": "S02_CLOCK",
+    "next": "step:S02_HUB",
+    "when": {
+      "not": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PROP_SCHEDULE"
+      }
+    },
+    "dur": 0,
+    "sample_text": "16:45 chụp; 17:10 Nhi đi; 17:30 tháo quầy. Sáng thứ Bảy giao file lúc 10:00.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PROP_SCHEDULE"
+      }
+    ]
+  },
+  {
+    "scene": "S02",
+    "step": "S02_HUB",
+    "choice_id": "S02_ASK_CAMERA",
+    "next": "step:S02_HUB",
+    "when": {
+      "field": "knows_handoff",
+      "op": "eq",
+      "value": false
+    },
+    "dur": 0,
+    "sample_text": "Tấm ba đứa hôm hội chợ, ai chụp ấy nhỉ?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "knows_handoff",
+        "value": true
+      },
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "TESTIMONY_NHI"
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F06"
+      }
+    ]
+  },
+  {
+    "scene": "S02",
+    "step": "S02_HUB",
+    "choice_id": "S02_CAPTION",
+    "next": "step:S02_HUB",
+    "when": {
+      "not": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PROP_CAPTION_OLD"
+      }
+    },
+    "dur": 0,
+    "sample_text": "Tao bảo sửa lời tao, không bảo xóa cả trang. Câu kia tao đâu nói thế.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PROP_CAPTION_OLD"
+      }
+    ]
+  },
+  {
+    "scene": "S02",
+    "step": "S02_HUB",
+    "choice_id": "S02_LEAVE",
+    "next": "scene:S03",
+    "when": {
+      "all": [
+        {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PROP_CLAMP"
+        },
+        {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PROP_SCHEDULE"
+        },
+        {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PROP_CAPTION_OLD"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "An ghim lịch cạnh album. Chiếc kẹp được đặt riêng trong ngăn đồ sẽ mang ra sân.",
+    "effects": []
+  },
+  {
+    "scene": "S03",
+    "step": "S03_DESK",
+    "choice_id": "S03_LOOK_0441",
+    "next": "step:S03_DESK",
+    "when": {
+      "not": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PHOTO_0441"
+      }
+    },
+    "dur": 0,
+    "sample_text": "Đèn chưa sáng. Nhi ở mép, tay cầm dây. Chưa ai nhìn vào máy.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PHOTO_0441"
+      }
+    ]
+  },
+  {
+    "scene": "S03",
+    "step": "S03_DESK",
+    "choice_id": "S03_LOOK_0442",
+    "next": "step:S03_DESK",
+    "when": {
+      "not": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PHOTO_0442"
+      }
+    },
+    "dur": 0,
+    "sample_text": "Đèn đã sáng. Ổ chia nằm trên ghế đỏ. Nhi đang nhìn sang An.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PHOTO_0442"
+      }
+    ]
+  },
+  {
+    "scene": "S03",
+    "step": "S03_DESK",
+    "choice_id": "S03_LOOK_0443",
+    "next": "step:S03_DESK",
+    "when": {
+      "not": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PHOTO_0443"
+      }
+    },
+    "dur": 0,
+    "sample_text": "Kéo tới mép ảnh. Vẫn chỉ có An, Hạ và Minh. Không có phần hình nào giấu Nhi bên ngoài.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PHOTO_0443"
+      }
+    ]
+  },
+  {
+    "scene": "S03",
+    "step": "S03_DESK",
+    "choice_id": "S03_EMPTY",
+    "next": "step:S03_DESK",
+    "when": {
+      "not": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PHOTO_CLAMP_EMPTY"
+      }
+    },
+    "dur": 0,
+    "sample_text": "Hôm tập mình dùng hẹn giờ được mà.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "PHOTO_CLAMP_EMPTY"
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F04"
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F05"
+      }
+    ]
+  },
+  {
+    "scene": "S03",
+    "step": "S03_DESK",
+    "choice_id": "S03_WHY",
+    "next": "step:S03_REASON",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tấm này vẫn là chuyện thật của tụi tao. Không phải cứ thiếu một người là hôm đó không ai được vui.",
+    "effects": []
+  },
+  {
+    "scene": "S03",
+    "step": "S03_DESK",
+    "choice_id": "S03_SOURCE",
+    "next": "scene:S04",
+    "when": {
+      "all": [
+        {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PHOTO_0441"
+        },
+        {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PHOTO_0442"
+        },
+        {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PHOTO_0443"
+        },
+        {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PHOTO_CLAMP_EMPTY"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Vy có quay ở quầy bên cạnh. Nếu em ấy cho xem thì mình đối chiếu.",
+    "effects": []
+  },
+  {
+    "scene": "S03",
+    "step": "S03_REASON",
+    "choice_id": "S03_REASON_BACK",
+    "next": "step:S03_DESK",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": []
+  },
+  {
+    "scene": "S04",
+    "step": "S04_SOURCE",
+    "choice_id": "S04_WATCH",
+    "next": "step:S04_AFTER",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Khung trước: Nhi tới muộn, túi dây nối còn trên vai. An trả lời cụt. Nhi nói gắt rồi quay sang chuyển ổ chia khỏi chỗ ướt.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "saw_video",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "knows_handoff",
+        "value": true
+      },
+      {
+        "op": "add_unique",
+        "field": "evidence_seen",
+        "value": "VIDEO_VY"
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F06"
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F07"
+      },
+      {
+        "op": "add_unique",
+        "field": "facts_discovered",
+        "value": "F08"
+      },
+      {
+        "op": "add_unique",
+        "field": "ha_shared_facts",
+        "value": "F06"
+      },
+      {
+        "op": "add_unique",
+        "field": "ha_shared_facts",
+        "value": "F07"
+      },
+      {
+        "op": "add_unique",
+        "field": "ha_shared_facts",
+        "value": "F08"
+      },
+      {
+        "op": "grant",
+        "asset_id": "VIDEO_VY",
+        "subject_id": "VY",
+        "scope": "internal_review",
+        "status": "yes",
+        "source_event_id": "S04_WATCH"
+      }
+    ]
+  },
+  {
+    "scene": "S04",
+    "step": "S04_SOURCE",
+    "choice_id": "S04_TESTIMONY",
+    "next": "step:S04_AFTER",
+    "when": {
+      "field": "knows_handoff",
+      "op": "eq",
+      "value": true
+    },
+    "dur": 0,
+    "sample_text": "Tao hỏi rồi. Nhi nói chính tao đưa máy, hẹn lát chụp đủ.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "ha_shared_facts",
+        "value": "F06"
+      }
+    ]
+  },
+  {
+    "scene": "S04",
+    "step": "S04_AFTER",
+    "choice_id": "S04_DRAFT",
+    "next": "scene:S05",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": []
+  },
+  {
+    "scene": "S05",
+    "step": "S05_TEMPLATE",
+    "choice_id": "S05_TYPE_TRIBUTE",
+    "next": "step:S05_RECIPIENT",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Hay làm một trang cảm ơn Nhi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_type",
+        "value": "tribute"
+      },
+      {
+        "op": "add_unique",
+        "field": "draft_seen_by",
+        "value": "AN"
+      }
+    ]
+  },
+  {
+    "scene": "S05",
+    "step": "S05_TEMPLATE",
+    "choice_id": "S05_TYPE_PAIRED",
+    "next": "step:S05_RECIPIENT",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao muốn giữ hai ô như sơ đồ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_type",
+        "value": "paired"
+      },
+      {
+        "op": "add_unique",
+        "field": "draft_seen_by",
+        "value": "AN"
+      }
+    ]
+  },
+  {
+    "scene": "S05",
+    "step": "S05_TEMPLATE",
+    "choice_id": "S05_TYPE_MEMORY",
+    "next": "step:S05_RECIPIENT",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Chưa có ảnh mới thì làm từ những tấm đang giữ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_type",
+        "value": "memory"
+      },
+      {
+        "op": "add_unique",
+        "field": "draft_seen_by",
+        "value": "AN"
+      }
+    ]
+  },
+  {
+    "scene": "S05",
+    "step": "S05_RECIPIENT",
+    "choice_id": "S05_SEND_NHI",
+    "next": "scene:S06",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao gửi nháp riêng. Mày xem lúc rảnh, chưa đưa đi in.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_sent_to",
+        "value": "nhi"
+      }
+    ]
+  },
+  {
+    "scene": "S05",
+    "step": "S05_RECIPIENT",
+    "choice_id": "S05_SEND_GROUP_TRIBUTE",
+    "next": "scene:S06",
+    "when": {
+      "field": "draft_type",
+      "op": "eq",
+      "value": "tribute"
+    },
+    "dur": 0,
+    "sample_text": "Mẫu này in được đấy. Tao còn giấy màu, cắt thử cái bảng nhé.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_sent_to",
+        "value": "group_four"
+      },
+      {
+        "op": "set",
+        "field": "tribute_board_prepared",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "draft_retracted",
+        "value": "no"
+      },
+      {
+        "op": "add_unique",
+        "field": "draft_seen_by",
+        "value": "HA"
+      },
+      {
+        "op": "add_unique",
+        "field": "draft_seen_by",
+        "value": "MINH"
+      }
+    ]
+  },
+  {
+    "scene": "S05",
+    "step": "S05_RECIPIENT",
+    "choice_id": "S05_SEND_GROUP_OTHER",
+    "next": "scene:S06",
+    "when": {
+      "field": "draft_type",
+      "op": "ne",
+      "value": "tribute"
+    },
+    "dur": 0,
+    "sample_text": "Tao mở được rồi. Giữ bản này để bàn, chưa chốt.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_sent_to",
+        "value": "group_four"
+      },
+      {
+        "op": "add_unique",
+        "field": "draft_seen_by",
+        "value": "HA"
+      },
+      {
+        "op": "add_unique",
+        "field": "draft_seen_by",
+        "value": "MINH"
+      }
+    ]
+  },
+  {
+    "scene": "S05",
+    "step": "S05_RECIPIENT",
+    "choice_id": "S05_HOLD",
+    "next": "scene:S06",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Để tao mang đi hỏi trước. Chưa gửi nhóm.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_sent_to",
+        "value": "held"
+      }
+    ]
+  },
+  {
+    "scene": "S06",
+    "step": "S06_TALK",
+    "choice_id": "S06_OWN",
+    "next": "step:S06_PLACE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao đưa máy cho Nhi. Phần đó tao phải nói.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "an_owned_camera_choice",
+        "value": "yes"
+      }
+    ]
+  },
+  {
+    "scene": "S06",
+    "step": "S06_TALK",
+    "choice_id": "S06_BLAME",
+    "next": "step:S06_PLACE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Mày chọn tấm không có nó thì trang mới thành thế này.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "an_owned_camera_choice",
+        "value": "deflected"
+      }
+    ]
+  },
+  {
+    "scene": "S06",
+    "step": "S06_TALK",
+    "choice_id": "S06_COMPARE",
+    "next": "step:S06_PLACE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Mày muốn giữ cái nào? Hay cả hai, nhưng đừng gọi chúng là cùng một chuyện.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "an_owned_camera_choice",
+        "value": "unresolved"
+      }
+    ]
+  },
+  {
+    "scene": "S06",
+    "step": "S06_PLACE",
+    "choice_id": "S06_KEEP_AGREE",
+    "next": "scene:S07",
+    "when": {
+      "field": "an_owned_camera_choice",
+      "op": "ne",
+      "value": "deflected"
+    },
+    "dur": 0,
+    "sample_text": "Để nó như ảnh hội chợ ba người. Tao viết chữ, gửi mày xem lại.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "photo0443_placement",
+        "value": "page17"
+      },
+      {
+        "op": "set",
+        "field": "ha_support",
+        "value": "collaborate"
+      }
+    ]
+  },
+  {
+    "scene": "S06",
+    "step": "S06_PLACE",
+    "choice_id": "S06_PRIVATE_AGREE",
+    "next": "scene:S07",
+    "when": {
+      "field": "an_owned_camera_choice",
+      "op": "ne",
+      "value": "deflected"
+    },
+    "dur": 0,
+    "sample_text": "Ảnh này vẫn giữ. Trang 17 thử nguồn buổi tập trước, phần chữ để tao.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "photo0443_placement",
+        "value": "private_album"
+      },
+      {
+        "op": "set",
+        "field": "ha_support",
+        "value": "collaborate"
+      }
+    ]
+  },
+  {
+    "scene": "S06",
+    "step": "S06_PLACE",
+    "choice_id": "S06_HANDOVER",
+    "next": "scene:S07",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao gửi đủ file. Mẫu đơn giản ở đây, phần còn lại mày làm nhé.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "photo0443_placement",
+        "value": "private_album"
+      },
+      {
+        "op": "set",
+        "field": "ha_support",
+        "value": "handover_only"
+      }
+    ]
+  },
+  {
+    "scene": "S06",
+    "step": "S06_PLACE",
+    "choice_id": "S06_KEEP_HANDOVER",
+    "next": "scene:S07",
+    "when": {
+      "field": "an_owned_camera_choice",
+      "op": "eq",
+      "value": "deflected"
+    },
+    "dur": 0,
+    "sample_text": "Ảnh thì tao đưa. Nhưng tao không dàn thêm hôm nay. Muốn dùng, gửi bản chữ cuối cho tao xem.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "photo0443_placement",
+        "value": "page17"
+      },
+      {
+        "op": "set",
+        "field": "ha_support",
+        "value": "handover_only"
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_SHOW",
+    "choice_id": "S07_SHOW_TRIBUTE",
+    "next": "step:S07_REACT",
+    "when": {
+      "field": "draft_type",
+      "op": "eq",
+      "value": "tribute"
+    },
+    "dur": 0,
+    "sample_text": "Mai khỏi làm bảng này.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "draft_seen_by",
+        "value": "NHI"
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_SHOW",
+    "choice_id": "S07_SHOW_OTHER",
+    "next": "step:S07_INVITE",
+    "when": {
+      "field": "draft_type",
+      "op": "ne",
+      "value": "tribute"
+    },
+    "dur": 0,
+    "sample_text": "Tấm hai ảnh ấy. Tao vẽ cái đó.",
+    "effects": [
+      {
+        "op": "add_unique",
+        "field": "draft_seen_by",
+        "value": "NHI"
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_REACT",
+    "choice_id": "S07_STOP_SENT",
+    "next": "step:S07_INVITE",
+    "when": {
+      "field": "draft_sent_to",
+      "op": "eq",
+      "value": "group_four"
+    },
+    "dur": 0,
+    "sample_text": "Bản cảm ơn dừng nhé. Hạ, Minh đừng chuẩn bị theo bản đó nữa. Tao đổi sang trang ký ức.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_type",
+        "value": "memory"
+      },
+      {
+        "op": "set",
+        "field": "draft_version",
+        "value": 2
+      },
+      {
+        "op": "set",
+        "field": "draft_retracted",
+        "value": "yes"
+      },
+      {
+        "op": "add_unique",
+        "field": "retraction_notified_to",
+        "value": "NHI"
+      },
+      {
+        "op": "add_unique",
+        "field": "retraction_notified_to",
+        "value": "HA"
+      },
+      {
+        "op": "add_unique",
+        "field": "retraction_notified_to",
+        "value": "MINH"
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_REACT",
+    "choice_id": "S07_STOP_PRIVATE",
+    "next": "step:S07_INVITE",
+    "when": {
+      "field": "draft_sent_to",
+      "op": "ne",
+      "value": "group_four"
+    },
+    "dur": 0,
+    "sample_text": "Ừ, tao dừng bản này. Để tao làm theo hai ô rồi hỏi mọi người.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_type",
+        "value": "paired"
+      },
+      {
+        "op": "set",
+        "field": "draft_version",
+        "value": 2
+      },
+      {
+        "op": "set",
+        "field": "draft_retracted",
+        "value": "yes"
+      },
+      {
+        "op": "add_unique",
+        "field": "retraction_notified_to",
+        "value": "NHI"
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_REACT",
+    "choice_id": "S07_INSIST",
+    "next": "step:S07_INVITE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Nhưng mọi người đang làm vì mày mà.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "invite_pressure",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "nhi_invite_status",
+        "value": "declined"
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_REACT",
+    "choice_id": "S07_DISCUSS_AT_FIELD",
+    "next": "step:S07_INVITE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao biết mày không muốn bảng đó. Tao sẽ nói rõ ở sân, chưa dùng vào ảnh.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "invite_pressure",
+        "value": false
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_INVITE",
+    "choice_id": "S07_INVITE_CLEAR",
+    "next": "step:S07_OLD_RIGHTS",
+    "when": {
+      "field": "invite_pressure",
+      "op": "eq",
+      "value": false
+    },
+    "dur": 0,
+    "sample_text": "Mai 16:45 chụp cùng nhé? Tao lo máy hẹn giờ, không cần đứng y hệt tấm cũ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "nhi_invite_status",
+        "value": "accepted"
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_INVITE",
+    "choice_id": "S07_ASK_AVAILABILITY",
+    "next": "step:S07_OLD_RIGHTS",
+    "when": {
+      "field": "invite_pressure",
+      "op": "eq",
+      "value": false
+    },
+    "dur": 0,
+    "sample_text": "Mai mày có thu xếp ra sân được không? Không kịp thì mình tính trang từ ảnh cũ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "nhi_invite_status",
+        "value": "declined"
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_INVITE",
+    "choice_id": "S07_INVITE_SHORT",
+    "next": "step:S07_OLD_RIGHTS",
+    "when": {
+      "field": "invite_pressure",
+      "op": "eq",
+      "value": false
+    },
+    "dur": 0,
+    "sample_text": "Mai ra chụp nhé? Tao gửi giờ trong nhóm, xem lịch rồi báo tao.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "nhi_invite_status",
+        "value": "pending"
+      }
+    ]
+  },
+  {
+    "scene": "S07",
+    "step": "S07_INVITE",
+    "choice_id": "S07_ACCEPT_DECLINE",
+    "next": "step:S07_OLD_RIGHTS",
+    "when": {
+      "field": "invite_pressure",
+      "op": "eq",
+      "value": true
+    },
+    "dur": 0,
+    "sample_text": "Ừ. Tao không nhắn mày ra nữa. Còn phần ảnh cũ, cho tao hỏi rõ.",
+    "effects": []
+  },
+  {
+    "scene": "S07",
+    "step": "S07_OLD_RIGHTS",
+    "choice_id": "S07_OLD_OK",
+    "next": "scene:S08",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": [
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_S00_GOOD",
+        "subject_id": "NHI",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S07_OLD_OK"
+      }
+    ]
+  },
+  {
+    "scene": "S08",
+    "step": "S08_ASSIGN",
+    "choice_id": "S08_ASSIGN",
+    "next": "step:S08_PRINT",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Máy và bản xuất để tao. Minh đưa pin trước, tối kiểm giúp một lượt nếu kịp thôi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "support_plan",
+        "value": "assigned"
+      },
+      {
+        "op": "set",
+        "field": "export_owner",
+        "value": "AN"
+      }
+    ]
+  },
+  {
+    "scene": "S08",
+    "step": "S08_ASSIGN",
+    "choice_id": "S08_ASSUME",
+    "next": "step:S08_PRINT",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao tưởng mọi người lo như cũ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "support_plan",
+        "value": "assumed"
+      },
+      {
+        "op": "set",
+        "field": "export_owner",
+        "value": "AN"
+      }
+    ]
+  },
+  {
+    "scene": "S08",
+    "step": "S08_PRINT",
+    "choice_id": "S08_NORMAL",
+    "next": "step:S08_CHECK",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Cứ lịch thường. Thiếu ảnh mới thì tao làm từ ảnh cũ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "print_slot",
+        "value": "normal"
+      }
+    ]
+  },
+  {
+    "scene": "S08",
+    "step": "S08_PRINT",
+    "choice_id": "S08_EXTEND",
+    "next": "step:S08_CHECK",
+    "when": {
+      "field": "courtyard_minute",
+      "op": "lt",
+      "value": 60
+    },
+    "dur": 0,
+    "sample_text": "Nếu cần, bọn em giao trước 12:00 thứ Bảy được không?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "print_slot",
+        "value": "extended"
+      },
+      {
+        "op": "set",
+        "field": "extension_confirmed",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "S08",
+    "step": "S08_CHECK",
+    "choice_id": "S08_READY",
+    "next": "step:S08_ROUTE",
+    "when": {
+      "all": []
+    },
+    "dur": 5,
+    "sample_text": "An kê thêm miếng cao su, thử hẹn giờ. Máy đứng vững.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "equipment_ready",
+        "value": "ready"
+      },
+      {
+        "op": "advance_minutes",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "scene": "S08",
+    "step": "S08_CHECK",
+    "choice_id": "S08_REPAIR_LATER",
+    "next": "step:S08_ROUTE",
+    "when": {
+      "all": []
+    },
+    "dur": 5,
+    "sample_text": "Túi máy đủ đồ. Kẹp chưa thử xong; lúc chụp cần kê lại hoặc đổi chỗ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "equipment_ready",
+        "value": "repairable"
+      },
+      {
+        "op": "advance_minutes",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "scene": "S08",
+    "step": "S08_ROUTE",
+    "choice_id": "S08_ARRIVE",
+    "next": "scene:S09_A",
+    "when": {
+      "field": "nhi_invite_status",
+      "op": "eq",
+      "value": "accepted"
+    },
+    "dur": 0,
+    "sample_text": "Nhi đặt cặp cạnh ghế, nhìn đồng hồ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "attendance",
+        "value": "present"
+      },
+      {
+        "op": "set",
+        "field": "nhi_wants_capture",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "S08",
+    "step": "S08_ROUTE",
+    "choice_id": "S08_ABSENT",
+    "next": "scene:S09_B",
+    "when": {
+      "field": "nhi_invite_status",
+      "op": "ne",
+      "value": "accepted"
+    },
+    "dur": 0,
+    "sample_text": "Hạ đặt pin lên quầy. Tin nhắn không có câu nhận lời mới. Chỗ cạnh máy vẫn trống.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "attendance",
+        "value": "absent"
+      },
+      {
+        "op": "set",
+        "field": "nhi_wants_capture",
+        "value": false
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_BOARD",
+    "choice_id": "S09_A_REMOVE_BOARD",
+    "next": "step:S09_A_FRAME",
+    "when": {
+      "all": [
+        {
+          "field": "tribute_board_prepared",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "tribute_board_removed",
+          "op": "eq",
+          "value": false
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Bản này dừng rồi. Tao cất bảng đi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "tribute_board_removed",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_BOARD",
+    "choice_id": "S09_A_LEAVE_BOARD",
+    "next": "step:S09_A_LEAVE",
+    "when": {
+      "all": [
+        {
+          "field": "tribute_board_prepared",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "tribute_board_removed",
+          "op": "eq",
+          "value": false
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Cầm thử một tấm thôi được không?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "nhi_wants_capture",
+        "value": false
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_BOARD",
+    "choice_id": "S09_A_NO_BOARD",
+    "next": "step:S09_A_FRAME",
+    "when": {
+      "any": [
+        {
+          "field": "tribute_board_prepared",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "field": "tribute_board_removed",
+          "op": "eq",
+          "value": true
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Tấm hội chợ vẫn giữ nhé.",
+    "effects": []
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_FRAME",
+    "choice_id": "S09_A_OPEN_FRAME",
+    "next": "step:S09_A_CAMERA",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Không cần giống tấm trước. Mày đứng đâu tiện thì đứng.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "framing",
+        "value": "open"
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_FRAME",
+    "choice_id": "S09_A_OLD_POSE",
+    "next": "step:S09_A_REFUSE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Nhi sang phải chút, đúng chỗ trong ảnh trước.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "framing",
+        "value": "forced"
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_FRAME",
+    "choice_id": "S09_A_CHECK_SCOPE",
+    "next": "step:S09_A_CAMERA",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Mình chụp một tấm rồi cả nhóm xem. Chưa ai đồng ý thì chưa đưa vào trang.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "framing",
+        "value": "open"
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_REFUSE",
+    "choice_id": "S09_A_CHANGE_FRAME",
+    "next": "step:S09_A_CAMERA",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "An kéo băng đánh dấu khỏi sàn.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "framing",
+        "value": "open"
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_REFUSE",
+    "choice_id": "S09_A_STOP_FRAME",
+    "next": "step:S09_A_LEAVE",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Thôi, hôm nay không chụp chung nữa.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "nhi_wants_capture",
+        "value": false
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_CAMERA",
+    "choice_id": "S09_A_FIX",
+    "next": "step:S09_A_CAPTURE",
+    "when": {
+      "field": "equipment_ready",
+      "op": "eq",
+      "value": "repairable"
+    },
+    "dur": 4,
+    "sample_text": "Dây để tao giữ. Minh nhìn giúp máy có nghiêng không?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "equipment_ready",
+        "value": "ready"
+      },
+      {
+        "op": "advance_minutes",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_CAMERA",
+    "choice_id": "S09_A_MOUNT",
+    "next": "step:S09_A_CAPTURE",
+    "when": {
+      "field": "equipment_ready",
+      "op": "eq",
+      "value": "ready"
+    },
+    "dur": 0,
+    "sample_text": "An đặt máy vào kẹp, kéo dây gọn rồi bước thử vào khung.",
+    "effects": []
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_CAMERA",
+    "choice_id": "S09_A_REBUILD",
+    "next": "step:S09_A_LEAVE",
+    "when": {
+      "all": []
+    },
+    "dur": 25,
+    "sample_text": "16:45 đã qua. Khi An kê xong tấm bảng, Nhi đeo cặp lên.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "attendance",
+        "value": "left"
+      },
+      {
+        "op": "set",
+        "field": "nhi_wants_capture",
+        "value": false
+      },
+      {
+        "op": "advance_minutes",
+        "value": 25
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_CAPTURE",
+    "choice_id": "S09_A_CAPTURE",
+    "next": "step:S09_A_RIGHTS",
+    "when": {
+      "all": [
+        {
+          "field": "attendance",
+          "op": "eq",
+          "value": "present"
+        },
+        {
+          "field": "nhi_wants_capture",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "courtyard_minute",
+          "op": "lt",
+          "value": 70
+        },
+        {
+          "field": "equipment_ready",
+          "op": "eq",
+          "value": "ready"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Bíp rồi, đừng nhìn tao nữa, nhìn máy.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "photo_result",
+        "value": "four"
+      },
+      {
+        "op": "set",
+        "field": "captured_asset",
+        "value": "PHOTO_NEW_FOUR"
+      },
+      {
+        "op": "set",
+        "field": "photo_participants",
+        "value": [
+          "AN",
+          "NHI",
+          "HA",
+          "MINH"
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_CAPTURE",
+    "choice_id": "S09_A_TIMEOUT",
+    "next": "step:S09_A_LEAVE",
+    "when": {
+      "any": [
+        {
+          "field": "courtyard_minute",
+          "op": "gte",
+          "value": 70
+        },
+        {
+          "field": "attendance",
+          "op": "ne",
+          "value": "present"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Tao phải đi rồi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "attendance",
+        "value": "left"
+      },
+      {
+        "op": "set",
+        "field": "nhi_wants_capture",
+        "value": false
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_RIGHTS",
+    "choice_id": "S09_A_USE_PHOTO",
+    "next": "step:S09_A_PACK",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Phần có tao in được, giữ album riêng cũng được.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "nhi_photo_consent",
+        "value": "yes"
+      },
+      {
+        "op": "set",
+        "field": "private_photo_allowed",
+        "value": true
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "AN",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S09_A_USE_PHOTO"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "NHI",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S09_A_USE_PHOTO"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "HA",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S09_A_USE_PHOTO"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "MINH",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S09_A_USE_PHOTO"
+      },
+      {
+        "op": "set",
+        "field": "new_photo_print_allowed",
+        "value": true
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "AN",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_A_USE_PHOTO"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "NHI",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_A_USE_PHOTO"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "HA",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_A_USE_PHOTO"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "MINH",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_A_USE_PHOTO"
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_RIGHTS",
+    "choice_id": "S09_A_PRIVATE_ONLY",
+    "next": "step:S09_A_PACK",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tấm này tao chưa muốn đưa vào kỷ yếu. Giữ trong album riêng thôi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "nhi_photo_consent",
+        "value": "no"
+      },
+      {
+        "op": "set",
+        "field": "private_photo_allowed",
+        "value": true
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "AN",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_A_PRIVATE_ONLY"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "NHI",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_A_PRIVATE_ONLY"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "HA",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_A_PRIVATE_ONLY"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "MINH",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_A_PRIVATE_ONLY"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_FOUR",
+        "subject_id": "NHI",
+        "scope": "yearbook_print",
+        "status": "no",
+        "source_event_id": "S09_A_PRIVATE_ONLY"
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_PACK",
+    "choice_id": "S09_A_PACK",
+    "next": "scene:S10",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "An tháo máy. Minh cất pin vào túi đã ghi tên. Vy nhận lại kẹp, Hạ giữ file ảnh.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "equipment_packed",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "attendance",
+        "value": "left"
+      }
+    ]
+  },
+  {
+    "scene": "S09_A",
+    "step": "S09_A_LEAVE",
+    "choice_id": "S09_A_TO_ABSENT",
+    "next": "scene:S09_B",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Nhi khoác cặp đi về phía chỗ trả đồ. An đặt máy xuống, nhìn Hạ và Minh.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "attendance",
+        "value": "left"
+      },
+      {
+        "op": "set",
+        "field": "nhi_wants_capture",
+        "value": false
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_DECIDE",
+    "choice_id": "S09_B_THREE",
+    "next": "step:S09_B_THREE",
+    "when": {
+      "field": "courtyard_minute",
+      "op": "lt",
+      "value": 90
+    },
+    "dur": 0,
+    "sample_text": "Chụp một tấm của ba đứa đang ở đây. Không gọi là đủ bốn.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "absence_choice",
+        "value": "three"
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_DECIDE",
+    "choice_id": "S09_B_NO_PHOTO",
+    "next": "step:S09_B_PACK",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Thôi, hôm nay cất máy. Tao giữ sơ đồ, làm trang từ nguồn cũ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "absence_choice",
+        "value": "none"
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_DECIDE",
+    "choice_id": "S09_B_LATER",
+    "next": "step:S09_B_LATER",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao hỏi một buổi khác, ai được thì gặp. Chưa có trả lời thì hôm nay mình vẫn cất đồ.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "absence_choice",
+        "value": "later"
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_THREE",
+    "choice_id": "S09_B_TAKE_THREE",
+    "next": "step:S09_B_THREE_RIGHTS",
+    "when": {
+      "field": "courtyard_minute",
+      "op": "lt",
+      "value": 86
+    },
+    "dur": 4,
+    "sample_text": "An kéo ghế thừa ra khỏi khung rồi chạy vào. Minh vừa nhìn pin thì máy bấm.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "equipment_ready",
+        "value": "ready"
+      },
+      {
+        "op": "set",
+        "field": "photo_result",
+        "value": "three"
+      },
+      {
+        "op": "set",
+        "field": "captured_asset",
+        "value": "PHOTO_NEW_THREE"
+      },
+      {
+        "op": "set",
+        "field": "photo_participants",
+        "value": [
+          "AN",
+          "HA",
+          "MINH"
+        ]
+      },
+      {
+        "op": "advance_minutes",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_THREE",
+    "choice_id": "S09_B_TOO_LATE",
+    "next": "step:S09_B_PACK",
+    "when": {
+      "field": "courtyard_minute",
+      "op": "gte",
+      "value": 86
+    },
+    "dur": 0,
+    "sample_text": "Sắp tháo quầy rồi, em nhận lại kẹp nhé.",
+    "effects": []
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_THREE_RIGHTS",
+    "choice_id": "S09_B_THREE_PRINT",
+    "next": "step:S09_B_PACK",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Dùng tấm này trong trang và album riêng được. Ghi đúng hôm nay và ba người nhé.",
+    "effects": [
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_THREE",
+        "subject_id": "AN",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S09_B_THREE_PRINT"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_THREE",
+        "subject_id": "HA",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S09_B_THREE_PRINT"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_THREE",
+        "subject_id": "MINH",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S09_B_THREE_PRINT"
+      },
+      {
+        "op": "set",
+        "field": "private_photo_allowed",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "new_photo_print_allowed",
+        "value": true
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_THREE",
+        "subject_id": "AN",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_B_THREE_PRINT"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_THREE",
+        "subject_id": "HA",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_B_THREE_PRINT"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_THREE",
+        "subject_id": "MINH",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_B_THREE_PRINT"
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_THREE_RIGHTS",
+    "choice_id": "S09_B_THREE_PRIVATE",
+    "next": "step:S09_B_PACK",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Mình giữ riêng tấm này nhé. Trang 17 tao dùng ảnh cũ.",
+    "effects": [
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_THREE",
+        "subject_id": "AN",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_B_THREE_PRIVATE"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_THREE",
+        "subject_id": "HA",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_B_THREE_PRIVATE"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_NEW_THREE",
+        "subject_id": "MINH",
+        "scope": "private_album",
+        "status": "yes",
+        "source_event_id": "S09_B_THREE_PRIVATE"
+      },
+      {
+        "op": "set",
+        "field": "private_photo_allowed",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_LATER",
+    "choice_id": "S09_B_LATER_CLEAR",
+    "next": "step:S09_B_PACK",
+    "when": {
+      "field": "invite_pressure",
+      "op": "eq",
+      "value": false
+    },
+    "dur": 0,
+    "sample_text": "Thứ Hai 11/05, 16:30 ở ghế đá được không? Tao mang ảnh cũ với tờ bổ sung, không bắt buộc chụp.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "later_status",
+        "value": "accepted"
+      },
+      {
+        "op": "set",
+        "field": "later_datetime",
+        "value": "2026-05-11T16:30:00"
+      },
+      {
+        "op": "set",
+        "field": "later_place",
+        "value": "ghế đá sân trường"
+      },
+      {
+        "op": "set",
+        "field": "later_purpose",
+        "value": "xem ảnh và giao tờ bổ sung"
+      },
+      {
+        "op": "set",
+        "field": "later_participants",
+        "value": [
+          "AN",
+          "NHI"
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_LATER",
+    "choice_id": "S09_B_LATER_PENDING",
+    "next": "step:S09_B_PACK",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tuần sau mày muốn nhận ảnh lúc nào thì báo tao nhé. Không cần ra chụp.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "later_status",
+        "value": "pending"
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_LATER",
+    "choice_id": "S09_B_LATER_REFUSED",
+    "next": "step:S09_B_PACK",
+    "when": {
+      "field": "invite_pressure",
+      "op": "eq",
+      "value": true
+    },
+    "dur": 0,
+    "sample_text": "Tuần sau mình gặp để tao nói rõ hơn nhé?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "later_status",
+        "value": "declined"
+      }
+    ]
+  },
+  {
+    "scene": "S09_B",
+    "step": "S09_B_PACK",
+    "choice_id": "S09_B_PACK",
+    "next": "scene:S10",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "An gỡ bản dựng ba vị trí, cuộn dây, trả kẹp cho Vy. Sơ đồ bốn tên được đặt trong túi bìa.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "equipment_packed",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "tribute_board_removed",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_WORK",
+    "choice_id": "S10_WITH_HA",
+    "next": "step:S10_NOTICE",
+    "when": {
+      "field": "ha_support",
+      "op": "eq",
+      "value": "collaborate"
+    },
+    "dur": 0,
+    "sample_text": "Tao làm phần ảnh. Phần chữ mày tự chốt rồi gửi xem lại.",
+    "effects": []
+  },
+  {
+    "scene": "S10",
+    "step": "S10_WORK",
+    "choice_id": "S10_ALONE",
+    "next": "step:S10_NOTICE",
+    "when": {
+      "field": "ha_support",
+      "op": "eq",
+      "value": "handover_only"
+    },
+    "dur": 0,
+    "sample_text": "An mở mẫu một trang, kéo ảnh vào đúng ô. File Hạ bàn giao vẫn đủ.",
+    "effects": []
+  },
+  {
+    "scene": "S10",
+    "step": "S10_NOTICE",
+    "choice_id": "S10_STOP_REMAINING",
+    "next": "step:S10_OLD",
+    "when": {
+      "all": [
+        {
+          "field": "draft_type",
+          "op": "eq",
+          "value": "tribute"
+        },
+        {
+          "field": "draft_retracted",
+          "op": "ne",
+          "value": "yes"
+        },
+        {
+          "field": "draft_sent_to",
+          "op": "eq",
+          "value": "group_four"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Bản cảm ơn trước dừng nhé. Trang này không dùng câu đó hay bảng đó. Người đã xem nhận giúp tao bản mới.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_retracted",
+        "value": "yes"
+      },
+      {
+        "op": "set",
+        "field": "draft_version",
+        "value": 2
+      },
+      {
+        "op": "set",
+        "field": "tribute_board_removed",
+        "value": true
+      },
+      {
+        "op": "add_unique",
+        "field": "retraction_notified_to",
+        "value": "NHI"
+      },
+      {
+        "op": "add_unique",
+        "field": "retraction_notified_to",
+        "value": "HA"
+      },
+      {
+        "op": "add_unique",
+        "field": "retraction_notified_to",
+        "value": "MINH"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_NOTICE",
+    "choice_id": "S10_NOTICE_OK",
+    "next": "step:S10_OLD",
+    "when": {
+      "any": [
+        {
+          "field": "draft_type",
+          "op": "ne",
+          "value": "tribute"
+        },
+        {
+          "field": "draft_retracted",
+          "op": "eq",
+          "value": "yes"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Bản hiện tại được mở cạnh lịch giao sách; bản cũ vẫn nằm trong lịch sử.",
+    "effects": []
+  },
+  {
+    "scene": "S10",
+    "step": "S10_NOTICE",
+    "choice_id": "S10_STOP_PRIVATE_REMAINING",
+    "next": "step:S10_OLD",
+    "when": {
+      "all": [
+        {
+          "field": "draft_type",
+          "op": "eq",
+          "value": "tribute"
+        },
+        {
+          "field": "draft_retracted",
+          "op": "ne",
+          "value": "yes"
+        },
+        {
+          "field": "draft_sent_to",
+          "op": "ne",
+          "value": "group_four"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Bản cảm ơn riêng trước tao dừng. Nguồn cũ vừa chọn, tao sẽ cho mày xem chữ trước khi chốt.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "draft_retracted",
+        "value": "yes"
+      },
+      {
+        "op": "set",
+        "field": "draft_version",
+        "value": 2
+      },
+      {
+        "op": "set",
+        "field": "tribute_board_removed",
+        "value": true
+      },
+      {
+        "op": "add_unique",
+        "field": "retraction_notified_to",
+        "value": "NHI"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_OLD",
+    "choice_id": "S10_OLD_1",
+    "next": "step:S10_NEW",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao giữ tấm đủ bốn đã hỏi mày, đúng ảnh này trong trang.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "final_old_asset",
+        "value": "PHOTO_S00_GOOD"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_S00_GOOD",
+        "subject_id": "NHI",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S10_OLD_1"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_OLD",
+    "choice_id": "S10_OLD_2",
+    "next": "step:S10_NEW",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Còn tấm đèn tắt này, để trong trang 17 được không?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "final_old_asset",
+        "value": "PHOTO_S00_BAD_01"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_S00_BAD_01",
+        "subject_id": "NHI",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S10_OLD_2"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_OLD",
+    "choice_id": "S10_OLD_3",
+    "next": "step:S10_NEW",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao muốn dùng tấm Minh cúi xuống này. Mày xem nhé?",
+    "effects": [
+      {
+        "op": "set",
+        "field": "final_old_asset",
+        "value": "PHOTO_S00_BAD_02"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_S00_BAD_02",
+        "subject_id": "NHI",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S10_OLD_3"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_OLD",
+    "choice_id": "S10_OLD_4",
+    "next": "step:S10_NEW",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Dùng sơ đồ mày vẽ như một bản nháp cũ được không? Không coi ô trống là lời trách ai.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "final_old_asset",
+        "value": "PROP_DIAGRAM"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PROP_DIAGRAM",
+        "subject_id": "NHI",
+        "scope": "yearbook_print",
+        "status": "yes",
+        "source_event_id": "S10_OLD_4"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_NEW",
+    "choice_id": "S10_NEW_FOUR",
+    "next": "step:S10_0443",
+    "when": {
+      "all": [
+        {
+          "field": "captured_asset",
+          "op": "eq",
+          "value": "PHOTO_NEW_FOUR"
+        },
+        {
+          "field": "nhi_photo_consent",
+          "op": "eq",
+          "value": "yes"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Nguồn cũ bên trái, ảnh 08/05 gồm An, Nhi, Hạ, Minh bên phải. Caption ghi đúng ngày và người.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "final_mode",
+        "value": "new"
+      },
+      {
+        "op": "set",
+        "field": "final_new_asset",
+        "value": "PHOTO_NEW_FOUR"
+      },
+      {
+        "op": "set",
+        "field": "final_scope",
+        "value": "yearbook_print"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_NEW",
+    "choice_id": "S10_NEW_THREE",
+    "next": "step:S10_0443",
+    "when": {
+      "all": [
+        {
+          "field": "captured_asset",
+          "op": "eq",
+          "value": "PHOTO_NEW_THREE"
+        },
+        {
+          "field": "new_photo_print_allowed",
+          "op": "eq",
+          "value": true
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "Ảnh mới ghi An, Hạ, Minh; không gọi là ảnh đủ bốn hay gán lời cho Nhi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "final_mode",
+        "value": "new"
+      },
+      {
+        "op": "set",
+        "field": "final_new_asset",
+        "value": "PHOTO_NEW_THREE"
+      },
+      {
+        "op": "set",
+        "field": "final_scope",
+        "value": "yearbook_print"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_NEW",
+    "choice_id": "S10_ONLY_OLD",
+    "next": "step:S10_0443",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "An bỏ ô chờ, nới nguồn cũ ra. Nếu có ảnh mới giữ riêng, nó vẫn còn trong album đúng phạm vi.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "final_mode",
+        "value": "old"
+      },
+      {
+        "op": "set",
+        "field": "final_new_asset",
+        "value": ""
+      },
+      {
+        "op": "set",
+        "field": "final_scope",
+        "value": "yearbook_print"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_NEW",
+    "choice_id": "S10_SUPPLEMENT",
+    "next": "step:S10_0443",
+    "when": {
+      "field": "later_status",
+      "op": "eq",
+      "value": "accepted"
+    },
+    "dur": 0,
+    "sample_text": "Sách chính để trang thông báo bổ sung phát riêng. Tờ ảnh này tao mang tới buổi đã hẹn, mọi người xem trước nhé.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "final_mode",
+        "value": "supplement"
+      },
+      {
+        "op": "set",
+        "field": "final_new_asset",
+        "value": ""
+      },
+      {
+        "op": "grant",
+        "asset_field": "final_old_asset",
+        "subject_id": "NHI",
+        "scope": "supplement_delivery",
+        "status": "yes",
+        "source_event_id": "S10_SUPPLEMENT"
+      },
+      {
+        "op": "set",
+        "field": "supplement_delivery_datetime",
+        "value": "2026-05-11T16:30:00"
+      },
+      {
+        "op": "set",
+        "field": "supplement_delivery_place",
+        "value": "ghế đá sân trường"
+      },
+      {
+        "op": "set",
+        "field": "final_scope",
+        "value": "supplement_delivery"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_0443",
+    "choice_id": "S10_ADD_0443",
+    "next": "step:S10_RIGHTS",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tao đặt tấm hội chợ ở góc này, đúng ba tên và ngày tháng Mười.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "use_0443",
+        "value": true
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_0443",
+        "subject_id": "AN",
+        "status": "yes",
+        "source_event_id": "S10_ADD_0443",
+        "scope_field": "final_scope"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_0443",
+        "subject_id": "HA",
+        "status": "yes",
+        "source_event_id": "S10_ADD_0443",
+        "scope_field": "final_scope"
+      },
+      {
+        "op": "grant",
+        "asset_id": "PHOTO_0443",
+        "subject_id": "MINH",
+        "status": "yes",
+        "source_event_id": "S10_ADD_0443",
+        "scope_field": "final_scope"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_0443",
+    "choice_id": "S10_KEEP_0443_PRIVATE",
+    "next": "step:S10_RIGHTS",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "Tấm hội chợ vẫn giữ trong album như đã thống nhất, trang này dùng nguồn vừa chọn.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "use_0443",
+        "value": false
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_RIGHTS",
+    "choice_id": "S10_RIGHTS_OK",
+    "next": "step:S10_PREVIEW",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": [
+      {
+        "op": "grant",
+        "asset_field": "final_old_asset",
+        "subject_id": "AN",
+        "status": "yes",
+        "source_event_id": "S10_RIGHTS_OK",
+        "scope_field": "final_scope"
+      },
+      {
+        "op": "grant",
+        "asset_field": "final_old_asset",
+        "subject_id": "HA",
+        "status": "yes",
+        "source_event_id": "S10_RIGHTS_OK",
+        "scope_field": "final_scope"
+      },
+      {
+        "op": "grant",
+        "asset_field": "final_old_asset",
+        "subject_id": "MINH",
+        "status": "yes",
+        "source_event_id": "S10_RIGHTS_OK",
+        "scope_field": "final_scope"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_PREVIEW",
+    "choice_id": "S10_PREVIEW",
+    "next": "step:S10_PUBLISH",
+    "when": {
+      "all": []
+    },
+    "dur": 0,
+    "sample_text": "",
+    "effects": [
+      {
+        "op": "set",
+        "field": "page_previewed",
+        "value": true
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_PUBLISH",
+    "choice_id": "S10_PUBLISH_NEW",
+    "next": "scene:E_A",
+    "when": {
+      "all": [
+        {
+          "field": "page_previewed",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "final_mode",
+          "op": "eq",
+          "value": "new"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "An xác nhận bản vừa xem để bàn giao. Một bản trang cuối được yêu cầu lưu cùng thông tin nguồn và ngày.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "print_submitted",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "final_artifact_requested",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "ending_id",
+        "value": "E_A"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_PUBLISH",
+    "choice_id": "S10_PUBLISH_OLD",
+    "next": "scene:E_B",
+    "when": {
+      "all": [
+        {
+          "field": "page_previewed",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "final_mode",
+          "op": "eq",
+          "value": "old"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "An xác nhận bản vừa xem để bàn giao. Một bản trang cuối được yêu cầu lưu cùng thông tin nguồn và ngày.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "print_submitted",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "final_artifact_requested",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "ending_id",
+        "value": "E_B"
+      }
+    ]
+  },
+  {
+    "scene": "S10",
+    "step": "S10_PUBLISH",
+    "choice_id": "S10_PUBLISH_SUPPLEMENT",
+    "next": "scene:E_C",
+    "when": {
+      "all": [
+        {
+          "field": "page_previewed",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "final_mode",
+          "op": "eq",
+          "value": "supplement"
+        }
+      ]
+    },
+    "dur": 0,
+    "sample_text": "An xác nhận bản vừa xem để bàn giao. Một bản trang cuối được yêu cầu lưu cùng thông tin nguồn và ngày.",
+    "effects": [
+      {
+        "op": "set",
+        "field": "print_submitted",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "final_artifact_requested",
+        "value": true
+      },
+      {
+        "op": "set",
+        "field": "ending_id",
+        "value": "E_C"
+      }
+    ]
+  }
+]

@@ -1,0 +1,795 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S10",
+  "title": "Trang nào được giữ",
+  "source_pages": [
+    12,
+    13,
+    14,
+    19
+  ],
+  "background_id": "BG_DESIGN_ROOM",
+  "entry_step": "S10_WORK",
+  "asset_ids": [
+    "PHOTO_S00_GOOD",
+    "PHOTO_S00_BAD_01",
+    "PHOTO_S00_BAD_02",
+    "PROP_DIAGRAM",
+    "PHOTO_0443",
+    "PHOTO_NEW_FOUR",
+    "PHOTO_NEW_THREE",
+    "PAGE17_FINAL"
+  ],
+  "production_notes": "Tối thứ Sáu. Mọi nguồn được hỏi đúng scope. Người chơi nhìn đúng trang, lịch và phần còn chờ trước chốt. Không chấm điểm.",
+  "steps": [
+    {
+      "step_id": "S10_WORK",
+      "stage_direction": "File gốc mở được dù Hạ không giúp dàn thêm.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S10_WITH_HA",
+          "label": "Cùng Hạ đặt ảnh vào mẫu",
+          "when": {
+            "field": "ha_support",
+            "op": "eq",
+            "value": "collaborate"
+          },
+          "lines": [
+            "S10_L001",
+            "S10_L002"
+          ],
+          "effects": [],
+          "next": "step:S10_NOTICE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_ALONE",
+          "label": "An mở mẫu đơn giản và tự dàn",
+          "when": {
+            "field": "ha_support",
+            "op": "eq",
+            "value": "handover_only"
+          },
+          "lines": [
+            "S10_L003",
+            "S10_L004"
+          ],
+          "effects": [],
+          "next": "step:S10_NOTICE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S10_NOTICE",
+      "stage_direction": "Kiểm việc dừng bản tôn vinh. Một phiên bản mới không xóa người đã thấy phiên bản cũ.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S10_STOP_REMAINING",
+          "label": "Báo dừng nháp cảm ơn còn chưa xử lý",
+          "when": {
+            "all": [
+              {
+                "field": "draft_type",
+                "op": "eq",
+                "value": "tribute"
+              },
+              {
+                "field": "draft_retracted",
+                "op": "ne",
+                "value": "yes"
+              },
+              {
+                "field": "draft_sent_to",
+                "op": "eq",
+                "value": "group_four"
+              }
+            ]
+          },
+          "lines": [
+            "S10_L005",
+            "S10_L006",
+            "S10_L007",
+            "S10_L008"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_retracted",
+              "value": "yes"
+            },
+            {
+              "op": "set",
+              "field": "draft_version",
+              "value": 2
+            },
+            {
+              "op": "set",
+              "field": "tribute_board_removed",
+              "value": true
+            },
+            {
+              "op": "add_unique",
+              "field": "retraction_notified_to",
+              "value": "NHI"
+            },
+            {
+              "op": "add_unique",
+              "field": "retraction_notified_to",
+              "value": "HA"
+            },
+            {
+              "op": "add_unique",
+              "field": "retraction_notified_to",
+              "value": "MINH"
+            }
+          ],
+          "next": "step:S10_OLD",
+          "action_note": "Chỉ gửi tới người thực sự đã xem; runtime lấy giao của danh sách người này với draft_seen_by. Không thêm lượt đã xem.",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_NOTICE_OK",
+          "label": "Tiếp tục từ bản hiện tại",
+          "when": {
+            "any": [
+              {
+                "field": "draft_type",
+                "op": "ne",
+                "value": "tribute"
+              },
+              {
+                "field": "draft_retracted",
+                "op": "eq",
+                "value": "yes"
+              }
+            ]
+          },
+          "lines": [
+            "S10_L009"
+          ],
+          "effects": [],
+          "next": "step:S10_OLD",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_STOP_PRIVATE_REMAINING",
+          "label": "Báo dừng nháp cảm ơn còn chưa xử lý",
+          "when": {
+            "all": [
+              {
+                "field": "draft_type",
+                "op": "eq",
+                "value": "tribute"
+              },
+              {
+                "field": "draft_retracted",
+                "op": "ne",
+                "value": "yes"
+              },
+              {
+                "field": "draft_sent_to",
+                "op": "ne",
+                "value": "group_four"
+              }
+            ]
+          },
+          "lines": [
+            "S10_L041",
+            "S10_L042"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_retracted",
+              "value": "yes"
+            },
+            {
+              "op": "set",
+              "field": "draft_version",
+              "value": 2
+            },
+            {
+              "op": "set",
+              "field": "tribute_board_removed",
+              "value": true
+            },
+            {
+              "op": "add_unique",
+              "field": "retraction_notified_to",
+              "value": "NHI"
+            }
+          ],
+          "next": "step:S10_OLD",
+          "action_note": "Dừng nháp riêng và báo Nhi; không tạo người nhận/đã xem mới trong lịch sử.",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S10_OLD",
+      "stage_direction": "Chọn nguồn cũ cụ thể. Preview riêng và lời xin phép Nhi đi liền nguồn, không cấp quyền cho cả album.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S10_OLD_1",
+          "label": "Ảnh buổi tập đủ bốn",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S10_L010",
+            "S10_L011"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "final_old_asset",
+              "value": "PHOTO_S00_GOOD"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_S00_GOOD",
+              "subject_id": "NHI",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S10_OLD_1"
+            }
+          ],
+          "next": "step:S10_NEW",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_OLD_2",
+          "label": "Ảnh hỏng khi đèn vừa tắt",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S10_L012",
+            "S10_L013"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "final_old_asset",
+              "value": "PHOTO_S00_BAD_01"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_S00_BAD_01",
+              "subject_id": "NHI",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S10_OLD_2"
+            }
+          ],
+          "next": "step:S10_NEW",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_OLD_3",
+          "label": "Ảnh hỏng Minh đang cúi nhặt bìa",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S10_L014",
+            "S10_L015"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "final_old_asset",
+              "value": "PHOTO_S00_BAD_02"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_S00_BAD_02",
+              "subject_id": "NHI",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S10_OLD_3"
+            }
+          ],
+          "next": "step:S10_NEW",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_OLD_4",
+          "label": "Sơ đồ hai ô và tia chớp",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S10_L016",
+            "S10_L017"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "final_old_asset",
+              "value": "PROP_DIAGRAM"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PROP_DIAGRAM",
+              "subject_id": "NHI",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S10_OLD_4"
+            }
+          ],
+          "next": "step:S10_NEW",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S10_NEW",
+      "stage_direction": "Ảnh mới nếu có được đặt cạnh nguồn cũ; ảnh không có quyền in chỉ ở album riêng đã được đồng ý.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S10_NEW_FOUR",
+          "label": "Dùng ảnh mới bốn người trong trang",
+          "when": {
+            "all": [
+              {
+                "field": "captured_asset",
+                "op": "eq",
+                "value": "PHOTO_NEW_FOUR"
+              },
+              {
+                "field": "nhi_photo_consent",
+                "op": "eq",
+                "value": "yes"
+              }
+            ]
+          },
+          "lines": [
+            "S10_L018"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "final_mode",
+              "value": "new"
+            },
+            {
+              "op": "set",
+              "field": "final_new_asset",
+              "value": "PHOTO_NEW_FOUR"
+            },
+            {
+              "op": "set",
+              "field": "final_scope",
+              "value": "yearbook_print"
+            }
+          ],
+          "next": "step:S10_0443",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_NEW_THREE",
+          "label": "Dùng ảnh mới ba người trong trang",
+          "when": {
+            "all": [
+              {
+                "field": "captured_asset",
+                "op": "eq",
+                "value": "PHOTO_NEW_THREE"
+              },
+              {
+                "field": "new_photo_print_allowed",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "lines": [
+            "S10_L019"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "final_mode",
+              "value": "new"
+            },
+            {
+              "op": "set",
+              "field": "final_new_asset",
+              "value": "PHOTO_NEW_THREE"
+            },
+            {
+              "op": "set",
+              "field": "final_scope",
+              "value": "yearbook_print"
+            }
+          ],
+          "next": "step:S10_0443",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_ONLY_OLD",
+          "label": "Dùng nguồn cũ, bỏ khung chờ ảnh mới",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S10_L020"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "final_mode",
+              "value": "old"
+            },
+            {
+              "op": "set",
+              "field": "final_new_asset",
+              "value": ""
+            },
+            {
+              "op": "set",
+              "field": "final_scope",
+              "value": "yearbook_print"
+            }
+          ],
+          "next": "step:S10_0443",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_SUPPLEMENT",
+          "label": "Dùng trang thông báo ngắn, tự giao tờ bổ sung ở cuộc gặp đã xác nhận",
+          "when": {
+            "field": "later_status",
+            "op": "eq",
+            "value": "accepted"
+          },
+          "lines": [
+            "S10_L021",
+            "S10_L022",
+            "S10_L023",
+            "S10_L024"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "final_mode",
+              "value": "supplement"
+            },
+            {
+              "op": "set",
+              "field": "final_new_asset",
+              "value": ""
+            },
+            {
+              "op": "grant",
+              "asset_field": "final_old_asset",
+              "subject_id": "NHI",
+              "scope": "supplement_delivery",
+              "status": "yes",
+              "source_event_id": "S10_SUPPLEMENT"
+            },
+            {
+              "op": "set",
+              "field": "supplement_delivery_datetime",
+              "value": "2026-05-11T16:30:00"
+            },
+            {
+              "op": "set",
+              "field": "supplement_delivery_place",
+              "value": "ghế đá sân trường"
+            },
+            {
+              "op": "set",
+              "field": "final_scope",
+              "value": "supplement_delivery"
+            }
+          ],
+          "next": "step:S10_0443",
+          "action_note": "Không tự gia hạn sách hoặc hứa miễn phí. TV5 chốt chi phí in thực trước khi có lựa chọn trả tiền; MVP tự giao tờ riêng.",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S10_0443",
+      "stage_direction": "0443 có thể ở album hoặc một góc phù hợp của trang/tờ, quyền được hỏi riêng.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S10_ADD_0443",
+          "label": "Thêm 0443 với chữ “Hội chợ tháng Mười - An, Hạ, Minh”",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S10_L025",
+            "S10_L026",
+            "S10_L027",
+            "S10_L028"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "use_0443",
+              "value": true
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_0443",
+              "subject_id": "AN",
+              "status": "yes",
+              "source_event_id": "S10_ADD_0443",
+              "scope_field": "final_scope"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_0443",
+              "subject_id": "HA",
+              "status": "yes",
+              "source_event_id": "S10_ADD_0443",
+              "scope_field": "final_scope"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_0443",
+              "subject_id": "MINH",
+              "status": "yes",
+              "source_event_id": "S10_ADD_0443",
+              "scope_field": "final_scope"
+            }
+          ],
+          "next": "step:S10_RIGHTS",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_KEEP_0443_PRIVATE",
+          "label": "Giữ 0443 ở album, không thêm vào trang cuối",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S10_L029",
+            "S10_L030"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "use_0443",
+              "value": false
+            }
+          ],
+          "next": "step:S10_RIGHTS",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S10_RIGHTS",
+      "stage_direction": "Cả nhóm nhận đúng preview nguồn cũ và caption; không xin quyền bằng tên file không rõ nội dung.",
+      "lines": [
+        "S10_L031",
+        "S10_L032",
+        "S10_L033",
+        "S10_L034"
+      ],
+      "choices": [
+        {
+          "choice_id": "S10_RIGHTS_OK",
+          "label": "Ghi nhận quyền đúng nguồn và phạm vi đang dùng",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [
+            {
+              "op": "grant",
+              "asset_field": "final_old_asset",
+              "subject_id": "AN",
+              "status": "yes",
+              "source_event_id": "S10_RIGHTS_OK",
+              "scope_field": "final_scope"
+            },
+            {
+              "op": "grant",
+              "asset_field": "final_old_asset",
+              "subject_id": "HA",
+              "status": "yes",
+              "source_event_id": "S10_RIGHTS_OK",
+              "scope_field": "final_scope"
+            },
+            {
+              "op": "grant",
+              "asset_field": "final_old_asset",
+              "subject_id": "MINH",
+              "status": "yes",
+              "source_event_id": "S10_RIGHTS_OK",
+              "scope_field": "final_scope"
+            }
+          ],
+          "next": "step:S10_PREVIEW",
+          "action_note": "PROP_DIAGRAM chỉ có tác giả Nhi cần grant; các xác nhận dư của người xem không thay quyền tác giả. Runtime kiểm theo subjects của asset catalog.",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S10_PREVIEW",
+      "stage_direction": "Hiện trang thật, danh sách nguồn/người, lịch theo print_slot và việc tự giao bổ sung nếu có. Không có thông báo đạo đức.",
+      "lines": [
+        "S10_L035",
+        "S10_L036",
+        "S10_L037"
+      ],
+      "choices": [
+        {
+          "choice_id": "S10_PREVIEW",
+          "label": "Xem đủ trang và lịch giao",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [
+            {
+              "op": "set",
+              "field": "page_previewed",
+              "value": true
+            }
+          ],
+          "next": "step:S10_PUBLISH",
+          "action_note": "Runtime render và kiểm quyền; chưa gửi in chỉ vì mở preview.",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S10_PUBLISH",
+      "stage_direction": "Chốt riêng sau kiểm quyền; yêu cầu runtime lưu PNG hiện vật, không giả định đã ghi file thành công.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S10_PUBLISH_NEW",
+          "label": "Chốt bản vừa xem và lưu trang cuối",
+          "when": {
+            "all": [
+              {
+                "field": "page_previewed",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "final_mode",
+                "op": "eq",
+                "value": "new"
+              }
+            ]
+          },
+          "lines": [
+            "S10_L038"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "print_submitted",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "final_artifact_requested",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "ending_id",
+              "value": "E_A"
+            }
+          ],
+          "next": "scene:E_A",
+          "action_note": "Command publish phải kiểm toàn bộ grants/attendance ảnh/lịch lại. PNG lỗi được thử lại; không coi yêu cầu export là đã có file.",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_PUBLISH_OLD",
+          "label": "Chốt bản vừa xem và lưu trang cuối",
+          "when": {
+            "all": [
+              {
+                "field": "page_previewed",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "final_mode",
+                "op": "eq",
+                "value": "old"
+              }
+            ]
+          },
+          "lines": [
+            "S10_L039"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "print_submitted",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "final_artifact_requested",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "ending_id",
+              "value": "E_B"
+            }
+          ],
+          "next": "scene:E_B",
+          "action_note": "Command publish phải kiểm toàn bộ grants/attendance ảnh/lịch lại. PNG lỗi được thử lại; không coi yêu cầu export là đã có file.",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S10_PUBLISH_SUPPLEMENT",
+          "label": "Chốt bản vừa xem và lưu trang cuối",
+          "when": {
+            "all": [
+              {
+                "field": "page_previewed",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "final_mode",
+                "op": "eq",
+                "value": "supplement"
+              }
+            ]
+          },
+          "lines": [
+            "S10_L040"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "print_submitted",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "final_artifact_requested",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "ending_id",
+              "value": "E_C"
+            }
+          ],
+          "next": "scene:E_C",
+          "action_note": "Command publish phải kiểm toàn bộ grants/attendance ảnh/lịch lại. PNG lỗi được thử lại; không coi yêu cầu export là đã có file.",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,0 @@
-CiviOpenFont.ttf: Liberation Sans, SIL Open Font License.
-CiviHand.ttf: Patrick Hand, SIL Open Font License.
-CiviDiary.ttf: font derived from Lora, renamed CiviDiary; SIL Open Font License.
-See accompanying original OFL notices.

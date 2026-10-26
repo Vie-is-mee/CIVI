@@ -1,0 +1,160 @@
+{
+  "scene_id": "S08",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S08_L001",
+      "speaker_id": "MINH",
+      "text": "Tối tao phải ôn. Pin tao mang, còn ai kiểm file?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L002",
+      "speaker_id": "HA",
+      "text": "File gốc tao gửi rồi. Ai giữ máy thì ghi tên vào túi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L003",
+      "speaker_id": "AN",
+      "text": "Máy và bản xuất để tao. Minh đưa pin trước, tối kiểm giúp một lượt nếu kịp thôi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L004",
+      "speaker_id": "MINH",
+      "text": "Ừ. Tao chỉ ngồi tới giờ ôn.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L005",
+      "speaker_id": "NARRATOR",
+      "text": "An viết tên mình lên băng dính dán túi máy.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L006",
+      "speaker_id": "AN",
+      "text": "Tao tưởng mọi người lo như cũ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L007",
+      "speaker_id": "MINH",
+      "text": "Tao đưa pin thôi, tối mày tự xuất nhé. Bản hướng dẫn tao gửi rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L008",
+      "speaker_id": "AN",
+      "text": "Ừ, phần còn lại để tao.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L009",
+      "speaker_id": "AN",
+      "text": "Cứ lịch thường. Thiếu ảnh mới thì tao làm từ ảnh cũ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L010",
+      "speaker_id": "MINH",
+      "text": "Ừ. Sách chiều thứ Hai.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L011",
+      "speaker_id": "AN",
+      "text": "Nếu cần, bọn em giao trước 12:00 thứ Bảy được không?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L012",
+      "speaker_id": "PRINTER",
+      "text": "Giữ chỗ được. Sách chuyển sang sáng thứ Ba, nhóm xác nhận nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L013",
+      "speaker_id": "AN",
+      "text": "Dạ, nhóm nhận lịch đó.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L014",
+      "speaker_id": "HA",
+      "text": "Kẹp còn trượt không?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L015",
+      "speaker_id": "AN",
+      "text": "Để tao thử.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L016",
+      "speaker_id": "MINH",
+      "text": "Đừng thử bằng cách thả tay luôn.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L017",
+      "speaker_id": "NARRATOR",
+      "text": "An kê thêm miếng cao su, thử hẹn giờ. Máy đứng vững.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L018",
+      "speaker_id": "AN",
+      "text": "Được rồi. Máy tự bấm, tao vào cùng.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L019",
+      "speaker_id": "NARRATOR",
+      "text": "Túi máy đủ đồ. Kẹp chưa thử xong; lúc chụp cần kê lại hoặc đổi chỗ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L020",
+      "speaker_id": "NARRATOR",
+      "text": "Nhi đặt cặp cạnh ghế, nhìn đồng hồ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L021",
+      "speaker_id": "NHI",
+      "text": "Tao tới rồi. Đến 17:10 thôi nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S08_L022",
+      "speaker_id": "NARRATOR",
+      "text": "Hạ đặt pin lên quầy. Tin nhắn không có câu nhận lời mới. Chỗ cạnh máy vẫn trống.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "result": "PASS",
+  "scenes": 15,
+  "choices": 126,
+  "dialogue_entries": 326,
+  "route_cases": 22,
+  "negative_cases": 5,
+  "cases": [
+    {
+      "case": "four",
+      "ending": "E_A",
+      "photo": "four",
+      "choices": 51,
+      "result": "PASS"
+    },
+    {
+      "case": "early_understanding",
+      "ending": "E_A",
+      "photo": "four",
+      "choices": 50,
+      "result": "PASS"
+    },
+    {
+      "case": "ha_handover",
+      "ending": "E_A",
+      "photo": "four",
+      "choices": 51,
+      "result": "PASS"
+    },
+    {
+      "case": "declined_three",
+      "ending": "E_A",
+      "photo": "three",
+      "choices": 49,
+      "result": "PASS"
+    },
+    {
+      "case": "pending_three",
+      "ending": "E_A",
+      "photo": "three",
+      "choices": 49,
+      "result": "PASS"
+    },
+    {
+      "case": "no_new",
+      "ending": "E_B",
+      "photo": "none",
+      "choices": 47,
+      "result": "PASS"
+    },
+    {
+      "case": "three_private",
+      "ending": "E_B",
+      "photo": "three",
+      "choices": 49,
+      "result": "PASS"
+    },
+    {
+      "case": "four_not_printed",
+      "ending": "E_B",
+      "photo": "four",
+      "choices": 51,
+      "result": "PASS"
+    },
+    {
+      "case": "leave_early",
+      "ending": "E_A",
+      "photo": "three",
+      "choices": 53,
+      "result": "PASS"
+    },
+    {
+      "case": "forced_pose_changed",
+      "ending": "E_A",
+      "photo": "four",
+      "choices": 52,
+      "result": "PASS"
+    },
+    {
+      "case": "forced_pose_stopped",
+      "ending": "E_A",
+      "photo": "three",
+      "choices": 53,
+      "result": "PASS"
+    },
+    {
+      "case": "tribute_retracted",
+      "ending": "E_A",
+      "photo": "four",
+      "choices": 51,
+      "result": "PASS"
+    },
+    {
+      "case": "tribute_board_kept",
+      "ending": "E_A",
+      "photo": "three",
+      "choices": 51,
+      "result": "PASS"
+    },
+    {
+      "case": "pressure_absence",
+      "ending": "E_A",
+      "photo": "three",
+      "choices": 49,
+      "result": "PASS"
+    },
+    {
+      "case": "later_old",
+      "ending": "E_C",
+      "photo": "none",
+      "choices": 49,
+      "result": "PASS"
+    },
+    {
+      "case": "later_new",
+      "ending": "E_C",
+      "photo": "later",
+      "choices": 52,
+      "result": "PASS"
+    },
+    {
+      "case": "later_new_private",
+      "ending": "E_C",
+      "photo": "later",
+      "choices": 51,
+      "result": "PASS"
+    },
+    {
+      "case": "later_pending",
+      "ending": "E_B",
+      "photo": "none",
+      "choices": 48,
+      "result": "PASS"
+    },
+    {
+      "case": "old_bad_01",
+      "ending": "E_A",
+      "photo": "four",
+      "choices": 51,
+      "result": "PASS"
+    },
+    {
+      "case": "old_bad_02",
+      "ending": "E_A",
+      "photo": "four",
+      "choices": 51,
+      "result": "PASS"
+    },
+    {
+      "case": "old_diagram",
+      "ending": "E_A",
+      "photo": "four",
+      "choices": 51,
+      "result": "PASS"
+    },
+    {
+      "case": "extended",
+      "ending": "E_A",
+      "photo": "four",
+      "choices": 51,
+      "result": "PASS"
+    }
+  ],
+  "limits": "Authoring checks only; no Unity, media, provider or human playtest verified."
+}

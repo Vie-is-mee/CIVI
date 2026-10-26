@@ -1,0 +1,296 @@
+{
+  "scene_id": "S03",
+  "status": "tv1_draft",
+  "entries": [
+    {
+      "response_id": "SOURCE_0441",
+      "intent": "ASK_SOURCE",
+      "target": "PHOTO_0441",
+      "when": {
+        "all": []
+      },
+      "speaker_id": "HA",
+      "text": "Ảnh gốc 0441 ở đây, mày mở để xem nhé.",
+      "action_proposal": {
+        "type": "INSPECT_EVIDENCE",
+        "target": "PHOTO_0441"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "SOURCE_0442",
+      "intent": "ASK_SOURCE",
+      "target": "PHOTO_0442",
+      "when": {
+        "all": []
+      },
+      "speaker_id": "HA",
+      "text": "Ảnh gốc 0442 ở đây, mày mở để xem nhé.",
+      "action_proposal": {
+        "type": "INSPECT_EVIDENCE",
+        "target": "PHOTO_0442"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "SOURCE_0443",
+      "intent": "ASK_SOURCE",
+      "target": "PHOTO_0443",
+      "when": {
+        "all": []
+      },
+      "speaker_id": "HA",
+      "text": "Ảnh gốc 0443 ở đây, mày mở để xem nhé.",
+      "action_proposal": {
+        "type": "INSPECT_EVIDENCE",
+        "target": "PHOTO_0443"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "SEEN_0441",
+      "intent": "CHECK_VISIBILITY",
+      "target": "PHOTO_0441",
+      "when": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PHOTO_0441"
+      },
+      "speaker_id": "HA",
+      "text": "Nhi ở mép ảnh, cầm dây. Đèn lúc này chưa sáng.",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "UNSEEN_0441",
+      "intent": "CHECK_VISIBILITY",
+      "target": "PHOTO_0441",
+      "when": {
+        "not": {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PHOTO_0441"
+        }
+      },
+      "speaker_id": "HA",
+      "text": "Mở đúng tấm đó trước nhé, mình nhìn rồi nói.",
+      "action_proposal": {
+        "type": "OFFER_EVIDENCE",
+        "target": "PHOTO_0441"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "SEEN_0442",
+      "intent": "CHECK_VISIBILITY",
+      "target": "PHOTO_0442",
+      "when": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PHOTO_0442"
+      },
+      "speaker_id": "HA",
+      "text": "Nhi vẫn ở đó. Đèn sáng rồi, ổ chia trên ghế đỏ.",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "UNSEEN_0442",
+      "intent": "CHECK_VISIBILITY",
+      "target": "PHOTO_0442",
+      "when": {
+        "not": {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PHOTO_0442"
+        }
+      },
+      "speaker_id": "HA",
+      "text": "Mở đúng tấm đó trước nhé, mình nhìn rồi nói.",
+      "action_proposal": {
+        "type": "OFFER_EVIDENCE",
+        "target": "PHOTO_0442"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "SEEN_0443",
+      "intent": "CHECK_VISIBILITY",
+      "target": "PHOTO_0443",
+      "when": {
+        "field": "evidence_seen",
+        "op": "contains",
+        "value": "PHOTO_0443"
+      },
+      "speaker_id": "HA",
+      "text": "Chỉ có An, tao và Minh. Kéo rộng cũng không thấy Nhi; tấm gốc không có nó.",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "UNSEEN_0443",
+      "intent": "CHECK_VISIBILITY",
+      "target": "PHOTO_0443",
+      "when": {
+        "not": {
+          "field": "evidence_seen",
+          "op": "contains",
+          "value": "PHOTO_0443"
+        }
+      },
+      "speaker_id": "HA",
+      "text": "Mở đúng tấm đó trước nhé, mình nhìn rồi nói.",
+      "action_proposal": {
+        "type": "OFFER_EVIDENCE",
+        "target": "PHOTO_0443"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "COMPOSITION",
+      "intent": "ASK_COMPOSITION_REASON",
+      "target": "PHOTO_0443",
+      "when": {
+        "all": []
+      },
+      "speaker_id": "HA",
+      "text": "Tao chọn vì cả ba đang cười và bảng đã sáng. Tấm này vẫn là chuyện thật của tụi tao.",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "COMPARE_PHOTO_0441__PHOTO_0442",
+      "intent": "COMPARE_PHOTOS",
+      "target": "PHOTO_0441__PHOTO_0442",
+      "when": {
+        "all": []
+      },
+      "speaker_id": "HA",
+      "text": "Đặt hai tấm cạnh nhau đi. Đừng gọi chuyện trong ảnh là ý nghĩ của người ngoài khung.",
+      "action_proposal": {
+        "type": "COMPARE_EVIDENCE",
+        "target": "PHOTO_0441__PHOTO_0442"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "COMPARE_PHOTO_0442__PHOTO_0443",
+      "intent": "COMPARE_PHOTOS",
+      "target": "PHOTO_0442__PHOTO_0443",
+      "when": {
+        "all": []
+      },
+      "speaker_id": "HA",
+      "text": "Đặt hai tấm cạnh nhau đi. Đừng gọi chuyện trong ảnh là ý nghĩ của người ngoài khung.",
+      "action_proposal": {
+        "type": "COMPARE_EVIDENCE",
+        "target": "PHOTO_0442__PHOTO_0443"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "HANDOFF_UNKNOWN",
+      "intent": "ASK_CAMERA_HANDOFF",
+      "target": "PHOTO_0443",
+      "when": {
+        "not": {
+          "field": "ha_shared_facts",
+          "op": "contains",
+          "value": "F06"
+        }
+      },
+      "speaker_id": "HA",
+      "text": "Tao nhớ lúc đó chụp rất vội, nhưng không chắc ai nhờ trước. Hỏi Nhi hoặc xem clip của Vy sẽ rõ hơn.",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "HANDOFF_KNOWN",
+      "intent": "ASK_CAMERA_HANDOFF",
+      "target": "PHOTO_0443",
+      "when": {
+        "field": "ha_shared_facts",
+        "op": "contains",
+        "value": "F06"
+      },
+      "speaker_id": "HA",
+      "text": "An đưa máy cho Nhi rồi nói lát chụp đủ. Mình biết từ nguồn vừa đối chiếu, không phải do tấm ảnh tự kể được.",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "QUOTE_UNKNOWN",
+      "intent": "ASK_QUOTE",
+      "target": "VIDEO_VY",
+      "when": {
+        "not": {
+          "field": "ha_shared_facts",
+          "op": "contains",
+          "value": "F08"
+        }
+      },
+      "speaker_id": "HA",
+      "text": "Tao không chắc nguyên câu. Đừng lấy phần tao nhớ làm lời nguyên văn của Nhi.",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "QUOTE_KNOWN",
+      "intent": "ASK_QUOTE",
+      "target": "VIDEO_VY",
+      "when": {
+        "field": "ha_shared_facts",
+        "op": "contains",
+        "value": "F08"
+      },
+      "speaker_id": "HA",
+      "text": "Trong đoạn vừa xem, Nhi nói: “Ảnh thì khỏi cần mặt tao. Nhớ ghi phần tao làm là được.” Không có nghĩa nó không muốn xuất hiện trong mọi ảnh.",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "CLARIFY",
+      "intent": "CLARIFY",
+      "target": "UNRESOLVED",
+      "when": {
+        "all": []
+      },
+      "speaker_id": "HA",
+      "text": "Mày đang hỏi tấm nào, 0441, 0442 hay 0443?",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    },
+    {
+      "response_id": "UNSUPPORTED",
+      "intent": "UNSUPPORTED",
+      "target": "OUT_OF_SCOPE",
+      "when": {
+        "all": []
+      },
+      "speaker_id": "HA",
+      "text": "Chỗ này mình đang xem ảnh. Chuyện gửi trang hay xin dùng ảnh phải làm ở bước riêng.",
+      "action_proposal": {
+        "type": "NONE"
+      },
+      "status": "tv1_draft"
+    }
+  ]
+}

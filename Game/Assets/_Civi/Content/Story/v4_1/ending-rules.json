@@ -1,0 +1,58 @@
+{
+  "status": "tv1_draft",
+  "rules": [
+    {
+      "ending_id": "E_A",
+      "when": {
+        "field": "final_mode",
+        "op": "eq",
+        "value": "new"
+      },
+      "requires": [
+        "actual_new_photo",
+        "all_required_yearbook_print_grants",
+        "page_previewed",
+        "print_submitted"
+      ]
+    },
+    {
+      "ending_id": "E_B",
+      "when": {
+        "field": "final_mode",
+        "op": "eq",
+        "value": "old"
+      },
+      "requires": [
+        "permitted_old_source",
+        "page_previewed",
+        "equipment_packed",
+        "print_submitted"
+      ],
+      "note": "may have a new photo retained privately"
+    },
+    {
+      "ending_id": "E_C",
+      "when": {
+        "all": [
+          {
+            "field": "final_mode",
+            "op": "eq",
+            "value": "supplement"
+          },
+          {
+            "field": "later_status",
+            "op": "eq",
+            "value": "accepted"
+          }
+        ]
+      },
+      "requires": [
+        "confirmed_time_place_people",
+        "supplement_scope_grants",
+        "physical_delivery_event_before_finished"
+      ]
+    }
+  ],
+  "no_moral_score": true,
+  "no_inference_from_photo_count_alone": true
+}

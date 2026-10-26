@@ -1,0 +1,186 @@
+{
+  "content_version": "tv1-0.1",
+  "source": "STORY v4.1",
+  "facts": [
+    {
+      "fact_id": "F01",
+      "statement": "Nhi nghĩ ra trang hai ảnh trước/sau; buổi tập chụp đủ An, Nhi, Hạ, Minh bằng hẹn giờ.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.4–5"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F02",
+      "statement": "Có hai ảnh hỏng, sơ đồ hai ô/four names/tia chớp; An giữ cả ảnh hỏng lẫn ảnh tốt.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.4–5,19"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F03",
+      "statement": "Minh chuyển trang chưa chốt sang tạm giữ theo tin An “Ừ bỏ đi, mai tính”; không phá hoại.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.5,15"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F04",
+      "statement": "0441: đèn tắt, Nhi cầm dây ở mép; 0442: đèn sáng, ổ chia ở ghế đỏ, Nhi nhìn An.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.6"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F05",
+      "statement": "0443 chỉ có An, Hạ, Minh. Nới crop không làm xuất hiện Nhi; Hạ thật sự quý khoảnh khắc vui đó.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.6–8,14"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F06",
+      "statement": "An đưa máy cho Nhi, nói một tấm thôi rồi hứa lát chụp đủ; tư liệu tìm được không có lần chụp đủ sau đó.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.6–7"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F07",
+      "statement": "Nhi đến hội chợ lúc 16:31 so với hẹn 16:15, có phản ứng gắt; không là nhân vật hoàn hảo.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.6,14–15"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F08",
+      "statement": "Lời Nhi có hai vế; câu dẫn trên trang đã viết thay ý cô. Nhi yêu cầu sửa lời, không yêu cầu xóa mọi ký ức vui.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.5–7"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F09",
+      "statement": "Sơ đồ chứng minh ý tưởng cũ; chỉ Nhi xác nhận mong muốn hiện tại. Ảnh/video không chứng minh ý đồ loại ai.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.15"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F10",
+      "statement": "Lời mời, có mặt, muốn chụp và cho dùng ảnh là những điều khác nhau. Pending/đã xem không là nhận lời.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.8–11,18"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F11",
+      "statement": "Hạ có thể cộng tác hoặc chỉ bàn giao; cả hai vẫn phải có đường hoàn thành.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.8,18"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F12",
+      "statement": "Người hiểu sớm không bị ép tạo bảng tôn vinh. Bảng chỉ tồn tại nếu đã có người chuẩn bị và chưa gỡ.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.7–11,18–19"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F13",
+      "statement": "Thu hồi nháp không xóa người đã xem. Phải báo lại người nhận và xử lý đạo cụ.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.7,14,18"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F14",
+      "statement": "Buổi chụp 08/05 lúc 16:45; Nhi đi 17:10; tháo quầy 17:30. Đọc thoại không tiêu thụ thời gian thực.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.9–11,14–15"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F15",
+      "statement": "Hạn thường 09/05 10:00; gia hạn 12:00 cần giữ lịch trước 17:00 thứ Sáu; giao sách theo lịch đã chọn.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.9,14–15"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F16",
+      "statement": "Nhi vắng vẫn có ba hướng thao tác: chụp ba, không chụp/thu đồ, đề nghị cuộc gặp khác.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.10"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F17",
+      "statement": "Chụp ba không mặc định xấu. Kết B có thể giữ ảnh mới trong album riêng và dùng nguồn cũ cho trang 17.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.12–13"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F18",
+      "statement": "E-C cần xác nhận và việc giao hiện vật thực sự; đề nghị hẹn chưa là cuộc gặp đã có.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.13–14"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F19",
+      "statement": "Nguồn nội bộ không tự thành quyền phát hành; không ai tự đồng ý vì điểm quan hệ hoặc AI.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.12,14,18,20"
+      },
+      "mutable": false
+    },
+    {
+      "fact_id": "F20",
+      "statement": "Không có điểm đạo đức, một kết đúng duy nhất hoặc lời xin lỗi mẫu khiến mọi người hòa giải.",
+      "source": {
+        "document": "STORY",
+        "locator": "tr.2–3,14,16"
+      },
+      "mutable": false
+    }
+  ]
+}

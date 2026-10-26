@@ -1,0 +1,668 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S09_A",
+  "title": "Cùng chụp một tấm mới",
+  "source_pages": [
+    10,
+    11,
+    18,
+    19
+  ],
+  "background_id": "BG_COURTYARD",
+  "entry_step": "S09_A_BOARD",
+  "asset_ids": [
+    "PROP_TRIBUTE_BOARD",
+    "PROP_CLAMP",
+    "PROP_SIGN_HEN",
+    "PHOTO_NEW_FOUR"
+  ],
+  "production_notes": "Không ép ảnh trở lại nguyên khuôn. Nếu Nhi đi trước capture, chuyển S09_B. Gỡ bảng không tự xóa lịch sử.",
+  "steps": [
+    {
+      "step_id": "S09_A_BOARD",
+      "stage_direction": "Kiểm đạo cụ trước dựng khung; chỉ hiện bảng nếu đã được chuẩn bị và chưa gỡ.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S09_A_REMOVE_BOARD",
+          "label": "Lấy bảng cảm ơn khỏi chỗ chụp",
+          "when": {
+            "all": [
+              {
+                "field": "tribute_board_prepared",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "tribute_board_removed",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "lines": [
+            "S09_A_L001",
+            "S09_A_L002",
+            "S09_A_L003"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "tribute_board_removed",
+              "value": true
+            }
+          ],
+          "next": "step:S09_A_FRAME",
+          "action_note": "Nếu chưa báo người nhận, dùng bước notice trước chốt trang; thao tác gỡ không thay tin báo.",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_A_LEAVE_BOARD",
+          "label": "Giữ bảng trong khung và đề nghị Nhi cầm",
+          "when": {
+            "all": [
+              {
+                "field": "tribute_board_prepared",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "tribute_board_removed",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "lines": [
+            "S09_A_L004",
+            "S09_A_L005"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "nhi_wants_capture",
+              "value": false
+            }
+          ],
+          "next": "step:S09_A_LEAVE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_A_NO_BOARD",
+          "label": "Đặt sơ đồ cũ cạnh máy, không dựng bảng",
+          "when": {
+            "any": [
+              {
+                "field": "tribute_board_prepared",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "tribute_board_removed",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "lines": [
+            "S09_A_L006",
+            "S09_A_L007"
+          ],
+          "effects": [],
+          "next": "step:S09_A_FRAME",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_A_FRAME",
+      "stage_direction": "Mọi người tự chọn chỗ; khung cũ không vừa bảng mới và túi sách.",
+      "lines": [
+        "S09_A_L008"
+      ],
+      "choices": [
+        {
+          "choice_id": "S09_A_OPEN_FRAME",
+          "label": "Nới khung, để mỗi người tự chọn chỗ",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L009",
+            "S09_A_L010",
+            "S09_A_L011"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "framing",
+              "value": "open"
+            }
+          ],
+          "next": "step:S09_A_CAMERA",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_A_OLD_POSE",
+          "label": "Đề nghị mọi người đứng y hệt tấm cũ",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L012",
+            "S09_A_L013"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "framing",
+              "value": "forced"
+            }
+          ],
+          "next": "step:S09_A_REFUSE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_A_CHECK_SCOPE",
+          "label": "Hạ máy, hỏi ảnh mới sẽ dùng ở đâu",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L014",
+            "S09_A_L015"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "framing",
+              "value": "open"
+            }
+          ],
+          "next": "step:S09_A_CAMERA",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_A_REFUSE",
+      "stage_direction": "Nhi chưa rời; An có thể đổi cách chụp hoặc dừng. Không cần chọn câu xin lỗi mẫu.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S09_A_CHANGE_FRAME",
+          "label": "Bỏ dấu vị trí cũ, thử khung thoáng hơn",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L016",
+            "S09_A_L017",
+            "S09_A_L018"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "framing",
+              "value": "open"
+            }
+          ],
+          "next": "step:S09_A_CAMERA",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_A_STOP_FRAME",
+          "label": "Dừng buổi chụp với Nhi",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L019",
+            "S09_A_L020"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "nhi_wants_capture",
+              "value": false
+            }
+          ],
+          "next": "step:S09_A_LEAVE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_A_CAMERA",
+      "stage_direction": "An giữ đầu dây, không mặc định giao Nhi. Thử lại kẹp nếu chưa kiểm xong.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S09_A_FIX",
+          "label": "Kê lại kẹp và tự giữ dây (4 phút)",
+          "when": {
+            "field": "equipment_ready",
+            "op": "eq",
+            "value": "repairable"
+          },
+          "lines": [
+            "S09_A_L021",
+            "S09_A_L022"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "equipment_ready",
+              "value": "ready"
+            },
+            {
+              "op": "advance_minutes",
+              "value": 4
+            }
+          ],
+          "next": "step:S09_A_CAPTURE",
+          "action_note": "",
+          "duration_minutes": 4
+        },
+        {
+          "choice_id": "S09_A_MOUNT",
+          "label": "Đặt máy đã kiểm lên kẹp",
+          "when": {
+            "field": "equipment_ready",
+            "op": "eq",
+            "value": "ready"
+          },
+          "lines": [
+            "S09_A_L023"
+          ],
+          "effects": [],
+          "next": "step:S09_A_CAPTURE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_A_REBUILD",
+          "label": "Dựng lại toàn bộ quầy theo ảnh trước (25 phút)",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L024",
+            "S09_A_L025",
+            "S09_A_L026"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "attendance",
+              "value": "left"
+            },
+            {
+              "op": "set",
+              "field": "nhi_wants_capture",
+              "value": false
+            },
+            {
+              "op": "advance_minutes",
+              "value": 25
+            }
+          ],
+          "next": "step:S09_A_LEAVE",
+          "action_note": "UI báo trước 25 phút và mốc đi, không cho thời gian âm thầm trôi khi đọc.",
+          "duration_minutes": 25
+        }
+      ]
+    },
+    {
+      "step_id": "S09_A_CAPTURE",
+      "stage_direction": "Mọi người đã thống nhất khung. Chỉ chụp nếu attendance/giờ vẫn hợp lệ.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S09_A_CAPTURE",
+          "label": "Bấm hẹn giờ rồi An chạy vào",
+          "when": {
+            "all": [
+              {
+                "field": "attendance",
+                "op": "eq",
+                "value": "present"
+              },
+              {
+                "field": "nhi_wants_capture",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "courtyard_minute",
+                "op": "lt",
+                "value": 70
+              },
+              {
+                "field": "equipment_ready",
+                "op": "eq",
+                "value": "ready"
+              }
+            ]
+          },
+          "lines": [
+            "S09_A_L027",
+            "S09_A_L028",
+            "S09_A_L029"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "photo_result",
+              "value": "four"
+            },
+            {
+              "op": "set",
+              "field": "captured_asset",
+              "value": "PHOTO_NEW_FOUR"
+            },
+            {
+              "op": "set",
+              "field": "photo_participants",
+              "value": [
+                "AN",
+                "NHI",
+                "HA",
+                "MINH"
+              ]
+            }
+          ],
+          "next": "step:S09_A_RIGHTS",
+          "action_note": "Hiện chi tiết tương ứng opening_gesture; không đòi pose cụ thể để chụp được.",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_A_TIMEOUT",
+          "label": "Cất chỗ Nhi trước khi thử chụp tiếp",
+          "when": {
+            "any": [
+              {
+                "field": "courtyard_minute",
+                "op": "gte",
+                "value": 70
+              },
+              {
+                "field": "attendance",
+                "op": "ne",
+                "value": "present"
+              }
+            ]
+          },
+          "lines": [
+            "S09_A_L030",
+            "S09_A_L031"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "attendance",
+              "value": "left"
+            },
+            {
+              "op": "set",
+              "field": "nhi_wants_capture",
+              "value": false
+            }
+          ],
+          "next": "step:S09_A_LEAVE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_A_RIGHTS",
+      "stage_direction": "Mở đúng ảnh mới vừa chụp, hỏi quyền dùng; không mặc định đồng ý từ việc đứng vào ảnh.",
+      "lines": [
+        "S09_A_L032"
+      ],
+      "choices": [
+        {
+          "choice_id": "S09_A_USE_PHOTO",
+          "label": "Cho cả nhóm xem ảnh và hỏi dùng bản này",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L044",
+            "S09_A_L045",
+            "S09_A_L046"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "nhi_photo_consent",
+              "value": "yes"
+            },
+            {
+              "op": "set",
+              "field": "private_photo_allowed",
+              "value": true
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "AN",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S09_A_USE_PHOTO"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "NHI",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S09_A_USE_PHOTO"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "HA",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S09_A_USE_PHOTO"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "MINH",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S09_A_USE_PHOTO"
+            },
+            {
+              "op": "set",
+              "field": "new_photo_print_allowed",
+              "value": true
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "AN",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_A_USE_PHOTO"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "NHI",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_A_USE_PHOTO"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "HA",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_A_USE_PHOTO"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "MINH",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_A_USE_PHOTO"
+            }
+          ],
+          "next": "step:S09_A_PACK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_A_PRIVATE_ONLY",
+          "label": "Hỏi giữ riêng tấm này, dùng ảnh cũ cho trang",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L036",
+            "S09_A_L037",
+            "S09_A_L038",
+            "S09_A_L039"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "nhi_photo_consent",
+              "value": "no"
+            },
+            {
+              "op": "set",
+              "field": "private_photo_allowed",
+              "value": true
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "AN",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_A_PRIVATE_ONLY"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "NHI",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_A_PRIVATE_ONLY"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "HA",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_A_PRIVATE_ONLY"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "MINH",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_A_PRIVATE_ONLY"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_FOUR",
+              "subject_id": "NHI",
+              "scope": "yearbook_print",
+              "status": "no",
+              "source_event_id": "S09_A_PRIVATE_ONLY"
+            }
+          ],
+          "next": "step:S09_A_PACK",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_A_PACK",
+      "stage_direction": "Giờ đi không phụ thuộc số câu đọc. Thu đồ sau chụp; Nhi đi trước để kịp lớp.",
+      "lines": [
+        "S09_A_L040",
+        "S09_A_L041"
+      ],
+      "choices": [
+        {
+          "choice_id": "S09_A_PACK",
+          "label": "Tháo máy, cất pin và bàn giao kẹp",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L042"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "equipment_packed",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "attendance",
+              "value": "left"
+            }
+          ],
+          "next": "scene:S10",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_A_LEAVE",
+      "stage_direction": "Nhi rời phần chụp; khung hình kế tiếp chỉ có người còn ở sân.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S09_A_TO_ABSENT",
+          "label": "Để Nhi đi, quay lại với Hạ và Minh",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_A_L043"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "attendance",
+              "value": "left"
+            },
+            {
+              "op": "set",
+              "field": "nhi_wants_capture",
+              "value": false
+            }
+          ],
+          "next": "scene:S09_B",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

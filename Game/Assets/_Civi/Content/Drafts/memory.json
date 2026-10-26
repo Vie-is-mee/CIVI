@@ -1,0 +1,21 @@
+{
+  "draft_type": "memory",
+  "title": "Những gì được giữ lại",
+  "description": "Nguồn cũ có ngày, người và quyền rõ; không để ô trống trách người vắng.",
+  "recipient_options": [
+    "held",
+    "nhi",
+    "group_four"
+  ],
+  "preview_before_send": true,
+  "preview_is_not_publication": true,
+  "original_evidence_immutable": true,
+  "only_tribute_can_prepare_board": false,
+  "style_brief": "giấy sáng, chữ Việt rõ, không badge tốt/xấu",
+  "state_fields": [
+    "draft_version",
+    "draft_seen_by",
+    "draft_retracted",
+    "retraction_notified_to"
+  ]
+}
