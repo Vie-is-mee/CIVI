@@ -1,0 +1,100 @@
+{
+  "status": "tv1_draft",
+  "entries": [
+    {
+      "asset_id": "PHOTO_S00_GOOD",
+      "can_prove": [
+        "F01",
+        "F02"
+      ],
+      "cannot_prove": [
+        "current consent",
+        "current attendance"
+      ]
+    },
+    {
+      "asset_id": "PHOTO_0441",
+      "can_prove": [
+        "F04"
+      ],
+      "cannot_prove": [
+        "Nhi did all work"
+      ]
+    },
+    {
+      "asset_id": "PHOTO_0442",
+      "can_prove": [
+        "F04"
+      ],
+      "cannot_prove": [
+        "who asked Nhi to photograph"
+      ]
+    },
+    {
+      "asset_id": "PHOTO_0443",
+      "can_prove": [
+        "F05"
+      ],
+      "cannot_prove": [
+        "Nhi deliberately excluded",
+        "Hạ hidden motive"
+      ]
+    },
+    {
+      "asset_id": "PHOTO_CLAMP_EMPTY",
+      "can_prove": [],
+      "cannot_prove": [
+        "who held the camera"
+      ]
+    },
+    {
+      "asset_id": "VIDEO_VY",
+      "can_prove": [
+        "F06",
+        "F07",
+        "F08"
+      ],
+      "cannot_prove": [
+        "current publication rights"
+      ]
+    },
+    {
+      "asset_id": "TESTIMONY_NHI",
+      "can_prove": [
+        "F06"
+      ],
+      "cannot_prove": [
+        "video publication rights"
+      ]
+    },
+    {
+      "asset_id": "PROP_CHAT_REMOVE",
+      "can_prove": [
+        "F03"
+      ],
+      "cannot_prove": [
+        "Minh sabotage"
+      ]
+    },
+    {
+      "asset_id": "PROP_DIAGRAM",
+      "can_prove": [
+        "F01",
+        "F02"
+      ],
+      "cannot_prove": [
+        "Nhi currently accepts invitation"
+      ]
+    },
+    {
+      "asset_id": "PROP_SCHEDULE",
+      "can_prove": [
+        "F14",
+        "F15"
+      ],
+      "cannot_prove": [
+        "automatic extension"
+      ]
+    }
+  ]
+}

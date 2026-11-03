@@ -1,0 +1,54 @@
+{
+    "name":  "CIVI New Story Environment",
+    "reference_story":  "nhung_nguoi_khong_co_cho_duoi_bau_troi_phien_ban_phan_nhanh.md",
+    "art_direction_version":  "0.1",
+    "work_state":  "campaign_test_ready",
+    "old_story_assets_preserved":  true,
+    "not_yet_synced_images":  false,
+    "camera_projection":  "orthographic 2d",
+    "view":  "three_quarter",
+    "target_aspect":  "16:9",
+    "ready_for_unity_gameplay":  true,
+    "initial_environments":  [
+                                 {
+                                     "id":  "ENV_RM_ALLEY",
+                                     "status":  "concept_in_progress",
+                                     "story_chapters":  [
+                                                            2,
+                                                            7,
+                                                            8,
+                                                            10
+                                                        ],
+                                     "walkable":  true,
+                                     "asset_file":  null
+                                 },
+                                 {
+                                     "id":  "BG_LQ_CITY",
+                                     "status":  "concept_in_progress",
+                                     "story_chapters":  [
+                                                            1,
+                                                            4,
+                                                            8,
+                                                            10
+                                                        ],
+                                     "walkable":  false,
+                                     "asset_file":  null
+                                 }
+                             ],
+    "required_layers":  [
+                            "GROUND",
+                            "STRUCTURES",
+                            "PROPS",
+                            "FOREGROUND",
+                            "LIGHT_VFX"
+                        ],
+    "variants":  [
+                     "NORMAL",
+                     "WARNING",
+                     "STORM",
+                     "POSTSTORM"
+                 ],
+    "art_production_ready":  false,
+    "art_source_limitation":  "Canva thumbnails 595x335 upscaled; not native-resolution art",
+    "active_scene":  "Assets/_Civi/Scenes/CIVI-NewStory-FullCampaign.unity"
+}

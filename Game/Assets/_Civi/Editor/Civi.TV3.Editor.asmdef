@@ -1,0 +1,1 @@
+{"name":"Civi.TV3.Editor","references":["Civi.TV3.Preview","Unity.ugui","Unity.InputSystem"],"includePlatforms":["Editor"],"autoReferenced":true}

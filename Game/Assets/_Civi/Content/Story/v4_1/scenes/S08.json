@@ -1,0 +1,267 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S08",
+  "title": "Mang gì ra sân",
+  "source_pages": [
+    9,
+    14,
+    15,
+    18
+  ],
+  "background_id": "BG_COURTYARD",
+  "entry_step": "S08_ASSIGN",
+  "asset_ids": [
+    "PROP_CLAMP",
+    "PROP_BATTERY",
+    "PROP_SCHEDULE",
+    "PROP_TRIBUTE_BOARD"
+  ],
+  "production_notes": "Cắt cảnh sang 08/05. Bàn giao cụ thể trước sân; thời lượng thao tác là giả định nhịp để thử, không số nguồn.",
+  "steps": [
+    {
+      "step_id": "S08_ASSIGN",
+      "stage_direction": "Sáng thứ Sáu, trước 16:00. Lịch tháo quầy vẫn dán ở đó.",
+      "lines": [
+        "S08_L001",
+        "S08_L002"
+      ],
+      "choices": [
+        {
+          "choice_id": "S08_ASSIGN",
+          "label": "An nhận máy và xuất file; nhờ Minh bàn giao pin",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S08_L003",
+            "S08_L004",
+            "S08_L005"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "support_plan",
+              "value": "assigned"
+            },
+            {
+              "op": "set",
+              "field": "export_owner",
+              "value": "AN"
+            }
+          ],
+          "next": "step:S08_PRINT",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S08_ASSUME",
+          "label": "Chưa phân lại, mang file và pin đã được bàn giao",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S08_L006",
+            "S08_L007",
+            "S08_L008"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "support_plan",
+              "value": "assumed"
+            },
+            {
+              "op": "set",
+              "field": "export_owner",
+              "value": "AN"
+            }
+          ],
+          "next": "step:S08_PRINT",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S08_PRINT",
+      "stage_direction": "Minh chỉ lịch thường và lịch giữ chỗ. Không có thao tác tự gửi in.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S08_NORMAL",
+          "label": "Giữ lịch thường: giao file 09/05 lúc 10:00",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S08_L009",
+            "S08_L010"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "print_slot",
+              "value": "normal"
+            }
+          ],
+          "next": "step:S08_CHECK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S08_EXTEND",
+          "label": "Gọi giữ lịch dự phòng trước 17:00 thứ Sáu",
+          "when": {
+            "field": "courtyard_minute",
+            "op": "lt",
+            "value": 60
+          },
+          "lines": [
+            "S08_L011",
+            "S08_L012",
+            "S08_L013"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "print_slot",
+              "value": "extended"
+            },
+            {
+              "op": "set",
+              "field": "extension_confirmed",
+              "value": true
+            }
+          ],
+          "next": "step:S08_CHECK",
+          "action_note": "PRINTER là vai âm/tin nhắn vận hành, không thêm nhân vật giải quyết xung đột.",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S08_CHECK",
+      "stage_direction": "16:40 tại sân. Bấm thử kẹp/pin trước khi Nhi tới hoặc quyết định không tới.",
+      "lines": [
+        "S08_L014",
+        "S08_L015",
+        "S08_L016"
+      ],
+      "choices": [
+        {
+          "choice_id": "S08_READY",
+          "label": "Lắp máy, kiểm kẹp và pin (5 phút)",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S08_L017",
+            "S08_L018"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "equipment_ready",
+              "value": "ready"
+            },
+            {
+              "op": "advance_minutes",
+              "value": 5
+            }
+          ],
+          "next": "step:S08_ROUTE",
+          "action_note": "",
+          "duration_minutes": 5
+        },
+        {
+          "choice_id": "S08_REPAIR_LATER",
+          "label": "Mang đồ sang vị trí chụp, kiểm tiếp tại đó (5 phút)",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S08_L019"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "equipment_ready",
+              "value": "repairable"
+            },
+            {
+              "op": "advance_minutes",
+              "value": 5
+            }
+          ],
+          "next": "step:S08_ROUTE",
+          "action_note": "",
+          "duration_minutes": 5
+        }
+      ]
+    },
+    {
+      "step_id": "S08_ROUTE",
+      "stage_direction": "16:45. Chỉ nhận lời có sự kiện đến mới vào đường có Nhi.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S08_ARRIVE",
+          "label": "Đón Nhi tại sân",
+          "when": {
+            "field": "nhi_invite_status",
+            "op": "eq",
+            "value": "accepted"
+          },
+          "lines": [
+            "S08_L020",
+            "S08_L021"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "attendance",
+              "value": "present"
+            },
+            {
+              "op": "set",
+              "field": "nhi_wants_capture",
+              "value": true
+            }
+          ],
+          "next": "scene:S09_A",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S08_ABSENT",
+          "label": "Bắt đầu với những người đang có mặt",
+          "when": {
+            "field": "nhi_invite_status",
+            "op": "ne",
+            "value": "accepted"
+          },
+          "lines": [
+            "S08_L022"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "attendance",
+              "value": "absent"
+            },
+            {
+              "op": "set",
+              "field": "nhi_wants_capture",
+              "value": false
+            }
+          ],
+          "next": "scene:S09_B",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

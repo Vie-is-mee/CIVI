@@ -1,0 +1,152 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S04",
+  "title": "Chín giây ngoài ảnh",
+  "source_pages": [
+    6,
+    7,
+    15
+  ],
+  "background_id": "BG_DESIGN_ROOM",
+  "entry_step": "S04_SOURCE",
+  "asset_ids": [
+    "VIDEO_VY",
+    "PHOTO_0443",
+    "PROP_CLAMP"
+  ],
+  "production_notes": "Animatic/video có âm, phụ đề, thanh kéo. Mở cả nguồn khi được cho xem; không khóa tới cuối game.",
+  "steps": [
+    {
+      "step_id": "S04_SOURCE",
+      "stage_direction": "Vy cho mượn clip để kiểm chứng nội bộ.",
+      "lines": [
+        "S04_L001",
+        "S04_L002"
+      ],
+      "choices": [
+        {
+          "choice_id": "S04_WATCH",
+          "label": "Xem đoạn trước ảnh 0443 cùng Hạ",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S04_L003",
+            "S04_L004",
+            "S04_L005",
+            "S04_L006",
+            "S04_L007",
+            "S04_L008",
+            "S04_L009",
+            "S04_L010",
+            "S04_L011"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "saw_video",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "knows_handoff",
+              "value": true
+            },
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "VIDEO_VY"
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F06"
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F07"
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F08"
+            },
+            {
+              "op": "add_unique",
+              "field": "ha_shared_facts",
+              "value": "F06"
+            },
+            {
+              "op": "add_unique",
+              "field": "ha_shared_facts",
+              "value": "F07"
+            },
+            {
+              "op": "add_unique",
+              "field": "ha_shared_facts",
+              "value": "F08"
+            },
+            {
+              "op": "grant",
+              "asset_id": "VIDEO_VY",
+              "subject_id": "VY",
+              "scope": "internal_review",
+              "status": "yes",
+              "source_event_id": "S04_WATCH"
+            }
+          ],
+          "next": "step:S04_AFTER",
+          "action_note": "Giữ thứ tự chứng cứ, khoảng lặng sau lời lát; cho tua/lặp. Đồng ý kiểm chứng không là phát hành.",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S04_TESTIMONY",
+          "label": "Giữ lời Nhi đã kể, chưa xem clip",
+          "when": {
+            "field": "knows_handoff",
+            "op": "eq",
+            "value": true
+          },
+          "lines": [
+            "S04_L012",
+            "S04_L013"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "ha_shared_facts",
+              "value": "F06"
+            }
+          ],
+          "next": "step:S04_AFTER",
+          "action_note": "Không giả vờ chưa biết chỉ vì chưa xem clip; nguyên câu hai vế vẫn chưa mở cho Hạ.",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S04_AFTER",
+      "stage_direction": "Ảnh vui vẫn trên bàn. Sổ chỉ ghi điều có nguồn, không ghi ý đồ của ai.",
+      "lines": [
+        "S04_L014"
+      ],
+      "choices": [
+        {
+          "choice_id": "S04_DRAFT",
+          "label": "Mở các mẫu trang",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [],
+          "next": "scene:S05",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

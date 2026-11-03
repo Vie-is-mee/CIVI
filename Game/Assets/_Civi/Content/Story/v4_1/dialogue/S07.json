@@ -1,0 +1,209 @@
+{
+  "scene_id": "S07",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S07_L001",
+      "speaker_id": "AN",
+      "text": "Đây là bản nháp tao muốn hỏi mày, chưa in.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L002",
+      "speaker_id": "NARRATOR",
+      "text": "Nhi nhìn màn hình, kéo về tấm buổi tập.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L003",
+      "speaker_id": "NHI",
+      "text": "Mai khỏi làm bảng này.",
+      "mood": "concerned",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L004",
+      "speaker_id": "AN",
+      "text": "Mày muốn sửa câu nào?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L005",
+      "speaker_id": "NHI",
+      "text": "Bỏ đoạn cảm ơn. Tao không nhận giải.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L006",
+      "speaker_id": "NHI",
+      "text": "Tấm hai ảnh ấy. Tao vẽ cái đó.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L007",
+      "speaker_id": "AN",
+      "text": "Tao vẫn giữ sơ đồ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L008",
+      "speaker_id": "NHI",
+      "text": "Ảnh mới ai chụp?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L009",
+      "speaker_id": "AN",
+      "text": "Bản cảm ơn dừng nhé. Hạ, Minh đừng chuẩn bị theo bản đó nữa. Tao đổi sang trang ký ức.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L010",
+      "speaker_id": "HA",
+      "text": "Tao đọc rồi. Cái bảng đang ở trong túi, ra sân nhớ lấy ra cất.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L011",
+      "speaker_id": "MINH",
+      "text": "Ừ. Cho tao bản mới sau.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L012",
+      "speaker_id": "AN",
+      "text": "Ừ, tao dừng bản này. Để tao làm theo hai ô rồi hỏi mọi người.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L013",
+      "speaker_id": "NHI",
+      "text": "Cho tao xem tấm cũ trước.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L014",
+      "speaker_id": "AN",
+      "text": "Nhưng mọi người đang làm vì mày mà.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L015",
+      "speaker_id": "NHI",
+      "text": "Vậy tụi mày làm đi. Mai tao không ra chụp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L016",
+      "speaker_id": "AN",
+      "text": "Tao biết mày không muốn bảng đó. Tao sẽ nói rõ ở sân, chưa dùng vào ảnh.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L017",
+      "speaker_id": "NHI",
+      "text": "Đừng bắt tao cầm nó.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L018",
+      "speaker_id": "AN",
+      "text": "Mai 16:45 chụp cùng nhé? Tao lo máy hẹn giờ, không cần đứng y hệt tấm cũ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L019",
+      "speaker_id": "NHI",
+      "text": "Được. 17:10 tao phải đi, chưa xong tao vẫn đi đấy.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L020",
+      "speaker_id": "AN",
+      "text": "Ừ. Mày đến là vào chụp, tao lo máy.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L021",
+      "speaker_id": "AN",
+      "text": "Mai mày có thu xếp ra sân được không? Không kịp thì mình tính trang từ ảnh cũ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L022",
+      "speaker_id": "NHI",
+      "text": "Mai tao còn trả đồ với Phương trước giờ kiểm tra. Tao không ra được.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L023",
+      "speaker_id": "AN",
+      "text": "Ừ. Tao không chờ mày ở sân.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L024",
+      "speaker_id": "AN",
+      "text": "Mai ra chụp nhé? Tao gửi giờ trong nhóm, xem lịch rồi báo tao.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L025",
+      "speaker_id": "NHI",
+      "text": "Để tao xem đã.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L026",
+      "speaker_id": "NARRATOR",
+      "text": "Chưa có câu nhận lời. An không đánh dấu đã hẹn xong.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L027",
+      "speaker_id": "AN",
+      "text": "Ừ. Tao không nhắn mày ra nữa. Còn phần ảnh cũ, cho tao hỏi rõ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L028",
+      "speaker_id": "AN",
+      "text": "Tấm buổi tập này, tao để vào trang 17 được không? Chỉ ảnh và ngày, không câu gán kia.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S07_L029",
+      "speaker_id": "NHI",
+      "text": "Được, tấm này dùng được. Gửi tao bản chốt nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

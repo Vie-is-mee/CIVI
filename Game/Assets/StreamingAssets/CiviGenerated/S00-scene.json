@@ -1,0 +1,324 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S00",
+  "title": "Đừng bấm vội",
+  "source_pages": [
+    4,
+    5,
+    19
+  ],
+  "background_id": "BG_COURTYARD",
+  "entry_step": "S00_MACHINE",
+  "asset_ids": [
+    "PHOTO_S00_GOOD",
+    "PHOTO_S00_BAD_01",
+    "PHOTO_S00_BAD_02",
+    "PROP_DIAGRAM",
+    "PROP_SIGN_HEN",
+    "PROP_CLAMP",
+    "PROP_BATTERY"
+  ],
+  "production_notes": "Buổi tập tháng Mười; không gán ngày cụ thể. Hai lần chụp hỏng là hiện vật, không màn thất bại.",
+  "steps": [
+    {
+      "step_id": "S00_MACHINE",
+      "stage_direction": "An kéo dây ra khỏi lối đi. Điện thoại nghiêng trên thùng; Nhi đang cài giờ.",
+      "lines": [
+        "S00_L001",
+        "S00_L002",
+        "S00_L003"
+      ],
+      "choices": [
+        {
+          "choice_id": "S00_BOX",
+          "label": "Kê lại thùng và giữ điện thoại",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S00_L004",
+            "S00_L005"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "opening_support",
+              "value": "self"
+            }
+          ],
+          "next": "step:S00_POSE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S00_CLAMP",
+          "label": "Giữ chân kẹp cho Nhi cài giờ",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S00_L006",
+            "S00_L007"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "opening_support",
+              "value": "clamp"
+            }
+          ],
+          "next": "step:S00_POSE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S00_ASK",
+          "label": "Nhờ Nhi kiểm kẹp, mình giữ dây",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S00_L008",
+            "S00_L009"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "opening_support",
+              "value": "ask"
+            }
+          ],
+          "next": "step:S00_POSE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S00_POSE",
+      "stage_direction": "Bảng chỉ sáng chữ HẸN. Cả ba rủ An thử cách đứng khác nhau.",
+      "lines": [
+        "S00_L010",
+        "S00_L011",
+        "S00_L012"
+      ],
+      "choices": [
+        {
+          "choice_id": "S00_POSE1",
+          "label": "Giơ tay làm nét chữ HẸN",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S00_L013",
+            "S00_L014"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "opening_gesture",
+              "value": "pose_1"
+            }
+          ],
+          "next": "step:S00_CAPTURE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S00_POSE2",
+          "label": "Cùng nhìn sang một phía",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S00_L015",
+            "S00_L016"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "opening_gesture",
+              "value": "pose_2"
+            }
+          ],
+          "next": "step:S00_CAPTURE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S00_POSE3",
+          "label": "Đứng bình thường, trêu Minh đừng nhìn pin",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S00_L017",
+            "S00_L018"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "opening_gesture",
+              "value": "pose_3"
+            }
+          ],
+          "next": "step:S00_CAPTURE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S00_CAPTURE",
+      "stage_direction": "Đặt máy, bấm hẹn giờ, An chạy vào. Lần một đèn tắt; lần hai Minh cúi nhặt bìa.",
+      "lines": [
+        "S00_L019",
+        "S00_L020",
+        "S00_L021"
+      ],
+      "choices": [
+        {
+          "choice_id": "S00_SHOOT",
+          "label": "Đặt lại giờ và chạy vào ảnh",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S00_L022",
+            "S00_L023",
+            "S00_L024",
+            "S00_L025"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "opening_photos_created",
+              "value": true
+            },
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PHOTO_S00_GOOD"
+            },
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PHOTO_S00_BAD_01"
+            },
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PHOTO_S00_BAD_02"
+            }
+          ],
+          "next": "step:S00_ALBUM",
+          "action_note": "Cho mở cả ba ảnh ngay; luôn đủ bốn trong ảnh gốc.",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S00_ALBUM",
+      "stage_direction": "Ba thumbnail nằm cạnh nhau. Người chơi chọn tên album ngắn.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S00_ALBUM1",
+          "label": "Một lần đủ bốn",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [
+            {
+              "op": "set",
+              "field": "album_name",
+              "value": "Một lần đủ bốn"
+            }
+          ],
+          "next": "step:S00_DIAGRAM",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S00_ALBUM2",
+          "label": "Đèn chưa chịu sáng",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [
+            {
+              "op": "set",
+              "field": "album_name",
+              "value": "Đèn chưa chịu sáng"
+            }
+          ],
+          "next": "step:S00_DIAGRAM",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S00_ALBUM3",
+          "label": "Minh đừng nhìn pin",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [
+            {
+              "op": "set",
+              "field": "album_name",
+              "value": "Minh đừng nhìn pin"
+            }
+          ],
+          "next": "step:S00_DIAGRAM",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S00_DIAGRAM",
+      "stage_direction": "Nhi vẽ hai ô, bốn tên, dán tia chớp. Ô phải để trống.",
+      "lines": [
+        "S00_L026",
+        "S00_L027",
+        "S00_L028",
+        "S00_L029"
+      ],
+      "choices": [
+        {
+          "choice_id": "S00_KEEP",
+          "label": "Cất sơ đồ cùng album",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PROP_DIAGRAM"
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F01"
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F02"
+            }
+          ],
+          "next": "scene:S01",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

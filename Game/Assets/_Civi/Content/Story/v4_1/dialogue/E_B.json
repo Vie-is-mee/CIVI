@@ -1,0 +1,48 @@
+{
+  "scene_id": "E_B",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "E_B_L001",
+      "speaker_id": "HA",
+      "text": "Không có ảnh mới trong trang này nhỉ?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_B_L002",
+      "speaker_id": "AN",
+      "text": "Ừ. Tao bỏ ô chờ rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_B_L003",
+      "speaker_id": "NARRATOR",
+      "text": "Ngón tay An dừng ở nguồn cũ vừa chọn. Ảnh mới nếu có vẫn nằm riêng, không bị xóa như hình phạt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_B_L004",
+      "speaker_id": "NHI",
+      "text": "Nguồn cũ này dùng được. Gửi tao bản vừa chốt nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_B_L005",
+      "speaker_id": "AN",
+      "text": "Ừ, tao gửi đúng bản này.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_B_L006",
+      "speaker_id": "NARRATOR",
+      "text": "An chọn bản vừa được hỏi, gửi cho Nhi. Màn hình điện thoại tắt. Tiếng quạt ngoài phòng vẫn đều.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

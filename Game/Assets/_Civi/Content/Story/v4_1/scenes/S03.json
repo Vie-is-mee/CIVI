@@ -1,0 +1,208 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S03",
+  "title": "Ba ảnh khác nhau",
+  "source_pages": [
+    6,
+    7,
+    17
+  ],
+  "background_id": "BG_DESIGN_ROOM",
+  "entry_step": "S03_DESK",
+  "asset_ids": [
+    "PHOTO_0441",
+    "PHOTO_0442",
+    "PHOTO_0443",
+    "PHOTO_CLAMP_EMPTY"
+  ],
+  "production_notes": "Thí nghiệm A/B/C duy nhất. B/C dùng responses riêng và cùng luật với các nút. Hub không tự lộ video.",
+  "steps": [
+    {
+      "step_id": "S03_DESK",
+      "stage_direction": "Hạ mở ảnh gốc, kéo chúng cạnh nhau. Có thể phóng to, kéo rộng và hỏi bằng nút hoặc câu nhập.",
+      "lines": [
+        "S03_L001",
+        "S03_L002"
+      ],
+      "choices": [
+        {
+          "choice_id": "S03_LOOK_0441",
+          "label": "Mở ảnh 0441",
+          "when": {
+            "not": {
+              "field": "evidence_seen",
+              "op": "contains",
+              "value": "PHOTO_0441"
+            }
+          },
+          "lines": [
+            "S03_L003"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PHOTO_0441"
+            }
+          ],
+          "next": "step:S03_DESK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S03_LOOK_0442",
+          "label": "Mở ảnh 0442",
+          "when": {
+            "not": {
+              "field": "evidence_seen",
+              "op": "contains",
+              "value": "PHOTO_0442"
+            }
+          },
+          "lines": [
+            "S03_L004"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PHOTO_0442"
+            }
+          ],
+          "next": "step:S03_DESK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S03_LOOK_0443",
+          "label": "Mở ảnh 0443",
+          "when": {
+            "not": {
+              "field": "evidence_seen",
+              "op": "contains",
+              "value": "PHOTO_0443"
+            }
+          },
+          "lines": [
+            "S03_L005"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PHOTO_0443"
+            }
+          ],
+          "next": "step:S03_DESK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S03_EMPTY",
+          "label": "So cận chiếc kẹp trống",
+          "when": {
+            "not": {
+              "field": "evidence_seen",
+              "op": "contains",
+              "value": "PHOTO_CLAMP_EMPTY"
+            }
+          },
+          "lines": [
+            "S03_L006",
+            "S03_L007"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PHOTO_CLAMP_EMPTY"
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F04"
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F05"
+            }
+          ],
+          "next": "step:S03_DESK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S03_WHY",
+          "label": "Hỏi Hạ vì sao giữ 0443",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S03_L008"
+          ],
+          "effects": [],
+          "next": "step:S03_REASON",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S03_SOURCE",
+          "label": "Tìm đoạn quay của Vy",
+          "when": {
+            "all": [
+              {
+                "field": "evidence_seen",
+                "op": "contains",
+                "value": "PHOTO_0441"
+              },
+              {
+                "field": "evidence_seen",
+                "op": "contains",
+                "value": "PHOTO_0442"
+              },
+              {
+                "field": "evidence_seen",
+                "op": "contains",
+                "value": "PHOTO_0443"
+              },
+              {
+                "field": "evidence_seen",
+                "op": "contains",
+                "value": "PHOTO_CLAMP_EMPTY"
+              }
+            ]
+          },
+          "lines": [
+            "S03_L009"
+          ],
+          "effects": [],
+          "next": "scene:S04",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S03_REASON",
+      "stage_direction": "Ảnh 0443 đứng cạnh sơ đồ; câu hỏi không tự biến thành lời buộc tội được xác nhận.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S03_REASON_BACK",
+          "label": "Trở lại ba ảnh",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [],
+          "next": "step:S03_DESK",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

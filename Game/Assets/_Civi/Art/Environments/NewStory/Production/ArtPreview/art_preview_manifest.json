@@ -1,0 +1,83 @@
+{
+  "note": "preview source 595x335 from Canva; cannot claim native 1672px fidelity",
+  "sources": [
+    {
+      "id": "ENV_RM_ALLEY",
+      "from_thumbnail": [
+        595,
+        335
+      ],
+      "asset_resolution": [
+        1672,
+        941
+      ],
+      "actual_source_resolution": [
+        595,
+        335
+      ],
+      "filename": "ENV_RM_ALLEY_v02.png",
+      "foreground": "ENV_RM_ALLEY_foreground_v02.png",
+      "quality": "upscaled_canva_preview_not_original",
+      "sha256": "84763cb4b21cc5c33a5fc934256713667837fac28da0cfd77ecd71d8b00ecb85"
+    },
+    {
+      "id": "ENV_RM_ALLEY_STORM",
+      "from_thumbnail": [
+        595,
+        335
+      ],
+      "asset_resolution": [
+        1672,
+        941
+      ],
+      "actual_source_resolution": [
+        595,
+        335
+      ],
+      "filename": "ENV_RM_ALLEY_STORM_v02.png",
+      "foreground": "ENV_RM_ALLEY_STORM_foreground_v02.png",
+      "quality": "upscaled_canva_preview_not_original",
+      "sha256": "edb28b866eb5e7b5196659e5b4d74fdf41e15516be0e839d36c3326678d18ffc"
+    },
+    {
+      "id": "ENV_RM_FILTER19",
+      "from_thumbnail": [
+        595,
+        335
+      ],
+      "asset_resolution": [
+        1672,
+        941
+      ],
+      "actual_source_resolution": [
+        595,
+        335
+      ],
+      "filename": "ENV_RM_FILTER19_v02.png",
+      "foreground": "ENV_RM_FILTER19_foreground_v02.png",
+      "quality": "upscaled_canva_preview_not_original",
+      "sha256": "2f5006ca7c0cfd61ebaca9ff5b6237d8b86cd9c2fe7f9d34b56f71b35c3a5090"
+    },
+    {
+      "id": "ENV_LQ_PLAZA",
+      "from_thumbnail": [
+        595,
+        335
+      ],
+      "asset_resolution": [
+        1672,
+        941
+      ],
+      "actual_source_resolution": [
+        595,
+        335
+      ],
+      "filename": "ENV_LQ_PLAZA_v02.png",
+      "foreground": "ENV_LQ_PLAZA_foreground_v02.png",
+      "quality": "upscaled_canva_preview_not_original",
+      "sha256": "48bf8bbccb840037b930923f79f80d39e8273437d4175bfba6fb745af2059090"
+    }
+  ],
+  "actor": "temporary illustrated placeholder, not confirmed character design",
+  "status": "playable art prototype only"
+}

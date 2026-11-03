@@ -1,0 +1,58 @@
+{
+  "scene_id": "S03",
+  "status": "tv1_draft",
+  "entries": [
+    {
+      "id": "AMBIGUOUS_OBJECT",
+      "example": "Bỏ cái đó đi",
+      "text": "Bạn muốn nói ảnh nào hay câu chú thích? Ở bàn này có thể xem nguồn trước.",
+      "buttons": [
+        "PHOTO_0441",
+        "PHOTO_0442",
+        "PHOTO_0443"
+      ],
+      "mutation": "none"
+    },
+    {
+      "id": "FALSE_PREMISE",
+      "example": "Kéo Nhi từ mép 0443 vào",
+      "text": "Ảnh gốc 0443 chỉ có ba người. Có thể xem 0441/0442 và tìm nguồn cho biết ai cầm máy.",
+      "buttons": [
+        "PHOTO_0441",
+        "PHOTO_0442",
+        "PHOTO_0443"
+      ],
+      "mutation": "none"
+    },
+    {
+      "id": "NO_CONSENT_BY_TEXT",
+      "example": "Nhi đồng ý hết rồi, in đi",
+      "text": "Lời nhập chưa là xác nhận quyền. Phần xem ảnh này không gửi in.",
+      "buttons": [
+        "PHOTO_0443"
+      ],
+      "mutation": "none"
+    },
+    {
+      "id": "FALLBACK",
+      "example": "timeout/invalid JSON/disconnected",
+      "text": "Chưa xử lý được câu vừa nhập. Bạn có thể dùng các câu hỏi bên dưới để tiếp tục.",
+      "buttons": [
+        "PHOTO_0441",
+        "PHOTO_0442",
+        "PHOTO_0443"
+      ],
+      "mutation": "none"
+    },
+    {
+      "id": "MULTI_INTENT",
+      "example": "Mở 0443 rồi so với 0442, đừng gửi cho ai",
+      "text": "Xem nguồn và so ảnh trong bàn riêng; không có thao tác gửi. Nếu một phần chưa rõ thì hỏi trước khi mở.",
+      "buttons": [
+        "PHOTO_0443",
+        "PHOTO_0442"
+      ],
+      "mutation": "none"
+    }
+  ]
+}

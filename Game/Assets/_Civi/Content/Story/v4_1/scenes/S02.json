@@ -1,0 +1,228 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S02",
+  "title": "Chiếc kẹp có cao su mới",
+  "source_pages": [
+    5,
+    6,
+    15
+  ],
+  "background_id": "BG_EQUIPMENT_CORNER",
+  "entry_step": "S02_HUB",
+  "asset_ids": [
+    "PROP_DIAGRAM",
+    "PROP_CLAMP",
+    "PROP_SCHEDULE",
+    "PROP_CAPTION_OLD"
+  ],
+  "production_notes": "Hub xem sơ đồ/kẹp/lịch tùy thứ tự; thông tin cốt lõi không cần giúp đủ lượt. Hỏi trực tiếp được đáp ngay.",
+  "steps": [
+    {
+      "step_id": "S02_HUB",
+      "stage_direction": "Nhi và Phương kiểm đồ. An có thể chạm từng vật hoặc hỏi trong lúc họ làm.",
+      "lines": [
+        "S02_L001",
+        "S02_L002"
+      ],
+      "choices": [
+        {
+          "choice_id": "S02_HELP",
+          "label": "Giữ thùng và giúp kiểm đồ",
+          "when": {
+            "field": "nhi_contact",
+            "op": "ne",
+            "value": "help"
+          },
+          "lines": [
+            "S02_L003",
+            "S02_L004",
+            "S02_L005"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "nhi_contact",
+              "value": "help"
+            }
+          ],
+          "next": "step:S02_HUB",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S02_DIAGRAM",
+          "label": "Xem lại sơ đồ hai ảnh",
+          "when": {
+            "field": "early_nhi_understanding",
+            "op": "eq",
+            "value": false
+          },
+          "lines": [
+            "S02_L006",
+            "S02_L007"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "early_nhi_understanding",
+              "value": true
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F01"
+            }
+          ],
+          "next": "step:S02_HUB",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S02_CLAMP",
+          "label": "Thử chiếc kẹp vừa sửa",
+          "when": {
+            "not": {
+              "field": "evidence_seen",
+              "op": "contains",
+              "value": "PROP_CLAMP"
+            }
+          },
+          "lines": [
+            "S02_L008",
+            "S02_L009",
+            "S02_L010",
+            "S02_L011"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PROP_CLAMP"
+            }
+          ],
+          "next": "step:S02_HUB",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S02_CLOCK",
+          "label": "Đọc lịch trên thùng",
+          "when": {
+            "not": {
+              "field": "evidence_seen",
+              "op": "contains",
+              "value": "PROP_SCHEDULE"
+            }
+          },
+          "lines": [
+            "S02_L012",
+            "S02_L013"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PROP_SCHEDULE"
+            }
+          ],
+          "next": "step:S02_HUB",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S02_ASK_CAMERA",
+          "label": "Hỏi Nhi ai cầm máy hôm hội chợ",
+          "when": {
+            "field": "knows_handoff",
+            "op": "eq",
+            "value": false
+          },
+          "lines": [
+            "S02_L014",
+            "S02_L015",
+            "S02_L016",
+            "S02_L017"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "knows_handoff",
+              "value": true
+            },
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "TESTIMONY_NHI"
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F06"
+            }
+          ],
+          "next": "step:S02_HUB",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S02_CAPTION",
+          "label": "Hỏi về lời nhắc đừng in",
+          "when": {
+            "not": {
+              "field": "evidence_seen",
+              "op": "contains",
+              "value": "PROP_CAPTION_OLD"
+            }
+          },
+          "lines": [
+            "S02_L018",
+            "S02_L019",
+            "S02_L020"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PROP_CAPTION_OLD"
+            }
+          ],
+          "next": "step:S02_HUB",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S02_LEAVE",
+          "label": "Mang lịch về bàn ảnh",
+          "when": {
+            "all": [
+              {
+                "field": "evidence_seen",
+                "op": "contains",
+                "value": "PROP_CLAMP"
+              },
+              {
+                "field": "evidence_seen",
+                "op": "contains",
+                "value": "PROP_SCHEDULE"
+              },
+              {
+                "field": "evidence_seen",
+                "op": "contains",
+                "value": "PROP_CAPTION_OLD"
+              }
+            ]
+          },
+          "lines": [
+            "S02_L021"
+          ],
+          "effects": [],
+          "next": "scene:S03",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

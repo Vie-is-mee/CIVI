@@ -1,0 +1,238 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S05",
+  "title": "Trang đẹp hơn",
+  "source_pages": [
+    7,
+    17,
+    19
+  ],
+  "background_id": "BG_DESIGN_ROOM",
+  "entry_step": "S05_TEMPLATE",
+  "asset_ids": [
+    "TEMPLATE_TRIBUTE",
+    "TEMPLATE_PAIRED",
+    "TEMPLATE_MEMORY",
+    "PROP_TRIBUTE_BOARD",
+    "PHOTO_S00_GOOD"
+  ],
+  "production_notes": "Ba mẫu đều đẹp, không tô đúng/sai. Chỉ là nháp riêng, chưa xác nhận quyền in. Không có gửi nhóm lớp mặc định.",
+  "steps": [
+    {
+      "step_id": "S05_TEMPLATE",
+      "stage_direction": "Ba preview đặt ngang hàng; ảnh dùng trong preview được đánh dấu nháp riêng.",
+      "lines": [
+        "S05_L001",
+        "S05_L002"
+      ],
+      "choices": [
+        {
+          "choice_id": "S05_TYPE_TRIBUTE",
+          "label": "Một trang cảm ơn với ảnh hậu trường",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S05_L003",
+            "S05_L004"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_type",
+              "value": "tribute"
+            },
+            {
+              "op": "add_unique",
+              "field": "draft_seen_by",
+              "value": "AN"
+            }
+          ],
+          "next": "step:S05_RECIPIENT",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S05_TYPE_PAIRED",
+          "label": "Hai ảnh trước và bây giờ",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S05_L005",
+            "S05_L006"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_type",
+              "value": "paired"
+            },
+            {
+              "op": "add_unique",
+              "field": "draft_seen_by",
+              "value": "AN"
+            }
+          ],
+          "next": "step:S05_RECIPIENT",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S05_TYPE_MEMORY",
+          "label": "Ảnh hỏng và sơ đồ trong trang ký ức",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S05_L007",
+            "S05_L008"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_type",
+              "value": "memory"
+            },
+            {
+              "op": "add_unique",
+              "field": "draft_seen_by",
+              "value": "AN"
+            }
+          ],
+          "next": "step:S05_RECIPIENT",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S05_RECIPIENT",
+      "stage_direction": "Preview luôn hiện loại nháp, nội dung, phiên bản 1 và người nhận. Người chơi bấm xác nhận gửi.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S05_SEND_NHI",
+          "label": "Gửi riêng Nhi xem trước",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S05_L009",
+            "S05_L010"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_sent_to",
+              "value": "nhi"
+            }
+          ],
+          "next": "scene:S06",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S05_SEND_GROUP_TRIBUTE",
+          "label": "Gửi nhóm bốn người",
+          "when": {
+            "field": "draft_type",
+            "op": "eq",
+            "value": "tribute"
+          },
+          "lines": [
+            "S05_L011",
+            "S05_L012",
+            "S05_L013"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_sent_to",
+              "value": "group_four"
+            },
+            {
+              "op": "set",
+              "field": "tribute_board_prepared",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "draft_retracted",
+              "value": "no"
+            },
+            {
+              "op": "add_unique",
+              "field": "draft_seen_by",
+              "value": "HA"
+            },
+            {
+              "op": "add_unique",
+              "field": "draft_seen_by",
+              "value": "MINH"
+            }
+          ],
+          "next": "scene:S06",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S05_SEND_GROUP_OTHER",
+          "label": "Gửi nhóm bốn người",
+          "when": {
+            "field": "draft_type",
+            "op": "ne",
+            "value": "tribute"
+          },
+          "lines": [
+            "S05_L014",
+            "S05_L015"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_sent_to",
+              "value": "group_four"
+            },
+            {
+              "op": "add_unique",
+              "field": "draft_seen_by",
+              "value": "HA"
+            },
+            {
+              "op": "add_unique",
+              "field": "draft_seen_by",
+              "value": "MINH"
+            }
+          ],
+          "next": "scene:S06",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S05_HOLD",
+          "label": "Giữ trên máy, mang ra nói trực tiếp",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S05_L016",
+            "S05_L017"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "draft_sent_to",
+              "value": "held"
+            }
+          ],
+          "next": "scene:S06",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

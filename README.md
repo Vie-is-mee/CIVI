@@ -1,42 +1,115 @@
-# CIVI · Trang 17 không tồn tại
+# CIVI — Unity 2D Game
 
-Một trang kỷ yếu bị rút khỏi bản in thử. Ảnh có ba người, bản nháp ghi bốn tên — còn lời hẹn hôm đó là gì?
+## BẢN CHƠI MỚI NHẤT — CHƯƠNG 1 (01/11/2026)
 
-Bản chơi thử kể chuyện tương tác bằng tiếng Việt, có tư liệu để xem, lựa chọn đối thoại và các kết quả khác nhau. Nội dung hiện được rút gọn từ kịch bản v4.1; chưa tích hợp dịch vụ AI hội thoại.
+**Chạy `PLAY_CIVI_CHAPTER1.bat`** ngay trong repo. Đây là bản Windows x86 playable của hai cảnh theo canon học đường v4.1: **S00 “Đừng bấm vội” → S01 “Trang ở giữa”**. Nhân vật An đi trong sân/liền mạch, tương tác với máy ảnh và ba bạn học, xem ba ảnh buổi tập; đi tới cửa phòng thiết kế để chuyển Unity scene, giải quyết nội dung S01 và nhận màn hoàn thành Chương 1.
 
-## Chơi trên Windows
+Trong Unity 6000.6.6f1: **CIVI > Chapter 1 > Open Chapter 1 → Play**. Phím: WASD/mũi tên di chuyển, **E** tương tác, Enter/Space đọc thoại, phím 1–3 chọn, F5/F9 lưu/tải. **Chỉ bản Chapter 1 mới được bật trong Build Settings**; bản V1/V2, S00/S02 cũ và NewStory không bị xóa.
 
-**[Tải Choi-CIVI.bat](https://github.com/Vie-is-mee/CIVI/releases/download/v0.41.1/Choi-CIVI.bat)** từ [bản phát hành 0.41.1](https://github.com/Vie-is-mee/CIVI/releases/tag/v0.41.1), rồi bấm đúp file vừa tải.
+**Bằng chứng QA:** Unity Editor smoke PASS, standalone Windows-player integration PASS S00→S01→S02 boundary, Story Runtime regression 69/69. **Giới hạn:** pixel-art vẫn là prototype; chưa đạt art production Blue Archive, và chưa manual playtest phím end-to-end. Xem [tài liệu bàn giao Chương 1](docs/production/chapter1-playable-handoff-2026-11-01.md).
 
-Lần đầu, BAT tải và kiểm tra gói game, cài vào thư mục người dùng, tạo lối tắt trên Desktop rồi mở game. Những lần sau, bấm lối tắt **CIVI - Trang 17** hoặc mở lại BAT; không cần mạng nếu bản cài vẫn đầy đủ.
+---
 
-Chọn **Mở trang đầu** để bắt đầu. Không cần cài Unity, Git, Python hay Node. Bản này dành cho Windows 10/11 64-bit; chưa có bản macOS, Linux hoặc điện thoại. Lần đầu cần mạng và khoảng 250 MB dung lượng trống trong lúc cài.
+## LỊCH SỬ — SCHOOL VISUAL V2 (31/10/2026)
 
-Nếu muốn tự giải nén: tải **CIVI-Trang17-0.41.1-Windows.zip** trong cùng release, giải nén toàn bộ rồi mở **CIVI-Trang17.exe**. Đừng chỉ lấy riêng EXE hoặc tải “Source code” để chơi. Có thể đặt ZIP cạnh BAT để cài không cần mạng.
+## BẢN TEST MỚI NHẤT: SCHOOL VISUAL V2 (31/10/2026)
 
-## Điều khiển
+**Bạn chỉ cần chạy `PLAY_CIVI_SCHOOL_V2.bat`** ở thư mục repo. Không phải import hoặc gán asset. Bản mới nâng cấp mỹ thuật và nhân vật, có 2 scene (khuôn viên trường học + phòng thiết kế) nối qua cửa E; camera cuộn liền mạch trong mỗi scene. Nhân vật có sprite 4 hướng × 4 frame; ground/building/props/foreground độc lập.
 
-| Thao tác | Cách dùng |
-|---|---|
-| Đọc tiếp | Bấm **Tiếp tục** hoặc Space / Enter; khi chữ đang chạy, lần bấm đầu hiện hết câu |
-| Chọn hành động | Bấm nút; phím 1–3 dùng khi bảng lựa chọn đã mở |
-| Xem tư liệu / lời vừa nói | J / H |
-| Tạm dừng, âm thanh, nhịp chữ | Esc |
-| Lưu và quay lại | **Đặt dấu trang** / **Về dấu đã lưu** |
+Trong Unity 6000.6.6f1: chọn `CIVI > School World V2 > Open Campus`, nhấn Play. Phím **WASD** di chuyển; **E** tương tác và mở cửa; **H** trợ giúp; **F5/F9** lưu/tải. Xem [hướng dẫn test + giới hạn chất lượng](docs/engineering/school-visual-v2-handoff.md).
 
-Lưu lại giữ cả vị trí và những lựa chọn đã thực hiện. Chơi lại không tự xóa dấu đã lưu. Cài lại game không xóa tiến trình: dữ liệu nằm riêng tại `%USERPROFILE%\AppData\LocalLow\CIVI Prototype\CIVI Trang 17`.
+Bản môi trường mới là art/gameplay prototype; các bản school v1, S00/S02 và Lưu Quang **vẫn được giữ** phục vụ team, không bị ghi đè.
 
-## Gửi nhận xét
+---
 
-Ghi giúp nhóm đoạn nào muốn đọc tiếp hoặc muốn bỏ qua, câu nào khó hiểu, và lựa chọn nào chưa tạo khác biệt. Nếu gặp lỗi, gửi kèm ảnh và thao tác ngay trước đó. Có thể dùng [Issues](https://github.com/Vie-is-mee/CIVI/issues); đừng đăng thông tin riêng tư trong báo lỗi công khai.
+# CIVI — Unity Game
 
-## Cho người phát triển
+## BẢN TEST ĐANG DÙNG — SCHOOL WORLD / BẢN ĐỒ TRƯỜNG HỌC LIỀN MẠCH
 
-- `Game/`: mã và tài nguyên cần cho bản Trang 17, tách gọn khỏi các bản thử cũ. Dùng Unity **6000.6.5f1**. Mở thư mục này bằng Unity Hub; menu **CIVI > Trang 17 v4.1 > Chơi bản UI mới** để xem thử.
-- `tools/Build-Windows.ps1`: xuất bản Windows vào `release/Windows` bằng `Civi41Editor.Build`; build cũng chạy kiểm tra mô hình lựa chọn.
-- `tools/Package-Windows.ps1`: tạo ZIP, BAT và SHA256SUMS trong `release/` sau khi build. Đổi phiên bản trong mã build trước khi phát hành một bản mới.
-- `tools/Launcher/`: nguồn bộ tải, công cụ sinh BAT từ ZIP và bài kiểm tự động. [Chi tiết](tools/Launcher/README.md).
-- `Choi-CIVI.bat`: launcher một file, ghim đúng phiên bản 0.41.1 và SHA-256. Gói chạy nằm trong GitHub Releases, không nằm trong lịch sử Git.
-- [Ghi chú phát hành](docs/RELEASE-0.41.1.md) · [Tài nguyên và giấy phép](docs/ASSETS.md).
+**Chạy ngay `PLAY_CIVI_SCHOOL_WORLD.bat`** ở thư mục gốc. Không cần tự import asset, tạo scene, hay gán script. Bản đồ trường học có một không gian 152×60 tile: cổng, bãi xe đạp, sân, hành lang, lớp học, phòng thiết kế và thư viện; camera theo nhân vật liên tục. Không phải tranh nền ghép từng màn.
 
-Không đưa cache Unity, bản cũ, dữ liệu lưu, token hoặc khóa API vào repo. Bản nguồn dùng Built-in để tái tạo bản chạy này; không thay thế cấu hình URP của dự án làm việc gốc.
+Trong Unity 6000.6.6f1: `CIVI > School World > Open Seamless Campus` → Play. Điều khiển **WASD**, tương tác **E**, **H** hướng dẫn, **F5/F9** lưu/tải; camera zoom bằng con lăn chuột.
+
+Bản School World là môi trường gameplay độc lập đang được ưu tiên để test; chưa phải phần chuyển thể đã gắn toàn bộ nhiệm vụ của các kịch bản khác. [Hướng dẫn và QA](docs/engineering/school-connected-world-v1.md). Nguồn art tile **Kenney CC0**. Bản cũ và bản campaign Lưu Quang vẫn được giữ an toàn.
+
+---
+
+## LỊCH SỬ / BẢN TEST CŨ — FULL CAMPAIGN (31/10/2026)
+
+**Chỉ cần chạy `PLAY_CIVI_NEW_STORY.bat` ở thư mục gốc**. Không phải mở Unity, không cần tạo scene, không cần sửa code.
+
+Nếu dùng Unity 6000.6.6f1: `CIVI > NEW STORY > Open Full Campaign` rồi nhấn Play. Build Settings chỉ chứa `CIVI-NewStory-FullCampaign.unity`.
+
+Game dựa trên bản phân nhánh 28/10/2026 của *Những người không có chỗ dưới bầu trời*: **10 chương, 4 cảnh rẽ, tuyến C, 2 tuyến kết thúc thay thế; 12 tổ hợp lựa chọn và 3 kết thúc**. Mỗi phần truyện là 3 screen nối nhau có camera theo nhân vật; nhấn E để đọc điểm chuyện, R để mở toàn văn 1.033 đoạn; F5/F9 lưu/tải. Quyết định bằng phím 1/2/3 ở cuối chương 5, 7, 9.
+
+**Cảnh báo:** đây là bản kiểm thử campaign hoàn chỉnh về nội dung và phân nhánh, **chưa phải bản game production** về art/gameplay. Nền 2D vẫn có độ phân giải nguồn giới hạn và được tái sử dụng; NPC, puzzle riêng, collision và animating chưa hoàn thiện.
+
+[Hướng dẫn test, QA và giới hạn](docs/production/full-campaign-test-2026-10-31.md) · `tools/check_full_campaign.py` · bản sao lưu `artifacts/campaign-handoff-2026-10-31`.
+
+---
+
+## ARCHIVE — Những bản prototype không còn dùng để test cuối
+
+Các mục bên dưới mô tả tiến trình kỹ thuật trước đây, **không phải hướng chạy campaign mới**. NS01/NS02 đã chuyển khỏi Assets sang `artifacts/legacy-prototypes-2026-10-31`. Các scene S00/S02 thuộc tuyến kỷ yếu cũ vẫn được giữ phục vụ team nhưng bị loại khỏi build hiện tại.
+
+## OLD NS02 — Art Playtest (30/10/2026)
+
+Mở project `Game` bằng Unity 6000.6.6f1, chọn **CIVI > New Story > Open Art Vertical Slice (v2)**, rồi nhấn Play. Bốn nền concept có thể chuyển bằng `1`, `Q` (bão), `2`, `3`; di chuyển bằng WASD, E để xem địa điểm, con lăn để zoom. Bản NS01 cũ còn nguyên để so sánh. Xem [hướng dẫn test](docs/engineering/new-story-art-vertical-slice-v2.md) và [bảng tự đánh giá/giới hạn chất lượng ảnh](docs/production/new-story-art-v2-self-review.md). Nền mới vẫn là preview 595x335 được upscale, **không phải native-resolution art production**.
+
+
+## P2 — Điều tra & suy luận tương tác (27/10/2026)
+
+Đã bổ sung chế độ xem ảnh S03 với zoom/kéo, câu hỏi quan sát theo từng ảnh, so sánh cặp 0441–0442/0442–0443 và bảng giả thuyết. Chứng cứ canon chỉ do StorySession ghi nhận; suy luận không tự cấp quyền ảnh. Chơi bằng scene 2D sẵn có, không cần tải thêm. Xem [hướng dẫn P2](docs/engineering/p2-investigation-deduction.md).
+
+
+## P1 mới: Camera top-down 3/4 (27/10/2026)
+
+Bản S02–S03 hiện có **camera bám theo An, zoom bằng con lăn, phòng 3/4 riêng cho S02/S03, lớp trước/sau đồ vật và avatar An có hướng đứng/đi placeholder**. Mở lại scene 2D như P0, không cần dựng scene mới hoặc tải asset. Xem [hướng dẫn P1](docs/engineering/p1-quarter-camera-view.md). Đây vẫn là bản greybox để kiểm tra gameplay trước khi thay bằng bộ art chính thức.
+
+
+## P0 mới: Game 2D điều khiển An (27/10/2026)
+
+Đã thêm scene **`Game/Assets/_Civi/Scenes/S02-2D-VerticalSlice.unity`**: WASD, E để tương tác, bảng ảnh B, F5/F9 lưu/tải, logic chứng cứ từ JSON S02/S03 và cầu nối từ cuối S01. Đây là **greybox kỹ thuật**, chưa có animation/tileset production; không thay thế demo S00.
+
+Hướng dẫn: **[P0 Exploration 2D](docs/engineering/p0-2d-exploration.md)**. Trong Unity có menu `CIVI > TV2 > Mở scene khám phá 2D`.
+
+
+Thư mục làm việc theo cây mới của nhóm. Bản thử trước đó được giữ riêng để tham khảo; không có thư mục `../CIVI` trong gói giải nén này.
+
+## Xem tiến độ TV3 trước
+
+**[00-TIEN-DO-TV3.md — đã làm gì, còn thiếu gì, làm gì tiếp](00-TIEN-DO-TV3.md)**
+
+**[Tám nhiệm vụ riêng của thành viên 3 — W3.1 đến W3.8](docs/production/tv3-task-status.md)**
+
+**[Mở bản S00](01-CHOI-THU-S00.bat)** · [Phiếu nhận xét TV1/TV5](docs/qa/TV3-NHAN-XET-S00.md) · [TV2 nhận mã tích hợp](docs/engineering/tv3-s00-integration.md)
+
+Ảnh ở `Game/Assets/_Civi/Art`, âm thanh ở `Audio`, phông ở `Fonts`. Có file không đồng nghĩa đã duyệt. Các thư mục UI/prefab/video ghi rõ phần đã làm và phần còn thiếu.
+
+## Bắt đầu với TV1
+
+- [Hướng dẫn bộ bàn giao TV1](docs/story/TV1_BAT_DAU_O_DAY.md).
+- [Kịch bản để đọc và góp ý](docs/story/kich-ban-doc-thuan.md).
+- [Kịch bản có điều kiện và hệ quả dữ liệu](docs/story/kich-ban-mvp.md).
+- [Tình trạng W1.1–W1.8](docs/production/tv1-task-status.md).
+- [Cấu trúc và toàn bộ 40 đầu việc](CAU_TRUC_VA_TINH_NANG.md).
+
+## Hiện có gì?
+
+Cây thư mục và gói nội dung TV1 0.1 đã được tạo: canon, phạm vi MVP, state/quyền, kiến thức NPC, lịch, 15 cảnh/nhánh kết cùng thoại, ba template nháp, phản hồi ý định S03 và brief tài nguyên. Nội dung mới chờ người nhận kiểm duyệt.
+
+TV3 đã có 29 media, sáu prefab UI (thoại/lựa chọn/ba mẫu nháp/DraftReview), bốn prefab đạo cụ, AssetCatalog, scene S00 và bản Windows đọc/bấm được. S00 có ba cặp callback gesture và animatic phụ đề/hiệu ứng; UI W3.4 có bàn thử chín tổ hợp mẫu/người nhận. Model/build/UI 720p và 1080p đã kiểm. Xem trang tiến độ và báo cáo hash để xác định kết quả còn khớp bản hiện tại hay không.
+
+Cây này **đã tích hợp S00**, dừng ở điểm nối S01. Chưa tích hợp S01–S10/các kết, chưa AI service, chưa có nhận xét người chơi thật hoặc xác nhận nhóm duyệt. S00Session chỉ thực thi lệnh S00; không phải runtime đầy đủ cho contract TV1/TV4. Bản chạy cũ vẫn giữ riêng.
+
+Sau khi kiểm đã dọn khoảng 422 MiB cache Unity tự sinh. Bản Windows vẫn mở bình thường; lần đầu mở project bằng Unity sẽ nhập lại tài nguyên. Giữ `Assets` và `.meta`, `Packages`, `ProjectSettings`; không cần mang `Library/Temp/Logs` khi bàn giao.
+
+## Kiểm dữ liệu
+
+Từ thư mục này, dùng Python 3:
+
+```powershell
+python tools/Content/validate_tv1_content.py
+```
+
+Script chỉ dùng thư viện chuẩn; kiểm ID/tham chiếu và mô phỏng nội dung. Báo cáo lần chạy hiện tại nằm ở [kết quả kiểm TV1](docs/qa/tv1-content-validation.md). Việc nạp Unity, UI/media, lưu ảnh thực và hiệu quả AI vẫn phải kiểm riêng.

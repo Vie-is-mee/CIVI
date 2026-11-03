@@ -1,0 +1,125 @@
+{
+  "scene_id": "S05",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S05_L001",
+      "speaker_id": "HA",
+      "text": "Mày thử đặt ảnh lên đây. Muốn sửa chỗ nào thì chỉ rõ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L002",
+      "speaker_id": "MINH",
+      "text": "Chốt xong gửi tao bản xem. Đừng gửi mỗi tên file.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L003",
+      "speaker_id": "AN",
+      "text": "Hay làm một trang cảm ơn Nhi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L004",
+      "speaker_id": "HA",
+      "text": "Được. Tao thử ảnh lớn, chữ ngắn ở dưới.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L005",
+      "speaker_id": "AN",
+      "text": "Tao muốn giữ hai ô như sơ đồ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L006",
+      "speaker_id": "HA",
+      "text": "Ô mới chưa có ảnh. Cứ để bản nháp, đừng lấy 0443 gọi là đủ bốn.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L007",
+      "speaker_id": "AN",
+      "text": "Chưa có ảnh mới thì làm từ những tấm đang giữ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L008",
+      "speaker_id": "HA",
+      "text": "Ừ. Nhưng chọn ít thôi, để còn nhìn được mặt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L009",
+      "speaker_id": "AN",
+      "text": "Tao gửi nháp riêng. Mày xem lúc rảnh, chưa đưa đi in.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L010",
+      "speaker_id": "NARRATOR",
+      "text": "Tin đã gửi. Nhi đang trong lớp; phản hồi sẽ đến khi cô có thể xem.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L011",
+      "speaker_id": "HA",
+      "text": "Mẫu này in được đấy. Tao còn giấy màu, cắt thử cái bảng nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L012",
+      "speaker_id": "MINH",
+      "text": "Vậy mai ai cầm pin?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L013",
+      "speaker_id": "NARRATOR",
+      "text": "Hạ lấy giấy, đặt dòng Cảm ơn Nhi lên tấm bảng còn trắng.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L014",
+      "speaker_id": "HA",
+      "text": "Tao mở được rồi. Giữ bản này để bàn, chưa chốt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L015",
+      "speaker_id": "MINH",
+      "text": "Nhớ hỏi người có trong ảnh trước khi gửi in.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L016",
+      "speaker_id": "AN",
+      "text": "Để tao mang đi hỏi trước. Chưa gửi nhóm.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S05_L017",
+      "speaker_id": "HA",
+      "text": "Ừ. Mày nhớ nói rõ đây là nháp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

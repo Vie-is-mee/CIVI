@@ -1,0 +1,436 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S09_B",
+  "title": "Sân còn ba người",
+  "source_pages": [
+    10,
+    11,
+    13,
+    18,
+    19
+  ],
+  "background_id": "BG_COURTYARD",
+  "entry_step": "S09_B_DECIDE",
+  "asset_ids": [
+    "PHOTO_S00_GOOD",
+    "PHOTO_NEW_THREE",
+    "PROP_DIAGRAM",
+    "PROP_CLAMP",
+    "PROP_TRIBUTE_BOARD"
+  ],
+  "production_notes": "Đường vắng có đủ việc làm và cảnh kết, không là màn báo lỗi. Nhắn nhiều hay chờ không triệu hồi Nhi.",
+  "steps": [
+    {
+      "step_id": "S09_B_DECIDE",
+      "stage_direction": "Bảng HẸN sáng, ảnh cũ đủ bốn ở góc màn hình. Hạ giữ chân máy, Minh nhìn giờ.",
+      "lines": [
+        "S09_B_L001",
+        "S09_B_L002"
+      ],
+      "choices": [
+        {
+          "choice_id": "S09_B_THREE",
+          "label": "Chụp một tấm ba người hôm nay",
+          "when": {
+            "field": "courtyard_minute",
+            "op": "lt",
+            "value": 90
+          },
+          "lines": [
+            "S09_B_L003",
+            "S09_B_L004"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "absence_choice",
+              "value": "three"
+            }
+          ],
+          "next": "step:S09_B_THREE",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_B_NO_PHOTO",
+          "label": "Không chụp hôm nay, cùng thu đồ",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_B_L005",
+            "S09_B_L006"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "absence_choice",
+              "value": "none"
+            }
+          ],
+          "next": "step:S09_B_PACK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_B_LATER",
+          "label": "Đề nghị một cuộc gặp khác, không bắt buộc chụp",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_B_L007"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "absence_choice",
+              "value": "later"
+            }
+          ],
+          "next": "step:S09_B_LATER",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_B_THREE",
+      "stage_direction": "An đặt máy vào kẹp, kiểm lại và chạy vào khung. Không sinh hình Nhi từ ảnh cũ.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S09_B_TAKE_THREE",
+          "label": "Kê máy, hẹn giờ và cùng vào ảnh (4 phút)",
+          "when": {
+            "field": "courtyard_minute",
+            "op": "lt",
+            "value": 86
+          },
+          "lines": [
+            "S09_B_L008",
+            "S09_B_L009",
+            "S09_B_L010"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "equipment_ready",
+              "value": "ready"
+            },
+            {
+              "op": "set",
+              "field": "photo_result",
+              "value": "three"
+            },
+            {
+              "op": "set",
+              "field": "captured_asset",
+              "value": "PHOTO_NEW_THREE"
+            },
+            {
+              "op": "set",
+              "field": "photo_participants",
+              "value": [
+                "AN",
+                "HA",
+                "MINH"
+              ]
+            },
+            {
+              "op": "advance_minutes",
+              "value": 4
+            }
+          ],
+          "next": "step:S09_B_THREE_RIGHTS",
+          "action_note": "",
+          "duration_minutes": 4
+        },
+        {
+          "choice_id": "S09_B_TOO_LATE",
+          "label": "Tháo quầy đúng lịch, giữ ảnh cũ",
+          "when": {
+            "field": "courtyard_minute",
+            "op": "gte",
+            "value": 86
+          },
+          "lines": [
+            "S09_B_L011",
+            "S09_B_L012"
+          ],
+          "effects": [],
+          "next": "step:S09_B_PACK",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_B_THREE_RIGHTS",
+      "stage_direction": "Xem ảnh vừa chụp; chỉ người thực sự xuất hiện xác nhận.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S09_B_THREE_PRINT",
+          "label": "Hỏi dùng ảnh ba người trong trang kỷ yếu",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_B_L033",
+            "S09_B_L034",
+            "S09_B_L035"
+          ],
+          "effects": [
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_THREE",
+              "subject_id": "AN",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S09_B_THREE_PRINT"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_THREE",
+              "subject_id": "HA",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S09_B_THREE_PRINT"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_THREE",
+              "subject_id": "MINH",
+              "scope": "yearbook_print",
+              "status": "yes",
+              "source_event_id": "S09_B_THREE_PRINT"
+            },
+            {
+              "op": "set",
+              "field": "private_photo_allowed",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "new_photo_print_allowed",
+              "value": true
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_THREE",
+              "subject_id": "AN",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_B_THREE_PRINT"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_THREE",
+              "subject_id": "HA",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_B_THREE_PRINT"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_THREE",
+              "subject_id": "MINH",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_B_THREE_PRINT"
+            }
+          ],
+          "next": "step:S09_B_PACK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_B_THREE_PRIVATE",
+          "label": "Giữ trong album riêng, chưa dùng cho trang",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_B_L016",
+            "S09_B_L017",
+            "S09_B_L018"
+          ],
+          "effects": [
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_THREE",
+              "subject_id": "AN",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_B_THREE_PRIVATE"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_THREE",
+              "subject_id": "HA",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_B_THREE_PRIVATE"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_NEW_THREE",
+              "subject_id": "MINH",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "S09_B_THREE_PRIVATE"
+            },
+            {
+              "op": "set",
+              "field": "private_photo_allowed",
+              "value": true
+            }
+          ],
+          "next": "step:S09_B_PACK",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_B_LATER",
+      "stage_direction": "Gửi lời đề nghị có ngày, chỗ và mục đích. Không quay cảnh gặp khi chưa có xác nhận.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "S09_B_LATER_CLEAR",
+          "label": "Hỏi gặp ghế đá 11/05 lúc 16:30 để xem ảnh và giao tờ bổ sung",
+          "when": {
+            "field": "invite_pressure",
+            "op": "eq",
+            "value": false
+          },
+          "lines": [
+            "S09_B_L019",
+            "S09_B_L020",
+            "S09_B_L021"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "later_status",
+              "value": "accepted"
+            },
+            {
+              "op": "set",
+              "field": "later_datetime",
+              "value": "2026-05-11T16:30:00"
+            },
+            {
+              "op": "set",
+              "field": "later_place",
+              "value": "ghế đá sân trường"
+            },
+            {
+              "op": "set",
+              "field": "later_purpose",
+              "value": "xem ảnh và giao tờ bổ sung"
+            },
+            {
+              "op": "set",
+              "field": "later_participants",
+              "value": [
+                "AN",
+                "NHI"
+              ]
+            }
+          ],
+          "next": "step:S09_B_PACK",
+          "action_note": "Đây là biến thể được biên soạn, có câu nhận lời thật trong truyện; không mặc định mọi lần đề nghị đều được nhận.",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_B_LATER_PENDING",
+          "label": "Gửi đề nghị để Nhi xem lịch, không hẹn giờ thay cô",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_B_L022",
+            "S09_B_L023"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "later_status",
+              "value": "pending"
+            }
+          ],
+          "next": "step:S09_B_PACK",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "S09_B_LATER_REFUSED",
+          "label": "Hỏi lại một lần sau cuộc nói chuyện còn căng",
+          "when": {
+            "field": "invite_pressure",
+            "op": "eq",
+            "value": true
+          },
+          "lines": [
+            "S09_B_L024",
+            "S09_B_L025",
+            "S09_B_L026"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "later_status",
+              "value": "declined"
+            }
+          ],
+          "next": "step:S09_B_PACK",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S09_B_PACK",
+      "stage_direction": "Không cắt ngay tới tổng kết. Người chơi tháo máy, lấy sơ đồ và cất bảng nếu tồn tại.",
+      "lines": [
+        "S09_B_L027",
+        "S09_B_L028",
+        "S09_B_L029"
+      ],
+      "choices": [
+        {
+          "choice_id": "S09_B_PACK",
+          "label": "Gập chân máy, cất bảng và sơ đồ",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S09_B_L030",
+            "S09_B_L031",
+            "S09_B_L032"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "equipment_packed",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "tribute_board_removed",
+              "value": true
+            }
+          ],
+          "next": "scene:S10",
+          "action_note": "Chỉ animate bảng nếu prepared; set removed không tạo bảng chưa từng có.",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

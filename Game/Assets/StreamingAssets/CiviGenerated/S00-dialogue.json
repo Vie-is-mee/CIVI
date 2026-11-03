@@ -1,0 +1,209 @@
+{
+  "scene_id": "S00",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S00_L001",
+      "speaker_id": "NHI",
+      "text": "Khoan, máy đang trượt.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L002",
+      "speaker_id": "HA",
+      "text": "Đừng kê bằng tập đề của Minh.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L003",
+      "speaker_id": "MINH",
+      "text": "Cuối cùng cũng có người hỏi ý kiến tao.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L004",
+      "speaker_id": "AN",
+      "text": "Để tao giữ. Mày cài tiếp đi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L005",
+      "speaker_id": "NHI",
+      "text": "Giữ bên này, đừng che camera.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L006",
+      "speaker_id": "AN",
+      "text": "Chân kẹp tao giữ rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L007",
+      "speaker_id": "NHI",
+      "text": "Ừ. Ba giây thôi, đừng buông sớm.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L008",
+      "speaker_id": "AN",
+      "text": "Mày xem kẹp được không? Tao giữ dây.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L009",
+      "speaker_id": "NHI",
+      "text": "Được. Đừng kéo căng quá.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L010",
+      "speaker_id": "HA",
+      "text": "Hay cùng nhìn bên kia?",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L011",
+      "speaker_id": "MINH",
+      "text": "Hay đứng yên.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L012",
+      "speaker_id": "NHI",
+      "text": "Mỗi đứa làm một chữ đi.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L013",
+      "speaker_id": "AN",
+      "text": "Tao nhận chữ dễ nhất.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L014",
+      "speaker_id": "MINH",
+      "text": "Có chữ nào không cần giơ tay không?",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L015",
+      "speaker_id": "HA",
+      "text": "Bên này. Minh, bên này cơ.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L016",
+      "speaker_id": "MINH",
+      "text": "Tao nhìn rồi, tại mắt tao vậy.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L017",
+      "speaker_id": "AN",
+      "text": "Lần này cấm nhìn pin.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L018",
+      "speaker_id": "MINH",
+      "text": "Hết pin thì đừng nhìn tao.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L019",
+      "speaker_id": "NHI",
+      "text": "Đủ bốn mới bấm.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L020",
+      "speaker_id": "MINH",
+      "text": "Máy tự bấm.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L021",
+      "speaker_id": "NHI",
+      "text": "Thì mày thương lượng với máy đi.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L022",
+      "speaker_id": "NARRATOR",
+      "text": "Tiếng bíp. Hạ vẫn đang cười khi máy bấm lần thứ ba.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L023",
+      "speaker_id": "HA",
+      "text": "Lưu cả hai tấm trước đi.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L024",
+      "speaker_id": "MINH",
+      "text": "Tấm tao cúi xuống ấy hả?",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L025",
+      "speaker_id": "NHI",
+      "text": "Nhất là tấm đấy.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L026",
+      "speaker_id": "NHI",
+      "text": "Tấm này để đây. Trước khi ra trường chụp lại, đúng chỗ này.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L027",
+      "speaker_id": "AN",
+      "text": "Lưu rồi. Cả hai tấm hỏng.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L028",
+      "speaker_id": "MINH",
+      "text": "Cuộn băng ai cầm về?",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S00_L029",
+      "speaker_id": "NARRATOR",
+      "text": "Không ai trả lời. Nhi kéo sơ đồ khỏi cốc nước rồi cất vào túi bìa.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

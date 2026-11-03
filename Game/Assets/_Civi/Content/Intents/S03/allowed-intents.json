@@ -1,0 +1,78 @@
+{
+  "schema_version": "tv1-intent-draft-0.1",
+  "scene_id": "S03",
+  "npc_id": "HA",
+  "modes": [
+    "Buttons",
+    "Rules",
+    "AI"
+  ],
+  "response_policy": "authored_lines_only",
+  "intents": [
+    {
+      "id": "ASK_SOURCE",
+      "targets": [
+        "PHOTO_0441",
+        "PHOTO_0442",
+        "PHOTO_0443"
+      ]
+    },
+    {
+      "id": "ASK_COMPOSITION_REASON",
+      "targets": [
+        "PHOTO_0443"
+      ]
+    },
+    {
+      "id": "CHECK_VISIBILITY",
+      "targets": [
+        "PHOTO_0441",
+        "PHOTO_0442",
+        "PHOTO_0443"
+      ]
+    },
+    {
+      "id": "COMPARE_PHOTOS",
+      "targets": [
+        "PHOTO_0441__PHOTO_0442",
+        "PHOTO_0442__PHOTO_0443"
+      ]
+    },
+    {
+      "id": "ASK_CAMERA_HANDOFF",
+      "targets": [
+        "PHOTO_0443"
+      ]
+    },
+    {
+      "id": "ASK_QUOTE",
+      "targets": [
+        "VIDEO_VY"
+      ]
+    },
+    {
+      "id": "CLARIFY",
+      "targets": [
+        "UNRESOLVED"
+      ]
+    },
+    {
+      "id": "UNSUPPORTED",
+      "targets": [
+        "OUT_OF_SCOPE"
+      ]
+    }
+  ],
+  "forbidden_outputs": [
+    "state_patch",
+    "new_evidence",
+    "new_consent",
+    "ending",
+    "generated_story_dialogue"
+  ],
+  "batch_policy": "validate_all_before_dispatch; ask_on_ambiguity_or_unsupported; no_partial_side_effects",
+  "notes": [
+    "Ý định/target đề xuất chờ TV4/TV2 nhận.",
+    "Không có PUBLISH hoặc SET_CONSENT trong allowlist."
+  ]
+}

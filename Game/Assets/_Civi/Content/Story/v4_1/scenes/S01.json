@@ -1,0 +1,96 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "S01",
+  "title": "Trang ở giữa",
+  "source_pages": [
+    5,
+    15
+  ],
+  "background_id": "BG_DESIGN_ROOM",
+  "entry_step": "S01_OPEN",
+  "asset_ids": [
+    "PROP_PROOF_16_18",
+    "PROP_CHAT_REMOVE",
+    "PHOTO_0443",
+    "PROP_THREE_LAYOUT",
+    "PROP_DIAGRAM"
+  ],
+  "production_notes": "Cắt từ ảnh đủ bốn sang bản in thử 16/18. Không mở bằng hồ sơ nhân vật. Minh giải thích ngay.",
+  "steps": [
+    {
+      "step_id": "S01_OPEN",
+      "stage_direction": "07/05/2026, 10:00. Tiếng quạt, lật giấy, bạn lớp khác cười ngoài cửa.",
+      "lines": [
+        "S01_L001",
+        "S01_L002",
+        "S01_L003",
+        "S01_L004"
+      ],
+      "choices": [
+        {
+          "choice_id": "S01_CHAT",
+          "label": "Mở tin nhắn tối hôm trước",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "S01_L005",
+            "S01_L006"
+          ],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PROP_CHAT_REMOVE"
+            },
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PROP_PROOF_16_18"
+            },
+            {
+              "op": "add_unique",
+              "field": "facts_discovered",
+              "value": "F03"
+            }
+          ],
+          "next": "step:S01_COMPARE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "S01_COMPARE",
+      "stage_direction": "Ảnh buổi tập cạnh ảnh hội chợ ba người; trên bàn là bố cục ba vị trí cho ngày mai.",
+      "lines": [
+        "S01_L007",
+        "S01_L008",
+        "S01_L009",
+        "S01_L010"
+      ],
+      "choices": [
+        {
+          "choice_id": "S01_FIND",
+          "label": "Mang sơ đồ xuống chỗ kiểm đồ",
+          "when": {
+            "all": []
+          },
+          "lines": [],
+          "effects": [
+            {
+              "op": "add_unique",
+              "field": "evidence_seen",
+              "value": "PROP_THREE_LAYOUT"
+            }
+          ],
+          "next": "scene:S02",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

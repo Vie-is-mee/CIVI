@@ -1,0 +1,83 @@
+{
+  "scene_id": "E_A",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "E_A_L001",
+      "speaker_id": "NARRATOR",
+      "text": "Nhi nhìn nguồn cũ lâu hơn ảnh mới. Minh kéo cuốn sách về phía mình.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L002",
+      "speaker_id": "MINH",
+      "text": "Tấm tao cúi thế này mà tụi mày cũng giữ à?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L003",
+      "speaker_id": "HA",
+      "text": "Tại nó thật.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L004",
+      "speaker_id": "NHI",
+      "text": "Gửi tao bản ảnh nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L005",
+      "speaker_id": "HA",
+      "text": "Tấm hôm thứ Sáu tao lưu riêng rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L006",
+      "speaker_id": "NARRATOR",
+      "text": "An gửi Nhi bản xem đúng phần đã được đồng ý. Không có câu hỏi vì sao cô không có mặt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L007",
+      "speaker_id": "NARRATOR",
+      "text": "An nhìn nét chữ HẸN trong ảnh cũ, bàn tay vẫn làm sai một nét. Minh chỉ vào đúng chỗ đó rồi cười.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L008",
+      "speaker_id": "HA",
+      "text": "Cuối cùng vẫn mỗi đứa nhìn một hướng.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L009",
+      "speaker_id": "AN",
+      "text": "Tấm nào cũng vậy.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L010",
+      "speaker_id": "MINH",
+      "text": "Có tấm nào tao không nhìn pin không?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_A_L011",
+      "speaker_id": "AN",
+      "text": "Có. Tấm đèn tắt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}
