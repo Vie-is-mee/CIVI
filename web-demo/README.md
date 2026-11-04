@@ -1,67 +1,97 @@
-# CIVI · Tầng 42 — bản demo web Chương 1
+# CIVI · Tầng 42 — game 3D trên trình duyệt (Chương 1–3)
 
-Bản MVP để pitching VSIC 2026: game bàn làm việc chạy trên trình duyệt (máy tính và điện thoại), khoảng 7 phút.
+Bản demo pitching VSIC 2026: một game phiêu lưu 3D góc nhìn thứ ba chạy trên trình duyệt, máy tính và điện thoại. Người chơi điều khiển Mai, thực tập sinh IT ở cơ quan điều phối của thành phố mái vòm Lưu Quang, đi cùng CIVI, một drone AI hơi quá tự tin. Ba chương, khoảng 30 phút.
+
+Câu hỏi của cả game: hệ thống chia điện, khí sạch và nước theo điểm đã ghi Phân khu 8-12 có **0 người**. Ai đã bị đếm sót, vì dòng code nào, và đếm lại thế nào cho đúng mà không lấy dữ liệu của người không đồng ý.
 
 ## Chạy thử
 
-- **Mở ngay:** mở `dist/index.html` bằng trình duyệt (Chrome/Edge/Safari). Không cần cài gì.
-- **Đưa lên mạng:** tải cả thư mục `dist/` lên GitHub Pages, Netlify hoặc bất kỳ host tĩnh nào.
-- **Bản có AI thật:** link Claude Artifact (do chủ dự án chia sẻ). Ở đó Kiểm toán viên dùng Claude của người xem để viết báo cáo riêng.
+- **Mở ngay:** mở `dist/index.html` bằng Chrome/Edge/Safari. Không cần cài gì. Nếu trình duyệt chặn file cục bộ, chạy `python -m http.server` trong `dist/` rồi mở `http://localhost:8000`.
+- **Đưa lên mạng:** tải cả thư mục `dist/` lên GitHub Pages, Netlify hoặc host tĩnh bất kỳ.
+- **Bản có AI thật:** link Claude Artifact (do chủ dự án chia sẻ). Ở đó nút "Hỏi CIVI" và báo cáo cuối game dùng Claude của người xem; ngoài Claude, CIVI trả lời bằng câu soạn sẵn và báo cáo dùng bản không cần mạng.
+- **Bản đọc cũ** (game chữ, có bản đồ năng lượng 3D): `classic.html`, có link ở màn đầu. Máy không chạy được WebGL sẽ được đưa sang bản này.
 
-## Cấu trúc
+## Điều khiển
 
-- `index.html` — mã nguồn (nội dung trang, chưa có khung `<!doctype>`; đây là định dạng Claude Artifact cần).
-- `assets/` — ảnh cắt và nén từ `Game/Assets/_Civi/Art/LiuQuangC1/` (tranh của đội).
-- `dist/` — bản độc lập đã đóng gói. Sau khi sửa `index.html`, chạy lại:
+| Máy tính | Điện thoại | Việc |
+|---|---|---|
+| WASD / phím mũi tên | kéo nửa trái màn hình | đi |
+| Shift | nút chạy, hoặc kéo cần hết cỡ | chạy |
+| Space | nút mũi tên lên | nhảy |
+| kéo chuột, lăn chuột | kéo nửa phải | xoay, thu phóng camera |
+| E / Enter / bấm chuột | nút bàn tay, chạm màn hình | nói chuyện, đọc tiếp |
+| Q | nút kính | Kính Debug: xem lớp dữ liệu của thành phố |
+| 1–4 | chạm | chọn câu trả lời |
+| Esc / P | nút tạm dừng | tạm dừng |
+
+## Luồng chơi
+
+**Mở đầu · Ký ức.** Mai tám tuổi. Cô y tá áo xám nhập bốn dòng dữ liệu để giữ mẹ Mai lại bệnh viện. Người chơi bấm từng dòng.
+
+**Chương 1 · Ngày đầu ở Tầng 42** (văn phòng 3D, khoảng 8 phút)
+1. CIVI chào Mai. Con mèo Bé Điện đang ngủ trên ghế của Mai.
+2. Bàn ánh sáng: đóng dấu bốn yêu cầu (bệnh viện, shop bỉm livestream, mèo xin số cư trú, trạm lọc 19). CIVI chấm điểm sẵn; làm khác CIVI thì nó "ghi chú một cách trung lập".
+3. Ảnh của Linh: bật Kính Debug, tìm ba dấu hiệu có người ở căn nhà "dân số 0".
+4. Terminal: tìm dòng code làm người biến mất khỏi phép đếm (`h.trang_thai == "đã xác minh"`), chọn cách sửa. `git push` bị chặn vì đóng băng hệ thống trước mùa bão.
+5. Sếp Vinh tới. Chọn tự đi xác minh sau giờ làm, hoặc trả hồ sơ đúng quy trình.
+6. Báo động trạm khí B4: chạy tới tường đông, vặn ba van trong 40 giây. Giữa chừng anh Tường (tài xế) gọi tới nhờ ghi giờ làm, mất 8 giây.
+7. Hoàng hôn bên cửa sổ, nhìn về Rìa Mưa. CIVI: "Tôi đi cùng."
+
+**Chương 2 · Những chiếc ô hỏng** (khu Rìa Mưa 3D, mưa đêm, khoảng 12 phút)
+1. Đi theo mũi tên bản đồ chính thức tới trạm lọc 19: đường dẫn thẳng xuống chỗ ngập. An, cô bé sửa ô, gọi lại. Minigame bấm đúng nhịp để gắn nan ô.
+2. Đi theo An qua lối không có trên bản đồ: tiệm may (Tín kể chuyện Lõi Sáng), mép sông (sổ đo mực nước của An, xin chụp hay không), cầu tấm nhựa, chợ mái bạt (bát cháo của ông cụ), trạm lọc 19 (sổ giấy của quản đốc), căn nhà trong ảnh của Linh.
+3. Nhiệm vụ phụ: chiếc dép đỏ trôi ở rãnh của chú Sáu; xin ghi tên bà Sáu cơm, cô Cúc. Người đồng ý thì được ghi, người từ chối thì CIVI không dùng.
+4. Bé Tí báo bà Dung ngã. Chạy qua chỗ ngập: nhảy lên các viên đá kê, nước đẩy người chơi trôi nếu lội.
+5. Nhà bà Dung mất điện: Mai cầm đèn pin, soi vào đâu thì người ở đó làm được việc (bà tìm thuốc, An chèn ống rò, Mai ghi mã đoạn ống). Máy tính bảng: tìm hai dòng mâu thuẫn giữa Phòng Hạ tầng và Phòng Cư trú, lý do lệnh sửa cứ quay về "chờ". Chọn lời hứa trong quyền hay ngoài quyền.
+6. Bà Hạ về. Hộp thiếc: chụp từng giấy tờ, bà Hạ nhìn. Ảnh gia đình không được chụp. Chuyện bố An.
+7. Trạm kiểm toán lưu động: Kính Debug lộ phụ lục giấy, người sửa ống là bà Hạ nhưng điểm và thưởng về công ty thầu. "Cho CIVI học lại" chỉ từ dữ liệu được đồng ý.
+8. An đuổi theo Mai ra cổng. Dòng kết: hồ sơ vẫn ghi 0 người; tối nay Mai đã gặp N người.
+
+**Chương 3 · Người có điểm bằng không** (Tầng 42 ngày bão, khoảng 8 phút)
+1. CIVI đã học lại: Phân khu 8-12 có N người, nhưng điểm đóng góp bằng 0 nên khi bão được chia 0 điện. Đếm đúng vẫn chưa đủ; Mai đề xuất "sàn sinh tồn".
+2. PR #219 cần ba người duyệt, làm theo thứ tự tùy ý:
+   - Khoa: chọn đúng ba test cho PR (có test bẫy "Bé Điện có số cư trú" và "if True: đếm tất cả"), chạy `pytest`, "LGTM: Looks Good To Mai".
+   - Chị Hằng: phiếu ngoại lệ ĐB-07 "Đơn xin phép được cho phép". Máy in kẹt; CIVI đề xuất tắt bật, vỗ cạnh trái; con mèo Bé Điện ngồi lên thì máy chạy.
+   - Linh: chọn bằng chứng đính kèm, chỉ những gì người dân đã cho phép.
+3. Sếp Vinh mở khóa đóng băng và nhận trách nhiệm trong nhật ký. Nếu Mai dọa tự merge, Vinh nhắc lại câu của bà Hạ.
+4. Bão tới sớm: chia 48 MW ở bàn ánh sáng. CIVI điền sẵn theo điểm (Lõi Sáng 34 MW, Phân khu 8-12 0 MW). Người chơi tự cân bệnh viện, trạm khí B4, sàn 3 MW cho 8-12, đài phun nước của Lõi Sáng, livestream của shop.
+5. Cùng đêm ở Rìa Mưa: nếu 8-12 được chia đủ sàn, cửa sổ sáng lên. Dòng kết: "N người. Đã đếm. Đã có điện. Ai cũng có tên."
+
+**Báo cáo.** CIVI kiểm toán chính người chơi từ nhật ký lựa chọn: đã gặp bao nhiêu người, bao nhiêu người đồng ý hay từ chối, lời hứa nào ngoài quyền, việc gì còn dang dở. Trong Claude có thể để AI viết lại báo cáo. Thẻ kết quả để chia sẻ.
+
+## Cấu trúc mã
+
+- `index.html` — trang game: giao diện HUD, CSS, nạp Three.js 0.147 (jsDelivr) và năm file trong `game/`. Viết dạng nội dung trang (không có `<!doctype>`), đúng định dạng Claude Artifact.
+- `game/engine.js` — renderer và chất liệu toon (cel shading, viền ngoài, ánh sáng viền), điều khiển bàn phím/chuột/cảm ứng, camera người thứ ba (né tường, góc quay hội thoại), di chuyển và va chạm, NPC, bong bóng thoại, lựa chọn, mục tiêu và mũi tên chỉ đường, Kính Debug, hạt, âm thanh tổng hợp bằng WebAudio, lưu tiến độ.
+- `game/chars.js` — nhân vật chibi dựng từ khối cơ bản, mặt anime vẽ bằng canvas (11 biểu cảm, chớp mắt, mấp máy môi), hoạt ảnh thủ tục (đi, chạy, nhảy, thở, 18 cử chỉ, 11 tư thế, nhìn theo người nói, tóc đung đưa), drone CIVI, mèo Bé Điện, danh sách 16 nhân vật.
+- `game/worlds.js` — ba bối cảnh: Tầng 42, Rìa Mưa (mưa, nước, cầu, chợ, trạm lọc, đá kê qua chỗ ngập, đường chân trời Lõi Sáng), phòng tối của bà Dung.
+- `game/story1.js` — hàm dùng chung cho kịch bản, màn đầu, ký ức và Chương 1.
+- `game/story2.js` — Chương 2, báo cáo, chat với CIVI, khởi động game.
+- `game/story3.js` — Chương 3: duyệt PR, máy in, mở khóa đóng băng, chia điện trong bão, đoạn kết ở Rìa Mưa.
+- `classic.html` — bản đọc cũ (Chương 1 và Chương 2 phần 1–2 dạng chữ).
+- `assets/` — ảnh nén từ `Game/Assets/_Civi/Art/LiuQuangC1/` (tranh của đội); `city-window.jpg` là cảnh thành phố ngoài cửa sổ Tầng 42.
+- `dist/` — bản độc lập đã đóng gói. Sau khi sửa mã, chạy lại:
 
 ```
 python tools/build_web_demo.py
 ```
 
-## Luồng chơi
+Nhân vật và bối cảnh đều dựng bằng mã (không có file 3D ngoài), nên cả game nhẹ (khoảng 210 KB mã, cộng ảnh). Máy yếu, điện thoại hoặc cửa sổ hẹp tự chuyển sang đồ họa nhẹ: tắt bóng đổ và viền, giảm hạt mưa.
 
-1. Ký ức: người chơi là cô y tá, nhập 4 dòng dữ liệu → vạch xanh.
-2. Bàn làm việc Tầng 42: 6 hồ sơ có đồng hồ đếm ngược. Mở bằng chứng tốn thời gian. Nhóm chat, bản tin chạy chữ, hồ sơ hài (shop bỉm livestream, mèo xin cư trú).
-3. Hồ sơ 8-12 (dân số = 0) có ảnh phóng to với 3 chi tiết. Bài toán kho thuốc / nhà trẻ có phương án thứ ba ẩn.
-4. Khủng hoảng: cảnh báo trạm khí B4 cùng lúc với cuộc gọi của anh Tường (tài xế).
-5. Bản đồ năng lượng 3D (khoảng 25 giây, nút "Tiếp" để qua): camera nhìn sa bàn thành phố từ trên cao, các quyết định trong ca hiện lại thành dòng năng lượng sáng (H01, H04, B4; từ chối/chờ là đường đứt đỏ rồi tắt). Phân khu 8-12 là vùng tối, dân số 0; nếu đã gửi xác minh, cửa sổ ở đó lần lượt sáng lên. Không có WebGL thì bỏ qua cảnh này.
-6. Phòng trưng bày (câu hỏi của cậu học sinh) → tối ở nhà với mẹ → ảnh 8-12 lúc đêm.
-7. Báo cáo kiểm toán về chính người chơi: AI (nếu người chơi cho phép) hoặc báo cáo dự phòng không cần mạng, đều dựa trên nhật ký hành vi. Số người bị bỏ sót, câu hỏi ngược, thẻ kết quả để chia sẻ, xem/xóa dữ liệu.
+## Góc AI và dấu ấn sinh viên IT
 
-### Chương 2 · Những chiếc ô hỏng (bản thử, phần 1–2)
+- CIVI là một AI tối ưu hóa thật thà: nó không ác, nó chỉ đếm những gì được cho xem. Câu chốt của nó ở Chương 2: "Tôi không cộng sai. Tôi chỉ chưa từng được cho thấy họ."
+- "Cho CIVI học lại" chỉ dùng dữ liệu người dân đồng ý; người từ chối được tôn trọng và không bị đếm thay.
+- Kính Debug, terminal có dòng code lỗi, `git push` bị đóng băng mùa bão, bảng KPI "0 lỗi / 2.190 ngày".
+- Nút "Hỏi CIVI" (trong Claude): chat với CIVI bằng AI, giữ vai, không tiết lộ diễn biến sau mục tiêu hiện tại.
 
-Vào từ nút "Chương 2 · bản thử" ở màn đầu, hoặc "Chơi tiếp Chương 2" sau báo cáo / thẻ kết quả Chương 1. Khoảng 4 phút, chuyển thể từ Chương 2 của *Những người không có chỗ dưới bầu trời* (`Game/Assets/_Civi/Resources/NewStory/novel_source.txt`).
+## Giới hạn hiện tại
 
-- Mai đi theo bản đồ thành phố tới trạm lọc 19 và gặp chỗ ngập: nước che hai bậc thang, bản đồ vẫn ghi "thông". An dẫn đường bằng lối vạch phấn trong sổ của em.
-- Bảy chặng trên mô hình 3D Rìa Mưa (cùng scene với màn mở đầu): quầy vá ô, hẻm ống 13, cầu tấm nhựa, tiệm may, chợ mái bạt, trạm lọc 19, căn nhà trong ảnh của Linh.
-- Ô đếm ở góc phải: "Hồ sơ 8-12: 0" đặt cạnh số người Mai đã gặp. Mỗi người gặp được ghi vào sổ của Mai, kèm một chi tiết riêng. Họ không được mô tả như một tính cách chung.
-- Lựa chọn: hỏi đường hay cãi bản đồ; xin chụp sổ của An (An cho chụp trang vẽ ô, còn trang có tên người thì phải hỏi từng người); trả lời Tín; trả tiền bát cháo hay hỏi; có hỏi ai trực tiếp sửa ống không; dòng "dân số" trong ghi chú hiện trường (giữ 0 / đề nghị xác minh lại / hỏi An trước).
-- Đoạn mở đầu đổi theo hồ sơ HS-0019 ở Chương 1 (gửi xác minh hay trả về).
-- Không có WebGL thì vẫn chơi được bằng chữ, nền là ảnh tĩnh.
-
-**Phần 2 · Bà Dung** (khoảng 4 phút; mở thẳng bằng cách thêm `#c2p2` vào cuối địa chỉ, khi đó Phần 1 được tính theo lựa chọn mặc định):
-
-- Một cậu bé chạy tới báo tin bà Dung ngã. Mai chạy theo An tới cuối hẻm ống 13.
-- Căn nhà tối có đèn pin: Mai cầm đèn, soi vào đâu thì người ở đó làm được việc. Có ba việc: bà Dung tìm thuốc, An chèn miếng đệm dưới ống, Mai ghi mã đoạn ống. Mỗi lúc chỉ soi được một chỗ. Điều khiển bằng kéo/chạm, hoặc bằng các nút "Soi đèn vào…" (cũng dùng được với bàn phím).
-- Xin chụp vết nứt: hỏi bà Dung (được phép), chụp luôn (bà phản đối, Mai xóa ảnh), hoặc chỉ ghi tay.
-- Máy tính bảng công vụ: người chơi tìm hai dòng mâu thuẫn giữa sổ đường ống của Phòng Hạ tầng (tuyến phân phối chung, thành phố bảo trì) và hồ sơ công trình của Phòng Cư trú (công trình tự phát, không đủ điều kiện bảo trì). Đây là lý do ba lá đơn trước đều quay về "chờ". Chọn sai thì có gợi ý.
-- Gửi lệnh sửa: gửi lại như cũ, gửi cả hai phòng kèm ghi chú, hoặc chuyển thẳng cho đội kỹ thuật. Cả ba cách đều kết thúc ở trạng thái "chờ", nhưng mỗi cách để lại một hồ sơ khác nhau.
-- Sổ lời hứa: hứa điều trong quyền của Mai, hứa điều ngoài quyền, hoặc không hứa. Lời hứa được ghi lại kèm trạng thái đã làm/chưa làm, để dùng ở Phần 3 khi bà Hạ nói "Đừng hứa trước mặt An điều cô không quyết được".
+- Đồ họa là toon dựng bằng khối cơ bản, chưa tới mức Genshin: chưa có mô hình nhân vật do họa sĩ dựng, chưa có hoạt ảnh motion capture, chưa có lồng tiếng. Muốn lên mức đó cần mô hình GLB có xương (đội vẽ hoặc đặt làm), bộ hoạt ảnh (Mixamo hoặc tự quay), và âm nhạc.
+- Chưa thử trên điện thoại thật; mới thử bằng trình duyệt giả lập (xem phần kiểm thử trong lịch sử commit).
 
 ## Lộ trình
 
-Đã xong: Chương 1 trên web; màn mở đầu 3D; bản đồ năng lượng 3D; Chương 2 phần 1 và phần 2.
-
-Tiếp theo, theo thứ tự:
-
-1. **Chương 2 · phần 3 "Hộp thiếc".** Bà Hạ trở về. Hạ cho chụp giấy tờ nhưng muốn xem Mai chụp gì, nên quyền xin theo từng tư liệu. Chuyện bố An không được ép kể. Sổ lời hứa ghi lời hứa lớn và lời hứa nhỏ làm được. Ở trạm kiểm toán lưu động: mã lao động của Hạ chỉ có trong phụ lục giấy. Kết chương bằng câu "Lần này, cô không nhìn lên.", rồi báo cáo kiểm toán Chương 2 dựa trên sổ của Mai.
-2. **Nối hai chương.** Lưu tiến độ trên máy người chơi (có nút xóa), chọn chương ở màn đầu, thẻ chia sẻ gộp cả hai chương.
-3. **Tranh nhân vật Chương 2** (An, bà Hạ, Tín, bà Dung, người bán cháo) theo brief cho đội vẽ. Trong lúc chờ, dùng chân dung chữ cái.
-4. **Chuẩn bị thi:** âm thanh (mưa máy, chợ), kiểm trên điện thoại thật, playtest có phiếu nhận xét, kịch bản video demo mới cho Lưu Quang (`docs/submission/demo-script.md` vẫn là truyện cũ).
-5. **Chương 3–5**, tới Điểm rẽ I ở cuối Chương 5 của tiểu thuyết.
-
-## Ghi chú kỹ thuật
-
-- Thư viện ngoài duy nhất: Three.js 0.147 (CDN jsDelivr) cho màn mở đầu, bản đồ năng lượng và Rìa Mưa ở Chương 2; một renderer/scene dùng chung (`initCity()`, `startMap()`, `startCh2()`). Kịch bản Chương 2 là các mảng `C2SCRIPT` (phần 1) và `C2SCRIPT2` (phần 2). Không tải được thì game dùng ảnh tĩnh và bỏ qua bản đồ. Ngoài ra chỉ có Google Fonts.
-- Nhật ký chơi chỉ nằm trong bộ nhớ trang, không lưu lại sau khi tải lại trang; không thu tên hay thông tin cá nhân.
-- Báo cáo dự phòng: hàm `localReport()`; prompt AI: hàm `aiPrompt()` trong `index.html`.
+1. Chương 4–5 theo tiểu thuyết, tới Điểm rẽ I; giữ lời hứa với bà Dung, bà Hạ, An từ Chương 2.
+2. Mô hình nhân vật thật cho Mai, An, CIVI, bà Hạ; âm nhạc theo từng khu.
+3. Playtest trên điện thoại thật, phiếu nhận xét, video demo mới cho hồ sơ thi.
