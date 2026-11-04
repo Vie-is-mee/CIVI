@@ -11,6 +11,8 @@ namespace Civi.Preview
         public Texture2D PropAtlas, CastAtlas;
         public Font LabelFont;
         public Sprite[] Frames;
+        // Optional 4 directions x 6 walking poses; legacy V2 stays on its 16-frame path.
+        public Sprite[] WalkFramesSix;
         public Sprite[] Cast;
         public virtual Vector2 Spawn => Interior ? new Vector2(0,-8) : new Vector2(-13,-5);
         public Vector2 PhotoPoint => new Vector2(-10,-1);

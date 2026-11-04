@@ -128,7 +128,7 @@ namespace Civi.Preview
         void Update()
         {
             if(!ready||Keyboard.current==null)return;
-            if(ChapterMode&&ExternalLock){direction=Vector2.zero;return;}
+            if(ChapterMode&&ExternalLock){direction=Vector2.zero; if(sprite!=null&&ChapterEnvironment!=null&&ChapterEnvironment.WalkFramesSix!=null) sprite.sprite=StudentFrames[facing*4];return;}
             var k=Keyboard.current;
             if(!ChapterMode&&(k.escapeKey.wasPressedThisFrame||k.eKey.wasPressedThisFrame))
             {
@@ -155,8 +155,13 @@ namespace Civi.Preview
                 facing=Mathf.Abs(direction.x)>Mathf.Abs(direction.y)?
                     (direction.x>0?3:2):(direction.y>0?1:0);
             timer+=Time.deltaTime;
-            sprite.sprite=StudentFrames[facing*4+
-                (direction.sqrMagnitude>.01f?(ChapterEnvironment!=null?((int)(timer*8f)%4):1+((int)(timer*7f)%3)):0)];
+            if(ChapterEnvironment!=null&&ChapterEnvironment.WalkFramesSix!=null&&ChapterEnvironment.WalkFramesSix.Length==24)
+                sprite.sprite=direction.sqrMagnitude>.01f?
+                    ChapterEnvironment.WalkFramesSix[facing*6+((int)(timer*9f)%6)]:
+                    StudentFrames[facing*4];
+            else
+                sprite.sprite=StudentFrames[facing*4+
+                    (direction.sqrMagnitude>.01f?(ChapterEnvironment!=null?((int)(timer*8f)%4):1+((int)(timer*7f)%3)):0)];
         }
         void OnGUI()
         {

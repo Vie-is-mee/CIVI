@@ -7,7 +7,20 @@ shared=shared.replace('a=p.parse_args()',"p.add_argument('--resume-check',action
 exec(compile(shared.split('def story(expected):')[0].replace("speed=4.25 if 'Design' in start['scene'] else 6.4","speed=4.25"),str(Path(__file__).with_name('chapter1_windows_qa.py')),'exec'))
 
 def button(prefix):
-    s=state();b=next(b for b in s['buttons'] if b['label'].startswith(prefix));click(b['x'],b['y']);return b['label']
+    s=state();b=next(b for b in s['buttons'] if b['label'].startswith(prefix))
+    click(b['x'],b['y'])
+    new=state()
+    # Keep keyboard and mouse results separate: desktop injection is intermittent.
+    if prefix[:1].isdigit() and prefix[1:4]=='  ·' and new['mask']==s['mask']:
+        record('mouse-action-not-received',label=b['label'],step=s['step'])
+        key(0x30+int(prefix[0]))
+    elif prefix.startswith(('Xác nhận','Kiểm tra phương án','Gửi yêu cầu')) and new['mode']==s['mode']:
+        record('mouse-submit-not-received',label=b['label'],step=s['step'])
+        key(0x0D)
+    elif prefix.startswith('Tiếp tục bản lưu') and new['help']==s['help']:
+        record('mouse-resume-not-received',label=b['label'])
+        key(0x78)
+    return b['label']
 
 def launch(cmd):
     global proc,hwnd
@@ -25,6 +38,22 @@ def launch(cmd):
     if not hwnd:raise RuntimeError('Player window missing')
     until(lambda s:s['help'] and s['frame']>30,60);focus();size_window()
 
+def read_reviewed_dialogue(mode, step):
+    """Use real Enter/mouse input until this authored pre/post sequence ends."""
+    pages=0
+    while state()['step']==step and state()['mode']==mode:
+        if pages>=85:raise AssertionError(f"Dialogue loop at task {step}, mode {mode}")
+        snapshot=state()
+        # Use keyboard for long authored dialogue; overlapping desktop windows
+        # may intercept cursor clicks even while the game has keyboard focus.
+        key(0x0D)
+        until(lambda s:s['step']!=step or s['mode']!=mode or s['line']!=snapshot['line'],15)
+        pages+=1
+        assert not state()['textOverflows'],state()['textOverflows']
+    record('reviewed-dialogue-read',task=step,phase=mode,pages=pages)
+    return pages
+
+
 try:
     cmd=[str(Path(a.exe).resolve()),'-screen-width',str(a.width),'-screen-height',str(a.height),'-screen-fullscreen','0','-civi-qa','-civi-qa-dir',str(out),'-logFile',str(out/'player.log')]
     if (out/'state.json').exists():(out/'state.json').unlink()
@@ -35,13 +64,25 @@ try:
         if state()['help']:key(0x78)
         until(lambda s:s['complete']);capture('14-relaunch-resumed');record('PASS',resolution=[a.width,a.height],resume_recheck=True)
         sys.exit(0)
-    launch(cmd);capture('00-onboarding');button('Bắt đầu');until(lambda s:not s['help'])
+    launch(cmd);capture('00-onboarding');button('Bắt đầu')
+    if state()['help']:
+        record('mouse-start-not-received',foreground=int(u.GetForegroundWindow()),game_window=int(hwnd))
+        key(0x1B)  # Independent keyboard route through the same onboarding state.
+    until(lambda s:not s['help'])
+    if state()['mode']==3:read_reviewed_dialogue(3,0)
     if a.inspect:
         capture('01-memory-workbench');record('INSPECT-READY');a.keep=True
     else:
         for step in range(13):
             until(lambda s:s['step']==step and not s['transition'],20)
             task=state()['task']
+            if step==1:
+                key(0x4A)  # J: authored dialogue journal (only previously read pages).
+                until(lambda s:any(b['label'].startswith('Đóng  (J)') for b in s['buttons']))
+                assert state()['locked'],'Journal must lock movement'
+                key(0x4A)
+                until(lambda s:not any(b['label'].startswith('Đóng  (J)') for b in s['buttons']))
+                record('reviewed-journal-open-close-pass')
             if step>0:
                 # Walk through an unobstructed corridor, then up to the actual target.
                 if step==1:
@@ -54,8 +95,15 @@ try:
                         key(0x26,.4)
                         if state()['y']>-.85:break
                     until(lambda s:-.85<s['y']<-.65);blocked=state();key(0x26,.6);until(lambda s:s['frame']>blocked['frame']+2);assert -.85<state()['y']<-.65,'Crossed table footprint';record('real-footprint-collision',y=state()['y']);key(0x28,.2)
-                key(0x45);until(lambda s:s['mode']==1)
+                key(0x45);until(lambda s:s['mode'] in (1,3))
+                if state()['mode']==3:read_reviewed_dialogue(3,step)
             capture(f'{step:02}-{task}-workbench')
+            if step>0 and state()['mode']==0:
+                record('workbench-closed-after-capture',task=task,step=step)
+                key(0x45)
+                until(lambda s:s['mode'] in (1,3))
+                if state()['mode']==3:read_reviewed_dialogue(3,step)
+            assert state()['mode']==1,('Workbench not open after capture',state())
             # Invalid early submission must not advance any task.
             key(0x0D);assert state()['mode']==1;record('missing-prerequisites-blocked',task=task)
             n=max(int(b['label'][0]) for b in state()['buttons'] if b['label'][:1].isdigit())
@@ -72,14 +120,9 @@ try:
             if step==0:key(0x74);shutil.copy2(state()['savePath'],out/'checkpoint-00-dialogue.json')
             if step==3:
                 key(0x74);key(0x0D);s=state();key(0x78);until(lambda n:n['line']==s['line']);record('dialogue-bookmark-roundtrip')
-            for _ in range(15):
-                s=state()
-                if s['step']!=step:break
-                assert s['mode']==2
-                if s['line']%2:button('Tiếp tục')
-                else:key(0x0D)
-                time.sleep(.07)
-            else:raise AssertionError('Task did not finish')
+            post_pages=read_reviewed_dialogue(2,step)
+            assert post_pages>=1
+            until(lambda s:s['step']>step and not s['transition'],40)
         until(lambda s:s['complete']);capture('13-complete');record('full-input-playthrough-pass')
         key(0x74);shutil.copy2(state()['savePath'],out/'completed-save.json')
         focus();u.PostMessageW(hwnd,0x0010,0,0);proc.wait(timeout=15);shutil.copy2(out/'player.log',out/'player-first-run.log')

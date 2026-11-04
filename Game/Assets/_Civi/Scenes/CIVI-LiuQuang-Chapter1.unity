@@ -222,10 +222,12 @@ MonoBehaviour:
   CastAtlas: {fileID: 2800000, guid: c98ca5d0ad79113478f1081660d70499, type: 3}
   LabelFont: {fileID: 12800000, guid: 2c4addeb591e9bd4f95dea145d7ad1cd, type: 3}
   Frames: []
+  WalkFramesSix: []
   Cast: []
   SupportAtlas: {fileID: 2800000, guid: ca2de87557440a740b823fbc21b209f2, type: 3}
   EvidenceAtlas: {fileID: 2800000, guid: 08322f7c8870a80478a2b09f42f76278, type: 3}
   CityAtlas: {fileID: 2800000, guid: a9a640ab2aa320647af10422163d1854, type: 3}
+  WalkAtlas: {fileID: 2800000, guid: 8e438d298eddc70469207e54fe70503d, type: 3}
   Room: 0
   House: {fileID: 0}
   Album: {fileID: 0}

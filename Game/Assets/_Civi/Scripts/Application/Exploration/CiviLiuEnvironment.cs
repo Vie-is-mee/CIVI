@@ -6,7 +6,7 @@ namespace Civi.Preview
     // Inherits the polished environment seam; movement itself is unchanged.
     public sealed class CiviLiuEnvironment : CiviChapterEnvironment
     {
-        public Texture2D SupportAtlas, EvidenceAtlas, CityAtlas;
+        public Texture2D SupportAtlas, EvidenceAtlas, CityAtlas, WalkAtlas;
         public int Room;
         public readonly List<Rect> Solids=new List<Rect>();
         public override Vector2 Spawn=>Room==0?new Vector2(0,-2.5f):new Vector2(0,-6);
@@ -42,6 +42,17 @@ namespace Civi.Preview
             float[] centers={cw*.5f,cw*1.5f,cw*2.5f,cw*3.5f}; float[] rows={0,ch,ch*2,ch*3};float[] heights={ch,ch,ch,ch};
             var frames=new Sprite[12];for(int i=0;i<12;i++)frames[i]=Slice(CastAtlas,new Rect(centers[i%4]-105,rows[i/4],210,heights[i/4]),2.65f);
             int[] order={0,1,0,2,3,4,3,5,6,8,6,9,7,10,7,11};Frames=new Sprite[16];for(int i=0;i<16;i++)Frames[i]=frames[order[i]];
+            if(WalkAtlas!=null)
+            {
+                if(WalkAtlas.width%6!=0||WalkAtlas.height%4!=0)
+                    throw new System.FormatException("Reviewed 24-frame walking atlas grid mismatch");
+                int cellW=WalkAtlas.width/6, cellH=WalkAtlas.height/4;
+                WalkFramesSix=new Sprite[24];
+                for(int direction=0;direction<4;direction++)
+                    for(int frame=0;frame<6;frame++)
+                        WalkFramesSix[direction*6+frame]=Slice(WalkAtlas,
+                            new Rect(frame*cellW,direction*cellH,cellW,cellH),2.65f);
+            }
             Cast=new Sprite[4];for(int i=0;i<4;i++)Cast[i]=Slice(CastAtlas,new Rect(centers[i]-108,ch*3,216,ch),2.65f);
             Rect[] cuts={new Rect(0,0,384,304),new Rect(390,0,210,304),new Rect(618,0,312,304),new Rect(932,0,346,304),
                 new Rect(0,305,366,311),new Rect(387,305,216,311),new Rect(630,305,270,311),new Rect(906,305,372,311),

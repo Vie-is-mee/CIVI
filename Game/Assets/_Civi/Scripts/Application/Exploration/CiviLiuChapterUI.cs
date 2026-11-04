@@ -44,8 +44,8 @@ namespace Civi.Preview
         void RenderUI()
         {
             foreach(Transform child in modal){child.gameObject.SetActive(false);Destroy(child.gameObject);}
-            if(help){HelpUI();return;}if(Complete){CompleteUI();return;}
-            if(state.mode==1)WorkUI();else if(state.mode==2)DialogueUI();
+            if(help){HelpUI();return;}if(journalOpen){JournalUI();return;}if(Complete){CompleteUI();return;}
+            if(state.mode==1)WorkUI();else if(state.mode==2||state.mode==3)DialogueUI();
         }
         RectTransform Card(string name,float width,float height)
         {return Panel(name,modal,new Vector2(.5f,.5f),new Vector2(.5f,.5f),new Vector2(0,-38),new Vector2(width,height),Ink,true);}
@@ -55,7 +55,7 @@ namespace Civi.Preview
             Txt(p,"Eyebrow","NHỮNG NGƯỜI KHÔNG CÓ CHỖ DƯỚI BẦU TRỜI",44,30,1090,35,22,Gold,true);
             Txt(p,"Title","Chương 1. Thành phố công bằng",44,85,1090,70,40,Paper,true);
             Txt(p,"Introduction","Một ngày của Mai ở Cơ quan Điều phối Mái vòm. Tìm những gì con số nhìn thấy — và những gì còn nằm ngoài phép tính.",44,173,1090,100,27,Paper);
-            Txt(p,"Controls","WASD / Mũi tên: đi lại     E: tương tác khi đến gần\nChuột hoặc 1–6: xem chứng cứ / ghép phương án\nEnter: xác nhận / tiếp lời     Esc: đóng bảng / tạm dừng\nF5: lưu     F9: tiếp tục bản lưu     H: hướng dẫn     M: bật/tắt âm thanh",44,285,1090,158,24,Paper);
+            Txt(p,"Controls","WASD / Mũi tên: đi lại     E: tương tác khi đến gần\nChuột hoặc 1–6: xem chứng cứ / ghép phương án\nEnter: xác nhận / tiếp lời     Esc: đóng bảng / tạm dừng\nF5: lưu     F9: tiếp tục bản lưu     J: nhật ký thoại     H: hướng dẫn     M: bật/tắt âm thanh",44,285,1090,158,24,Paper);
             Txt(p,"IME hint","Nếu bật bộ gõ tiếng Việt, hãy dùng phím mũi tên. Tiến độ tự lưu sau mỗi thao tác và phân đoạn.",44,459,1090,52,20,Muted);
             Btn(p,state.step==0&&state.mask==0?"Bắt đầu":"Trở lại",44,542,332,54,Begin,true);
             Btn(p,"Tiếp tục bản lưu",404,542,332,54,Load);
@@ -114,15 +114,80 @@ namespace Civi.Preview
                 Txt(p,"Diagram label",top,22,28,566,48,22,Gold,true,TextAnchor.MiddleCenter);Txt(p,"Diagram value",main,24,108,562,150,36,Paper,true,TextAnchor.MiddleCenter);Txt(p,"Diagram note",bottom,24,285,562,60,21,Muted,false,TextAnchor.MiddleCenter);
             }
         }
+        Sprite Portrait(string name)
+        {
+            switch(name)
+            {
+                case "Mai":return Environment.Frames[0];
+                case "Linh":return Environment.Cast[0];
+                case "Vinh":return Environment.Cast[1];
+                case "Mẹ Mai":return Environment.Cast[2];
+                default:return null; // Do not assign a false identity to any other speaker.
+            }
+        }
+        int ReadPages()
+            => dialogue.ReadCount(Math.Min(state.step,dialogue.segments.Length),state.mode,state.line);
+
+        void ToggleJournal()
+        {
+            if(!Once()||dialogue==null)return;
+            journalOpen=!journalOpen;
+            if(journalOpen)journalCursor=Mathf.Max(0,ReadPages()-1);
+            Lock();RenderUI();
+        }
+
+        void JournalUI()
+        {
+            Full("Journal veil",modal,new Color(.025f,.08f,.10f,.96f),true);
+            var p=Card("Authored chapter journal",1350,705);
+            Txt(p,"Journal heading","NHẬT KÝ  /  THÀNH PHỐ CÔNG BẰNG",36,28,1250,42,29,Gold,true);
+            int available=ReadPages();
+            if(available<=0)
+            {
+                Txt(p,"Empty","Những gì Mai trải qua sẽ được ghi lại ở đây khi bạn đọc các cảnh.",42,135,1240,160,27,Paper);
+                Btn(p,"Đóng  (J)",994,620,300,52,ToggleJournal,true);
+                return;
+            }
+            journalCursor=Mathf.Clamp(journalCursor,0,available-1);
+            var page=dialogue.pages[journalCursor];
+            Txt(p,"Journal scene","CẢNH "+page.scene+"  /  "+page.sceneTitle,42,97,1230,50,25,Muted,true);
+            Txt(p,"Journal speaker",page.kind=="direction"?"DẪN TRUYỆN":page.speaker,42,181,1200,40,27,Gold,true);
+            Txt(p,"Journal passage",page.text,42,245,1240,240,page.text.Length>285?25:29,Paper);
+            Txt(p,"Journal cursor","TRANG "+(journalCursor+1)+" / "+available+"   ·   Chỉ hiển thị nội dung đã đọc",44,540,1185,44,22,Muted);
+            if(journalCursor>0)Btn(p,"← Trước",48,620,270,52,()=>{journalCursor--;RenderUI();});
+            if(journalCursor<available-1)Btn(p,"Sau →",342,620,270,52,()=>{journalCursor++;RenderUI();});
+            Btn(p,"Đóng  (J)",994,620,300,52,ToggleJournal,true);
+        }
         void DialogueUI()
         {
-            string raw=Task.lines[state.line];int split=raw.IndexOf('|');string who=raw.Substring(0,split),line=raw.Substring(split+1);
-            var p=Panel("Dialogue",modal,new Vector2(.5f,0),new Vector2(.5f,0),new Vector2(0,22),new Vector2(1460,285),Ink,true);
-            Txt(p,"Speaker",who,30,24,1050,36,24,Gold,true);Txt(p,"Dialogue text",line,30,78,1400,120,28,Paper);
-            Txt(p,"Dialogue controls","ENTER / SPACE  ·  TIẾP TỤC     |     F5 / F9  ·  LƯU / TẢI",30,230,1050,30,18,Muted);
-            Btn(p,"Tiếp tục  →",1120,218,310,50,Next,true);
-            if(Task.id=="memory"&&state.line==1){var strip=Panel("Green retention",modal,new Vector2(.5f,.5f),new Vector2(.5f,.5f),new Vector2(0,20),new Vector2(830,84),new Color(.22f,.48f,.35f));Txt(strip,"Retained","ĐƯỢC GIỮ LẠI  •  QUY ĐỊNH ĐÃ ĐƯỢC ÁP DỤNG",24,24,782,36,23,Paper,true,TextAnchor.MiddleCenter);}
-            if(Task.image!=0){var pic=Panel("Photo during reflection",modal,new Vector2(.5f,1),new Vector2(.5f,1),new Vector2(0,-166),new Vector2(640,385),Paper);Picture(pic,Task.image==1?Environment.House:Environment.Album,8,8,624,369);}
+            var page=dialogue.At(state.step,state.mode,state.line);
+            var p=Panel("Authored dialogue",modal,new Vector2(.5f,0),new Vector2(.5f,0),
+                new Vector2(0,22),new Vector2(1460,360),Ink,true);
+            Txt(p,"Scene title","CẢNH "+page.scene+"  ·  "+page.sceneTitle,
+                26,14,1045,42,22,Muted,true);
+            Txt(p,"Dialogue speaker",page.kind=="direction"?"DẪN TRUYỆN":page.speaker,
+                225,67,1110,48,30,Gold,true);
+            var portrait=page.kind=="speech"?Portrait(page.speaker):null;
+            if(portrait!=null)Picture(p,portrait,20,100,186,200);
+            Txt(p,"Reviewed dialogue text",page.text,225,127,1190,168,
+                page.text.Length>280?23:page.text.Length>190?25:28,Paper);
+            Txt(p,"Source progress",(state.mode==3?"TRƯỚC TƯƠNG TÁC":"SAU TƯƠNG TÁC")+
+                "  ·  "+(state.line+1)+" / "+dialogue.Count(state.step,state.mode),
+                28,310,1035,31,19,Muted);
+            Btn(p,"Tiếp tục  →",1120,298,310,52,Next,true);
+            if(Task.id=="memory"&&state.mode==2&&state.line==0)
+            {
+                var strip=Panel("Green retention",modal,new Vector2(.5f,.5f),new Vector2(.5f,.5f),
+                    new Vector2(0,20),new Vector2(830,84),new Color(.22f,.48f,.35f));
+                Txt(strip,"Retained","ĐƯỢC GIỮ LẠI  ·  QUY ĐỊNH ĐÃ ĐƯỢC ÁP DỤNG",
+                    24,24,782,36,23,Paper,true,TextAnchor.MiddleCenter);
+            }
+            if(Task.image!=0)
+            {
+                var pic=Panel("Evidence during reflection",modal,new Vector2(.5f,1),new Vector2(.5f,1),
+                    new Vector2(0,-174),new Vector2(600,340),Paper);
+                Picture(pic,Task.image==1?Environment.House:Environment.Album,8,8,584,324);
+            }
         }
         void CompleteUI()
         {
