@@ -1,0 +1,1027 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>
+<title>CIVI Tầng 42</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+<style>
+/* Layout: one-screen game. Desk = queue | open file | group chat, over a news ticker.
+   Two worlds: Lõi Sáng console (pearl + signal mint) and Rìa Mưa evidence (lamp amber on night). */
+:root{
+  --pearl:#EEF3F1;      /* console ground */
+  --panel:#FBFDFC;      /* paper / panels */
+  --ink:#11211D;        /* text */
+  --muted:#5A6C67;      /* secondary text */
+  --line:#D3DEDA;       /* hairlines */
+  --mint:#17A389;       /* the green bar: approvals, signal */
+  --mint-soft:#DCF2EB;
+  --red:#C2483B;        /* stamp red */
+  --red-soft:#F7E3E0;
+  --amber:#E0A040;      /* Rìa Mưa lamp light */
+  --amber-soft:#F8ECD6;
+  --night:#0E1615;      /* evening / memory scenes */
+  --night-2:#18221F;
+  --night-ink:#EDE6D8;
+  --night-muted:#A9A391;
+  --f-ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-story:"Literata",Georgia,"Times New Roman",serif;
+  --f-data:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+.chat-close{display:none}
+html,body{height:100%}
+body{margin:0;background:var(--pearl);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--mint);outline-offset:2px}
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.data{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+.label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1,h2,h3{text-wrap:balance;margin:0}
+
+/* ---------- buttons ---------- */
+.btn{border:0;border-radius:10px;padding:12px 18px;font-weight:700;background:var(--ink);color:var(--panel);transition:transform .12s ease,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn.mint{background:var(--mint);color:#fff}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn.light{background:var(--panel);color:var(--ink)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+
+/* ---------- title ---------- */
+#s-title{background:var(--night);color:var(--night-ink);overflow:auto}
+.hero{position:relative;flex:1;display:flex;align-items:flex-end;min-height:0}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,21,.05) 30%,rgba(14,22,21,.92) 88%)}
+.hero-copy{position:relative;z-index:1;padding-block:32px 40px;max-width:760px;display:grid;gap:14px}
+.brand{font-weight:800;font-size:clamp(56px,11vw,120px);line-height:.9;letter-spacing:-.04em}
+.brand span{color:var(--mint)}
+.hero-copy .sub{font-family:var(--f-story);font-size:clamp(18px,2.4vw,24px);max-width:34ch}
+.hero-copy .meta{color:var(--night-muted);font-size:13px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+/* ---------- story scenes (memory, gallery, home) ---------- */
+.story{background:var(--night);color:var(--night-ink);overflow:auto}
+.story-wrap{margin:auto;width:100%;max-width:880px;padding-block:28px;display:grid;gap:22px}
+.story-line{font-family:var(--f-story);font-size:clamp(18px,2.2vw,22px);line-height:1.6;max-width:60ch}
+.story-line em{color:var(--amber);font-style:normal}
+.who{font-family:var(--f-ui);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:700;display:block;margin-bottom:4px}
+.cast-row{display:flex;gap:14px;align-items:center}
+.av{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center 20%;background:var(--night-2);flex:none;border:2px solid rgba(255,255,255,.12)}
+.terminal{background:#09100F;border:1px solid #23302C;border-radius:12px;padding:16px;display:grid;gap:8px;font-family:var(--f-data);font-size:14px}
+.term-row{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;background:#101A18;border:1px solid #1E2A27;text-align:left;width:100%;color:var(--night-ink)}
+.term-row.done{border-color:var(--mint);color:#BFEBDD}
+.term-row .ok{color:var(--mint);font-weight:600}
+.greenbar{height:14px;border-radius:7px;background:#1A2522;overflow:hidden}
+.greenbar i{display:block;height:100%;width:0;background:var(--mint);box-shadow:0 0 24px var(--mint);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.greenbar-label{font-family:var(--f-data);font-size:12px;letter-spacing:.1em;color:var(--mint);min-height:18px}
+.next{justify-self:start}
+.story-img{width:100%;max-width:100%;border-radius:14px;display:block;aspect-ratio:4/3;object-fit:cover}
+.choices{display:grid;gap:10px}
+.choice{text-align:left;background:var(--night-2);border:1px solid #2A3632;border-radius:12px;padding:14px 16px;color:var(--night-ink);font-family:var(--f-story);font-size:17px}
+.choice:hover{border-color:var(--amber)}
+.free{display:grid;gap:8px}
+.free textarea{width:100%;min-height:76px;border-radius:12px;border:1px solid #2A3632;background:#0A1110;color:var(--night-ink);padding:12px;font:inherit;font-family:var(--f-story);font-size:16px;resize:vertical}
+.gas-tag{width:160px;aspect-ratio:1.6;border-radius:12px;background:linear-gradient(135deg,#9AA6A2,#5E6B67 60%,#87938F);color:#18211F;padding:12px;display:grid;align-content:space-between;font-family:var(--f-data);font-size:11px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.25),0 10px 30px rgba(0,0,0,.4);clip-path:polygon(0 0,92% 0,100% 12%,100% 100%,6% 100%,0 88%)}
+.gas-tag b{font-size:20px;letter-spacing:.05em}
+
+/* ---------- desk ---------- */
+#s-desk{background:var(--pearl)}
+.topbar{display:flex;align-items:center;gap:18px;padding-block:10px;border-bottom:1px solid var(--line);background:var(--panel);flex-wrap:wrap}
+.tb-brand{font-weight:800;letter-spacing:-.02em;display:flex;gap:8px;align-items:center}
+.tb-brand .dot{width:10px;height:10px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px var(--mint-soft)}
+.tb-clock{font-size:20px;font-weight:600}
+.stats{display:flex;gap:18px;margin-left:auto;flex-wrap:wrap;align-items:center}
+.stat{display:grid;gap:0;line-height:1.2}
+.stat .v{font-size:16px;font-weight:600}
+.stat.flash-up .v{color:var(--mint)}
+.stat.flash-down .v{color:var(--red)}
+.trust{display:flex;gap:4px;padding-top:4px}
+.trust i{width:12px;height:12px;border-radius:3px;background:var(--line)}
+.trust i.on{background:var(--ink)}
+.storm{background:var(--ink);color:var(--panel);border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600}
+.iconbtn{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:6px 10px;font-size:12px}
+.desk{flex:1;min-height:0;display:grid;grid-template-columns:240px minmax(0,1fr) 300px;gap:16px;padding-block:16px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;min-height:0;display:flex;flex-direction:column}
+.panel-h{padding:12px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.queue-list{list-style:none;margin:0;padding:8px;display:grid;gap:6px;overflow:auto;align-content:start}
+.q{padding:10px 12px;border-radius:10px;border:1px solid transparent;display:grid;gap:2px}
+.q .c{font-family:var(--f-data);font-size:11px;color:var(--muted)}
+.q .t{font-size:13px;font-weight:600;line-height:1.3}
+.q.now{border-color:var(--ink);background:var(--pearl)}
+.q.urgent{border-color:var(--red);background:var(--red-soft)}
+.q.done{opacity:.45}
+.q.done .t::after{content:" · " attr(data-res);font-weight:500;color:var(--muted)}
+.file-zone{position:relative;min-width:0;min-height:0;display:flex}
+.file{position:relative;flex:1;min-height:0;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px clamp(16px,3vw,32px);display:grid;gap:16px;align-content:start;transition:transform .35s ease,opacity .35s ease}
+.file.out{transform:translateX(-30px);opacity:0}
+.file.in{transform:translateX(30px);opacity:0}
+.file-meta{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.file-meta .from{font-size:13px;color:var(--muted)}
+.timer{display:grid;gap:4px;min-width:160px;flex:1;max-width:260px}
+.timer-bar{height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.timer-bar i{display:block;height:100%;background:var(--ink);transition:width .25s linear}
+.timer.low .timer-bar i{background:var(--red)}
+.timer-t{font-size:12px;color:var(--muted);text-align:right}
+.file h2{font-size:clamp(20px,2.4vw,26px);line-height:1.25;letter-spacing:-.01em}
+.file-body{font-size:16px;max-width:62ch}
+.file-body b{font-family:var(--f-data);font-weight:600}
+.evid{display:flex;gap:8px;flex-wrap:wrap}
+.ev{border:1px dashed var(--muted);background:transparent;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:600;display:flex;gap:6px;align-items:center}
+.ev .cost{font-family:var(--f-data);font-weight:500;color:var(--muted);font-size:11px}
+.ev.seen{border-style:solid;border-color:var(--mint);background:var(--mint-soft)}
+.ev-out{display:grid;gap:8px}
+.note{border-left:3px solid var(--amber);background:var(--amber-soft);padding:10px 12px;border-radius:0 8px 8px 0;font-size:14px;max-width:62ch}
+.actions{display:flex;gap:10px;flex-wrap:wrap;padding-top:6px;border-top:1px solid var(--line)}
+.act{border-radius:10px;padding:12px 16px;font-weight:700;border:2px solid var(--ink);background:var(--panel);display:flex;gap:8px;align-items:center;text-align:left}
+.act.green{border-color:var(--mint);color:#0B6E5C}
+.act.green:hover{background:var(--mint);color:#fff}
+.act.red{border-color:var(--red);color:var(--red)}
+.act.red:hover{background:var(--red);color:#fff}
+.act.later{border-color:var(--line);color:var(--muted)}
+.act.alt{border-color:var(--amber);color:#8A5A12;background:var(--amber-soft)}
+.act:disabled{opacity:.35;cursor:not-allowed}
+.act .hint{font-weight:500;font-size:12px;opacity:.8}
+.stamp{position:absolute;top:38%;left:50%;transform:translate(-50%,-50%) rotate(-9deg) scale(1.6);opacity:0;pointer-events:none;border:5px solid currentColor;border-radius:10px;padding:10px 22px;font-weight:800;font-size:clamp(24px,4vw,40px);letter-spacing:.06em;white-space:nowrap;z-index:5;background:rgba(251,253,252,.75)}
+.stamp.show{animation:stamp .5s cubic-bezier(.2,1.6,.4,1) forwards}
+@keyframes stamp{to{opacity:1;transform:translate(-50%,-50%) rotate(-9deg) scale(1)}}
+.toast-ok{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);background:var(--ink);color:var(--panel);padding:8px 14px;border-radius:999px;font-size:13px;font-family:var(--f-data);z-index:6;white-space:nowrap;max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis}
+.chat-list{list-style:none;margin:0;padding:12px;display:grid;gap:10px;overflow:auto;align-content:start;flex:1;min-height:0}
+.msg{display:grid;grid-template-columns:30px minmax(0,1fr);gap:8px;align-items:start;animation:pop .3s ease}
+.msg img,.msg .ini{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:center 20%;background:var(--pearl)}
+.msg .ini{display:grid;place-items:center;font-size:11px;font-weight:700;background:var(--mint-soft);color:#0B6E5C}
+.msg .n{font-size:12px;font-weight:700}
+.msg .b{font-size:14px;background:var(--pearl);border-radius:4px 12px 12px 12px;padding:7px 10px;display:inline-block;max-width:100%;overflow-wrap:anywhere}
+.msg.sys{grid-template-columns:1fr}
+.msg.sys .b{background:transparent;color:var(--muted);font-style:italic;font-size:12px;padding:0}
+.typing{font-size:12px;color:var(--muted);padding:0 14px 10px;min-height:22px}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}}
+.ticker{background:var(--ink);color:var(--panel);overflow:hidden;white-space:nowrap;font-size:13px;padding-block:8px}
+.ticker-in{display:inline-block;padding-left:100%;animation:tick 70s linear infinite}
+.ticker-in span{margin-right:48px}
+.ticker-in span b{color:var(--mint)}
+@keyframes tick{to{transform:translateX(-100%)}}
+.chat-fab{display:none}
+.chat-toast{display:none}
+
+/* photo viewer */
+.overlay{position:fixed;inset:0;background:rgba(9,14,13,.86);z-index:20;display:flex;align-items:center;justify-content:center;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.photo-box{width:min(1000px,100%);display:grid;gap:12px;color:var(--night-ink);max-height:100%;overflow:auto;padding-block:16px}
+.photo-frame{position:relative;border-radius:12px;overflow:hidden;max-width:100%}
+.photo-frame img{display:block;width:100%;height:auto}
+.hot{position:absolute;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;border:2px solid var(--amber);background:rgba(224,160,64,.18);box-shadow:0 0 0 0 rgba(224,160,64,.6);animation:pulse 1.8s infinite}
+.hot.seen{animation:none;border-color:#fff;background:rgba(255,255,255,.25)}
+@keyframes pulse{70%{box-shadow:0 0 0 16px rgba(224,160,64,0)}100%{box-shadow:0 0 0 0 rgba(224,160,64,0)}}
+.photo-notes{display:grid;gap:6px;font-family:var(--f-story);font-size:16px;min-height:28px}
+.photo-bar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.photo-stamp{font-family:var(--f-data);font-size:12px;color:var(--night-muted)}
+
+/* call */
+.call{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(440px,calc(100% - 32px));background:var(--night);color:var(--night-ink);border-radius:18px;padding:18px;z-index:30;display:grid;gap:12px;box-shadow:0 20px 60px rgba(0,0,0,.45);animation:rise .4s cubic-bezier(.2,1.2,.4,1)}
+@keyframes rise{from{transform:translate(-50%,40px);opacity:0}}
+.call .ring{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);font-weight:700}
+.call p{margin:0;font-family:var(--f-story);font-size:16px}
+.call .row{display:flex;gap:10px;flex-wrap:wrap}
+.call .timer-bar{background:#26322F}
+.call .timer-bar i{background:var(--amber)}
+.alert{position:fixed;top:calc(8px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-weight:700;padding:10px 16px;border-radius:10px;z-index:25;font-size:14px;box-shadow:0 10px 30px rgba(194,72,59,.4);animation:blink 1s steps(2) infinite;max-width:calc(100% - 32px);text-align:center}
+@keyframes blink{50%{background:#9E3329}}
+
+/* ---------- report ---------- */
+#s-report{background:var(--pearl);overflow:auto}
+.paper{margin:28px auto;width:min(760px,100%);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:clamp(20px,4vw,44px);display:grid;gap:22px;box-shadow:0 30px 60px -30px rgba(17,33,29,.35);position:relative}
+.paper-head{display:grid;gap:4px;border-bottom:2px solid var(--ink);padding-bottom:14px}
+.paper-head .org{font-family:var(--f-data);font-size:12px;letter-spacing:.08em}
+.paper-head h1{font-size:clamp(24px,3.4vw,34px);letter-spacing:-.02em}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.fact{background:var(--panel);padding:12px 14px;display:grid;gap:2px}
+.fact .v{font-family:var(--f-data);font-size:20px;font-weight:600;line-height:1.25}
+.ai-box{border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:12px;background:var(--pearl)}
+.ai-src{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
+.pill{font-size:11px;font-weight:700;letter-spacing:.06em;padding:4px 10px;border-radius:999px;background:var(--mint-soft);color:#0B6E5C}
+.pill.off{background:var(--amber-soft);color:#8A5A12}
+.ai-text{font-family:var(--f-story);font-size:18px;line-height:1.65;min-height:1.6em;white-space:pre-wrap}
+.consent{display:grid;gap:10px}
+.consent p{margin:0;font-size:14px;color:var(--muted);max-width:60ch}
+.consent .row{display:flex;gap:10px;flex-wrap:wrap}
+.missed{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;border:2px solid var(--red);border-radius:10px;padding:16px 18px;color:var(--red)}
+.missed .big{font-family:var(--f-data);font-size:56px;font-weight:600;line-height:1}
+.missed ul{margin:4px 0 0;padding-left:18px;color:var(--ink);font-size:14px}
+.missed.zero{border-color:var(--mint);color:#0B6E5C}
+.question{display:grid;gap:10px}
+.question .q-text{font-family:var(--f-story);font-size:20px;font-weight:600;line-height:1.4}
+.question textarea{width:100%;min-height:80px;border-radius:10px;border:1px solid var(--line);padding:12px;font:inherit;font-family:var(--f-story);font-size:16px;background:var(--panel);color:var(--ink);resize:vertical}
+.small{font-size:13px;color:var(--muted)}
+.row-end{display:flex;gap:10px;flex-wrap:wrap}
+pre.json{background:var(--ink);color:#CFE9E0;border-radius:8px;padding:12px;font-size:12px;overflow:auto;max-height:260px;margin:0}
+.closing{font-family:var(--f-story);font-size:17px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+
+/* ---------- share card ---------- */
+#s-card{background:var(--night);color:var(--night-ink);overflow:auto;align-items:center}
+.card-wrap{margin:auto;display:grid;gap:16px;justify-items:center;padding-block:24px;width:100%}
+.share{width:min(360px,100%);aspect-ratio:9/16;max-width:100%;border-radius:22px;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:26px 22px;background:#0B1211}
+.share>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.share::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,17,.2),rgba(11,18,17,.92) 70%)}
+.share>*:not(img){position:relative;z-index:1}
+.share .top{font-family:var(--f-data);font-size:11px;letter-spacing:.14em;color:var(--mint)}
+.share .title{font-weight:800;font-size:30px;line-height:1.05;letter-spacing:-.02em}
+.share .num{font-family:var(--f-data);font-size:84px;line-height:1;color:var(--amber);font-weight:600}
+.share .numl{font-size:14px;font-weight:600}
+.share blockquote{margin:0;font-family:var(--f-story);font-size:16px;line-height:1.5;border-left:2px solid var(--amber);padding-left:12px}
+.share .foot{font-size:12px;color:var(--night-muted)}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .desk{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:10px;padding-block:10px}
+  .queue{order:0}
+  .queue .panel-h{display:none}
+  .queue-list{display:flex;overflow-x:auto;padding:6px;gap:6px}
+  .q{min-width:150px;flex:none}
+  .chat{position:fixed;right:0;bottom:0;top:auto;left:0;height:62%;z-index:40;border-radius:16px 16px 0 0;transform:translateY(105%);transition:transform .3s ease;padding-bottom:env(safe-area-inset-bottom,0px)}
+  .chat.open{transform:none}
+  .chat-close{display:inline-block}
+  .chat-fab{display:flex;position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(52px + env(safe-area-inset-bottom,0px));z-index:35;background:var(--ink);color:var(--panel);border:0;border-radius:999px;padding:10px 14px;font-weight:700;font-size:13px;gap:6px;align-items:center}
+  .chat-fab .badge{background:var(--mint);border-radius:999px;padding:0 7px;font-size:12px}
+  .chat-toast{display:block;position:fixed;left:max(16px,env(safe-area-inset-left,0px));right:max(130px,env(safe-area-inset-right,0px));bottom:calc(48px + env(safe-area-inset-bottom,0px));z-index:28;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px;box-shadow:0 10px 30px rgba(17,33,29,.18);animation:pop .3s ease}
+  .topbar{gap:6px 14px;padding-block:8px}
+  .stats{gap:10px;margin-left:0;width:100%;justify-content:space-between;flex-wrap:nowrap}
+  .tb-clock{font-size:16px}
+  .file{padding:16px}
+}
+@media (max-width:520px){
+  .storm{display:none}
+  .tb-brand{font-size:14px}
+  .iconbtn{padding:5px 8px;font-size:11px}
+  .stat .label{font-size:9px}
+  .stat .v{font-size:14px}
+  .act{flex:1 1 100%;justify-content:space-between}
+  .missed{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .ticker-in{animation:none;padding-left:0}
+}
+</style>
+
+<!-- ============ TITLE ============ -->
+<section id="s-title" class="screen">
+  <div class="hero">
+    <img src="assets/city.jpg" alt="Thành phố Lưu Quang dưới mái vòm kính, buổi sáng">
+    <div class="hero-copy gut">
+      <div class="label" style="color:var(--mint)">Chương 1 · Ngày đầu tiên ở Tầng 42</div>
+      <div class="brand">CIVI<span>.</span></div>
+      <p class="sub">Bạn là người làm ra những vạch xanh. Hôm nay bạn sẽ cố công bằng. Rồi bạn sẽ biết mình đã bỏ sót ai.</p>
+      <div class="hero-actions">
+        <button class="btn mint" id="b-start">Vào ca làm việc</button>
+        <span class="meta">Khoảng 7 phút · chạm hoặc dùng chuột · có âm thanh</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEMORY ============ -->
+<section id="s-flash" class="screen story" hidden>
+  <div class="story-wrap gut">
+    <div class="label" style="color:var(--night-muted)">Ký ức · Mai, tám tuổi · mùa lạnh thứ mười bảy sau khi mái vòm phía Tây được dựng xong</div>
+    <p class="story-line">Mẹ nằm trên giường bệnh, tay nắm chặt chiếc thẻ lao động đã hết hạn. Nhân viên nói gia đình chưa đủ điểm đóng góp. Người phụ nữ áo xám bước tới bàn máy.</p>
+    <div class="cast-row">
+      <img class="av" src="assets/av-yta.png" alt="Cô y tá áo xám">
+      <p class="story-line" style="margin:0"><span class="who">Bạn là cô y tá</span>Nhập bốn dòng dữ liệu. Mỗi dòng là một lý do để giữ một người lại.</p>
+    </div>
+    <div class="terminal" id="term">
+      <button class="term-row" data-i="0"><span>Bệnh nhân: nữ, 34 tuổi · thẻ lao động hết hạn</span><span class="ok" hidden>ĐÃ NHẬP</span></button>
+      <button class="term-row" data-i="1"><span>Người phụ thuộc: 01 trẻ vị thành niên, 8 tuổi</span><span class="ok" hidden>ĐÃ NHẬP</span></button>
+      <button class="term-row" data-i="2"><span>Quy định mới: trẻ vị thành niên thuộc nhóm cần bảo vệ</span><span class="ok" hidden>ĐÃ NHẬP</span></button>
+      <button class="term-row" data-i="3"><span>Ưu tiên: hoàn cảnh y tế trước mức đóng góp</span><span class="ok" hidden>ĐÃ NHẬP</span></button>
+      <div class="greenbar" aria-hidden="true"><i id="gbar"></i></div>
+      <div class="greenbar-label" id="gbar-l"></div>
+    </div>
+    <div id="flash-after" hidden style="display:grid;gap:18px">
+      <div class="cast-row">
+        <img class="av" src="assets/av-mai8.png" alt="Mai lúc tám tuổi">
+        <p class="story-line" style="margin:0"><span class="who">Cô y tá</span>Đừng sợ. Người lớn sẽ tìm cách.</p>
+      </div>
+      <p class="story-line">Mười năm sau, trong lễ tốt nghiệp, Mai nói cô muốn trở thành người làm ra những vạch xanh như thế. Mười năm nữa, cô ngồi ở <em>tầng bốn mươi hai</em> của Cơ quan Điều phối Mái vòm.</p>
+      <p class="story-line">Bây giờ, người làm ra vạch xanh là <em>bạn</em>.</p>
+      <button class="btn mint next" id="b-to-desk">Mở bàn làm việc</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESK ============ -->
+<section id="s-desk" class="screen" hidden>
+  <header class="topbar gut">
+    <div class="tb-brand"><span class="dot"></span>Điều phối · Tầng 42</div>
+    <div class="tb-clock data" id="clock">08:00</div>
+    <div class="stats">
+      <div class="stat" id="st-power"><span class="label">Điện dư</span><span class="v data" id="v-power">48,0 MW</span></div>
+      <div class="stat" id="st-air"><span class="label">Khí sạch</span><span class="v data" id="v-air">97%</span></div>
+      <div class="stat" id="st-trust"><span class="label">Sếp Vinh tin bạn</span><span class="trust" id="v-trust"></span></div>
+      <span class="storm">Bão còn 12 ngày</span>
+      <button class="iconbtn" id="b-mute" aria-pressed="false">Âm thanh: bật</button>
+    </div>
+  </header>
+  <div class="desk gut">
+    <aside class="panel queue" aria-label="Hàng chờ hồ sơ">
+      <div class="panel-h"><span class="label">Hàng chờ</span><span class="data small" id="q-count"></span></div>
+      <ul class="queue-list" id="queue"></ul>
+    </aside>
+    <div class="file-zone">
+      <article class="file" id="file" aria-live="polite"></article>
+    </div>
+    <aside class="panel chat" id="chat" aria-label="Nhóm chat">
+      <div class="panel-h"><div><div style="font-weight:700;font-size:14px">Phòng Điều Phối T42</div><div class="small">37 thành viên</div></div><button class="iconbtn chat-close" id="b-chat-close">Đóng</button></div>
+      <ul class="chat-list" id="chat-list"></ul>
+      <div class="typing" id="typing"></div>
+    </aside>
+  </div>
+  <div class="ticker" aria-hidden="true"><div class="ticker-in" id="ticker"></div></div>
+  <button class="chat-fab" id="b-chat"><span>Nhóm chat</span><span class="badge" id="chat-badge">0</span></button>
+  <div class="chat-toast" id="chat-toast" hidden></div>
+</section>
+
+<!-- photo viewer -->
+<div class="overlay" id="photo" hidden>
+  <div class="photo-box gut">
+    <div class="photo-bar"><span class="label" style="color:var(--amber)">Ảnh Linh gửi · Phân khu 8-12 · chụp hôm qua</span><span class="photo-stamp" id="photo-timer"></span></div>
+    <div class="photo-frame" id="photo-frame">
+      <img src="assets/house-812.jpg" alt="Căn nhà ở phân khu 8-12 trong đêm mưa, đèn vàng còn sáng">
+      <button class="hot" style="left:35%;top:34%" data-h="plant" aria-label="Chậu cây trên bậu cửa"></button>
+      <button class="hot" style="left:65%;top:37%" data-h="shirts" aria-label="Hai chiếc áo đang phơi"></button>
+      <button class="hot" style="left:68%;top:86%" data-h="shoes" aria-label="Đôi giày dưới hiên"></button>
+    </div>
+    <div class="photo-notes" id="photo-notes"><span style="color:var(--night-muted)">Chạm vào các điểm sáng để xem kỹ.</span></div>
+    <div class="photo-bar"><span class="small" style="color:var(--night-muted)">Đồng hồ hồ sơ vẫn đang chạy.</span><button class="btn light" id="b-photo-close">Quay lại hồ sơ</button></div>
+  </div>
+</div>
+
+<!-- call + alert -->
+<div class="call" id="call" hidden role="dialog" aria-label="Cuộc gọi đến">
+  <div class="cast-row"><span class="av" style="display:grid;place-items:center;font-weight:800;background:var(--night-2)">AT</span><div><div class="ring" id="call-ring">Cuộc gọi đến</div><div style="font-weight:700">Anh Tường · tài xế xe công cộng tuyến 7</div></div></div>
+  <p id="call-text"></p>
+  <div class="timer-bar"><i id="call-bar" style="width:100%"></i></div>
+  <div class="row" id="call-actions"></div>
+</div>
+<div class="alert" id="alert" hidden></div>
+
+<!-- ============ GALLERY ============ -->
+<section id="s-gallery" class="screen story" hidden>
+  <div class="story-wrap gut" id="gallery"></div>
+</section>
+
+<!-- ============ HOME ============ -->
+<section id="s-home" class="screen story" hidden>
+  <div class="story-wrap gut" id="home"></div>
+</section>
+
+<!-- ============ REPORT ============ -->
+<section id="s-report" class="screen" hidden>
+  <div class="gut">
+    <div class="paper" id="paper">
+      <div class="paper-head">
+        <span class="org">CƠ QUAN ĐIỀU PHỐI MÁI VÒM · TẦNG 42 · KIỂM TOÁN NỘI BỘ</span>
+        <h1>Báo cáo kiểm toán về chính bạn</h1>
+        <span class="small">Đối tượng: nhân viên điều phối Mai (người chơi) · Ngày làm việc thứ nhất · Bão còn 12 ngày</span>
+      </div>
+      <div class="facts" id="facts"></div>
+      <div class="ai-box">
+        <div class="ai-src"><span class="label">Nhận xét của Kiểm toán viên</span><span class="pill" id="ai-pill" hidden></span></div>
+        <div class="consent" id="consent">
+          <p>Kiểm toán viên AI sẽ đọc nhật ký chơi của bạn: bạn mở gì, bỏ qua gì, do dự bao lâu. Nhật ký chỉ có hành vi trong game, không có tên hay thông tin cá nhân.</p>
+          <div class="row"><button class="btn mint" id="b-ai-yes">Cho AI đọc nhật ký</button><button class="btn ghost" id="b-ai-no">Dùng báo cáo không cần mạng</button></div>
+        </div>
+        <div class="ai-text" id="ai-text" hidden></div>
+      </div>
+      <div class="missed" id="missed" hidden></div>
+      <div class="question" id="question" hidden>
+        <span class="label">Kiểm toán viên hỏi lại bạn</span>
+        <div class="q-text" id="q-text"></div>
+        <textarea id="q-answer" placeholder="Viết vài chữ. Không có đáp án đúng."></textarea>
+        <div class="row-end"><button class="btn" id="b-q-save">Lưu vào hồ sơ</button><span class="small" id="q-saved" aria-live="polite"></span></div>
+      </div>
+      <div class="row-end" id="report-actions" hidden>
+        <button class="btn mint" id="b-card">Xem thẻ kết quả</button>
+        <button class="btn ghost" id="b-data">Xem dữ liệu của tôi</button>
+        <button class="btn ghost" id="b-del">Xóa dữ liệu</button>
+      </div>
+      <pre class="json" id="json" hidden></pre>
+      <p class="small" id="del-msg" aria-live="polite"></p>
+      <p class="closing" id="closing" hidden>Phân khu 8-12 vẫn ghi 0. Chương 2 · <em>Những chiếc ô hỏng</em> · Mai đến Rìa Mưa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHARE CARD ============ -->
+<section id="s-card" class="screen" hidden>
+  <div class="card-wrap gut">
+    <div class="share" id="share">
+      <img src="assets/house-812.jpg" alt="">
+      <div class="top">CIVI · CHƯƠNG 1 · TẦNG 42</div>
+      <div style="display:grid;gap:14px">
+        <div class="title" id="sc-title"></div>
+        <div><div class="num" id="sc-num"></div><div class="numl" id="sc-numl"></div></div>
+        <blockquote id="sc-quote"></blockquote>
+      </div>
+      <div class="foot">Bạn sẽ bỏ sót bao nhiêu người? Chơi Chương 1 miễn phí.</div>
+    </div>
+    <p class="small" style="color:var(--night-muted);text-align:center;max-width:36ch">Chụp màn hình thẻ này để đăng story, hoặc sao chép lời mời bên dưới.</p>
+    <div class="row-end" style="justify-content:center">
+      <button class="btn mint" id="b-copy">Sao chép lời mời</button>
+      <button class="btn ghost" id="b-back">Quay lại báo cáo</button>
+      <button class="btn ghost" id="b-replay">Chơi lại</button>
+    </div>
+    <p class="small" id="copy-msg" style="color:var(--night-muted)" aria-live="polite"></p>
+  </div>
+</section>
+
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const $$=s=>Array.from(document.querySelectorAll(s));
+const fmt1=n=>n.toLocaleString("vi-VN",{minimumFractionDigits:1,maximumFractionDigits:1});
+const now=()=>performance.now();
+
+/* ---------------- runtime: Claude sampling (optional) ---------------- */
+const samplePromise=(window.claude&&typeof window.claude.use==="function")
+  ? window.claude.use("sample").catch(()=>null) : Promise.resolve(null);
+
+/* ---------------- sound ---------------- */
+let actx=null,muted=false;
+function beep(kind){
+  if(muted)return;
+  try{
+    actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+    const t=actx.currentTime,o=actx.createOscillator(),g=actx.createGain();
+    const p={stamp:[90,.18,"square",.25],ok:[880,.12,"sine",.12],ring:[640,.25,"triangle",.12],alert:[220,.3,"sawtooth",.08],type:[1400,.03,"square",.03]}[kind]||[440,.1,"sine",.1];
+    o.type=p[2];o.frequency.setValueAtTime(p[0],t);
+    if(kind==="stamp")o.frequency.exponentialRampToValueAtTime(40,t+p[1]);
+    g.gain.setValueAtTime(p[3],t);g.gain.exponentialRampToValueAtTime(.0001,t+p[1]);
+    o.connect(g).connect(actx.destination);o.start(t);o.stop(t+p[1]+.02);
+  }catch(e){}
+}
+
+/* ---------------- state ---------------- */
+let S;
+function fresh(){
+  return {t0:now(),deskT0:0,deskT1:0,power:48,air:97,trust:3,clock:8*60,
+    log:[],hot:new Set(),gallery:null,driver:null,kho:null,answer:"",ai:null,consent:null,unread:0};
+}
+S=fresh();
+
+function show(id){
+  $$(".screen").forEach(s=>s.hidden=s.id!==id);
+  const el=$("#"+id); if(el) el.scrollTop=0;
+}
+
+/* ---------------- TITLE / MEMORY ---------------- */
+$("#b-start").onclick=()=>{beep("ok");S=fresh();show("s-flash");};
+let typed=0;
+$$("#term .term-row").forEach(b=>b.onclick=()=>{
+  if(b.classList.contains("done"))return;
+  b.classList.add("done");b.querySelector(".ok").hidden=false;beep("type");typed++;
+  $("#gbar").style.width=(typed*25)+"%";
+  if(typed===4){
+    setTimeout(()=>{beep("ok");$("#gbar-l").textContent="VẠCH XANH · BỆNH NHÂN ĐƯỢC GIỮ LẠI";$("#flash-after").hidden=false;
+      $("#flash-after").scrollIntoView({behavior:"smooth",block:"start"});},900);
+  }
+});
+$("#b-to-desk").onclick=()=>{beep("ok");startDesk();};
+
+/* ---------------- DESK content ---------------- */
+const PEOPLE={
+  linh:{n:"Linh",img:"assets/av-linh.png"},
+  vinh:{n:"Sếp Vinh",img:"assets/av-vinh.png"},
+  khoa:{n:"Khoa",ini:"K"},
+  hang:{n:"Chị Hằng · Hành chính",ini:"H"},
+};
+const TICKER=[
+  "<b>LƯU QUANG 24H</b> Giới trẻ Lõi Sáng săn vé hít thở phiên bản giới hạn, hết sạch sau 3 phút",
+  "#VachXanhChallenge đạt 2 triệu lượt quay video tạo dáng cạnh trạm khí",
+  "Chuyên gia: mái vòm vẫn ổn, chỉ hơi rung khi có gió",
+  "<b>QUẢNG CÁO</b> Tích điểm công dân, nhận ngay voucher hít thở 15 phút",
+  "Cục Cư trú: hệ thống đạt 0 lỗi trong 2.190 ngày liên tiếp",
+  "Căng tin Tầng 42 công bố thực đơn tuần: đậu, đậu sốt cà, chè đậu",
+  "Phân khu 8-12: không có tin tức",
+];
+
+const FILES=[
+ {id:"H01",code:"HS-0301",from:"Bệnh viện Số Ba · Khoa Hô hấp",title:"Xin chuyển 6 MW từ Quảng trường Thương mại",
+  body:"Bệnh viện cần thêm điện cho máy hỗ trợ hô hấp. Quảng trường có thể giảm đèn trang trí đến tối.",
+  time:35,min:40,
+  ev:[{id:"list",label:"Danh sách bệnh nhân",cost:4,text:"41 bệnh nhân đang dùng máy hỗ trợ hô hấp. 9 người ở mức nặng."}],
+  acts:[
+   {id:"ok",label:"Duyệt chuyển điện",kind:"green",stamp:"ĐÃ DUYỆT",fx:{air:1,trust:1},done:"Duyệt",
+    toast:s=>`Phê chuẩn trong ${s} giây · Ưu tiên sinh tồn: hoàn tất`,
+    chat:[["vinh","ok e"],["sys","Sếp Vinh đã thu hồi một tin nhắn"],["khoa","sếp vừa định khen ai đấy 👀"]]},
+   {id:"no",label:"Từ chối",kind:"red",stamp:"TỪ CHỐI",fx:{air:-3,trust:-1},done:"Từ chối",
+    chat:[["vinh","Bệnh viện mà em cũng từ chối à?"]]}
+  ]},
+ {id:"H02",code:"HS-0302",from:"Shop Mẹ Bỉm Lõi Sáng",title:"Xin thêm 0,2 MW để livestream xả kho lúc 0 giờ",
+  body:"Phiên live dự kiến 12.000 người xem. Mất điện giữa phiên là mất khách, mất khách là mất cả nhà.",
+  time:25,min:15,
+  ev:[{id:"why",label:"Lý do đính kèm",cost:3,text:"“Em làm một mình, con còn nhỏ. Tắt live 5 phút là khách sang shop khác. Mong cơ quan thương.”"}],
+  acts:[
+   {id:"ok",label:"Duyệt",kind:"green",stamp:"ĐÃ DUYỆT",fx:{power:-0.2},done:"Duyệt",
+    chat:[["khoa","tối nay ai cần bỉm thì nhắn tôi, có mã giảm 50%"],["linh","Khoa nhà cậu làm gì có em bé 😐"]]},
+   {id:"no",label:"Từ chối",kind:"red",stamp:"TỪ CHỐI",fx:{},done:"Từ chối",
+    chat:[["khoa","shop vừa đăng story: “có những người không hiểu nỗi khổ của người bán hàng online”"],["hang","Mọi người đừng vào bình luận nhé"]]}
+  ]},
+ {id:"H19",code:"HS-0019",from:"Trạm lọc số 19 · gửi kèm bởi Linh",title:"Sửa trạm lọc 19 · đề nghị lần thứ sáu",
+  body:"Dân số đã xác minh tại Phân khu 8-12: <b>0 người</b>. Dưới ngưỡng cấp thêm công suất. Quy định: trả hồ sơ về.",
+  time:45,min:50,pre:[["linh","@Mai hồ sơ trạm 19 là tớ gửi. Cậu xem ảnh giúp tớ."]],
+  ev:[{id:"photo",label:"Ảnh Linh chụp hôm qua",cost:5,photo:true},
+      {id:"query",label:"Kiểm tra truy vấn dân cư",cost:5,text:"Truy vấn không báo lỗi. Phép cộng chỉ gồm hồ sơ đã xác minh. Người đang chờ xác minh không được tính."}],
+  acts:[
+   {id:"return",label:"Trả về: dưới ngưỡng",hint:"đúng quy định",kind:"red",stamp:"TRẢ VỀ",fx:{trust:1},done:"Trả về",
+    chat:[["vinh","Đúng quy trình. Tốt."],["typing","Linh đang nhập…"]]},
+   {id:"verify",label:"Gửi tổ xác minh thực địa",hint:"chậm phương án bão",kind:"alt",stamp:"XÁC MINH",fx:{trust:-1},done:"Gửi xác minh",
+    chat:[["vinh","Còn 12 ngày nữa là bão. Đừng sa đà."],["linh","cảm ơn cậu"]]}
+  ]},
+ {id:"H03",code:"HS-0303",from:"Công dân Lõi Sáng, khu B",title:"Đăng ký cư trú cho “Bé Điện”, 4 tuổi",
+  body:"Xin cấp số cư trú và suất khí riêng 0,3 m³/ngày cho Bé Điện. Giống: mèo. Đã tiêm phòng đầy đủ.",
+  time:20,min:10,
+  ev:[{id:"pic",label:"Ảnh hồ sơ",cost:2,text:"Ảnh chân dung một con mèo mướp đeo nơ đỏ. Ánh mắt nhìn thẳng vào hệ thống, có phần khinh bỉ."}],
+  acts:[
+   {id:"ok",label:"Duyệt",hint:"vì nó dễ thương",kind:"green",stamp:"ĐÃ DUYỆT",fx:{trust:-1},done:"Duyệt",
+    chat:[["vinh","Ai vừa cấp số công dân cho một con mèo?"],["khoa","Bé Điện có thẻ khí trước cả tôi"]]},
+   {id:"no",label:"Từ chối",hint:"cư trú chỉ cấp cho người",kind:"red",stamp:"TỪ CHỐI",fx:{},done:"Từ chối",
+    chat:[["khoa","chủ Bé Điện đang khóc trong livestream của shop bỉm kìa"]]}
+  ]},
+ {id:"H04",code:"HS-0304",from:"Trạm phụ Vành Đệm",title:"Kho thuốc và nhà giữ trẻ cùng xin điện",
+  body:"Trạm phụ còn dư <b>1,2 MW</b>. Kho thuốc cần <b>0,8 MW</b> để giữ lạnh lô thuốc mới. Nhà giữ trẻ Hoa Sữa cần <b>0,7 MW</b> sưởi cho 23 trẻ. Không đủ cho cả hai.",
+  time:50,min:55,
+  ev:[{id:"temp",label:"Biên bản nhiệt độ kho",cost:4,text:"Nếu nhiệt độ vượt 8°C quá 3 giờ, toàn bộ lô thuốc phải hủy."},
+      {id:"school",label:"Gọi hiệu trưởng",cost:6,text:"23 trẻ trong hai phòng tường ẩm. Một em vừa nhập viện tuần trước vì viêm phổi. Có thể ghép tạm, nhưng chưa chắc đủ an toàn."},
+      {id:"map",label:"Bản đồ kho dự phòng",cost:5,text:"Kho dự phòng cạnh Bệnh viện Số Ba còn chỗ. Cần một chuyến xe công cộng chở thuốc sang. Trong lúc chờ, kho dùng pin dự trữ của chính họ."}],
+  acts:[
+   {id:"kho",label:"Ưu tiên kho thuốc",kind:"red",stamp:"KHO THUỐC",fx:{power:-0.8},done:"Kho thuốc",
+    chat:[["linh","nhà trẻ Hoa Sữa gần nhà bố tớ đấy"],["sys","Nhà giữ trẻ Hoa Sữa: ghép 23 trẻ vào một phòng"]]},
+   {id:"tre",label:"Ưu tiên nhà giữ trẻ",kind:"red",stamp:"NHÀ TRẺ",fx:{power:-0.7},done:"Nhà trẻ",
+    chat:[["sys","Kho thuốc báo nhiệt độ đang tăng 0,4°C mỗi giờ"]]},
+   {id:"half",label:"Chia đôi 0,6 / 0,6",kind:"later",stamp:"CHIA ĐÔI",fx:{power:-1.2},done:"Chia đôi",
+    chat:[["hang","Công bằng tuyệt đối luôn ạ"],["sys","Kho thuốc thiếu 0,2 MW · nhà trẻ thiếu 0,1 MW"]]},
+   {id:"third",label:"Phương án thứ ba: chuyển thuốc sang kho dự phòng",hint:"cần xe công cộng",kind:"alt",needs:["map"],stamp:"PHƯƠNG ÁN 3",fx:{power:-0.7,trust:1},done:"Phương án 3",
+    chat:[["sys","Kho thuốc và nhà giữ trẻ đều đồng ý"],["hang","Ui phương án đẹp quá"],["sys","Ghi chú: nếu đổi lịch vận tải, báo tài xế trước 15 phút"]]}
+  ]},
+ {id:"B4",code:"KHẨN · B4",from:"Trạm khí B4 · Vành Đệm",title:"Áp suất trạm khí B4 giảm 12%",
+  body:"Cần cấp <b>2 MW</b> điện dự phòng để giữ áp suất. Nếu không, khí sạch toàn vùng giảm trong giờ tới.",
+  time:30,min:20,urgent:true,
+  ev:[],
+  acts:[
+   {id:"ok",label:"Cấp điện dự phòng",kind:"green",stamp:"ĐÃ CẤP",fx:{power:-2,air:1},done:"Đã cấp",chat:[["vinh","Kịp. Tốt."]]},
+   {id:"wait",label:"Chờ đội kỹ thuật",kind:"later",stamp:"CHỜ",fx:{air:-5,trust:-1},done:"Chờ",chat:[["vinh","Áp suất B4 tụt rồi. Ai trực?"]]}
+  ]},
+];
+const ORDER=["H01","H02","H19","H03","H04"];
+const byId=id=>FILES.find(f=>f.id===id);
+
+/* ---------------- DESK engine ---------------- */
+let cur=null,curLog=null,timer=null,queue=[],tickH=null;
+
+function startDesk(){
+  show("s-desk");
+  S.deskT0=now();
+  $("#ticker").innerHTML=TICKER.concat(TICKER).map(t=>`<span>${t}</span>`).join("");
+  queue=ORDER.map(id=>({id,res:null}));
+  renderStats();renderQueue();
+  chatSeq([["khoa","chào buổi sáng các chiến binh tầng 42"],["hang","Nhắc nhẹ: trưa nay căng tin có đậu"],["linh","😐"],["vinh","Bão còn 12 ngày. Hôm nay xử lý cho xong hàng chờ."]],350);
+  setTimeout(()=>openFile("H01"),900);
+  if(!tickH) tickH=setInterval(tick,200);
+}
+
+function renderStats(){
+  $("#v-power").textContent=fmt1(Math.max(0,S.power))+" MW";
+  $("#v-air").textContent=Math.round(S.air)+"%";
+  $("#v-trust").innerHTML=[1,2,3,4,5].map(i=>`<i class="${i<=S.trust?"on":""}"></i>`).join("");
+  const h=Math.floor(S.clock/60)%24,m=S.clock%60;
+  $("#clock").textContent=String(h).padStart(2,"0")+":"+String(m).padStart(2,"0");
+}
+function flash(id,up){const el=$(id);el.classList.remove("flash-up","flash-down");void el.offsetWidth;el.classList.add(up?"flash-up":"flash-down");setTimeout(()=>el.classList.remove("flash-up","flash-down"),900);}
+function applyFx(fx){
+  if(fx.power){S.power+=fx.power;flash("#st-power",fx.power>0);}
+  if(fx.air){S.air=Math.min(100,S.air+fx.air);flash("#st-air",fx.air>0);}
+  if(fx.trust){S.trust=Math.max(0,Math.min(5,S.trust+fx.trust));flash("#st-trust",fx.trust>0);}
+  renderStats();
+}
+function renderQueue(){
+  const ul=$("#queue");
+  ul.innerHTML=queue.map(q=>{const f=byId(q.id);
+    const cls=["q",q.res?"done":"",cur&&cur.id===q.id&&!q.res?"now":"",f.urgent&&!q.res?"urgent":""].join(" ");
+    return `<li class="${cls}" data-res="${q.res||""}"><span class="c">${f.code}</span><span class="t">${f.title}</span></li>`;}).join("");
+  const left=queue.filter(q=>!q.res).length;
+  $("#q-count").textContent=left+" hồ sơ";
+  const nowEl=ul.querySelector(".now"); if(nowEl&&ul.scrollWidth>ul.clientWidth) nowEl.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"});
+}
+
+function openFile(id){
+  const f=byId(id);cur=f;
+  curLog={id:f.id,title:f.title,shownAt:Math.round(now()-S.deskT0),sec:0,action:null,evidence:[],timeout:false};
+  if(f.pre) chatSeq(f.pre,300);
+  const el=$("#file");
+  el.classList.add("in");
+  el.innerHTML=`
+    <div class="file-meta"><span class="data label" style="color:${f.urgent?"var(--red)":"var(--muted)"}">${f.code}</span><span class="from">${f.from}</span>
+      <div class="timer" id="ftimer"><div class="timer-bar"><i id="fbar" style="width:100%"></i></div><span class="timer-t data" id="ft"></span></div></div>
+    <h2>${f.title}</h2>
+    <p class="file-body" style="margin:0">${f.body}</p>
+    ${f.ev.length?`<div><div class="label" style="margin-bottom:8px">Bằng chứng · mở sẽ tốn thời gian</div><div class="evid">${f.ev.map(e=>`<button class="ev" data-ev="${e.id}">${e.label}<span class="cost">−${e.cost}s</span></button>`).join("")}</div></div>`:""}
+    <div class="ev-out" id="ev-out"></div>
+    <div class="actions">${f.acts.map(a=>`<button class="act ${a.kind}" data-act="${a.id}" ${a.needs?"disabled":""}>${a.label}${a.hint?`<span class="hint">${a.hint}</span>`:""}${a.needs?`<span class="hint">mở bản đồ kho dự phòng để thấy</span>`:""}</button>`).join("")}</div>
+    <div class="stamp" id="stamp"></div>`;
+  requestAnimationFrame(()=>el.classList.remove("in"));
+  el.scrollTop=0;
+  el.querySelectorAll("[data-ev]").forEach(b=>b.onclick=()=>openEvidence(b.dataset.ev,b));
+  el.querySelectorAll("[data-act]").forEach(b=>b.onclick=()=>decide(b.dataset.act));
+  startTimer(f.time,()=>decide(null,true));
+  renderQueue();
+}
+
+function startTimer(sec,onEnd){timer={end:now()+sec*1000,total:sec*1000,onEnd,done:false};}
+function tick(){
+  if(timer&&!timer.done){
+    const left=Math.max(0,timer.end-now());
+    const bar=$("#fbar"),t=$("#ft");
+    if(bar){bar.style.width=(left/timer.total*100)+"%";t.textContent=Math.ceil(left/1000)+" giây";$("#ftimer").classList.toggle("low",left<8000);}
+    const pt=$("#photo-timer"); if(pt) pt.textContent="Còn "+Math.ceil(left/1000)+" giây cho hồ sơ này";
+    if(left<=0){timer.done=true;timer.onEnd();}
+  }
+  if(callT&&!callT.done){
+    const left=Math.max(0,callT.end-now());
+    $("#call-bar").style.width=(left/callT.total*100)+"%";
+    if(left<=0){callT.done=true;callT.onEnd();}
+  }
+}
+
+function openEvidence(eid,btn){
+  const e=cur.ev.find(x=>x.id===eid);
+  if(!curLog.evidence.includes(eid)){
+    curLog.evidence.push(eid);
+    if(timer) timer.end-=e.cost*1000;
+    btn.classList.add("seen");
+  }
+  if(e.photo){openPhoto();return;}
+  const out=$("#ev-out");
+  if(!out.querySelector(`[data-n="${eid}"]`)){
+    const d=document.createElement("div");d.className="note";d.dataset.n=eid;d.textContent=e.text;out.appendChild(d);
+  }
+  beep("type");
+  cur.acts.forEach(a=>{if(a.needs&&a.needs.every(n=>curLog.evidence.includes(n))){const b=$(`[data-act="${a.id}"]`);b.disabled=false;const h=b.querySelectorAll(".hint");h[h.length-1].remove();}});
+}
+
+/* photo viewer */
+const HOT={plant:"Một chậu cây nhỏ trên bậu cửa. Đất còn ẩm. Có người tưới.",shirts:"Hai chiếc áo đang phơi, một áo người lớn, một áo nhỏ hơn.",shoes:"Một đôi giày trẻ em đặt ngay ngắn dưới hiên để hong khô."};
+function openPhoto(){
+  $("#photo").hidden=false;
+  const notes=$("#photo-notes");
+  notes.innerHTML=S.hot.size?[...S.hot].map(h=>`<div>${HOT[h]}</div>`).join(""):`<span style="color:var(--night-muted)">Chạm vào các điểm sáng để xem kỹ.</span>`;
+  $$(".hot").forEach(b=>b.classList.toggle("seen",S.hot.has(b.dataset.h)));
+  $("#b-photo-close").focus();
+}
+$$(".hot").forEach(b=>b.onclick=()=>{
+  const h=b.dataset.h;
+  if(!S.hot.has(h)){S.hot.add(h);beep("type");}
+  b.classList.add("seen");
+  $("#photo-notes").innerHTML=[...S.hot].map(x=>`<div>${HOT[x]}</div>`).join("")+(S.hot.size===3?`<div style="color:var(--amber)">Ảnh chụp hôm qua. Vậy phải có ít nhất một người.</div>`:"");
+});
+$("#b-photo-close").onclick=()=>{$("#photo").hidden=true;};
+
+function decide(aid,timeout){
+  if(!cur||curLog.action)return;
+  const f=cur;
+  let a=aid?f.acts.find(x=>x.id===aid):null;
+  if(timeout){
+    a=f.acts.find(x=>x.kind==="later")||f.acts.find(x=>x.kind==="red")||f.acts[f.acts.length-1];
+  }
+  curLog.action=a.id;curLog.timeout=!!timeout;
+  curLog.sec=Math.round((now()-S.deskT0-curLog.shownAt)/100)/10;
+  if(f.id==="H19") curLog.hot=[...S.hot];
+  S.log.push(curLog);
+  if(timer) timer.done=true;
+  $("#photo").hidden=true;
+  $$("#file [data-act],#file [data-ev]").forEach(b=>b.disabled=true);
+  const st=$("#stamp");
+  st.textContent=timeout?"HẾT GIỜ":a.stamp;
+  st.style.color={green:"var(--mint)",red:"var(--red)",alt:"#B07316",later:"var(--muted)"}[timeout?"later":a.kind];
+  st.classList.add("show");beep("stamp");
+  if(a.toast){const t=document.createElement("div");t.className="toast-ok";t.textContent=a.toast(Math.max(1,Math.round(curLog.sec)));$(".file-zone").appendChild(t);setTimeout(()=>t.remove(),2600);}
+  applyFx(a.fx||{});
+  S.clock+=f.min;renderStats();
+  const q=queue.find(x=>x.id===f.id); if(q) q.res=timeout?"Hết giờ":a.done;
+  if(f.id==="H04") S.kho=a.id;
+  renderQueue();
+  if(a.chat) setTimeout(()=>chatSeq(a.chat,700),500);
+  setTimeout(()=>nextStep(f.id),1500);
+}
+
+function nextStep(doneId){
+  const el=$("#file");el.classList.add("out");
+  setTimeout(()=>{
+    el.classList.remove("out");
+    if(doneId==="H04"){startCrisis();return;}
+    if(doneId==="B4"){endDesk();return;}
+    const i=ORDER.indexOf(doneId);
+    openFile(ORDER[i+1]);
+  },350);
+}
+
+/* crisis: B4 alert + driver call at the same time */
+let callT=null;
+function startCrisis(){
+  queue.unshift({id:"B4",res:null});
+  openFile("B4");
+  const al=$("#alert");al.hidden=false;al.textContent="CẢNH BÁO ĐỎ · Áp suất Trạm khí B4 đang giảm";beep("alert");
+  setTimeout(()=>{
+    const third=S.kho==="third";
+    $("#call-text").textContent=third
+      ? "Chị Mai ơi, tôi đổi giờ nghỉ để chở chuyến thuốc của chị sang kho dự phòng rồi nhé. Mà giờ làm thêm này bên thầu bảo không nằm trong chỗ chị xem…"
+      : "Chị Mai ơi, sáng nay tôi đổi giờ nghỉ để chở chuyến hàng khẩn tới Bệnh viện Số Ba. Mà giờ làm thêm này bên thầu bảo không nằm trong chỗ chị xem…";
+    $("#call-ring").textContent="Cuộc gọi đến";
+    $("#call-actions").innerHTML=`<button class="btn mint" id="c-rec">Ghi nhận ngay <span style="font-weight:500;opacity:.8">· mất 8 giây</span></button><button class="btn ghost" id="c-later">Để sau, tôi sẽ chuyển giúp</button>`;
+    $("#call").hidden=false;beep("ring");
+    const t0=now();
+    callT={end:now()+12000,total:12000,done:false,onEnd:()=>driverDone("later",true,t0)};
+    $("#c-later").onclick=()=>driverDone("later",false,t0);
+    $("#c-rec").onclick=()=>{
+      callT.done=true;S.recording=true;
+      $("#call-ring").textContent="Đang điền mẫu đối chiếu giờ làm · 8 trường dữ liệu";
+      $("#call-actions").innerHTML=`<span class="small" style="color:var(--night-muted)">Cảnh báo B4 vẫn đang chạy…</span>`;
+      callT={end:now()+8000,total:8000,done:false,onEnd:()=>driverDone("record",false,t0)};
+    };
+    $("#c-later").focus();
+  },1400);
+}
+function driverDone(act,timeout,t0){
+  if(S.driver)return;
+  if(callT) callT.done=true;
+  S.driver={action:act,timeout,sec:Math.round((now()-t0)/100)/10};
+  $("#call").hidden=true;
+  if(act==="record") chatSeq([["linh","cậu vẫn như hồi đại học, hứa gì làm nấy"]],400);
+  else chatSeq([["sys","Cuộc gọi đã kết thúc"]],200);
+}
+function endDesk(){
+  $("#alert").hidden=true;
+  if(!S.driver) driverDone(S.recording?"record":"later",!S.recording,now());
+  S.deskT1=now();
+  chatSeq([["hang","Hết ca sáng rồi mọi người ơi, đi ăn đậu thôi"]],300);
+  setTimeout(()=>startGallery(),1600);
+}
+
+/* chat */
+let chatQ=Promise.resolve();
+function chatSeq(list,gap){
+  list.forEach(([who,text])=>{chatQ=chatQ.then(()=>new Promise(r=>setTimeout(()=>{addMsg(who,text);r();},gap)));});
+}
+function addMsg(who,text){
+  const ul=$("#chat-list");
+  if(who==="typing"){const t=$("#typing");t.textContent=text;setTimeout(()=>{t.textContent="";},2600);return;}
+  const li=document.createElement("li");
+  if(who==="sys"){li.className="msg sys";li.innerHTML=`<span class="b"></span>`;li.querySelector(".b").textContent=text;}
+  else{const p=PEOPLE[who];li.className="msg";
+    li.innerHTML=(p.img?`<img src="${p.img}" alt="">`:`<span class="ini">${p.ini}</span>`)+`<div><div class="n"></div><span class="b"></span></div>`;
+    li.querySelector(".n").textContent=p.n;li.querySelector(".b").textContent=text;}
+  ul.appendChild(li);ul.scrollTop=ul.scrollHeight;
+  if(!$("#chat").classList.contains("open")){
+    S.unread++;$("#chat-badge").textContent=S.unread;
+    const tt=$("#chat-toast");tt.hidden=false;tt.textContent=(who==="sys"?"":PEOPLE[who].n+": ")+text;
+    clearTimeout(addMsg.h);addMsg.h=setTimeout(()=>tt.hidden=true,3200);
+  }
+}
+$("#b-chat").onclick=()=>{$("#chat").classList.add("open");S.unread=0;$("#chat-badge").textContent="0";$("#chat-toast").hidden=true;};
+$("#b-chat-close").onclick=()=>$("#chat").classList.remove("open");
+$("#b-mute").onclick=e=>{muted=!muted;e.currentTarget.textContent="Âm thanh: "+(muted?"tắt":"bật");e.currentTarget.setAttribute("aria-pressed",String(muted));};
+
+/* ---------------- GALLERY ---------------- */
+function startGallery(){
+  show("s-gallery");
+  const g=$("#gallery");
+  g.innerHTML=`
+    <div class="label" style="color:var(--night-muted)">Phòng trưng bày lịch sử · trên đường tới phòng họp</div>
+    <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+      <div class="gas-tag"><span>TRẠM KHÍ SỐ 3</span><b>24 GIỜ</b><span>THẺ HÍT THỞ · ĐỜI CŨ</span></div>
+      <p class="story-line" style="margin:0;flex:1;min-width:220px">Một đoàn học sinh đứng trước tủ kính đựng thẻ khí cũ. Mỗi tấm thẻ từng cho người giữ nó được thở hai mươi bốn giờ.</p>
+    </div>
+    <div class="cast-row"><img class="av" src="assets/av-boy.png" alt="Cậu học sinh"><p class="story-line" style="margin:0"><span class="who">Cậu học sinh</span>Sao không để ai cũng được vào ạ?</p></div>
+    <div class="cast-row"><img class="av" src="assets/av-mai.png" alt="Mai"><p class="story-line" style="margin:0"><span class="who">Mai</span>Nếu tất cả vào một lúc, trạm quá tải, không khí hỏng, và không ai được cứu. Phải chia để nhiều người sống nhất.</p></div>
+    <div class="cast-row"><img class="av" src="assets/av-boy.png" alt=""><p class="story-line" style="margin:0"><span class="who">Cậu học sinh</span>Thế cách chia do ai đặt ra ạ?</p></div>
+    <div class="label" style="color:var(--amber)">Bạn trả lời cậu bé</div>
+    <div class="choices">
+      <button class="choice" data-g="trach_nhiem">Những người được giao trách nhiệm, có kiểm tra và phải công khai.</button>
+      <button class="choice" data-g="may">Máy tính. Máy không thiên vị ai cả.</button>
+      <button class="choice" data-g="gioi">Những người giỏi nhất thành phố.</button>
+    </div>
+    <div class="free"><textarea id="g-free" placeholder="Hoặc tự viết câu trả lời của bạn…"></textarea><button class="btn light next" id="g-free-b">Trả lời bằng câu của tôi</button></div>`;
+  g.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>galleryAnswer(b.dataset.g,b.textContent));
+  $("#g-free-b").onclick=()=>{const v=$("#g-free").value.trim();if(v)galleryAnswer("tu_viet",v.slice(0,300));};
+}
+function galleryAnswer(key,text){
+  S.gallery={key,text};
+  const g=$("#gallery");
+  g.innerHTML=`
+    <div class="cast-row"><img class="av" src="assets/av-mai.png" alt="Mai"><p class="story-line" style="margin:0"><span class="who">Bạn</span></p></div>
+    <div class="cast-row"><img class="av" src="assets/av-boy.png" alt="Cậu học sinh"><p class="story-line" style="margin:0"><span class="who">Cậu học sinh</span>Vậy người không biết chữ có đọc được cách chia không ạ?</p></div>
+    <p class="story-line">Câu hỏi không có vẻ gì muốn bắt bẻ. Người hướng dẫn mời cả đoàn sang khu tiếp theo. Chỉ còn Mai đứng lại bên những tấm thẻ.</p>
+    <p class="story-line">Hệ thống bây giờ có giao diện giọng nói, đường dây khiếu nại. Cô đã kiểm tra chúng trong báo cáo hằng năm. <em>Nhưng lần cuối cô thử gọi như một người không có số công dân là khi nào?</em></p>
+    <button class="btn mint next" id="g-next">Về nhà</button>`;
+  g.querySelector(".who").insertAdjacentText("afterend",text);
+  $("#g-next").onclick=()=>{beep("ok");startHome();};
+  $("#s-gallery").scrollTop=0;
+}
+
+/* ---------------- HOME ---------------- */
+const HOME=[
+  ["Mẹ","Con còn nhớ cô y tá đã cứu mẹ không?"],
+  ["Mẹ","Sau hôm đó mẹ vẫn phải làm thêm mười một năm để trả hết nợ thuốc."],
+  ["Mẹ","Cô ấy cứu mẹ. Nhưng con đừng nhầm việc ấy với chuyện mọi thứ đã công bằng."],
+  ["Mai","Con sợ mọi điều tốt đẹp đời mình đều có ai đó trả giá ở nơi khác."],
+  ["Mẹ","Con không phải trả ơn bằng cách hối hận vì đã sống. Nhưng nếu biết có người bị đối xử sai, con cũng không được lấy chuyện mình từng được cứu làm lý do nhắm mắt. Hai việc có thể cùng thật."],
+];
+function startHome(){
+  show("s-home");
+  const h=$("#home");let i=0;
+  h.innerHTML=`<div class="label" style="color:var(--night-muted)">Tối · nhà Mai · mẹ đang tỉa hương thảo bên cửa sổ</div>
+    <img class="story-img" src="assets/album.jpg" alt="Ảnh cũ: mẹ Mai, Mai lúc nhỏ và cô y tá tóc ngắn trước bệnh viện">
+    <div id="home-lines" style="display:grid;gap:14px"></div>
+    <button class="btn light next" id="h-next">Tiếp</button>`;
+  const step=()=>{
+    if(i<HOME.length){
+      const [w,t]=HOME[i++];
+      const d=document.createElement("div");d.className="cast-row";
+      d.innerHTML=`<img class="av" src="${w==="Mẹ"?"assets/av-me.png":"assets/av-mai.png"}" alt=""><p class="story-line" style="margin:0"><span class="who"></span></p>`;
+      d.querySelector(".who").textContent=w;d.querySelector(".who").insertAdjacentText("afterend",t);
+      $("#home-lines").appendChild(d);d.scrollIntoView({behavior:"smooth",block:"end"});
+      if(i===HOME.length) $("#h-next").textContent="Trước khi ngủ";
+    }else{night();}
+  };
+  $("#h-next").onclick=step;step();
+}
+function night(){
+  const h=$("#home");
+  h.innerHTML=`<div class="label" style="color:var(--night-muted)">Trước khi ngủ · Mai mở lại ảnh phân khu 8-12</div>
+    <div class="photo-frame"><img src="assets/house-812.jpg" alt="Căn nhà ở phân khu 8-12"><div style="position:absolute;left:12px;top:12px;background:rgba(14,22,21,.8);padding:8px 12px;border-radius:8px;font-family:var(--f-data);font-size:13px">PHÂN KHU 8-12 · DÂN SỐ ĐÃ XÁC MINH: <b style="color:var(--amber)">0</b></div></div>
+    <p class="story-line">Tôi từng nghĩ sai lầm đáng sợ nhất của một phép tính là cho ra đáp án sai.</p>
+    <p class="story-line"><em>Lần đầu tiên, tôi nghĩ đến khả năng có những người chưa bao giờ được đưa vào phép tính.</em></p>
+    <button class="btn mint next" id="to-report">Mở báo cáo kiểm toán</button>`;
+  $("#s-home").scrollTop=0;
+  $("#to-report").onclick=()=>{beep("stamp");startReport();};
+}
+
+/* ---------------- REPORT ---------------- */
+function L(id){return S.log.find(x=>x.id===id)||{};}
+function analyze(){
+  const files=S.log;
+  const deskSec=Math.round((S.deskT1-S.deskT0)/1000);
+  const evTotal=FILES.reduce((n,f)=>n+f.ev.length,0);
+  const evSeen=files.reduce((n,x)=>n+x.evidence.length,0);
+  const h19=L("H19"),h03=L("H03"),h02=L("H02"),h04=L("H04"),b4=L("B4");
+  const longest=files.slice().sort((a,b)=>b.sec-a.sec)[0];
+  const photo=h19.evidence&&h19.evidence.includes("photo");
+  const hot=h19.hot||[];
+  const missed=[];
+  if(h19.action!=="verify") missed.push({n:3,who:"Ít nhất 3 cư dân Phân khu 8-12: hai chiếc áo, một đôi giày trẻ em. Màn hình ghi 0."});
+  if(!S.driver||S.driver.action!=="record") missed.push({n:1,who:"Anh Tường, tài xế tuyến 7: đã đổi giờ nghỉ, giờ làm thêm chưa được ghi."});
+  const missedN=missed.reduce((n,m)=>n+m.n,0);
+  return {deskSec,evTotal,evSeen,files,h19,h03,h02,h04,b4,longest,photo,hot,missed,missedN,
+    avg:files.length?Math.round(files.reduce((n,x)=>n+x.sec,0)/files.length):0};
+}
+const mmss=s=>Math.floor(s/60)+" phút "+String(s%60).padStart(2,"0")+" giây";
+const HOTNAME={plant:"chậu cây",shirts:"hai chiếc áo",shoes:"đôi giày trẻ em"};
+
+function localReport(A){
+  const out=[];
+  out.push(`Bạn xử lý ${A.files.length} hồ sơ trong ${mmss(A.deskSec)}, trung bình ${A.avg} giây mỗi hồ sơ. Bạn mở ${A.evSeen}/${A.evTotal} bằng chứng.`);
+  if(A.h03.action==="ok") out.push(`Bạn cấp cư trú cho một con mèo sau ${Math.max(1,Math.round(A.h03.sec))} giây.`);
+  else if(A.h02.action==="ok") out.push(`Bạn duyệt điện cho một buổi livestream bán bỉm lúc nửa đêm. Không ai thiếu điện vì việc đó.`);
+  if(A.h19.action==="verify") out.push(`Bạn gửi hồ sơ 8-12 đi xác minh dù sếp không thích. Màn hình vẫn ghi 0, nhưng giờ đã có người đi đếm.`);
+  else if(A.photo&&A.hot.length) out.push(`Bạn đã phóng to ảnh Phân khu 8-12 và nhìn thấy ${A.hot.map(h=>HOTNAME[h]).join(", ")}. Bạn dừng ở hồ sơ đó ${Math.round(A.h19.sec)} giây, rồi trả nó về đúng quy định.`);
+  else out.push(`Bạn không mở ảnh Phân khu 8-12. Trong ảnh có hai chiếc áo đang phơi và một đôi giày trẻ em vừa được hong khô.`);
+  if(A.h03.action==="ok"&&A.h19.action!=="verify") out.push(`Hôm nay, một con mèo được đưa vào phép tính nhanh hơn ba con người.`);
+  if(S.driver&&S.driver.action==="record") out.push(`Giữa lúc báo động, bạn dành 8 giây để ghi giờ làm cho một tài xế. Không chỉ số nào tăng vì việc đó.`);
+  else out.push(`Anh Tường đã đổi giờ nghỉ để chở hàng. Bạn hứa sẽ chuyển giúp. Anh ấy vẫn đang chờ.`);
+  let q;
+  if(A.h19.action!=="verify"&&A.photo&&A.hot.length) q="Bạn đã thấy đôi giày rồi vẫn làm theo quy định. Ai là người kiểm tra quy định?";
+  else if(A.h19.action!=="verify") q="Nếu chính bạn sống ở Phân khu 8-12, bạn muốn nhân viên điều phối làm gì trong vài giây đó?";
+  else if(!S.driver||S.driver.action!=="record") q="Nếu người tài xế là bố bạn, bạn có bấm “Để sau” không?";
+  else q="Hôm nay bạn không bỏ sót ai trong những người bạn nhìn thấy. Còn những người không có trong hàng chờ thì sao?";
+  let title;
+  if(A.missedN===0) title="Người đếm lại";
+  else if(A.h19.action!=="verify"&&A.photo&&A.hot.length) title="Người đã nhìn thấy";
+  else if(A.h19.action!=="verify"&&A.avg<=12) title="Nhân viên xuất sắc của tháng";
+  else if(A.h19.action==="verify") title="Người hứa để sau";
+  else title="Người làm đúng quy trình";
+  return {danh_hieu:title,bao_cao:out.join(" "),cau_hoi:q};
+}
+
+function logForAI(A){
+  return {
+    so_ho_so:A.files.length,tong_thoi_gian_giay:A.deskSec,trung_binh_giay:A.avg,bang_chung_da_mo:`${A.evSeen}/${A.evTotal}`,
+    ho_so:A.files.map(x=>({ma:x.id,tieu_de:x.title,quyet_dinh:x.action,giay:x.sec,bang_chung:x.evidence,het_gio:x.timeout})),
+    anh_8_12:{da_mo:A.photo,chi_tiet_da_xem:A.hot.map(h=>HOTNAME[h])},
+    tai_xe:S.driver,kho_thuoc_nha_tre:S.kho,
+    tra_loi_cau_be:S.gallery?S.gallery.text:null,
+    nguoi_bi_bo_sot:A.missed.map(m=>m.who),so_nguoi_bo_sot:A.missedN
+  };
+}
+function aiPrompt(A){
+  return `Bạn là "Kiểm toán viên" trong game CIVI. Bối cảnh: thành phố mái vòm Lưu Quang. Người chơi vào vai Mai, nhân viên điều phối năng lượng ở Tầng 42, vừa xong ca làm việc đầu tiên. Ý nghĩa chương: có những người chưa bao giờ được đưa vào phép tính (Phân khu 8-12 ghi dân số 0 dù ảnh chụp hôm qua có hai chiếc áo phơi, đôi giày trẻ em, chậu cây được tưới; anh Tường tài xế đổi giờ nghỉ nhưng giờ làm thêm không được ghi). Hồ sơ H03 là con mèo xin cư trú (hài), H02 là shop bỉm xin điện livestream (hài).
+
+Đây là nhật ký hành vi của người chơi (JSON):
+${JSON.stringify(logForAI(A))}
+
+Viết báo cáo kiểm toán về CHÍNH người chơi, bằng tiếng Việt.
+Giọng văn: hành chính khô khốc, hài đen nhẹ, quan sát chính xác như một biên bản. Gọi người chơi là "bạn".
+Quy tắc:
+- 3 đến 5 câu, tổng tối đa 90 chữ.
+- Phải nhắc ít nhất một con số có thật trong nhật ký và một chi tiết cụ thể (áo, giày, chậu cây, con mèo, anh Tường...).
+- Không giảng đạo, không khuyên, không phán xét. Không dùng các từ "nên", "phải", "hãy", "đáng lẽ", "bài học".
+- Chỉ nói điều có trong nhật ký. Nếu người chơi bỏ sót ai, câu cuối nêu sự thật đó một cách bình thản.
+- "cau_hoi": một câu hỏi ngắn (tối đa 25 chữ) xoáy vào mâu thuẫn trong chính hành vi của người chơi, không phải câu hỏi có/không mang tính dạy dỗ.
+- "danh_hieu": danh hiệu châm biếm nhẹ, tối đa 5 chữ.
+Chỉ trả lời bằng một object JSON: {"danh_hieu": "...", "bao_cao": "...", "cau_hoi": "..."}`;
+}
+
+let A=null,R=null;
+function startReport(){
+  show("s-report");
+  A=analyze();
+  $("#facts").innerHTML=[
+    ["Hồ sơ đã xử lý",A.files.length],
+    ["Thời gian trung bình",A.avg+" giây"],
+    ["Bằng chứng đã mở",A.evSeen+"/"+A.evTotal],
+    ["Do dự lâu nhất",A.longest?byId(A.longest.id).code+" · "+Math.round(A.longest.sec)+"s":"—"],
+  ].map(([k,v])=>`<div class="fact"><span class="label">${k}</span><span class="v">${v}</span></div>`).join("");
+  $("#consent").hidden=false;$("#ai-text").hidden=true;$("#ai-pill").hidden=true;
+  ["#missed","#question","#report-actions","#json","#closing"].forEach(s=>$(s).hidden=true);
+  $("#del-msg").textContent="";$("#q-saved").textContent="";$("#q-answer").value="";
+  samplePromise.then(s=>{ if(!s){ $("#b-ai-yes").hidden=true; $("#consent p").textContent="Trang này đang chạy ngoài Claude, nên Kiểm toán viên dùng báo cáo không cần mạng, vẫn dựa trên nhật ký chơi của bạn."; } });
+}
+$("#b-ai-no").onclick=()=>{S.consent=false;runReport(false);};
+$("#b-ai-yes").onclick=()=>{S.consent=true;runReport(true);};
+
+async function runReport(useAI){
+  $("#consent").hidden=true;
+  const box=$("#ai-text");box.hidden=false;box.textContent="Kiểm toán viên đang đọc nhật ký của bạn…";
+  const pill=$("#ai-pill");
+  let res=null;
+  if(useAI){
+    const sample=await samplePromise;
+    if(sample){
+      try{
+        const j=await sample.json(aiPrompt(A),{modelTier:"quick"});
+        if(j&&typeof j.bao_cao==="string"&&j.bao_cao.trim()&&typeof j.cau_hoi==="string") res={danh_hieu:String(j.danh_hieu||"").slice(0,40),bao_cao:j.bao_cao.trim(),cau_hoi:j.cau_hoi.trim(),src:"ai"};
+      }catch(e){res=null;}
+    }
+  }
+  if(!res){res=Object.assign(localReport(A),{src:"local"});}
+  if(!res.danh_hieu) res.danh_hieu=localReport(A).danh_hieu;
+  R=res;S.ai=res;
+  pill.hidden=false;pill.className="pill"+(res.src==="ai"?"":" off");
+  pill.textContent=res.src==="ai"?"VIẾT BỞI AI · RIÊNG CHO BẠN":(useAI?"AI KHÔNG PHẢN HỒI · BÁO CÁO DỰ PHÒNG":"BÁO CÁO KHÔNG CẦN MẠNG");
+  await typeOut(box,res.bao_cao);
+  const m=$("#missed");m.hidden=false;
+  m.className="missed"+(A.missedN?"":" zero");
+  m.innerHTML=A.missedN
+    ? `<div class="big">${A.missedN}</div><div><strong>người đã bị bỏ sót hôm nay</strong><ul>${A.missed.map(x=>`<li>${x.who}</li>`).join("")}</ul></div>`
+    : `<div class="big">0</div><div><strong>người bị bỏ sót trong những gì bạn thấy</strong><ul><li>Phân khu 8-12 đã được gửi đi xác minh.</li><li>Giờ làm thêm của anh Tường đã được ghi nhận.</li></ul></div>`;
+  beep("stamp");
+  $("#question").hidden=false;$("#q-text").textContent=res.cau_hoi;
+  $("#report-actions").hidden=false;$("#closing").hidden=false;
+}
+function typeOut(el,text){
+  return new Promise(r=>{
+    if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=text;r();return;}
+    el.textContent="";let i=0;
+    const h=setInterval(()=>{i+=2;el.textContent=text.slice(0,i);if(i%6===0)beep("type");if(i>=text.length){clearInterval(h);r();}},22);
+  });
+}
+$("#b-q-save").onclick=()=>{
+  const v=$("#q-answer").value.trim();
+  if(!v){$("#q-saved").textContent="Viết ít nhất vài chữ rồi lưu.";return;}
+  S.answer=v.slice(0,500);$("#q-saved").textContent="Đã lưu vào hồ sơ công bằng của bạn. Không có đáp án đúng.";
+};
+$("#b-data").onclick=()=>{const p=$("#json");p.hidden=!p.hidden;if(!p.hidden)p.textContent=JSON.stringify(Object.assign(logForAI(A||analyze()),{tra_loi_kiem_toan:S.answer||null}),null,2);};
+$("#b-del").onclick=()=>{S.log=[];S.hot=new Set();S.gallery=null;S.answer="";$("#json").hidden=true;$("#del-msg").textContent="Đã xóa nhật ký chơi. Không có gì được lưu sau khi bạn rời trang.";};
+
+/* ---------------- SHARE CARD ---------------- */
+$("#b-card").onclick=()=>{
+  show("s-card");
+  $("#sc-title").textContent=R.danh_hieu;
+  $("#sc-num").textContent=A.missedN;
+  $("#sc-numl").textContent=A.missedN?"người tôi đã bỏ sót hôm nay":"người bị bỏ sót · tôi đã đếm lại";
+  const sents=(R.bao_cao.match(/[^.!?]+[.!?]+/g)||[R.bao_cao]).map(x=>x.trim());
+  const first=sents.filter(x=>/mèo|áo|giày|Tường|chậu/.test(x)).pop()||sents[0];
+  $("#sc-quote").textContent=first;
+};
+$("#b-copy").onclick=()=>{
+  const txt=`Mình vừa chơi CIVI · Chương 1. Danh hiệu: ${R.danh_hieu}. Đã bỏ sót: ${A.missedN} người. Bạn sẽ bỏ sót bao nhiêu?`;
+  const msg=$("#copy-msg");
+  try{navigator.clipboard.writeText(txt).then(()=>msg.textContent="Đã sao chép lời mời.",()=>{msg.textContent=txt;});}catch(e){msg.textContent=txt;}
+};
+$("#b-back").onclick=()=>show("s-report");
+$("#b-replay").onclick=()=>location.reload();
+
+})();
+</script>
+
+</body></html>
