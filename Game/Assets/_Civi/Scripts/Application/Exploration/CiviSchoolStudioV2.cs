@@ -18,7 +18,9 @@ namespace Civi.Preview
         public Sprite Ground,Architecture,Props;
         public Sprite[] StudentFrames=new Sprite[16];
         public bool ChapterMode;
+        public CiviChapterEnvironment ChapterEnvironment;
         public bool ExternalLock;
+        public string ActorLabel="An / design studio";
         CiviStudioSaveMap map;
         Rigidbody2D actorBody;
         SpriteRenderer sprite;
@@ -43,6 +45,7 @@ namespace Civi.Preview
         Vector3 Cell(int x,int y){return new Vector3(x+.5f-map.width*.5f,y+.5f-map.height*.5f,0);}
         public bool Walkable(Vector2 v)
         {
+            if(ChapterEnvironment!=null)return ChapterEnvironment.CanStand(v);
             if(map==null)return false;
             int x=Mathf.FloorToInt(v.x+map.width*.5f);
             int y=Mathf.FloorToInt(v.y+map.height*.5f);
@@ -52,31 +55,44 @@ namespace Civi.Preview
         public void Boot()
         {
             if(ready)return;
-            if(RoomJson==null||Ground==null||Architecture==null||Props==null||
-               StudentFrames==null||StudentFrames.Length!=16||StudentFrames.Any(s=>s==null))
+            if(ChapterEnvironment==null&&(RoomJson==null||Ground==null||Architecture==null||Props==null||
+               StudentFrames==null||StudentFrames.Length!=16||StudentFrames.Any(s=>s==null)))
                 throw new InvalidOperationException("Missing Civi Design Studio v2 references");
+            if(ChapterEnvironment==null){
             map=JsonUtility.FromJson<CiviStudioSaveMap>(RoomJson.text);
             if(map==null||map.width!=32||map.height!=22||map.navigationRows.Length!=22)
                 throw new FormatException("Studio map schema mismatch");
             foreach(var s in map.navigationRows)
                 if(s.Length!=map.width)throw new FormatException("Studio collision grid broken");
+            }
             var cam=Camera.main;
             if(cam==null)throw new InvalidOperationException("Studio camera missing");
             cam.orthographic=true;
             cam.backgroundColor=new Color(.12f,.19f,.20f);
             cam.transform.position=new Vector3(0,0,-10);
+            if(ChapterEnvironment!=null)ChapterEnvironment.Build();
+            if(ChapterEnvironment==null){
             Render(Ground,"Parquet floor / modular", -1000);
             Render(Architecture,"Room shell and windows", -500);
             Render(Props,"Desks / computers / research notes", 120);
-            var go=new GameObject("An / design studio",typeof(SpriteRenderer));
+            }
+            var go=new GameObject(ActorLabel,typeof(SpriteRenderer));
             go.transform.SetParent(transform,false);
-            actor=go.transform;actor.position=Cell(map.spawn.x,map.spawn.y);
+            actor=go.transform;actor.position=ChapterEnvironment!=null?(Vector3)ChapterEnvironment.Spawn:Cell(map.spawn.x,map.spawn.y);
+            if(ChapterEnvironment!=null)StudentFrames=ChapterEnvironment.Frames;
             var art=new GameObject("Animated Student",typeof(SpriteRenderer));
             art.transform.SetParent(actor,false);
-            art.transform.localPosition=new Vector3(0,1.35f,0);
+            art.transform.localPosition=ChapterEnvironment!=null?Vector3.zero:new Vector3(0,1.35f,0);
+            if(ChapterEnvironment!=null)art.AddComponent<CiviChapterDepth>();
             sprite=art.GetComponent<SpriteRenderer>();
             sprite.sprite=StudentFrames[0];
             go.GetComponent<SpriteRenderer>().enabled=false;sprite.sortingOrder=750;
+            if(ChapterEnvironment!=null)
+            {
+                var shadow=new GameObject("Contact shadow",typeof(SpriteRenderer));shadow.transform.SetParent(actor,false);
+                shadow.transform.localScale=new Vector3(.9f,.5f,1);var sr=shadow.GetComponent<SpriteRenderer>();
+                sr.sprite=ChapterEnvironment.ContactShadow;sr.color=new Color(.1f,.2f,.15f,.26f);sr.sortingOrder=-450;
+            }
             actorBody=go.AddComponent<Rigidbody2D>();
             actorBody.bodyType=RigidbodyType2D.Kinematic;
             actorBody.interpolation=RigidbodyInterpolation2D.Interpolate;
@@ -86,6 +102,7 @@ namespace Civi.Preview
             cameraFollow.MinZoom=6.5f;cameraFollow.MaxZoom=9.4f;
             cameraFollow.SmoothTime=.22f;
             cameraFollow.Configure(actor,new Rect(-16,-11,32,22),7.65f);
+            if(ChapterEnvironment!=null){cameraFollow.MinZoom=8.4f;cameraFollow.MaxZoom=8.4f;cameraFollow.VerticalComposition=2.5f;cameraFollow.Configure(actor,ChapterEnvironment.Bounds,8.4f);}
             pixel=new Texture2D(1,1,TextureFormat.RGBA32,false);
             pixel.SetPixel(0,0,Color.white);pixel.Apply();
             ready=true;
@@ -139,7 +156,7 @@ namespace Civi.Preview
                     (direction.x>0?3:2):(direction.y>0?1:0);
             timer+=Time.deltaTime;
             sprite.sprite=StudentFrames[facing*4+
-                (direction.sqrMagnitude>.01f?1+((int)(timer*7f)%3):0)];
+                (direction.sqrMagnitude>.01f?(ChapterEnvironment!=null?((int)(timer*8f)%4):1+((int)(timer*7f)%3)):0)];
         }
         void OnGUI()
         {

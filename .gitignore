@@ -22,6 +22,7 @@
 
 # Local release builds and disposable backup / QA artifacts
 /release/
+/Game/release/
 /artifacts/
 *.log
 *.tmp

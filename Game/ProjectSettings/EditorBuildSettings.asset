@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Civi/Scenes/CIVI-LiuQuang-Chapter1.unity
+    guid: 8e685f274fa88384680406d32dc5a7a8
+  - enabled: 0
     path: Assets/_Civi/Scenes/CIVI-Chapter1-Courtyard.unity
     guid: d2d9968dd1b2b3f4b9a5cef07b7ad0e7
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Civi/Scenes/CIVI-Chapter1-DesignRoom.unity
     guid: a5dc50852cc8c2f4d863c7f46c4e2fbd
   - enabled: 0

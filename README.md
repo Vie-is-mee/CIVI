@@ -1,6 +1,14 @@
 # CIVI — Unity 2D Game
 
-## BẢN CHƠI MỚI NHẤT — CHƯƠNG 1 (01/11/2026)
+## BẢN HIỆN TẠI — LƯU QUANG / CHƯƠNG 1 (04/11/2026)
+
+Chuyển thể **Chương 1 — Thành phố công bằng** của *Những người không có chỗ dưới bầu trời*. Scene Unity: `Game/Assets/_Civi/Scenes/CIVI-LiuQuang-Chapter1.unity`. Bản build Windows cục bộ: `release/LiuQuangChapter1/CIVI_LiuQuang_C1.exe`, mở bằng `PLAY_CIVI_LIUQUANG_CHAPTER1.bat`. **Bản build không nằm trong Git/PR**; sau khi clone hãy mở Unity 6000.6.6f1 và dùng menu `CIVI > Lưu Quang C1 > Prepare, verify and build` để tạo bản Windows trước khi chạy launcher.
+
+Điều khiển: WASD/mũi tên để di chuyển, E tương tác, phím 1–6 hoặc chuột chọn mục, Enter xác nhận, F5/F9 lưu/tải, H trợ giúp. Nội dung và báo cáo bàn giao: [CHAPTER1_LIUQUANG.md](CHAPTER1_LIUQUANG.md). Bản school story cũ và dữ liệu NewStory vẫn được giữ. **Đây là baseline trước khi tích hợp phần `CIVI_5.zip` của đồng đội**.
+
+---
+
+## LỊCH SỬ — CHƯƠNG 1 TRƯỜNG HỌC (01/11/2026)
 
 **Chạy `PLAY_CIVI_CHAPTER1.bat`** ngay trong repo. Đây là bản Windows x86 playable của hai cảnh theo canon học đường v4.1: **S00 “Đừng bấm vội” → S01 “Trang ở giữa”**. Nhân vật An đi trong sân/liền mạch, tương tác với máy ảnh và ba bạn học, xem ba ảnh buổi tập; đi tới cửa phòng thiết kế để chuyển Unity scene, giải quyết nội dung S01 và nhận màn hoàn thành Chương 1.
 

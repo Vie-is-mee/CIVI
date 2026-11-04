@@ -3,6 +3,7 @@ Telemetry is read-only. Never calls game state methods or edits saves.
 """
 from pathlib import Path
 shared=Path(__file__).with_name('chapter1_windows_qa.py').read_text(encoding='utf-8')
+shared=shared.replace('a=p.parse_args()',"p.add_argument('--resume-check',action='store_true');a=p.parse_args()")
 exec(compile(shared.split('def story(expected):')[0].replace("speed=4.25 if 'Design' in start['scene'] else 6.4","speed=4.25"),str(Path(__file__).with_name('chapter1_windows_qa.py')),'exec'))
 
 def button(prefix):
@@ -22,11 +23,18 @@ def launch(cmd):
         if hwnd:break
         time.sleep(.2)
     if not hwnd:raise RuntimeError('Player window missing')
-    until(lambda s:s['help'] and s['frame']>30,60);size_window();focus()
+    until(lambda s:s['help'] and s['frame']>30,60);focus();size_window()
 
 try:
     cmd=[str(Path(a.exe).resolve()),'-screen-width',str(a.width),'-screen-height',str(a.height),'-screen-fullscreen','0','-civi-qa','-civi-qa-dir',str(out),'-logFile',str(out/'player.log')]
     if (out/'state.json').exists():(out/'state.json').unlink()
+    if a.resume_check:
+        trace[:]=json.loads((out/'input-trace.json').read_text(encoding='utf-8'))
+        assert any(e['test']=='full-input-playthrough-pass' for e in trace)
+        launch(cmd);button('Tiếp tục bản lưu');time.sleep(.5)
+        if state()['help']:key(0x78)
+        until(lambda s:s['complete']);capture('14-relaunch-resumed');record('PASS',resolution=[a.width,a.height],resume_recheck=True)
+        sys.exit(0)
     launch(cmd);capture('00-onboarding');button('Bắt đầu');until(lambda s:not s['help'])
     if a.inspect:
         capture('01-memory-workbench');record('INSPECT-READY');a.keep=True
@@ -39,7 +47,7 @@ try:
                 if step==1:
                     before=state();key(0x44,.15);assert state()['x']>before['x']+.1;record('retained-WASD',dx=state()['x']-before['x'])
                 go(state()['x'],-4.4);go(state()['targetX'],-4.4);go(state()['targetX'],state()['targetY'])
-                assert state()['distance']<=2.2;capture(f'{step:02}-{task}-room')
+                assert state()['distance']<=2.2;key(0x74);shutil.copy2(state()['savePath'],out/f'checkpoint-{step:02}.json');capture(f'{step:02}-{task}-room')
                 if step==1:
 
                     for _ in range(6):
@@ -61,6 +69,7 @@ try:
             before=state();key(0x27,.3);assert math.dist([before['x'],before['y']],[state()['x'],state()['y']])<.03;record('workbench-movement-lock',task=task)
             if step in (2,3,6,8,10,11,12):capture(f'{step:02}-{task}-inspected')
             button('Gửi yêu cầu' if step==11 else 'Kiểm tra phương án' if step==3 else 'Xác nhận');until(lambda s:s['mode']==2);capture(f'{step:02}-{task}-dialogue')
+            if step==0:key(0x74);shutil.copy2(state()['savePath'],out/'checkpoint-00-dialogue.json')
             if step==3:
                 key(0x74);key(0x0D);s=state();key(0x78);until(lambda n:n['line']==s['line']);record('dialogue-bookmark-roundtrip')
             for _ in range(15):
