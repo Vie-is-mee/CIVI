@@ -1,0 +1,1489 @@
+{
+  "schema": "civi-liuquang-dialogue-1",
+  "sourceFile": "Chuong_1_Ban_Duyet.md",
+  "sourceSha256": "1c2bf7a8427eaacfd115ec42663f49d5d67af14b7835e0128c346e3d332649e2",
+  "pagesSha256": "9152ed140865a5a0fb05c49033eb81dd574606ca63826bd89a041560d8b64c2e",
+  "sceneCount": 12,
+  "cueCount": 148,
+  "pages": [
+    {
+      "id": "C1.S01.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Hồi ức. Mùa lạnh thứ mười bảy sau khi mái vòm phía Tây được dựng xong. Mai mới tám tuổi. Trong phòng bệnh, mẹ cô nằm trên giường, tay vẫn nắm chặt chiếc thẻ lao động đã hết hạn. Máy lọc khí phát ra từng tiếng khô khốc. Một nhân viên đứng trước cửa, xem hồ sơ.",
+      "scene": 1,
+      "sceneTitle": "Vạch xanh đầu tiên",
+      "sourceLine": 8
+    },
+    {
+      "id": "C1.S01.002.p1",
+      "speaker": "Nhân viên bệnh viện",
+      "kind": "speech",
+      "text": "Rất tiếc. Bệnh viện không còn suất hỗ trợ cho gia đình chưa tích đủ điểm đóng góp.",
+      "scene": 1,
+      "sceneTitle": "Vạch xanh đầu tiên",
+      "sourceLine": 10
+    },
+    {
+      "id": "C1.S01.003.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai đứng cạnh giường, chưa hiểu hết những gì người lớn đang nói. Người phụ nữ mặc áo xám đi cùng nhân viên nhìn qua hồ sơ rồi lên tiếng.",
+      "scene": 1,
+      "sceneTitle": "Vạch xanh đầu tiên",
+      "sourceLine": 12
+    },
+    {
+      "id": "C1.S01.004.p1",
+      "speaker": "Người phụ nữ áo xám",
+      "kind": "speech",
+      "text": "Khoan đã. Quy định vừa thay đổi. Trẻ vị thành niên được tính vào nhóm phụ thuộc cần bảo vệ. Trường hợp này phải xét tình trạng sức khỏe trước, không thể chỉ dựa vào điểm đóng góp.",
+      "scene": 1,
+      "sceneTitle": "Vạch xanh đầu tiên",
+      "sourceLine": 14
+    },
+    {
+      "id": "C1.S01.005.p1",
+      "speaker": "Nhân viên bệnh viện",
+      "kind": "speech",
+      "text": "Nhưng hồ sơ hiện tại vẫn chưa đạt mức—",
+      "scene": 1,
+      "sceneTitle": "Vạch xanh đầu tiên",
+      "sourceLine": 16
+    },
+    {
+      "id": "C1.S01.006.p1",
+      "speaker": "Người phụ nữ áo xám",
+      "kind": "speech",
+      "text": "Tôi biết. Anh kiểm tra lại theo quy định mới đi.",
+      "scene": 1,
+      "sceneTitle": "Vạch xanh đầu tiên",
+      "sourceLine": 18
+    },
+    {
+      "id": "C1.S01.007.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Bà nhập bốn dòng dữ liệu vào máy. Một lúc sau, trên màn hình xuất hiện một vạch xanh. Mẹ Mai được giữ lại điều trị. Người phụ nữ áo xám cúi xuống, đặt tay lên đầu cô bé.",
+      "scene": 1,
+      "sceneTitle": "Vạch xanh đầu tiên",
+      "sourceLine": 20
+    },
+    {
+      "id": "C1.S01.008.p1",
+      "speaker": "Người phụ nữ áo xám",
+      "kind": "speech",
+      "text": "Đừng sợ. Người lớn sẽ tìm cách.",
+      "scene": 1,
+      "sceneTitle": "Vạch xanh đầu tiên",
+      "sourceLine": 22
+    },
+    {
+      "id": "C1.S01.009.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai không hiểu vạch xanh có ý nghĩa gì. Cô chỉ biết mẹ vẫn còn ở đó. Đêm ấy, cô ngủ dưới chân giường bệnh. Sáng hôm sau, mẹ yếu đến mức không thể ngồi dậy, nhưng vẫn cố đưa tay vuốt tóc con. Mai tin rằng mọi chuyện rồi sẽ ổn.",
+      "scene": 1,
+      "sceneTitle": "Vạch xanh đầu tiên",
+      "sourceLine": 24
+    },
+    {
+      "id": "C1.S02.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mười năm sau. Trong lễ tốt nghiệp, Mai đứng trước mọi người, nói về công việc mà cô muốn theo đuổi.",
+      "scene": 2,
+      "sceneTitle": "Một quyết định đúng",
+      "sourceLine": 30
+    },
+    {
+      "id": "C1.S02.002.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Tôi muốn trở thành người có thể tạo ra những vạch xanh như thế. Những quyết định giúp người ta được sống, thay vì bị loại khỏi danh sách chỉ vì không đủ điều kiện.",
+      "scene": 2,
+      "sceneTitle": "Một quyết định đúng",
+      "sourceLine": 32
+    },
+    {
+      "id": "C1.S02.003.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mười năm nữa trôi qua. Mai đã làm việc tại tầng bốn mươi hai của Cơ quan Điều phối Mái vòm. Hàng triệu vạch xanh và đỏ trên hệ thống quyết định mức điện được phân bổ cho từng khu phố.",
+      "scene": 2,
+      "sceneTitle": "Một quyết định đúng",
+      "sourceLine": 34
+    },
+    {
+      "id": "C1.S02.004.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Buổi sáng hôm ấy, Mai chuyển một phần năng lượng từ quảng trường thương mại sang Bệnh viện Số Ba. Trước đây, quyết định như vậy cần chữ ký của sáu người có thẩm quyền. Chỉ cần một người trì hoãn, cả quy trình có thể bị kéo dài. Nhưng lần này, với dữ liệu về số bệnh nhân cần hỗ trợ hô hấp, lệnh chuyển được phê chuẩn trong mười bốn giây.",
+      "scene": 2,
+      "sceneTitle": "Một quyết định đúng",
+      "sourceLine": 36
+    },
+    {
+      "id": "C1.S02.005.p1",
+      "speaker": "Hệ thống điều phối",
+      "kind": "speech",
+      "text": "Ưu tiên sinh tồn: hoàn tất.",
+      "scene": 2,
+      "sceneTitle": "Một quyết định đúng",
+      "sourceLine": 38
+    },
+    {
+      "id": "C1.S02.006.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai nhấp một ngụm trà đã nguội. Cô thích những buổi sáng mà mình có thể kết thúc một việc và không phải tự hỏi liệu mình đã làm sai điều gì.",
+      "scene": 2,
+      "sceneTitle": "Một quyết định đúng",
+      "sourceLine": 40
+    },
+    {
+      "id": "C1.S02.007.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Bên ngoài cửa kính, Lưu Quang sáng như một viên ngọc được giữ trong lòng bàn tay. Những dãy nhà trắng xếp tầng về phía trung tâm, xe điện chạy trên đường ray treo, các vòng đèn xanh đánh dấu những trạm lọc không khí đang hoạt động. Xa hơn, sát vành mái vòm phía Đông, một khu nhà thấp chìm trong hơi nước mờ đục.",
+      "scene": 2,
+      "sceneTitle": "Một quyết định đúng",
+      "sourceLine": 42
+    },
+    {
+      "id": "C1.S02.007.p2",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Trên bản đồ quy hoạch, nơi đó được gọi là Rìa Mưa.",
+      "scene": 2,
+      "sceneTitle": "Một quyết định đúng",
+      "sourceLine": 42
+    },
+    {
+      "id": "C1.S03.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Linh bước vào, đặt một tập báo cáo lên bàn Mai. Đầu ngón tay cô còn vương vệt mực dẫn điện.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 48
+    },
+    {
+      "id": "C1.S03.002.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Cậu lại nhìn về phía đó.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 50
+    },
+    {
+      "id": "C1.S03.003.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Nhìn một chút thôi mà.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 52
+    },
+    {
+      "id": "C1.S03.004.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Nhìn cũng không làm nó biến mất đâu.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 54
+    },
+    {
+      "id": "C1.S03.005.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Trạm lọc số mười chín lại gửi đề nghị sửa chữa à?",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 56
+    },
+    {
+      "id": "C1.S03.006.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Ừ. Lần thứ sáu rồi. Vẫn bị trả về. Họ nói mật độ cư dân chưa đạt ngưỡng để cấp thêm công suất.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 58
+    },
+    {
+      "id": "C1.S03.007.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai mở hồ sơ. Bên trong có ảnh một đường ống phủ dấu gỉ đỏ, ảnh một căn nhà dân và bảng thống kê tự động. Ở dòng số người cần bảo vệ trong phân khu 8-12, hệ thống ghi: 0.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 60
+    },
+    {
+      "id": "C1.S03.008.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Sao lại bằng không?",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 62
+    },
+    {
+      "id": "C1.S03.009.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Cô phóng to bức ảnh. Trong cửa sổ căn nhà có một chậu cây nhỏ và hai chiếc áo đang phơi. Dưới mái hiên, một đôi giày trẻ con được đặt ngay ngắn để hong khô.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 64
+    },
+    {
+      "id": "C1.S03.010.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Ảnh cũ à?",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 66
+    },
+    {
+      "id": "C1.S03.011.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Chụp hôm qua.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 68
+    },
+    {
+      "id": "C1.S03.012.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Vậy thì ít nhất cũng phải có một người chứ.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 70
+    },
+    {
+      "id": "C1.S03.013.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Đấy là lý do tớ mang hồ sơ này cho cậu.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 72
+    },
+    {
+      "id": "C1.S03.014.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai kiểm tra lại dữ liệu. Mô-đun phân bổ không báo lỗi. Truy vấn dân cư cũng không có lỗi. Hệ thống chỉ tính những người đã được xác minh hồ sơ; những người còn chờ xác minh không nằm trong phép tính.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 74
+    },
+    {
+      "id": "C1.S03.015.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Nghĩa là họ vẫn sống ở đó, vẫn dùng nước, mua điện, đi làm mỗi ngày… nhưng trong báo cáo khẩn cấp thì không tồn tại?",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 76
+    },
+    {
+      "id": "C1.S03.016.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Về mặt dữ liệu, đúng là như vậy.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 78
+    },
+    {
+      "id": "C1.S03.017.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Nhưng không thể cứ thế mà bỏ qua được.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 80
+    },
+    {
+      "id": "C1.S03.018.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Tớ đâu có bảo cậu bỏ qua. Tớ chỉ đưa cậu xem những gì hệ thống đang trả về.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 82
+    },
+    {
+      "id": "C1.S03.019.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai ghi vào hồ sơ: “Sai lệch dữ liệu đầu vào. Cần khảo sát thực địa.” Cô nhìn lại bức ảnh thêm một lần nữa trước khi đóng tập báo cáo.",
+      "scene": 3,
+      "sceneTitle": "Phân khu 8-12",
+      "sourceLine": 84
+    },
+    {
+      "id": "C1.S04.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Sáng hôm ấy, trước cuộc họp chiều, Mai còn phải giải quyết hai đề nghị gần như đến cùng lúc. Một trung tâm giữ trẻ ở Vành Đệm xin tăng định mức sưởi cho hai phòng học có trẻ mắc bệnh hô hấp. Một nhà kho thực phẩm cách đó ba tuyến đường cũng cần thêm điện để bảo quản lô thuốc bổ sung vừa được chuyển đến.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 90
+    },
+    {
+      "id": "C1.S04.001.p2",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Tổng công suất cần cấp vượt quá lượng điện còn dư tại trạm phụ.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 90
+    },
+    {
+      "id": "C1.S04.002.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai mở kênh liên lạc với hai nơi.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 92
+    },
+    {
+      "id": "C1.S04.003.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Tôi đã nhận được đề nghị tăng điện của trung tâm. Hiện công suất còn dư không đủ để đáp ứng cả hai yêu cầu cùng lúc. Tôi cần biết có thể điều chỉnh phần nào mà không gây nguy hiểm.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 94
+    },
+    {
+      "id": "C1.S04.004.p1",
+      "speaker": "Người quản kho",
+      "kind": "speech",
+      "text": "Nếu nhiệt độ vượt quá giới hạn, toàn bộ lô thuốc sẽ phải hủy. Chúng tôi không thể để chuyện đó xảy ra.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 96
+    },
+    {
+      "id": "C1.S04.005.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Anh có thể gửi biên bản ghi nhiệt độ hiện tại và mức giới hạn bảo quản không?",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 98
+    },
+    {
+      "id": "C1.S04.006.p1",
+      "speaker": "Người quản kho",
+      "kind": "speech",
+      "text": "Được. Tôi gửi ngay.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 100
+    },
+    {
+      "id": "C1.S04.007.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai chuyển sang đường dây của trung tâm giữ trẻ. Phía bên kia vọng lại tiếng trẻ con đọc bảng chữ cái.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 102
+    },
+    {
+      "id": "C1.S04.008.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Còn bên trung tâm, có phòng nào có thể ghép tạm các lớp trong thời gian chờ không?",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 104
+    },
+    {
+      "id": "C1.S04.009.p1",
+      "speaker": "Hiệu trưởng trung tâm giữ trẻ",
+      "kind": "speech",
+      "text": "Chúng tôi có thể sắp xếp lại, nhưng hai mươi ba đứa trẻ đang ở trong căn phòng tường ẩm này. Có một em vừa phải nhập viện tuần trước. Tôi không muốn phải chờ đến khi có thêm đứa trẻ đổ bệnh mới được cấp đủ sưởi.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 106
+    },
+    {
+      "id": "C1.S04.010.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Tôi hiểu. Tôi sẽ kiểm tra phương án khác. Nếu cần ghép lớp trong lúc chờ, nhờ cô xác nhận phòng thay thế đủ an toàn cho các em nhé.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 108
+    },
+    {
+      "id": "C1.S04.011.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai trải các phương án lên bàn. Cô quyết định chuyển lô thuốc sang kho dự phòng gần bệnh viện, đồng thời đề nghị vận tải công cộng ưu tiên một chuyến hàng. Nhờ vậy, một phần công suất được giải phóng để cấp điện cho trung tâm giữ trẻ. Nhà kho sẽ phải dùng nguồn pin dự trữ của chính mình trong thời gian chờ.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 110
+    },
+    {
+      "id": "C1.S04.011.p2",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Phương án có phát sinh chi phí nhưng vẫn nằm trong giới hạn an toàn.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 110
+    },
+    {
+      "id": "C1.S04.012.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Nếu chuyển lô thuốc sang kho dự phòng và ưu tiên chuyến vận tải, trung tâm sẽ có thêm phần điện cần thiết. Nhưng nhà kho phải dùng pin dự trữ trong thời gian chờ. Hai bên xác nhận giúp tôi là có thể thực hiện theo phương án này nhé.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 112
+    },
+    {
+      "id": "C1.S04.013.p1",
+      "speaker": "Người quản kho",
+      "kind": "speech",
+      "text": "Chúng tôi đồng ý. Miễn là lô thuốc được chuyển đi trước khi nhiệt độ vượt giới hạn.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 114
+    },
+    {
+      "id": "C1.S04.014.p1",
+      "speaker": "Hiệu trưởng trung tâm giữ trẻ",
+      "kind": "speech",
+      "text": "Bên tôi đồng ý. Cảm ơn cô đã tìm được cách giải quyết.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 116
+    },
+    {
+      "id": "C1.S04.015.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Tôi sẽ gửi lịch điều phối ngay khi hoàn tất.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 118
+    },
+    {
+      "id": "C1.S04.016.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai ghi thêm một dòng vào hồ sơ: “Nếu thay đổi lịch vận tải, phải thông báo người điều khiển trước mười lăm phút.”",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 120
+    },
+    {
+      "id": "C1.S04.017.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Một lúc sau, nhân viên vận tải gọi lại.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 122
+    },
+    {
+      "id": "C1.S04.018.p1",
+      "speaker": "Nhân viên vận tải",
+      "kind": "speech",
+      "text": "Tôi gọi để cảm ơn chị đã báo lịch. Tôi đã đổi giờ nghỉ để đưa chuyến thuốc đến bệnh viện. Hàng tới nơi rồi, chị nhé.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 124
+    },
+    {
+      "id": "C1.S04.019.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Cảm ơn anh. À, bên điều phối đã ghi nhận phần giờ làm thêm của anh chưa?",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 126
+    },
+    {
+      "id": "C1.S04.020.p1",
+      "speaker": "Nhân viên vận tải",
+      "kind": "speech",
+      "text": "Chuyện đó chắc phải hỏi bên thầu của bọn tôi. Nó không nằm trong phần chị xem đâu.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 128
+    },
+    {
+      "id": "C1.S04.021.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Anh bật cười, không có vẻ gì là trách móc.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 130
+    },
+    {
+      "id": "C1.S04.022.p1",
+      "speaker": "Nhân viên vận tải",
+      "kind": "speech",
+      "text": "Chắc tôi phải tự gửi yêu cầu thôi.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 132
+    },
+    {
+      "id": "C1.S04.023.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Anh gửi giúp tôi mã chuyến hàng và thông tin giờ làm nhé. Tôi sẽ chuyển sang bộ phận phụ trách hợp đồng.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 134
+    },
+    {
+      "id": "C1.S04.024.p1",
+      "speaker": "Nhân viên vận tải",
+      "kind": "speech",
+      "text": "Vâng, cảm ơn chị.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 136
+    },
+    {
+      "id": "C1.S04.025.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai định chuyển máy sang phòng phụ trách hợp đồng để hỏi ngay, nhưng một cảnh báo mới xuất hiện trên màn hình. Cô bảo người tài xế gửi yêu cầu sau rồi quay lại xử lý việc trước mắt. Đến trưa, cô đã quên mất lời hứa ấy.",
+      "scene": 4,
+      "sceneTitle": "Hai đề nghị khẩn cấp",
+      "sourceLine": 138
+    },
+    {
+      "id": "C1.S05.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai không cố tình quên những lời hứa nhỏ. Chỉ là cứ mỗi mười phút, công việc của cô lại xuất hiện một vấn đề có thể gây thiệt hại lớn hơn vấn đề trước.",
+      "scene": 5,
+      "sceneTitle": "Những việc bị bỏ lại",
+      "sourceLine": 144
+    },
+    {
+      "id": "C1.S05.002.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Hồi còn là thực tập sinh, Mai từng mang cả chồng đơn ngoại lệ về nhà, đọc đến ba giờ sáng. Người hướng dẫn khi ấy đã nhắc cô.",
+      "scene": 5,
+      "sceneTitle": "Những việc bị bỏ lại",
+      "sourceLine": 146
+    },
+    {
+      "id": "C1.S05.003.p1",
+      "speaker": "Người hướng dẫn thực tập",
+      "kind": "speech",
+      "text": "Muốn làm việc ở đây lâu, em phải học cách kết thúc một hồ sơ. Đừng đem cả thành phố lên giường ngủ.",
+      "scene": 5,
+      "sceneTitle": "Những việc bị bỏ lại",
+      "sourceLine": 148
+    },
+    {
+      "id": "C1.S05.004.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai đã học cách làm theo. Cô soạn báo cáo, ký tên, lưu hồ sơ rồi chuyển sang việc tiếp theo. Mỗi lần thấy đèn xanh hiện lên, cô có cảm giác mình vừa giúp được một người nào đó ngoài kia. Nhưng đôi khi, một việc chưa được giải quyết vẫn có thể biến mất giữa những hồ sơ đã hoàn tất.",
+      "scene": 5,
+      "sceneTitle": "Những việc bị bỏ lại",
+      "sourceLine": 150
+    },
+    {
+      "id": "C1.S06.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Trên đường từ khu kiểm toán sang phòng họp, Mai đi ngang phòng trưng bày lịch sử của cơ quan. Hôm nay có một đoàn học sinh đang đứng trước tủ kính chứa những chiếc thẻ khí cũ. Những tấm thẻ kim loại nặng, sứt cạnh từng cho người sở hữu quyền hít thở trong hai mươi bốn giờ tại một trạm được cấp phép.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 156
+    },
+    {
+      "id": "C1.S06.001.p2",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Phía sau là bức ảnh những người xếp hàng quanh đường ống từ đầu thế kỷ trước.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 156
+    },
+    {
+      "id": "C1.S06.002.p1",
+      "speaker": "Học sinh",
+      "kind": "speech",
+      "text": "Nếu người có thẻ đánh mất nó thì sao ạ?",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 158
+    },
+    {
+      "id": "C1.S06.003.p1",
+      "speaker": "Hướng dẫn viên",
+      "kind": "speech",
+      "text": "Có thể xin cấp lại. Nhưng hồi ấy, thủ tục mất khá nhiều thời gian.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 160
+    },
+    {
+      "id": "C1.S06.004.p1",
+      "speaker": "Học sinh",
+      "kind": "speech",
+      "text": "Còn nếu bị trộm thẻ thì sao?",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 162
+    },
+    {
+      "id": "C1.S06.005.p1",
+      "speaker": "Hướng dẫn viên",
+      "kind": "speech",
+      "text": "Thì sẽ rất nguy hiểm.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 164
+    },
+    {
+      "id": "C1.S06.006.p1",
+      "speaker": "Học sinh",
+      "kind": "speech",
+      "text": "Vậy tại sao không để ai cũng được vào?",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 166
+    },
+    {
+      "id": "C1.S06.007.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Người hướng dẫn viên thoáng khựng lại, nhìn quanh tìm một người lớn có thể giúp trả lời. Mai nghe thấy câu hỏi và lên tiếng.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 168
+    },
+    {
+      "id": "C1.S06.008.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Vì nếu mở cửa cho tất cả mọi người cùng một lúc, trạm sẽ không đủ công suất. Hệ thống lọc có thể gặp sự cố, rồi cuối cùng chẳng cứu được ai cả.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 170
+    },
+    {
+      "id": "C1.S06.009.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Điều công bằng trước tiên là phải có cách phân bổ để nhiều người sống sót nhất.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 172
+    },
+    {
+      "id": "C1.S06.010.p1",
+      "speaker": "Học sinh",
+      "kind": "speech",
+      "text": "Vậy ai là người đặt ra cách phân bổ đó?",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 174
+    },
+    {
+      "id": "C1.S06.011.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Những người được giao trách nhiệm. Và họ phải chịu sự kiểm tra, phải công khai cách mình quyết định.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 176
+    },
+    {
+      "id": "C1.S06.012.p1",
+      "speaker": "Học sinh",
+      "kind": "speech",
+      "text": "Thế những người không biết chữ thì có đọc được cách phân bổ không ạ?",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 178
+    },
+    {
+      "id": "C1.S06.013.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai im lặng. Cậu bé không có vẻ đang cố bắt bẻ cô. Em chỉ thật sự muốn biết câu trả lời.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 180
+    },
+    {
+      "id": "C1.S06.014.p1",
+      "speaker": "Hướng dẫn viên",
+      "kind": "speech",
+      "text": "Chúng ta sang khu tiếp theo nhé, các em. Bên đó còn một số hiện vật nữa.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 182
+    },
+    {
+      "id": "C1.S06.015.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Người hướng dẫn viên dẫn đoàn học sinh đi tiếp. Mai vẫn đứng lại trước những tấm thẻ khí cũ. Cô tự nhủ hệ thống hiện tại đã có giao diện giọng nói, dịch vụ hỗ trợ và đường dây khiếu nại. Cô từng tự tay kiểm tra những hạng mục ấy trong báo cáo hằng năm.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 184
+    },
+    {
+      "id": "C1.S06.016.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Nhưng cô không thể nhớ lần cuối mình gọi thử đường dây khiếu nại với tư cách một người không có số công dân là khi nào.",
+      "scene": 6,
+      "sceneTitle": "Câu hỏi trong phòng trưng bày",
+      "sourceLine": 186
+    },
+    {
+      "id": "C1.S07.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Buổi trưa, Mai ăn cùng Linh ở căng tin. Linh gạt đậu sang một bên. Thói quen ấy đã có từ thời đại học, đến mức Mai vẫn thường trêu bạn rằng Linh có thể lập trình một cỗ máy phức tạp nhưng lại không ăn nổi một hạt đậu.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 192
+    },
+    {
+      "id": "C1.S07.002.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Bố tớ vừa đổi sang loại máy oxy mới.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 194
+    },
+    {
+      "id": "C1.S07.003.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Loại mới dùng ổn không?",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 196
+    },
+    {
+      "id": "C1.S07.004.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Nhẹ hơn, nhưng pin đắt khủng khiếp. May mà có trợ cấp Vành Đệm.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 198
+    },
+    {
+      "id": "C1.S07.005.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Còn loại cũ?",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 200
+    },
+    {
+      "id": "C1.S07.006.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Bố cứ bảo tớ vứt đi. Tớ vẫn cất trong kho. Biết đâu lại cần.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 202
+    },
+    {
+      "id": "C1.S07.007.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Ừ, giữ lại cũng chẳng mất gì.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 204
+    },
+    {
+      "id": "C1.S07.008.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai kể cho Linh nghe chuyện nhà kho, trung tâm giữ trẻ và người tài xế đã đổi giờ nghỉ để đưa chuyến hàng đến bệnh viện.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 206
+    },
+    {
+      "id": "C1.S07.009.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Tớ còn chưa chắc phần giờ làm thêm của anh ấy đã được ghi nhận chưa.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 208
+    },
+    {
+      "id": "C1.S07.010.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Mã nhà thầu chỉ đi qua kênh thanh toán tổng thôi. Muốn biết ai thực sự vận chuyển hàng, phải mở biên bản ký tay. Mà người ký thường là quản đốc, không phải tài xế.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 210
+    },
+    {
+      "id": "C1.S07.011.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Như vậy rất dễ bỏ sót đóng góp của những người trực tiếp làm việc.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 212
+    },
+    {
+      "id": "C1.S07.012.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Đúng. Nhưng nhìn từ góc độ kỹ thuật thì mỗi chuyến hàng vẫn có người chịu trách nhiệm. Dữ liệu không cho biết người đó tự lái xe hay có cả mười người làm bên dưới.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 214
+    },
+    {
+      "id": "C1.S07.013.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Có cách nào sửa được không?",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 216
+    },
+    {
+      "id": "C1.S07.014.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Có chứ. Nhưng phải đổi giao thức của sáu công ty thầu, cấp thiết bị xác minh cho từng lao động, rồi chịu thêm chi phí duy trì. Đề xuất đã được nộp mấy lần rồi.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 218
+    },
+    {
+      "id": "C1.S07.015.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Và bị bác?",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 220
+    },
+    {
+      "id": "C1.S07.016.p1",
+      "speaker": "Linh",
+      "kind": "speech",
+      "text": "Không hẳn. Nó cứ bị xếp sau những việc khác. Lúc thì phải thay van trạm trung tâm, lúc thì có chuyện khẩn hơn. Cứ mỗi quý lại có một lý do mới.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 222
+    },
+    {
+      "id": "C1.S07.017.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Hai người im lặng ăn tiếp. Mai nghĩ đến người tài xế vừa đổi giờ nghỉ của mình. Trong bảng tổng kết buổi sáng, anh không xuất hiện như một con người có tên tuổi. Anh chỉ là một phần của dòng “giao hàng thành công”.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 224
+    },
+    {
+      "id": "C1.S07.018.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Ở Lõi Sáng, hàng vẫn đến đúng giờ. Mai chưa từng nghĩ nhiều hơn về điều đó. Chuông báo cuộc họp chiều vang lên, kéo cô trở lại công việc.",
+      "scene": 7,
+      "sceneTitle": "Bữa trưa với Linh",
+      "sourceLine": 226
+    },
+    {
+      "id": "C1.S08.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Trên hành lang trước phòng họp, Mai gặp một đồng nghiệp cũ đang cầm bản đề nghị điều chuyển khu dân cư. Anh trông rất vui. Sau nhiều tháng chờ đợi, cuối cùng anh cũng được duyệt chuyển từ Vành Đệm vào Lõi Sáng.",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 232
+    },
+    {
+      "id": "C1.S08.002.p1",
+      "speaker": "Đồng nghiệp cũ",
+      "kind": "speech",
+      "text": "Cuối cùng cũng xong rồi! Căn hộ nhỏ hơn, giá lại cao hơn, nhưng con gái tôi sẽ được học ở trường có phòng thí nghiệm. Thế cũng đáng.",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 234
+    },
+    {
+      "id": "C1.S08.003.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Chúc mừng anh. Anh đã chọn được khu nào chưa?",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 236
+    },
+    {
+      "id": "C1.S08.004.p1",
+      "speaker": "Đồng nghiệp cũ",
+      "kind": "speech",
+      "text": "Chưa. Tôi đang xem các tuyến tàu. Cô thấy khu nào tiện đi lại mà vẫn có chỗ cho trẻ con?",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 238
+    },
+    {
+      "id": "C1.S08.005.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Anh thử xem khu gần công viên phía bắc. Ở đó có nhà trẻ tốt, đi tàu cũng tiện.",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 240
+    },
+    {
+      "id": "C1.S08.006.p1",
+      "speaker": "Đồng nghiệp cũ",
+      "kind": "speech",
+      "text": "Được đấy. Cảm ơn cô nhé.",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 242
+    },
+    {
+      "id": "C1.S08.007.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Anh cất bản đề nghị, cười nhẹ nhõm.",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 244
+    },
+    {
+      "id": "C1.S08.008.p1",
+      "speaker": "Đồng nghiệp cũ",
+      "kind": "speech",
+      "text": "Ai cố gắng rồi cũng có chỗ đứng thôi.",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 246
+    },
+    {
+      "id": "C1.S08.009.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai không đáp. Câu nói ấy từng khiến cô thấy được khích lệ. Ngày nhận học bổng, chính cô cũng từng nói gần như vậy trước lớp. Nhưng giờ đây, cô lại nhớ đến đôi giày trẻ con trong bức ảnh của phân khu 8-12.",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 248
+    },
+    {
+      "id": "C1.S08.010.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Nếu đứa trẻ ấy lớn lên và cố gắng, liệu nó có biết mình cần đứng vào hàng nào, mang theo giấy tờ gì, nộp hồ sơ ở cửa sổ nào không? Có lẽ có. Cũng có thể Mai đang quá nhạy cảm chỉ vì một bức ảnh. Một người làm kiểm toán không thể đưa ra kết luận chỉ dựa vào cảm giác.",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 250
+    },
+    {
+      "id": "C1.S08.011.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Cô mở sổ việc, ghi câu hỏi ấy ngay dưới lời nhắc kiểm tra yêu cầu ghi nhận giờ làm cho người tài xế. Đến cuối ngày, sổ đã có thêm hai mươi bảy dòng khác.",
+      "scene": 8,
+      "sceneTitle": "“Ai cố gắng rồi cũng có chỗ đứng thôi”",
+      "sourceLine": 252
+    },
+    {
+      "id": "C1.S09.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Buổi chiều, trong phòng họp kín, Giám đốc Vinh đứng trước bản đồ năng lượng. Một khối xoáy lớn đang hình thành từ những đợt bụi mang điện ngoài khí quyển. Dự báo cho thấy nó sẽ quét qua mái vòm trong mười hai ngày nữa.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 258
+    },
+    {
+      "id": "C1.S09.002.p1",
+      "speaker": "Vinh",
+      "kind": "speech",
+      "text": "Chúng ta không có đủ điện để nuông chiều mọi sai sót hành chính. Bệnh viện, trạm cấp khí và các đường dẫn nước phải được giữ ổn định. Mỗi ngày chậm phê duyệt là một ngày chúng ta mất cơ hội chuẩn bị.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 260
+    },
+    {
+      "id": "C1.S09.003.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai giơ tay.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 262
+    },
+    {
+      "id": "C1.S09.004.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Tôi muốn báo cáo một vấn đề ở phân khu 8-12. Dữ liệu cho thấy có dấu hiệu thiếu dân số. Nếu chúng ta cắt công suất theo bảng hiện tại, phương án sẽ tính sai lượng khí cần thiết cho khu vực đó.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 264
+    },
+    {
+      "id": "C1.S09.005.p1",
+      "speaker": "Vinh",
+      "kind": "speech",
+      "text": "Cô có bằng chứng về sai lệch dữ liệu không?",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 266
+    },
+    {
+      "id": "C1.S09.006.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Có ảnh thực địa và hồ sơ đề nghị sửa chữa của trạm lọc số mười chín. Dữ liệu hệ thống không báo lỗi, nhưng nó chỉ tính những người đã được xác minh. Những cư dân đang chờ xác minh không được đưa vào phép tính.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 268
+    },
+    {
+      "id": "C1.S09.007.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Vinh không bác bỏ lời cô. Ông yêu cầu chuyển hồ sơ sang tổ xác minh rồi tiếp tục cuộc họp. Trên bản đồ, dự trữ năng lượng đang giảm; thiết bị lọc cũ ở vùng rìa cần thay; ngân sách dự phòng đã sử dụng quá nửa. Những con số đó cũng là sự thật.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 270
+    },
+    {
+      "id": "C1.S09.008.p1",
+      "speaker": "Vinh",
+      "kind": "speech",
+      "text": "Kết thúc ngày thứ ba, tôi cần một báo cáo có thể thực thi. Không phải một lời hứa rằng chúng ta sẽ cứu được tất cả.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 272
+    },
+    {
+      "id": "C1.S09.009.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Tôi hiểu.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 274
+    },
+    {
+      "id": "C1.S09.010.p1",
+      "speaker": "Vinh",
+      "kind": "speech",
+      "text": "Tôi không nói rằng vấn đề cô nêu ra không quan trọng. Nhưng chúng ta phải tính đến những gì thực sự có thể làm được, với lượng dự trữ hiện tại.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 276
+    },
+    {
+      "id": "C1.S09.011.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Tôi sẽ làm rõ sai lệch và đưa ra phương án cụ thể.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 278
+    },
+    {
+      "id": "C1.S09.012.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai hiểu sự khó chịu của Vinh. Cô cũng không thích những lời hứa không có cách thực hiện. Nhưng lần này, cô không thể coi con số không trong báo cáo như một sai sót nhỏ có thể xử lý sau.",
+      "scene": 9,
+      "sceneTitle": "Cuộc họp về cơn bão",
+      "sourceLine": 280
+    },
+    {
+      "id": "C1.S10.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Đêm ấy, Mai về nhà và kể cho mẹ nghe chuyện phân khu 8-12. Mẹ cô đang tỉa cây hương thảo bên cửa sổ.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 286
+    },
+    {
+      "id": "C1.S10.002.p1",
+      "speaker": "Mẹ Mai",
+      "kind": "speech",
+      "text": "Con còn nhớ cô y tá đã cứu mẹ không?",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 288
+    },
+    {
+      "id": "C1.S10.003.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Con nhớ.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 290
+    },
+    {
+      "id": "C1.S10.004.p1",
+      "speaker": "Mẹ Mai",
+      "kind": "speech",
+      "text": "Sau hôm đó, mẹ vẫn phải làm thêm mười một năm mới trả hết nợ thuốc.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 292
+    },
+    {
+      "id": "C1.S10.005.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Bà ngắt một chiếc lá khô, đặt sang bên.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 294
+    },
+    {
+      "id": "C1.S10.006.p1",
+      "speaker": "Mẹ Mai",
+      "kind": "speech",
+      "text": "Cô ấy đã cứu mẹ. Nhưng con đừng nhầm chuyện đó với việc mọi thứ đều công bằng.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 296
+    },
+    {
+      "id": "C1.S10.007.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Con biết hệ thống bây giờ tốt hơn trước nhiều. Tỷ lệ sống sót đã tăng, số vụ can thiệp đặc quyền giảm, trẻ em ở Vành Đệm có thêm suất học—",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 298
+    },
+    {
+      "id": "C1.S10.008.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai dừng lại. Mẹ cô đã quay về với chậu cây, không có vẻ muốn tranh luận. Không có cuộc tranh luận nào để thắng cả.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 300
+    },
+    {
+      "id": "C1.S10.009.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Có một chuyện Mai chưa từng kể với ai ở cơ quan. Ngày mẹ được giữ lại bệnh viện, cô không hề hiểu tấm thẻ xanh có ý nghĩa gì. Cô chỉ nhớ người phụ nữ áo xám đã đặt tay lên đầu mình và bảo rằng người lớn sẽ tìm cách. Đêm ấy, Mai ngủ dưới chân giường bệnh, mơ thấy những hành lang sáng mà không có cửa.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 302
+    },
+    {
+      "id": "C1.S10.009.p2",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Sáng hôm sau, mẹ yếu đến mức không ngồi dậy được, nhưng vẫn cố đưa tay vuốt tóc cô.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 302
+    },
+    {
+      "id": "C1.S10.010.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Nhiều năm sau, mỗi khi có người hỏi tại sao không chọn một nghề kiếm được nhiều tiền hơn, Mai thường kể về chiếc thẻ xanh. Cô chưa bao giờ kể phần còn lại: mẹ phải vay tiền trả thuốc, cô bỏ những buổi dã ngoại vì không có giày mới, bà ngoại bán chiếc vòng cuối cùng để đóng khoản nợ điều trị.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 304
+    },
+    {
+      "id": "C1.S10.011.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Những điều ấy không làm việc cứu sống mẹ trở nên kém giá trị. Chúng chỉ không đẹp trong một bài diễn văn về hệ thống công bằng. Mai đã vô thức cắt ký ức thành một câu chuyện có điểm bắt đầu và kết thúc rõ ràng, giống như cách cô cắt dữ liệu ở cơ quan để báo cáo có thể đọc trong mười phút.",
+      "scene": 10,
+      "sceneTitle": "Hai sự thật có thể cùng tồn tại",
+      "sourceLine": 306
+    },
+    {
+      "id": "C1.S11.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Tối hôm ấy, Mai lấy cuốn album ra. Trong ảnh, mẹ cô đứng trước mái vòm sau ngày xuất viện, mặc chiếc áo khoác đi mượn, một tay nắm Mai, tay kia cầm túi thuốc. Bên cạnh họ là một người phụ nữ tóc ngắn — người y tá năm đó.",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 310
+    },
+    {
+      "id": "C1.S11.002.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Mẹ có nghĩ ngày ấy họ đã chọn cứu mẹ thay vì một người khác không?",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 312
+    },
+    {
+      "id": "C1.S11.003.p1",
+      "speaker": "Mẹ Mai",
+      "kind": "speech",
+      "text": "Có thể. Mẹ không biết.",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 314
+    },
+    {
+      "id": "C1.S11.004.p1",
+      "speaker": "Mai",
+      "kind": "speech",
+      "text": "Con sợ rằng mọi điều tốt đẹp trong đời mình đều có ai đó phải trả giá ở nơi khác.",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 316
+    },
+    {
+      "id": "C1.S11.005.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mẹ Mai ngồi xuống, đặt cuốn album giữa hai người.",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 318
+    },
+    {
+      "id": "C1.S11.006.p1",
+      "speaker": "Mẹ Mai",
+      "kind": "speech",
+      "text": "Con không phải trả ơn bằng cách hối hận vì mình đã sống.",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 320
+    },
+    {
+      "id": "C1.S11.007.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Bà nhìn tấm ảnh một lúc rồi nói tiếp.",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 322
+    },
+    {
+      "id": "C1.S11.008.p1",
+      "speaker": "Mẹ Mai",
+      "kind": "speech",
+      "text": "Nhưng nếu con biết có người đang bị đối xử sai, con cũng không được lấy chuyện mình từng được cứu làm lý do để nhắm mắt. Hai việc đó có thể cùng đúng.",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 324
+    },
+    {
+      "id": "C1.S11.009.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai ngồi rất lâu bên cuốn album. Cô nhìn người y tá trong ảnh. Bà không cười như thể vừa giải xong một bài toán. Đôi mắt bà thâm quầng, bàn tay đặt trên vai cô bé như đang giữ một thứ rất mong manh.",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 326
+    },
+    {
+      "id": "C1.S11.010.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai chợt nghĩ, trong câu chuyện mình thường kể, cô đã quên mất người y tá cũng là một con người. Có thể bà từng do dự, từng mất ngủ, từng phải đứng trước hai chiếc giường bệnh mà không có đủ thuốc cho cả hai.",
+      "scene": 11,
+      "sceneTitle": "Phần ký ức còn lại",
+      "sourceLine": 328
+    },
+    {
+      "id": "C1.S12.001.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai từng gửi cho người y tá một bức thư cảm ơn khi tốt nghiệp, nhưng không biết bức thư có đến tay bà hay không. Cô cũng từng hứa với chính mình rằng khi làm việc ở cơ quan điều phối, cô sẽ tìm những người như bà để cảm ơn. Giờ đây, cô không còn chắc một lời cảm ơn đã đủ hay chưa.",
+      "scene": 12,
+      "sceneTitle": "Một hồ sơ nhỏ",
+      "sourceLine": 334
+    },
+    {
+      "id": "C1.S12.001.p2",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Có lẽ trước hết, cô cần hỏi xem họ đã phải làm gì để cứu những người mà hệ thống chưa từng tính đúng.",
+      "scene": 12,
+      "sceneTitle": "Một hồ sơ nhỏ",
+      "sourceLine": 334
+    },
+    {
+      "id": "C1.S12.002.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai khép cuốn album lại. Cô không đưa ra quyết định lớn lao nào trong đêm ấy. Chỉ có một việc cô có thể làm ngay.",
+      "scene": 12,
+      "sceneTitle": "Một hồ sơ nhỏ",
+      "sourceLine": 336
+    },
+    {
+      "id": "C1.S12.003.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Cô mở lại sổ việc, tìm dòng ghi về người tài xế. Cô gửi yêu cầu đối chiếu giờ làm và ghi rõ mã chuyến hàng đã giúp nhà kho giải phóng điện cho trung tâm giữ trẻ. Đây là một hồ sơ nhỏ, có thể mất nhiều tuần mới có phản hồi. Nhưng lần này, cô không muốn để sự đóng góp của một người biến thành thứ vô hình chỉ vì cuối ngày có một việc khác quan trọng hơn.",
+      "scene": 12,
+      "sceneTitle": "Một hồ sơ nhỏ",
+      "sourceLine": 338
+    },
+    {
+      "id": "C1.S12.004.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Trước khi đi ngủ, Mai mở lại bức ảnh căn nhà ở phân khu 8-12. Trời trong ảnh tối, bóng hai chiếc áo dài xuống mặt tường. Trên màn hình, hệ thống vẫn ghi số không.",
+      "scene": 12,
+      "sceneTitle": "Một hồ sơ nhỏ",
+      "sourceLine": 340
+    },
+    {
+      "id": "C1.S12.005.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Mai từng nghĩ sai lầm đáng sợ nhất của một phép tính là cho ra đáp án sai.",
+      "scene": 12,
+      "sceneTitle": "Một hồ sơ nhỏ",
+      "sourceLine": 342
+    },
+    {
+      "id": "C1.S12.006.p1",
+      "speaker": "Lời kể",
+      "kind": "direction",
+      "text": "Lần đầu tiên, cô nghĩ đến khả năng có những người chưa bao giờ được đưa vào phép tính.",
+      "scene": 12,
+      "sceneTitle": "Một hồ sơ nhỏ",
+      "sourceLine": 344
+    }
+  ],
+  "segments": [
+    {
+      "taskId": "memory",
+      "beforeStart": 0,
+      "beforeCount": 6,
+      "afterStart": 6,
+      "afterCount": 6
+    },
+    {
+      "taskId": "hospital",
+      "beforeStart": 12,
+      "beforeCount": 0,
+      "afterStart": 12,
+      "afterCount": 5
+    },
+    {
+      "taskId": "evidence",
+      "beforeStart": 17,
+      "beforeCount": 13,
+      "afterStart": 30,
+      "afterCount": 6
+    },
+    {
+      "taskId": "coordination",
+      "beforeStart": 36,
+      "beforeCount": 11,
+      "afterStart": 47,
+      "afterCount": 7
+    },
+    {
+      "taskId": "driver",
+      "beforeStart": 54,
+      "beforeCount": 8,
+      "afterStart": 62,
+      "afterCount": 5
+    },
+    {
+      "taskId": "gallery",
+      "beforeStart": 67,
+      "beforeCount": 13,
+      "afterStart": 80,
+      "afterCount": 4
+    },
+    {
+      "taskId": "lunch",
+      "beforeStart": 84,
+      "beforeCount": 10,
+      "afterStart": 94,
+      "afterCount": 8
+    },
+    {
+      "taskId": "corridor",
+      "beforeStart": 102,
+      "beforeCount": 8,
+      "afterStart": 110,
+      "afterCount": 3
+    },
+    {
+      "taskId": "meeting",
+      "beforeStart": 113,
+      "beforeCount": 6,
+      "afterStart": 119,
+      "afterCount": 6
+    },
+    {
+      "taskId": "mother",
+      "beforeStart": 125,
+      "beforeCount": 6,
+      "afterStart": 131,
+      "afterCount": 6
+    },
+    {
+      "taskId": "album",
+      "beforeStart": 137,
+      "beforeCount": 7,
+      "afterStart": 144,
+      "afterCount": 5
+    },
+    {
+      "taskId": "request",
+      "beforeStart": 149,
+      "beforeCount": 1,
+      "afterStart": 150,
+      "afterCount": 1
+    },
+    {
+      "taskId": "final",
+      "beforeStart": 151,
+      "beforeCount": 2,
+      "afterStart": 153,
+      "afterCount": 1
+    }
+  ]
+}

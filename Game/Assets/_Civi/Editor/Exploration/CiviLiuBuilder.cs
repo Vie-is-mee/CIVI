@@ -29,24 +29,30 @@ namespace Civi.Preview.Editor
         }
         public static void Prepare()
         {
-            var cast=Texture("cast-v2.png");var props=Texture("props.png");var support=Texture("support.png");var evidence=Texture("evidence.png");var city=Texture("city-window.png");
+            var cast=Texture("cast-v2.png");var walk=Texture("walk-v2.png");var props=Texture("props.png");var support=Texture("support.png");var evidence=Texture("evidence.png");var city=Texture("city-window.png");
             if(!File.Exists(Scene))
             {
                 var scene=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);
                 var camera=new GameObject("Main Camera",typeof(Camera),typeof(AudioListener));camera.tag="MainCamera";camera.transform.position=new Vector3(0,0,-10);camera.GetComponent<Camera>().orthographic=true;
-                var env=new GameObject("Lưu Quang modular environment",typeof(CiviLiuEnvironment)).GetComponent<CiviLiuEnvironment>();env.Interior=true;env.CastAtlas=cast;env.PropAtlas=props;env.SupportAtlas=support;env.EvidenceAtlas=evidence;env.CityAtlas=city;env.LabelFont=AssetDatabase.LoadAssetAtPath<Font>("Assets/_Civi/Fonts/CiviOpenFont.ttf");
+                var env=new GameObject("Lưu Quang modular environment",typeof(CiviLiuEnvironment)).GetComponent<CiviLiuEnvironment>();env.Interior=true;env.CastAtlas=cast;env.WalkAtlas=walk;env.PropAtlas=props;env.SupportAtlas=support;env.EvidenceAtlas=evidence;env.CityAtlas=city;env.LabelFont=AssetDatabase.LoadAssetAtPath<Font>("Assets/_Civi/Fonts/CiviOpenFont.ttf");
                 var move=new GameObject("Polished movement / retained",typeof(CiviSchoolStudioV2)).GetComponent<CiviSchoolStudioV2>();move.ChapterMode=true;move.ChapterEnvironment=env;move.ActorLabel="Mai / adult coordinator";move.ExternalLock=true;
                 var chapter=new GameObject("C1 story and workbench",typeof(CiviLiuChapter)).GetComponent<CiviLiuChapter>();chapter.Movement=move;chapter.Environment=env;chapter.InterfaceFont=env.LabelFont;chapter.ChapterData=AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Civi/Resources/LiuQuangC1/chapter.json");
                 EditorSceneManager.SaveScene(scene,Scene);
             }
-            var current=EditorSceneManager.OpenScene(Scene,OpenSceneMode.Single);var currentEnv=UnityEngine.Object.FindAnyObjectByType<CiviLiuEnvironment>();currentEnv.CastAtlas=cast;currentEnv.CityAtlas=city;EditorSceneManager.SaveScene(current);
+            var current=EditorSceneManager.OpenScene(Scene,OpenSceneMode.Single);var currentEnv=UnityEngine.Object.FindAnyObjectByType<CiviLiuEnvironment>();currentEnv.CastAtlas=cast;currentEnv.WalkAtlas=walk;currentEnv.CityAtlas=city;EditorSceneManager.SaveScene(current);
             var all=EditorBuildSettings.scenes.Where(s=>s.path!=Scene).Select(s=>new EditorBuildSettingsScene(s.path,false)).ToList();all.Insert(0,new EditorBuildSettingsScene(Scene,true));EditorBuildSettings.scenes=all.ToArray();AssetDatabase.SaveAssets();
         }
         static void Check(bool condition,string name){if(!condition)throw new Exception("C1 check failed: "+name);checks++;}static int checks;
         public static void Verify()
         {
             checks=0;var scene=EditorSceneManager.OpenScene(Scene,OpenSceneMode.Single);foreach(var root in scene.GetRootGameObjects())foreach(var t in root.GetComponentsInChildren<Transform>(true))Check(GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject)==0,"missing script");
-            var c=UnityEngine.Object.FindAnyObjectByType<CiviLiuChapter>();var data=JsonUtility.FromJson<LiuContent>(c.ChapterData.text);CiviLiuChapter.ValidateContent(data);var env=c.Environment;env.Build();Check(env.Frames.Length==16&&env.Frames.All(s=>s!=null),"16 walking frames");
+            var c=UnityEngine.Object.FindAnyObjectByType<CiviLiuChapter>();var data=JsonUtility.FromJson<LiuContent>(c.ChapterData.text);CiviLiuChapter.ValidateContent(data);
+            var source=Resources.Load<TextAsset>("LiuQuangC1/dialogue");
+            Check(source!=null,"compiled reviewed dialogue exists");
+            var dlg=JsonUtility.FromJson<LiuDialogueContent>(source.text);LiuDialogueContent.Validate(dlg,data);
+            Check(dlg.pages.Length==154&&dlg.segments.Length==13,"complete canonical dialogue");
+            var env=c.Environment;env.Build();Check(env.Frames.Length==16&&env.Frames.All(s=>s!=null),"16 walking frames");
+            Check(env.WalkFramesSix!=null&&env.WalkFramesSix.Length==24&&env.WalkFramesSix.All(s=>s!=null),"24 walking poses");
             Check(env.Cast.Length==4&&env.Cast.All(s=>s!=null),"adult NPC cast");
             foreach(var task in data.tasks)
             {
@@ -59,6 +65,30 @@ namespace Civi.Preview.Editor
             var full=new LiuSave();for(int i=0;i<data.tasks.Length;i++)
             {full.mode=1;for(int j=data.tasks[i].actions.Length-1;j>=0;j--)full.Observe(data.tasks[i],j);Check(full.Commit(data.tasks[i]),"reverse-order actions");for(int j=0;j<data.tasks[i].lines.Length;j++){full.Validate(data);full.Advance(data);}Check(full.step==i+1,"single event progression");full.Validate(data);}
             Check(full.step==13&&full.completed==8191,"chapter end has no C2 route");
+            // Complete each reviewed before-action and after-action cue in the
+            // retained 13-task progression, without bypassing prerequisites.
+            var integrated=new LiuSave{dialogueVersion=1};
+            for(int i=0;i<data.tasks.Length;i++)
+            {
+                int before=dlg.Count(i,3),after=dlg.Count(i,2);
+                for(int line=0;line<before;line++)
+                {integrated.mode=3;integrated.line=line;integrated.Validate(data,dlg);Check(dlg.At(i,3,line)!=null,"authored before-action cue");}
+                integrated.mode=1;integrated.line=0;
+                for(int j=0;j<data.tasks[i].actions.Length;j++)integrated.Observe(data.tasks[i],j);
+                Check(integrated.Commit(data.tasks[i]),"reviewed dialogue prerequisites "+i);
+                for(int line=0;line<after;line++)
+                {
+                    integrated.Validate(data,dlg);
+                    Check(dlg.At(i,2,line)!=null,"authored after-action cue");
+                    integrated.Advance(data,after);
+                }
+                Check(integrated.step==i+1,"reviewed dialogue task progression "+i);
+            }
+            integrated.Validate(data,dlg);
+            Check(integrated.step==13&&integrated.completed==8191,"integrated C1 completion");
+            var migrated=new LiuSave{step=3,completed=7,mode=2,line=0,mask=data.tasks[3].requiredMask};
+            migrated.Validate(data);migrated.dialogueVersion=1;migrated.Validate(data,dlg);
+            Check(migrated.step==3&&migrated.completed==7,"legacy checkpoint preserved");
             var bad=new[]{new LiuSave{version="old"},new LiuSave{step=4},new LiuSave{step=14},new LiuSave{mode=2},new LiuSave{x=float.NaN}};
             foreach(var s in bad){bool rejected=false;try{s.Validate(data);}catch(FormatException){rejected=true;}Check(rejected,"invalid save rejected");}
             EditorSceneManager.OpenScene(Scene,OpenSceneMode.Single);Debug.Log("LIUQUANG EDITMODE PASS "+checks+" checks; all prerequisite subsets, reverse observation order, C1 completion, save validation and radius-safe navigation.");
