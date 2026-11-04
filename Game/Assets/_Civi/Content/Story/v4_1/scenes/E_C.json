@@ -1,0 +1,308 @@
+{
+  "schema_version": "tv1-authoring-0.1",
+  "content_version": "tv1-0.1",
+  "status": "draft_for_handoff",
+  "scene_id": "E_C",
+  "title": "Một tờ giấy đến sau",
+  "source_pages": [
+    13,
+    14,
+    19
+  ],
+  "background_id": "BG_STONE_BENCH",
+  "entry_step": "E_C_ARRIVE",
+  "asset_ids": [
+    "PHOTO_S00_GOOD",
+    "PHOTO_LATER_TWO",
+    "PAGE17_SUPPLEMENT"
+  ],
+  "production_notes": "Chỉ vào khi later_status accepted với ngày/chỗ/người đã có câu xác nhận. Không tái dựng quầy đã tháo.",
+  "steps": [
+    {
+      "step_id": "E_C_ARRIVE",
+      "stage_direction": "Ngày và giờ từ later_datetime; ghế đá sân trường. Hạ/Minh không bị triệu hồi. An mang tờ có nguồn cũ đã được duyệt.",
+      "lines": [
+        "E_C_L001",
+        "E_C_L002",
+        "E_C_L003",
+        "E_C_L004"
+      ],
+      "choices": [
+        {
+          "choice_id": "E_C_HAND_OLD",
+          "label": "Cùng xem nguồn cũ, không chụp thêm",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "E_C_L005",
+            "E_C_L006",
+            "E_C_L007"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "later_purpose",
+              "value": "giao tờ bổ sung từ nguồn cũ"
+            }
+          ],
+          "next": "step:E_C_DELIVER",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "E_C_ASK_NEW",
+          "label": "Hỏi có muốn chụp một tấm hai người ở ghế đá không",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "E_C_L008",
+            "E_C_L009",
+            "E_C_L010"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "later_purpose",
+              "value": "gặp, chụp hai người và giao bổ sung"
+            }
+          ],
+          "next": "step:E_C_CAPTURE",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "E_C_CAPTURE",
+      "stage_direction": "An đặt máy trên vị trí vững và chạy vào; không dùng Nhi như người cầm máy. Đây là lựa chọn sau lời nhận chụp.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "E_C_CAPTURE",
+          "label": "Bấm hẹn giờ và đứng vào khung",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "E_C_L011",
+            "E_C_L012"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "photo_result",
+              "value": "later"
+            },
+            {
+              "op": "set",
+              "field": "captured_asset",
+              "value": "PHOTO_LATER_TWO"
+            },
+            {
+              "op": "set",
+              "field": "photo_participants",
+              "value": [
+                "AN",
+                "NHI"
+              ]
+            }
+          ],
+          "next": "step:E_C_PHOTO_RIGHTS",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "E_C_PHOTO_RIGHTS",
+      "stage_direction": "Mở ảnh hai người mới; hỏi phạm vi tờ bổ sung, không sửa ngược cuốn sách đã phát.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "E_C_LATER_USE",
+          "label": "Hỏi dùng ảnh vừa chụp trong tờ bổ sung",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "E_C_L013",
+            "E_C_L014",
+            "E_C_L015"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "later_photo_consent",
+              "value": "yes"
+            },
+            {
+              "op": "set",
+              "field": "final_new_asset",
+              "value": "PHOTO_LATER_TWO"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_LATER_TWO",
+              "subject_id": "AN",
+              "scope": "supplement_delivery",
+              "status": "yes",
+              "source_event_id": "E_C_LATER_USE"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_LATER_TWO",
+              "subject_id": "NHI",
+              "scope": "supplement_delivery",
+              "status": "yes",
+              "source_event_id": "E_C_LATER_USE"
+            }
+          ],
+          "next": "step:E_C_PRINT",
+          "action_note": "",
+          "duration_minutes": 0
+        },
+        {
+          "choice_id": "E_C_LATER_PRIVATE",
+          "label": "Giữ riêng ảnh mới, tờ bổ sung dùng nguồn cũ",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "E_C_L016",
+            "E_C_L017"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "later_photo_consent",
+              "value": "no"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_LATER_TWO",
+              "subject_id": "AN",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "E_C_LATER_PRIVATE"
+            },
+            {
+              "op": "grant",
+              "asset_id": "PHOTO_LATER_TWO",
+              "subject_id": "NHI",
+              "scope": "private_album",
+              "status": "yes",
+              "source_event_id": "E_C_LATER_PRIVATE"
+            }
+          ],
+          "next": "step:E_C_DELIVER",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "E_C_PRINT",
+      "stage_direction": "Chuyển cảnh sau khi bản thêm ảnh được Nhi xem và in xong. Không giả in ngay tại ghế đá.",
+      "lines": [
+        "E_C_L018",
+        "E_C_L019",
+        "E_C_L026",
+        "E_C_L027"
+      ],
+      "choices": [
+        {
+          "choice_id": "E_C_PRINT",
+          "label": "Mang tờ đã in tới chỗ giao đã thống nhất",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "E_C_L020"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "supplement_delivery_datetime",
+              "value": "2026-05-12T09:30:00"
+            },
+            {
+              "op": "set",
+              "field": "supplement_delivery_place",
+              "value": "cửa lớp"
+            }
+          ],
+          "next": "step:E_C_DELIVER",
+          "action_note": "Cắt cảnh tới mốc giao vừa được cả hai xác nhận; không phát sinh lịch từ lời hứa một phía. TV3 có thể dùng nền hành lang đã có.",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "E_C_DELIVER",
+      "stage_direction": "Tại supplement_delivery_datetime/place đã xác nhận. Giao giấy cho Nhi, người nhận tờ vật lý duy nhất của kế hoạch này; Hạ/Minh đã nhận bản xem.",
+      "lines": [
+        "E_C_L028",
+        "E_C_L029",
+        "E_C_L030"
+      ],
+      "choices": [
+        {
+          "choice_id": "E_C_DELIVER",
+          "label": "Chỉnh mép và giao tờ bổ sung",
+          "when": {
+            "all": []
+          },
+          "lines": [
+            "E_C_L031"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "supplement_delivered",
+              "value": true
+            },
+            {
+              "op": "set",
+              "field": "final_artifact_requested",
+              "value": true
+            }
+          ],
+          "next": "step:E_C_FINISH",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    },
+    {
+      "step_id": "E_C_FINISH",
+      "stage_direction": "Dừng ở hiện vật đã giao. Không hứa quan hệ trở lại như cũ.",
+      "lines": [],
+      "choices": [
+        {
+          "choice_id": "E_C_FINISH",
+          "label": "Khép cuốn sách",
+          "when": {
+            "field": "supplement_delivered",
+            "op": "eq",
+            "value": true
+          },
+          "lines": [
+            "E_C_L032"
+          ],
+          "effects": [
+            {
+              "op": "set",
+              "field": "finished",
+              "value": true
+            }
+          ],
+          "next": "end",
+          "action_note": "",
+          "duration_minutes": 0
+        }
+      ]
+    }
+  ]
+}

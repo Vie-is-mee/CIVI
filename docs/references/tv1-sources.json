@@ -1,0 +1,21 @@
+{
+  "generated_on": "2026-10-22",
+  "content_version": "tv1-0.1",
+  "sources": [
+    {
+      "name": "CIVI_kich_ban_v4_1.pdf",
+      "path": "D:\\VSIC\\CIVI_kich_ban_v4_1.pdf",
+      "sha256": "e1a174e848128ab44df713e9f0fdd7f68a644e13d4b5e97ce20904dd2ccbe9e6"
+    },
+    {
+      "name": "CIVI_AI_2_1_FIXED.pdf",
+      "path": "D:\\VSIC\\CIVI_AI_2_1_FIXED.pdf",
+      "sha256": "cd24e842efaad8ad5a3d3f662bbd156287298c3fcdbd754fc604dca4e93c90fe"
+    },
+    {
+      "name": "CIVI_Phan_cong_5_thanh_vien.xlsx",
+      "path": "D:\\VSIC\\CIVI_Phan_cong_5_thanh_vien.xlsx",
+      "sha256": "7d203ed14b9aba5f9c2d9a64060e65e0d381c40f5c58947c0e1a577e6c040e78"
+    }
+  ]
+}

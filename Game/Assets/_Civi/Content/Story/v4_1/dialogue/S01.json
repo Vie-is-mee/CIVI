@@ -1,0 +1,76 @@
+{
+  "scene_id": "S01",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S01_L001",
+      "speaker_id": "HA",
+      "text": "Trang 17 đâu?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S01_L002",
+      "speaker_id": "MINH",
+      "text": "Tao chuyển sang mục tạm giữ. Mày bảo bỏ mà.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S01_L003",
+      "speaker_id": "AN",
+      "text": "Tao nói câu chú thích.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S01_L004",
+      "speaker_id": "MINH",
+      "text": "Trong tin nhắn có chữ chú thích đâu.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S01_L005",
+      "speaker_id": "NARRATOR",
+      "text": "Minh: “Trang chưa chốt, bỏ khỏi bản thử nhé?” Dưới đó là câu trả lời của An: “Ừ bỏ đi, mai tính”.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S01_L006",
+      "speaker_id": "MINH",
+      "text": "Bản cũ tao vẫn giữ. Không mất file.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S01_L007",
+      "speaker_id": "AN",
+      "text": "Mai chụp…",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S01_L008",
+      "speaker_id": "NHI",
+      "text": "Tụi mày cứ chụp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S01_L009",
+      "speaker_id": "NARRATOR",
+      "text": "Nhi đi tiếp cùng Phương, ôm thùng đồ. Hạ kéo ảnh hội chợ lại gần.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S01_L010",
+      "speaker_id": "HA",
+      "text": "Bản này chưa ai chốt. Nhi chưa nhận lời ảnh mới.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

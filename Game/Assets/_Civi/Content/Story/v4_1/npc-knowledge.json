@@ -1,0 +1,75 @@
+{
+  "status": "tv1_draft",
+  "characters": [
+    {
+      "npc_id": "AN",
+      "initial_facts": [
+        "F01",
+        "F02"
+      ],
+      "discover_via": "evidence_seen, witness events; memory alone not verified source"
+    },
+    {
+      "npc_id": "NHI",
+      "initial_facts": [
+        "F01",
+        "F02",
+        "F06",
+        "F07",
+        "F08",
+        "F10",
+        "F14"
+      ],
+      "disallowed_inference": "other characters hidden motives"
+    },
+    {
+      "npc_id": "HA",
+      "initial_facts": [
+        "F04",
+        "F05",
+        "F11"
+      ],
+      "learn_from_shared_video": [
+        "F06",
+        "F07",
+        "F08"
+      ],
+      "shared_fact_state": "ha_shared_facts"
+    },
+    {
+      "npc_id": "MINH",
+      "initial_facts": [
+        "F03",
+        "F14",
+        "F15"
+      ],
+      "disallowed_inference": "Nhi current consent or every task completed"
+    },
+    {
+      "npc_id": "VY",
+      "initial_facts": [
+        "F06",
+        "F07",
+        "F08"
+      ],
+      "scope": "own video and direct observation"
+    },
+    {
+      "npc_id": "PHUONG",
+      "initial_facts": [],
+      "scope": "equipment check directly witnessed"
+    },
+    {
+      "npc_id": "PRINTER",
+      "initial_facts": [
+        "F15"
+      ],
+      "scope": "print slot, not relationships"
+    }
+  ],
+  "invariants": [
+    "player_discovered != npc_knows",
+    "no_unseen_video_quote",
+    "witness_replies_without_forced_mystery"
+  ]
+}

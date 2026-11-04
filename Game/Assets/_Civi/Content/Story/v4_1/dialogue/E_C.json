@@ -1,0 +1,195 @@
+{
+  "scene_id": "E_C",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "E_C_L001",
+      "speaker_id": "NHI",
+      "text": "Mang cả tấm buổi tập không?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L002",
+      "speaker_id": "AN",
+      "text": "Có, trong máy. Tờ bổ sung tao cũng mang rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L003",
+      "speaker_id": "NHI",
+      "text": "Hạ với Minh xem chưa?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L004",
+      "speaker_id": "AN",
+      "text": "Tao gửi bản trước khi in rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L005",
+      "speaker_id": "NARRATOR",
+      "text": "Nhi kéo ảnh trên điện thoại, dừng ở nguồn cũ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L006",
+      "speaker_id": "NHI",
+      "text": "Ừ. Tờ này để tao kẹp vào sách.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L007",
+      "speaker_id": "AN",
+      "text": "Để tao chỉnh mép gấp đã.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L008",
+      "speaker_id": "AN",
+      "text": "Máy còn hẹn giờ. Mày muốn chụp một tấm ở đây không?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L009",
+      "speaker_id": "NHI",
+      "text": "Một tấm thôi, không bắt đứng theo ảnh cũ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L010",
+      "speaker_id": "AN",
+      "text": "Ừ, tao đặt máy chỗ này.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L011",
+      "speaker_id": "NARRATOR",
+      "text": "Máy bíp. Nhi dời cặp sang bên, An vẫn đang bước vào khi máy chụp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L012",
+      "speaker_id": "NHI",
+      "text": "Tấm này để nguyên đi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L013",
+      "speaker_id": "AN",
+      "text": "Tấm này dùng trong tờ bổ sung được không? Tao gửi bản xem rồi mới giao.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L014",
+      "speaker_id": "NHI",
+      "text": "Được, ảnh này dùng được. Gửi tao bản ảnh luôn nhé.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L015",
+      "speaker_id": "AN",
+      "text": "Phần của tao cũng đồng ý.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L016",
+      "speaker_id": "NHI",
+      "text": "Tấm mới giữ riêng thôi nhé. Tờ cũ được rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L017",
+      "speaker_id": "AN",
+      "text": "Ừ, tao không thêm tấm mới vào tờ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L018",
+      "speaker_id": "NARRATOR",
+      "text": "An gửi bản có ảnh mới cho Nhi xem. Sau khi bản được xác nhận, tờ được in để giao theo cách đã thống nhất.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L019",
+      "speaker_id": "NHI",
+      "text": "Bản này được. Nhớ gửi file ảnh cho tao nữa.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L020",
+      "speaker_id": "NARRATOR",
+      "text": "An mang tờ bổ sung trở lại cuộc giao đã thống nhất. Hạ và Minh nhận bản riêng qua bàn giao, không xuất hiện trong ảnh hai người.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L026",
+      "speaker_id": "AN",
+      "text": "Tờ có ảnh mới phải in lại. Mai 12/05, 9:30 ở cửa lớp mày nhận được không?",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L027",
+      "speaker_id": "NHI",
+      "text": "Được. Gửi bản xem trước, mai tao nhận ở cửa lớp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L028",
+      "speaker_id": "NARRATOR",
+      "text": "Một mép giấy gấp lệch. An mở ra gấp lại, Nhi giữ cuốn sách.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L029",
+      "speaker_id": "NHI",
+      "text": "Được rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L030",
+      "speaker_id": "AN",
+      "text": "File tao gửi cùng bản xem rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L031",
+      "speaker_id": "NARRATOR",
+      "text": "Tờ ảnh nằm trong cuốn sách của Nhi. Bản xem đã gửi Hạ và Minh; ảnh mới nếu có vẫn ghi đúng người hiện diện.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "E_C_L032",
+      "speaker_id": "NARRATOR",
+      "text": "Nhi vuốt phẳng mép giấy rồi khép sách. Không ai đề nghị chụp thêm một tấm cho xong chuyện.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

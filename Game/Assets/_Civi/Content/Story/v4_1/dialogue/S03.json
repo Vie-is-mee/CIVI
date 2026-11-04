@@ -1,0 +1,69 @@
+{
+  "scene_id": "S03",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S03_L001",
+      "speaker_id": "HA",
+      "text": "Ảnh gốc ở đây, xem được. Tao chọn 0443 vì cả ba đang cười, bảng cũng sáng.",
+      "mood": "warm",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S03_L002",
+      "speaker_id": "AN",
+      "text": "Cho tao xem cả mấy tấm trước.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S03_L003",
+      "speaker_id": "NARRATOR",
+      "text": "Đèn chưa sáng. Nhi ở mép, tay cầm dây. Chưa ai nhìn vào máy.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S03_L004",
+      "speaker_id": "NARRATOR",
+      "text": "Đèn đã sáng. Ổ chia nằm trên ghế đỏ. Nhi đang nhìn sang An.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S03_L005",
+      "speaker_id": "NARRATOR",
+      "text": "Kéo tới mép ảnh. Vẫn chỉ có An, Hạ và Minh. Không có phần hình nào giấu Nhi bên ngoài.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S03_L006",
+      "speaker_id": "AN",
+      "text": "Hôm tập mình dùng hẹn giờ được mà.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S03_L007",
+      "speaker_id": "HA",
+      "text": "Ừ. Kẹp vẫn ở đó.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S03_L008",
+      "speaker_id": "HA",
+      "text": "Tấm này vẫn là chuyện thật của tụi tao. Không phải cứ thiếu một người là hôm đó không ai được vui.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S03_L009",
+      "speaker_id": "HA",
+      "text": "Vy có quay ở quầy bên cạnh. Nếu em ấy cho xem thì mình đối chiếu.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}

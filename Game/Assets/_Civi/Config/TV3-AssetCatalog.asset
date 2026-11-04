@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c09e823f564f406479d23007464286fe, type: 3}
+  m_Name: TV3-AssetCatalog
+  m_EditorClassIdentifier: Civi.TV3.Preview::Civi.Preview.CiviAssetCatalog
+  textures:
+  - id: BG_COURTYARD
+    texture: {fileID: 2800000, guid: d0610a304a144a56b8457f8780fffdbf, type: 3}
+  - id: BG_DESIGN_ROOM
+    texture: {fileID: 2800000, guid: 3f964dd1f43e4fd1943d99f1c533000f, type: 3}
+  - id: Cast
+    texture: {fileID: 2800000, guid: 7f49d7279b8748959bc93f0f6f55e2d4, type: 3}
+  - id: Expressions
+    texture: {fileID: 2800000, guid: 658f94bcfb4946b3a86234763ca7cb5e, type: 3}
+  - id: PHOTO_0441
+    texture: {fileID: 2800000, guid: 1044244983214f13a6bef554728e25f7, type: 3}
+  - id: PHOTO_0442
+    texture: {fileID: 2800000, guid: b740bc2156d14b40a3097f87d5ed756f, type: 3}
+  - id: PHOTO_0443
+    texture: {fileID: 2800000, guid: 400c44358c334881b94a43892c78ab7a, type: 3}
+  - id: PHOTO_CLAMP_EMPTY
+    texture: {fileID: 2800000, guid: 68cbfb8880d6478784b87fcf65da81a1, type: 3}
+  - id: PHOTO_LATER_TWO
+    texture: {fileID: 2800000, guid: 5a36a22bcdfb46e4bdfd0a1b765dbbeb, type: 3}
+  - id: PHOTO_NEW_FOUR
+    texture: {fileID: 2800000, guid: 3e84ee55b38249c49b2b0e858e9215a3, type: 3}
+  - id: PHOTO_NEW_FOUR_POSE_1
+    texture: {fileID: 2800000, guid: ba0cdd982e354024b7e263fee5cece7c, type: 3}
+  - id: PHOTO_NEW_FOUR_POSE_2
+    texture: {fileID: 2800000, guid: ff07791f35584babbbe5b60cb920dd9c, type: 3}
+  - id: PHOTO_NEW_FOUR_POSE_3
+    texture: {fileID: 2800000, guid: 7b76c20b365e4ad99907b2acec894c88, type: 3}
+  - id: PHOTO_NEW_THREE
+    texture: {fileID: 2800000, guid: a21ecc2f5a72b7a4c8b9fff0849cd42a, type: 3}
+  - id: PHOTO_S00_BAD_01
+    texture: {fileID: 2800000, guid: b2949662601442c8929e6f383fc80f08, type: 3}
+  - id: PHOTO_S00_BAD_02
+    texture: {fileID: 2800000, guid: 2420612c8ec942cea05dbc273fc3e7ad, type: 3}
+  - id: PHOTO_S00_GOOD
+    texture: {fileID: 2800000, guid: c8dfc9a10014419abad48062a29468df, type: 3}
+  - id: PHOTO_S00_POSE_1
+    texture: {fileID: 2800000, guid: 60403d8baeb746be994ac2932470664b, type: 3}
+  - id: PHOTO_S00_POSE_2
+    texture: {fileID: 2800000, guid: ead2d972b9d142cf836640b442e4b5d7, type: 3}
+  - id: PHOTO_S00_POSE_3
+    texture: {fileID: 2800000, guid: f6af78886527450ea3baff70d7462a27, type: 3}
+  sounds:
+  - id: CiviAmbience
+    clip: {fileID: 8300000, guid: 603a8e07e67ed2f43a4a5d5cee06494e, type: 3}
+  - id: CiviClampClick
+    clip: {fileID: 8300000, guid: 341e73ab745308c4aabf6858704d16e3, type: 3}
+  - id: CiviClick
+    clip: {fileID: 8300000, guid: 75e6ccc86ad1879458734ad2a5f543b5, type: 3}
+  - id: CiviPaperRustle
+    clip: {fileID: 8300000, guid: 7b35eb45bf5529242b1bb4cec029bd70, type: 3}
+  - id: CiviShutter
+    clip: {fileID: 8300000, guid: 367c102699673c94abf79ea2fbb8a85a, type: 3}
+  - id: CiviTimer
+    clip: {fileID: 8300000, guid: c10b8d5d5e63c694fb6b27dff7206391, type: 3}
+  uiFont: {fileID: 12800000, guid: 2c4addeb591e9bd4f95dea145d7ad1cd, type: 3}
+  handFont: {fileID: 12800000, guid: b3c9c413c3cd41aab529c0faac725b2b, type: 3}
+  diaryFont: {fileID: 12800000, guid: fb10a1a6abc742fd9b7069852732a08b, type: 3}
+  s00Scene: {fileID: 4900000, guid: 076bd7a2611932b4697e762fe5aa8017, type: 3}
+  s00Dialogue: {fileID: 4900000, guid: c717420091a453c4a87b0bd6277aa4e4, type: 3}
+  s04Dialogue: {fileID: 4900000, guid: be063221465df9d42842df043f1beef9, type: 3}
+  storyInitialState: {fileID: 4900000, guid: 26c85542314588c468245c74ed4fbc57, type: 3}
+  storyScenes:
+  - {fileID: 4900000, guid: 276b9e087159ee14485904aaddb9431b, type: 3}
+  - {fileID: 4900000, guid: bd80560ba14d7ac4993be5fd937c19ee, type: 3}
+  - {fileID: 4900000, guid: 03fa228c6ae3d684bbaa0f85a0c89359, type: 3}
+  - {fileID: 4900000, guid: 076bd7a2611932b4697e762fe5aa8017, type: 3}
+  - {fileID: 4900000, guid: 91a933c793c0ac04eb23c8166fc86a83, type: 3}
+  - {fileID: 4900000, guid: e21ff1eb0393d5b40b5e8baa10d624c8, type: 3}
+  - {fileID: 4900000, guid: 02ed1ce848cfd4f40832ad91b8529adc, type: 3}
+  - {fileID: 4900000, guid: 1f544d4d5f73210439dd9524fee8da7c, type: 3}
+  - {fileID: 4900000, guid: 39e58afecc2001a4a8e4f19552c7d017, type: 3}
+  - {fileID: 4900000, guid: bebb137cb17f37b4ea613071df0425cf, type: 3}
+  - {fileID: 4900000, guid: b0194c5d455e77f408f50b61838686d9, type: 3}
+  - {fileID: 4900000, guid: 17df6c42fd2037f41b2c362521d82927, type: 3}
+  - {fileID: 4900000, guid: dd3c7c460ad5c1e418ad3a0dca1968e8, type: 3}
+  - {fileID: 4900000, guid: 2d2b84d1a83d034479847ce87445ee4b, type: 3}
+  - {fileID: 4900000, guid: 0603028d317283d4480eaffd75a5a300, type: 3}
+  storyDialogues:
+  - {fileID: 4900000, guid: df570f556aaad2741b15b15f0a086ad3, type: 3}
+  - {fileID: 4900000, guid: 23a1b6b153f0a98409b859308c89e560, type: 3}
+  - {fileID: 4900000, guid: 0dd8a79f5e457754199e49ee0e2c54ef, type: 3}
+  - {fileID: 4900000, guid: c717420091a453c4a87b0bd6277aa4e4, type: 3}
+  - {fileID: 4900000, guid: dfbdb1d4155c1dc4790f79fafab68f06, type: 3}
+  - {fileID: 4900000, guid: d4860760d312b0e4884f809e99441644, type: 3}
+  - {fileID: 4900000, guid: c8f6861329a5eb44191300a1d69263c0, type: 3}
+  - {fileID: 4900000, guid: be063221465df9d42842df043f1beef9, type: 3}
+  - {fileID: 4900000, guid: 604beac3d406871488f1705f0cfcc378, type: 3}
+  - {fileID: 4900000, guid: c3ed88bb09acfa546a2bb4c22461c7e4, type: 3}
+  - {fileID: 4900000, guid: ea5ed67f0cfaa3a45afe3670008424b2, type: 3}
+  - {fileID: 4900000, guid: 598180bf6171ba74b9e840c035d7f892, type: 3}
+  - {fileID: 4900000, guid: eab71c0aa19a5c84081b3047a2c1933c, type: 3}
+  - {fileID: 4900000, guid: 9594fee537ca4a547b35ef598b232a2a, type: 3}
+  - {fileID: 4900000, guid: b1fb91656ccfa374a888a73022958368, type: 3}
+  draftBriefs:
+  - {fileID: 4900000, guid: 4b442a6f6eeb6e943b0ff79416a06515, type: 3}
+  - {fileID: 4900000, guid: 20c4f3d96f16c6d49a716725c1f27140, type: 3}
+  - {fileID: 4900000, guid: 3debe613032f0e1499af78aa33d1a420, type: 3}
+  draftTemplates:
+  - {fileID: 7180704596838093663, guid: 68c6d5afbe425a9488bb8f942591ca5a, type: 3}
+  - {fileID: 8357189496669680711, guid: 834860b9287335946b5d44141f6583ed, type: 3}
+  - {fileID: 4924834031965843600, guid: 56ba86aebc0c5a74083d1c74e8bf6faf, type: 3}
+  draftReviewPrefab: {fileID: 3754298729859323788, guid: 7fccf0c053a4656498a51cac2f0d1870, type: 3}
+  dialoguePrefab: {fileID: 1588861270188538492, guid: ab2275a6b83746d418da5d26d0302d19, type: 3}
+  choicesPrefab: {fileID: 4463602932200983010, guid: 7c889488cb0f76345a042ca93139cbb2, type: 3}
+  diagramPrefab: {fileID: 247494022480856134, guid: 46763448a8c7fb440bd323007e14a936, type: 3}
+  clampPrefab: {fileID: 2125164673964297541, guid: d2d0fed348f24c04a86b5d8cf6a9ace9, type: 3}
+  batteryPrefab: {fileID: 5602445028050651027, guid: e27c084f5395809448f61629ca80b2c8, type: 3}
+  signPrefab: {fileID: 3419882864896936897, guid: 7350febbe2f5e184d91b426adb0d61a0, type: 3}

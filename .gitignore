@@ -1,21 +1,67 @@
-**/Library/
-**/Temp/
-**/Logs/
-**/Obj/
-**/UserSettings/
-**/MemoryCaptures/
+# Unity: generated files and machine-specific state
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]in/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emory[Cc]aptures/
+**/[Bb]uild/
+**/[Bb]uilds/
 **/.vs/
-**/.vscode/
-*.csproj
-*.sln
-*.slnx
+/Game/*.csproj
+/Game/*.sln
+/Game/*.slnx
 *.user
-/tmp/
+*.userprefs
+*.pidb
+*.booproj
+
+# Unity source is intentionally versioned:
+# Game/Assets/** (including .meta), Game/Packages/**, Game/ProjectSettings/**
+
+# Local release builds and disposable backup / QA artifacts
 /release/
-/Game/Assets/Scenes/Civi41.unity*
-/Game/Assets/Resources/Civi41FontMaterial.mat*
-/Game/Assets/Resources/Civi41UIMaterial.mat*
+/Game/release/
+/artifacts/
+*.log
+*.tmp
+*.bak
+
+# Python development state
+**/__pycache__/
+*.py[cod]
+**/.pytest_cache/
+.venv/
+venv/
+
+# Editors and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Credentials, private keys and local environment configuration
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.pfx
+*.p12
+*.key
+*.keystore
+*.jks
+*.mobileprovision
+credentials.json
+service-account*.json
+
+# Packaged downloads; store playable builds separately as release artifacts
 *.zip
-*.exe
-*.dll
-!**/Assets/TextMesh Pro/Shaders/**
+*.7z
+*.rar
+
+# Unity autosaved recovery scene, not a project source scene
+/Game/Assets/_Recovery/
+/Game/Assets/_Recovery.meta

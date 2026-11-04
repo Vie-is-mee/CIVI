@@ -11,3 +11,8 @@
 *.asset -whitespace
 "Game/Assets/TextMesh Pro/**" -whitespace
 Game/Assets/FontLicenses/** -whitespace
+
+# Unity serializations may contain engine-generated trailing spaces.
+*.prefab -whitespace
+*.unity -whitespace
+*.mat -whitespace

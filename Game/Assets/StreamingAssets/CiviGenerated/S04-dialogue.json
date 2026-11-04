@@ -1,0 +1,104 @@
+{
+  "scene_id": "S04",
+  "status": "tv1_draft",
+  "lines": [
+    {
+      "text_id": "S04_L001",
+      "speaker_id": "VY",
+      "text": "Các anh chị xem ở đây nhé. Nếu định dùng ở đâu khác thì phải hỏi lại những người trong hình.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L002",
+      "speaker_id": "HA",
+      "text": "Ừ, chỉ xem để đối chiếu.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L003",
+      "speaker_id": "NARRATOR",
+      "text": "Khung trước: Nhi tới muộn, túi dây nối còn trên vai. An trả lời cụt. Nhi nói gắt rồi quay sang chuyển ổ chia khỏi chỗ ướt.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L004",
+      "speaker_id": "MINH",
+      "text": "Hôm đó hẹn 16:15, nó đến 16:31.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L005",
+      "speaker_id": "NARRATOR",
+      "text": "Khung gần lúc chụp: Minh đưa tay về phía kẹp. An nhấc điện thoại đưa cho Nhi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L006",
+      "speaker_id": "AN",
+      "text": "Mày chụp giúp cái. Một tấm thôi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L007",
+      "speaker_id": "NARRATOR",
+      "text": "Nhi chỉ chiếc kẹp.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L008",
+      "speaker_id": "AN",
+      "text": "Lát chụp đủ. Nhanh lên, có người tới rồi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L009",
+      "speaker_id": "NARRATOR",
+      "text": "Tiếng đếm rồi khách gọi. Máy quay theo quầy, không có tấm đủ bốn trong phần tư liệu này.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L010",
+      "speaker_id": "NHI",
+      "text": "Ảnh thì khỏi cần mặt tao. Nhớ ghi phần tao làm là được.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L011",
+      "speaker_id": "HA",
+      "text": "Ừ. Nhưng tụi mình đâu chụp nữa.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L012",
+      "speaker_id": "AN",
+      "text": "Tao hỏi rồi. Nhi nói chính tao đưa máy, hẹn lát chụp đủ.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L013",
+      "speaker_id": "HA",
+      "text": "Ừ, tao nhớ đoạn đưa máy. Nguyên câu còn lại tao không chắc.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    },
+    {
+      "text_id": "S04_L014",
+      "speaker_id": "HA",
+      "text": "Mày muốn sửa trang thế nào? Nói bằng một bản nháp đi.",
+      "mood": "neutral",
+      "provenance": "adapted_or_new_tv1_draft"
+    }
+  ]
+}
