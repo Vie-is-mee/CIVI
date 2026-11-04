@@ -24,11 +24,12 @@ python tools/build_web_demo.py
 2. Bàn làm việc Tầng 42: 6 hồ sơ có đồng hồ đếm ngược. Mở bằng chứng tốn thời gian. Nhóm chat, bản tin chạy chữ, hồ sơ hài (shop bỉm livestream, mèo xin cư trú).
 3. Hồ sơ 8-12 (dân số = 0) có ảnh phóng to với 3 chi tiết. Bài toán kho thuốc / nhà trẻ có phương án thứ ba ẩn.
 4. Khủng hoảng: cảnh báo trạm khí B4 cùng lúc với cuộc gọi của anh Tường (tài xế).
-5. Phòng trưng bày (câu hỏi của cậu học sinh) → tối ở nhà với mẹ → ảnh 8-12 lúc đêm.
-6. Báo cáo kiểm toán về chính người chơi: AI (nếu người chơi cho phép) hoặc báo cáo dự phòng không cần mạng, đều dựa trên nhật ký hành vi. Số người bị bỏ sót, câu hỏi ngược, thẻ kết quả để chia sẻ, xem/xóa dữ liệu.
+5. Bản đồ năng lượng 3D (khoảng 25 giây, nút "Tiếp" để qua): camera nhìn sa bàn thành phố từ trên cao, các quyết định trong ca hiện lại thành dòng năng lượng sáng (H01, H04, B4; từ chối/chờ là đường đứt đỏ rồi tắt). Phân khu 8-12 là vùng tối, dân số 0; nếu đã gửi xác minh, cửa sổ ở đó lần lượt sáng lên. Không có WebGL thì bỏ qua cảnh này.
+6. Phòng trưng bày (câu hỏi của cậu học sinh) → tối ở nhà với mẹ → ảnh 8-12 lúc đêm.
+7. Báo cáo kiểm toán về chính người chơi: AI (nếu người chơi cho phép) hoặc báo cáo dự phòng không cần mạng, đều dựa trên nhật ký hành vi. Số người bị bỏ sót, câu hỏi ngược, thẻ kết quả để chia sẻ, xem/xóa dữ liệu.
 
 ## Ghi chú kỹ thuật
 
-- Không dùng thư viện ngoài, chỉ Google Fonts.
+- Thư viện ngoài duy nhất: Three.js 0.147 (CDN jsDelivr) cho màn mở đầu và bản đồ năng lượng; một renderer/scene dùng chung (`initCity()`, `startMap()`). Không tải được thì game dùng ảnh tĩnh và bỏ qua bản đồ. Ngoài ra chỉ có Google Fonts.
 - Nhật ký chơi chỉ nằm trong bộ nhớ trang, không lưu lại sau khi tải lại trang; không thu tên hay thông tin cá nhân.
 - Báo cáo dự phòng: hàm `localReport()`; prompt AI: hàm `aiPrompt()` trong `index.html`.
