@@ -16,3 +16,5 @@ Game/Assets/FontLicenses/** -whitespace
 *.prefab -whitespace
 *.unity -whitespace
 *.mat -whitespace
+# chapter.json stores the SHA-256 of these exact bytes (CRLF); normalising would fail the provenance test.
+dialogue/Chuong_1_Ban_Duyet.md -text
