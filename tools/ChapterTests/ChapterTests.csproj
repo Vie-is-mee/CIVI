@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../Game/Assets/_Civi/Scripts/Domain/ChapterState.cs" Link="ChapterState.cs" />
+    <Compile Include="../../Game/Assets/_Civi/Scripts/Domain/SideQuests.cs" Link="SideQuests.cs" />
+    <None Include="../../Game/Assets/_Civi/Resources/Chapter1/quests.json" Link="quests.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../Game/Assets/_Civi/Resources/Chapter1/chapter.json" Link="chapter.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

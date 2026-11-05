@@ -1,0 +1,74 @@
+{
+  "items": [
+    { "id": "leaf", "name": "Lá trà tươi", "text": "Hái ở quầy trà và luống vườn trên sân thượng. Linh bảo pha đúng lúc thì đỡ đắng." },
+    { "id": "card", "name": "Thẻ khí cũ", "text": "Mỗi chiếc thẻ từng cho một người được thở trong hai mươi bốn giờ." },
+    { "id": "herb", "name": "Nhánh hương thảo", "text": "Mẹ dặn lấy nhánh còn non, đừng làm dập lá." },
+    { "id": "sensor", "name": "Cảm biến khí", "text": "Chỉ thấy được khi bật Kính Debug. Mỗi cái giữ một con số mà bảng điều phối không hiển thị." }
+  ],
+  "quests": [
+    {
+      "id": "cam_bien", "title": "Ba cảm biến lạc", "giver": "truc", "unlock": 0, "item": "sensor", "count": 3,
+      "offer": "Ba cảm biến khí trong khu này báo về thất thường mà tôi chẳng thấy chúng ở đâu. Chị bật Kính Debug lên, nhìn quanh tầng này giúp tôi nhé.",
+      "progress": "Vẫn chưa đủ ba cảm biến. Nhấn Q để bật Kính Debug, chúng sẽ hiện ra.",
+      "done": "Đủ ba cái rồi. Số liệu đã khớp lại với bảng. Ca trực của tôi nhẹ hẳn đi.",
+      "reward": "Người đọc cảm biến"
+    },
+    {
+      "id": "ca_truc", "title": "Ca điều phối buổi sáng", "giver": "", "unlock": 0, "item": "", "count": 0,
+      "offer": "Bốn yêu cầu đang chờ đóng dấu ở bàn ánh sáng.",
+      "progress": "Đóng dấu đủ bốn yêu cầu ở bàn ánh sáng.",
+      "done": "Ca điều phối đã xong.",
+      "reward": "Người đóng dấu"
+    },
+    {
+      "id": "dong_code", "title": "Dòng code làm người biến mất", "giver": "", "unlock": 2, "item": "", "count": 0,
+      "offer": "Truy vấn dân cư của Phân khu 8-12 trả về 0. Máy trạm của Linh đang mở sẵn đoạn mã.",
+      "progress": "Tìm dòng code làm người biến mất ở máy trạm của Linh.",
+      "done": "Đoạn sửa đã sẵn sàng, nhưng phải chờ đóng băng hệ thống hết hạn.",
+      "reward": "Người đọc từng dòng"
+    },
+    {
+      "id": "van_b4", "title": "Báo động trạm khí B4", "giver": "truc", "unlock": 3, "item": "", "count": 0,
+      "offer": "Áp suất trạm khí B4 đang tụt! Ba van nằm ở hành lang kỹ thuật, ngay sau cánh cửa phía Nam. Chị chạy được không?",
+      "progress": "Áp suất vẫn đang giảm. Vặn đủ ba van trong hành lang kỹ thuật.",
+      "done": "Áp suất ổn định rồi. Cảm ơn chị, không có chị thì tôi đã phải gọi cả tổ.",
+      "reward": "Người giữ áp"
+    },
+    {
+      "id": "the_khi", "title": "Những tấm thẻ rơi", "giver": "hoc_sinh", "unlock": 3, "item": "card", "count": 3,
+      "offer": "Chị ơi, đoàn em làm rơi ba tấm thẻ khí mẫu quanh phòng này. Cô hướng dẫn chưa biết đâu ạ. Chị tìm giúp em với!",
+      "progress": "Em vẫn còn thiếu thẻ ạ. Chúng rơi đâu đó trong phòng trưng bày.",
+      "done": "Đủ rồi ạ! Em cứ tưởng một tấm thẻ nhẹ lắm. Cầm lên mới thấy nặng.",
+      "reward": "Người giữ hiện vật"
+    },
+    {
+      "id": "tra_linh", "title": "Ấm trà cho Linh", "giver": "linh", "unlock": 4, "item": "leaf", "count": 3,
+      "offer": "Trà ở đây hết vị rồi. Cậu ghé quầy và sân thượng hái giúp tớ ba nắm lá tươi nhé. Tớ nợ cậu một bữa trưa.",
+      "progress": "Vẫn thiếu lá. Có ở quầy trà và luống vườn trên sân thượng ấy.",
+      "done": "Thơm thật. Lát nữa họp căng thẳng, ít ra tớ còn có cái này cầm tay.",
+      "reward": "Người pha trà"
+    },
+    {
+      "id": "be_dien", "title": "Bé Điện đi đâu rồi?", "giver": "dong_nghiep_a", "unlock": 4, "item": "", "count": 0,
+      "offer": "Con mèo của cả tầng lại trốn lên sân thượng. Chị thấy nó thì bế về giúp, chứ nó mà ngồi lên bàn phím của tôi nữa là hỏng cả ca.",
+      "progress": "Bé Điện vẫn đang chạy khắp sân thượng. Lại gần nó vài lần xem sao.",
+      "done": "Nó chịu về rồi à? Lạ thật, chị là người đầu tiên nó không cào.",
+      "reward": "Bạn của Bé Điện"
+    },
+    {
+      "id": "huong_thao", "title": "Nhánh hương thảo cho mẹ", "giver": "", "turnIn": "me_mai", "unlock": 4, "item": "herb", "count": 3,
+      "offer": "Tin nhắn của mẹ: «Vườn trên sân thượng cơ quan con có hương thảo đấy. Tối về nhớ mang cho mẹ ba nhánh nhé.»",
+      "progress": "Hái ba nhánh hương thảo trên sân thượng rồi mang về cho mẹ.",
+      "done": "Con vẫn nhớ à? Để mẹ giâm vào chậu. Cây này khó tính lắm, nhưng được chăm thì sống dai.",
+      "reward": "Đứa con nhớ lời"
+    }
+  ],
+  "notes": [
+    { "id": "note_0", "title": "Quy trình cũ", "text": "Trước đây, một lệnh chuyển điện cần chữ ký của sáu người có thẩm quyền. Chỉ cần một người trì hoãn, cả quy trình có thể bị kéo dài. Tờ giấy này đã ngả vàng ở mép." },
+    { "id": "note_1", "title": "Bảng ghi nhớ phòng lịch sử", "text": "Hiện vật được đặt cạnh những mốc thay đổi quy định, để người đến sau nhớ thành phố đã sống như thế nào." },
+    { "id": "note_2", "title": "Giấy nhắn ở quầy trà", "text": "«Ai dùng cốc cuối cùng thì tráng giúp. Trà ở tầng 42 không tự pha được đâu.»" },
+    { "id": "note_3", "title": "Sổ tay phòng họp", "text": "Mười hai ngày nữa bão tới. Dòng ghi chú này đã được gạch dưới hai lần." },
+    { "id": "chest_0", "title": "Hộp bảo trì", "text": "Trong hộp là một sổ ghi áp suất viết tay. Dòng cuối cùng chỉ có một chữ ký và lời nhắn: «Kiểm tra lại, đừng tin bảng số.»" },
+    { "id": "chest_1", "title": "Hộp gỗ trên sân thượng", "text": "Một tấm ảnh chụp sân thượng khi cây còn nhỏ. Mặt sau ghi: «Trồng cho người sẽ đến sau.»" }
+  ]
+}
