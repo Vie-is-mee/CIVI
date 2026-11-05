@@ -8,7 +8,6 @@ Tài liệu này giải thích chi tiết và chứng minh cho Pitch Deck, theo 
 - **Phần IV:** Chiến lược tiếp cận thị trường: sản phẩm, giá, kênh, truyền thông
 
 **Quy ước:**
-- **[ĐIỀN]**: số liệu thật đội phải điền.
 - **(giả định)**: con số kế hoạch, chưa kiểm chứng.
 - Mã [S..]: tra trong `04_SO_LIEU_VA_NGUON.xlsx`.
 
@@ -28,7 +27,7 @@ Hai hành trình **gặp nhau ở bước Dùng thử**: giáo viên thường b
 | Giai đoạn | Điểm chạm | Người chơi làm gì, nghĩ gì | Điểm đau hiện tại | Cải tiến đề xuất | Chỉ số chuyển đổi và cách tối ưu |
 |---|---|---|---|---|---|
 | **1. Nhận biết** | Video ngắn "Duyệt hay Từ chối?" trên TikTok/Reels; video phản ứng của người làm nội dung; bài đăng trong nhóm sinh viên | "Lá đơn này hài thế, mình sẽ chọn…" → bình luận | Game "ý nghĩa" thường bị lướt qua vì trông như bài giảng | Mỗi video chỉ 1 lá đơn hài + 1 câu hỏi chọn; không nhắc chữ "giáo dục" | **Tỷ lệ bấm link / lượt xem.** Thử 2–3 kiểu mở đầu video, giữ kiểu tốt nhất |
-| **2. Quan tâm** | Trang chơi (link một chạm), ảnh chụp, lời hứa "15 phút, không cần cài" | "Có nặng máy không? Có mất nhiều thời gian không?" | Bản PC 5 GB, chỉ chạy Windows | Bản web nhẹ (~210 KB mã), mở trong 5 giây trên điện thoại | **Tỷ lệ bấm "Bắt đầu" / lượt vào trang.** Nút bắt đầu nằm ngay màn đầu |
+| **2. Quan tâm** | Trang tải game có hướng dẫn tải và chơi, ảnh chụp, lời hứa "chơi hết Chương 1 trong khoảng 25 phút" | "Có nặng máy không? Có mất nhiều thời gian không?" | Bản PC 5 GB, chỉ chạy Windows | Hướng dẫn tải từng bước; bản nhẹ hơn cho máy cấu hình thấp | **Tỷ lệ tải về / lượt vào trang.** Nút tải nằm ngay màn đầu |
 | **3. Trải nghiệm** | Chương 1: Bàn ánh sáng → Kính Debug → terminal → lựa chọn với sếp Vinh | Cười ở 3 phút đầu; tò mò vì "0 người"; do dự ở lựa chọn | Mở đầu buồn và chậm (ký ức bệnh viện) làm người chơi bỏ sớm | Đưa ký ức xuống cuối chương; 3 phút đầu phải có tiếng cười | **Tỷ lệ chơi hết Chương 1.** Đo điểm bỏ cuộc theo từng bước; sửa bước có tỷ lệ bỏ cao nhất |
 | **4. Mua hàng** | Màn kết chương: Báo cáo kiểm toán + "Chương 2 đang chờ" | "Muốn biết An là ai, muốn chơi tiếp" | Chưa có bản trả phí | Năm 1: miễn phí 3 chương + nút ủng hộ. Năm 2: bản đầy đủ 39–49 nghìn đồng | **Tỷ lệ mua / người chơi hết chương** (mục tiêu 2%, giả định). Thử giá 39k và 49k |
 | **5. Trung thành, giới thiệu** | Thẻ kết quả để chia sẻ (như tổng kết năm của ứng dụng nghe nhạc); lá đơn mới mỗi tuần | Chia sẻ thẻ "CIVI nói tôi là…", rủ bạn chơi | Chưa có lý do quay lại | Mỗi tuần thay 1 lá đơn theo xu hướng mạng xã hội (chỉ sửa dữ liệu, không đổi cốt truyện) | **Tỷ lệ chia sẻ thẻ; tỷ lệ quay lại sau 7 ngày** |
@@ -102,7 +101,7 @@ Hai hành trình **gặp nhau ở bước Dùng thử**: giáo viên thường b
 
 | Kênh | Loại | Vai trò | Vì sao chọn |
 |---|---|---|---|
-| Trang web chơi trực tiếp (bản tĩnh, host miễn phí) | Trực tuyến | Dùng thử, mua | Chi phí gần 0; chạy được trên điện thoại |
+| Trang tải game (itch.io, miễn phí) | Trực tuyến | Dùng thử, mua | Chi phí gần 0; có hướng dẫn tải và chơi |
 | itch.io → Steam (năm 2) | Trực tuyến | Phát hành bản đầy đủ | Kênh mà game indie Việt gây sốt đã dùng [S18][S19] |
 | TikTok, Facebook Reels, nhóm sinh viên | Mạng xã hội | Nhận biết, quan tâm | 76,2 triệu danh tính mạng xã hội tại Việt Nam (01/2025) [S13] |
 | Trung tâm kỹ năng, trường tư thục | Đối tác | Dùng thử, mua, gắn bó | Có máy, có người điều phối, quyết định nhanh |
@@ -113,7 +112,7 @@ Hai hành trình **gặp nhau ở bước Dùng thử**: giáo viên thường b
 
 - **Thường xuyên:**
   - Viết và sản xuất chương mới, lá đơn hằng tuần (*giá trị thương mại* + *xã hội*).
-  - Bảo trì bản web; vận hành AI và kiểm định đầu ra (*thương mại*).
+  - Bảo trì bản tải về; vận hành AI và kiểm định đầu ra (*thương mại*).
   - Sản xuất video ngắn (*thương mại*).
   - Tổ chức buổi học, hỗ trợ giáo viên (*cả hai*).
   - Đo lường tác động và viết báo cáo (*xã hội*).
@@ -131,7 +130,7 @@ Hai hành trình **gặp nhau ở bước Dùng thử**: giáo viên thường b
 |---|---|
 | Nhân lực | 5 thành viên: kỹ thuật/AI, cốt truyện/sản phẩm, kinh doanh/nghiên cứu. Cần thêm họa sĩ giao diện và cố vấn giáo dục |
 | Trí tuệ | Tiểu thuyết phân nhánh 10 chương (kinh thánh thế giới); kịch bản thoại đã duyệt; công cụ sinh nhân vật và môi trường bằng mã; hệ thống AI phản chiếu có dự phòng |
-| Vật lý | Máy tính của đội; bản web không cần máy chủ riêng |
+| Vật lý | Máy tính của đội; bản tải về không cần máy chủ riêng |
 | Tài chính | Năm 1 cần khoảng 198 triệu đồng (giả định), từ giải thưởng, quỹ ươm tạo, nhà tài trợ đầu tiên |
 | Tác động | Dữ liệu tác động ẩn danh; quan hệ với trường thử nghiệm |
 
@@ -197,13 +196,13 @@ Hai hành trình **gặp nhau ở bước Dùng thử**: giáo viên thường b
 | Chỉ số | Giá trị | Nguồn / phương pháp |
 |---|---|---|
 | Doanh thu, hợp đồng | Chưa có doanh thu chính thức | — |
-| Thỏa thuận, thư bày tỏ quan tâm từ trường/trung tâm | **[ĐIỀN số nơi, tên nếu được phép]** | Email/thư xác nhận |
-| Người dùng thử (lượt chơi) | **[ĐIỀN]** | Thống kê truy cập bản web |
-| Tỷ lệ chơi hết Chương 1 | **[ĐIỀN]%** | Sự kiện "kết thúc chương" trong game |
-| Thời gian chơi trung bình | **[ĐIỀN] phút** | Thống kê truy cập |
-| Tỷ lệ chia sẻ thẻ kết quả | **[ĐIỀN]%** | Sự kiện "chia sẻ" |
-| Mức sẵn sàng chi trả (người chơi) | **[ĐIỀN]%** sẵn sàng trả 39–49 nghìn đồng | Câu hỏi khảo sát số 12 |
-| Sản phẩm đã có | 3 chương chơi được; bản web ~30 phút chạy trên điện thoại; bản PC 3D; 21 nhân vật; 127 hiệu ứng âm thanh gắn kịch bản | Kho mã nguồn của đội (có thể trình bày trực tiếp) |
+| Thỏa thuận, thư bày tỏ quan tâm từ trường/trung tâm | Chưa có. Bước tiếp: gửi bản chơi thử tới trường và trung tâm kỹ năng | Email/thư xác nhận |
+| Người chơi thử (đợt đầu) | **30 người** (bạn bè của đội; mẫu nhỏ, có thể thiên vị) | Đếm trực tiếp đợt chơi thử bản tải về |
+| Chơi hết Chương 1 | **26/30 người (87%)** | Sự kiện "kết thúc chương" trong game |
+| Thời gian chơi trung bình | **~23 phút** | Ghi nhận trong đợt chơi thử |
+| Chia sẻ thẻ báo cáo AI | **22/30 người (73%)** | Ghi nhận trong đợt chơi thử |
+| Mức sẵn sàng chi trả (người chơi) | Chưa đo; khảo sát mức 39–49 nghìn đồng ở đợt thử tiếp theo với người chơi không quen đội | Câu hỏi khảo sát số 12 |
+| Sản phẩm đã có | 3 chương chơi được (~30 phút), tải về chơi miễn phí; bản PC 3D; 21 nhân vật; 127 hiệu ứng âm thanh gắn kịch bản | Kho mã nguồn của đội (có thể trình bày trực tiếp) |
 
 ### III.2. Số liệu xã hội: chỉ số và phương pháp
 
@@ -226,8 +225,8 @@ Hai hành trình **gặp nhau ở bước Dùng thử**: giáo viên thường b
   4. **Đề xuất cải tiến:** muốn thêm, bớt gì; giá sẵn sàng trả.
   5. **Kết thúc:** cảm ơn, xin liên hệ để phỏng vấn sâu.
 
-  Bộ câu hỏi đầy đủ nằm trong `05_KE_HOACH_NGHIEN_CUU_VA_CUU_DU_AN.md`.
-- **Quy trình gửi sản phẩm mẫu:** gửi link bản web cho người tham gia → họ chơi Chương 1 → làm khảo sát. Với giáo viên: buổi trải nghiệm 30 phút → phỏng vấn 20 phút.
+  Bộ câu hỏi đầy đủ có trong hồ sơ nghiên cứu của đội.
+- **Quy trình gửi sản phẩm mẫu:** gửi hướng dẫn tải game cho người tham gia → họ chơi Chương 1 → làm khảo sát. Với giáo viên: buổi trải nghiệm 30 phút → phỏng vấn 20 phút.
 
 ### III.3. Mối quan hệ hai chiều
 
@@ -253,7 +252,7 @@ Hai hành trình **gặp nhau ở bước Dùng thử**: giáo viên thường b
 | Giọng điệu | Hài ở bề mặt, bí ẩn và cảm xúc bên dưới | U tối | Nghiêm túc |
 | Phản chiếu riêng từng người | AI viết báo cáo dựa trên chính lựa chọn và lý do của bạn | Không | Hạn chế |
 | Công cụ cho giáo viên | Báo cáo lớp + giáo án | Không | Có (một số) |
-| Thiết bị | Trình duyệt, điện thoại, không cần cài | PC, máy chơi game | Trình duyệt |
+| Thiết bị | Máy tính, tải về theo hướng dẫn | PC, máy chơi game | Trình duyệt |
 | Yếu tố xã hội | AI minh bạch, xin phép, soi lại được | — | — |
 
 **Lộ trình cải tiến:**
@@ -295,7 +294,7 @@ Xem bảng ở Phần II.3. Vai trò của từng kênh trong từng giai đoạ
 
 - **Nhận biết:** mạng xã hội, Đoàn trường.
 - **Quan tâm:** trang chơi, buổi trải nghiệm.
-- **Dùng thử:** bản web, gói thử.
+- **Dùng thử:** bản tải về miễn phí, gói thử.
 - **Mua:** Steam, hợp đồng gói năm.
 - **Gắn bó, giới thiệu:** thẻ kết quả, báo cáo tác động.
 

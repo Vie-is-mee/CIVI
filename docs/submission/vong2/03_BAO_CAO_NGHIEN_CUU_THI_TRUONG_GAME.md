@@ -74,7 +74,7 @@ Từ các game trên, 5 yếu tố lặp lại. **Không yếu tố nào là đ�
 |---|---|---|---|---|
 | 1 | Bản sắc Việt cụ thể, đời thường | Quán phở, "số 10 Đan Phượng" | Rìa Mưa, quầy vá ô, cháo, chợ mái bạt, đi làm văn phòng | Thêm chi tiết đời sống sinh viên, văn phòng Việt dễ nhận ra |
 | 2 | Bề mặt bình thường + bí ẩn bên dưới | Bán phở → chuyện kỳ quái | Thực tập ở Tầng 42 → "0 người" | Đưa bí ẩn lên 5 phút đầu |
-| 3 | Miễn phí, nhẹ, ngắn | itch.io miễn phí | Bản web ~210 KB mã, chạy trên điện thoại | Mở bản công khai **ngay** |
+| 3 | Miễn phí, nhẹ, ngắn | itch.io miễn phí | Bản tải về miễn phí, có hướng dẫn tải và chơi | Mở bản công khai **ngay** |
 | 4 | Khoảnh khắc khiến người quay video phải phản ứng | Cú giật mình, chi tiết kỳ lạ | Kính Debug lộ người ẩn; cái máy điền sẵn "0 MW" cho khu nghèo | Thiết kế 2–3 khoảnh khắc "bình luận cho tao biết mày chọn gì" |
 | 5 | Cộng đồng tự lan truyền | Địa điểm giả trên Google Maps | Thẻ kết quả, Báo cáo kiểm toán | Thẻ kết quả dễ chụp màn hình, có câu "cà khịa" vui |
 
@@ -100,12 +100,12 @@ Từ các game trên, 5 yếu tố lặp lại. **Không yếu tố nào là đ�
 
 | Bài học | Áp dụng vào CIVI |
 |---|---|
-| Thao tác đã tay | **Con dấu ĐÃ DUYỆT/TỪ CHỐI** trên Bàn ánh sáng: âm thanh, rung màn hình (đã có trong bản web) |
+| Thao tác đã tay | **Con dấu ĐÃ DUYỆT/TỪ CHỐI** trên Bàn ánh sáng: âm thanh, rung màn hình (đã có trong game) |
 | Con số để khoe | Lật ngược meme: CIVI khen "Hiệu suất +1" khi bạn duyệt nhanh, nhưng con số thật là **"N người đã được đếm"** |
 | Nghi thức hằng ngày | **"Ca trực 5 phút mỗi ngày":** 4 lá đơn mới mỗi ngày (1 lá theo xu hướng mạng), chia sẻ "bảng công trạng" |
 | Tự giễu nỗi lo thật | Mai là **thực tập sinh**; nỗi lo thực tập, đi làm, KPI của sinh viên |
 | Xếp hàng tạo tò mò | Châm biếm trong game: "Bạn đang ở vị trí #8.412 trong hàng chờ xác minh". Biến chính "vòng lặp giấy tờ" của cốt truyện thành meme |
-| Làm nhanh, rẻ bằng AI | Bản web CIVI nhẹ (~210 KB mã), dựng nhân vật bằng code; chi phí sản xuất thấp |
+| Làm nhanh, rẻ bằng AI | CIVI dựng nhân vật bằng code; chi phí sản xuất thấp |
 
 ---
 
@@ -164,7 +164,7 @@ Từ các game trên, 5 yếu tố lặp lại. **Không yếu tố nào là đ�
 | Chủ đề công bằng, hệ thống | ✔ | ✔ | ✘ | ✘ (tin giả) | ✘ (bắt nạt) |
 | Phản chiếu riêng từng người bằng AI | ✔ | ✘ | ✘ | ✘ | ✘ |
 | Công cụ cho giáo viên | ✔ | ✘ | ✘ | có tài liệu | ✔ |
-| Chạy trên điện thoại, không cài | ✔ (bản web) | ✘ | ✘ | ✔ | ✘ |
+| Miễn phí, tải về chơi ngay | ✔ | ✘ | ✔ | ✔ (web) | ✘ |
 
 **Rủi ro cạnh tranh:** đội lớn có thể làm game tương tự với đồ họa đẹp hơn. **Lợi thế khó sao chép của CIVI:**
 - Kho cốt truyện 10 chương đã viết xong.
@@ -177,7 +177,7 @@ Từ các game trên, 5 yếu tố lặp lại. **Không yếu tố nào là đ�
 
 1. **Định vị lại:** từ "game cảm xúc về bất công" sang **"game giải bí ẩn văn phòng hài hước, nơi bạn là thực tập sinh của một thuật toán chia điện và phát hiện nó đếm sót người"**.
 2. **Sản phẩm:**
-   - Bản web là bản chính để tiếp cận.
+   - Bản tải về miễn phí là bản chính để tiếp cận.
    - Bản PC 3D tạm dừng thêm tính năng.
    - Thay giao diện mặc định.
    - Chỉnh nhịp Chương 1 theo công thức 5 yếu tố ở mục 3.2.
