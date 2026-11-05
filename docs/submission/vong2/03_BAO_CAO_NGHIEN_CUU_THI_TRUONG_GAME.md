@@ -63,7 +63,7 @@
 | **Bánh Mì Bách Khoa** (phần tiếp theo) | 2026 | Cùng tác giả | **Steam, ~39.000đ / 1,99 USD** [S19] | Trailer **>130.000 lượt xem trong 4 ngày**; đoạt "Game indie Việt hay nhất" và "Game Việt của năm" tại Vietnam Game Awards [S15]; có tin bán >10.000 bản trong 2 tuần (**cần xác minh**) | Tận dụng cộng đồng của game miễn phí trước | **Đường đi doanh thu thật ở Việt Nam:** game miễn phí gây sốt → xây cộng đồng → phần sau trả phí giá thấp |
 | **Papers, Please** | 2013 | 1 người (Lucas Pope); pixel art | PC, di động; trả phí | **>5 triệu bản trong 10 năm** [S20] | Biến công việc giấy tờ nhàm chán thành lựa chọn đạo đức căng thẳng | **Gần CIVI nhất về cơ chế** (đóng dấu, soi hồ sơ). Đồ họa không phải yếu tố quyết định |
 | **Undertale** | 2015 | ~1 người chính; pixel art | PC, máy chơi game | Nhiều triệu bản (ước tính các bên khác nhau, chưa có số chính thức) | Hài + cảm xúc; lựa chọn của người chơi được game "nhớ" | Mẫu cho giọng **"hài ở bề mặt, đau ở bên dưới"** |
-| **Đi Chùa Online** | — | Ứng dụng của Chùa Tâm An | App Store, miễn phí [S24] | **Chưa tìm thấy số liệu về độ phổ biến**; mô tả là ứng dụng tâm linh (khấn, dâng hương, nghe pháp thoại), không phải game | Nghi lễ quen thuộc của người Việt, làm trên điện thoại | **Đội cần gửi nguồn cụ thể** (bài báo, video) về "game đi chùa online đang nổi" trước khi đưa lên slide. Hiện **không dùng làm số liệu** |
+| **Sansa** (chùa trực tuyến) | 2025 | 1 người tìm việc, làm bằng AI trong <30 phút | Web, miễn phí | **~600.000 lượt ghé trong 3 ngày** [S34] | Nghi lễ quen thuộc + làm ngay trên giường + tự giễu nỗi lo thất nghiệp | Xem mục 3.3 |
 | **Trụ Trì Online** | — | 2D vẽ tay; mô phỏng tu sửa chùa | Di động [S25] | Chưa có số liệu lượt tải | Văn hóa Việt + vòng lặp xây dựng hằng ngày | Bản sắc văn hóa là lợi thế cạnh tranh của game Việt |
 
 ### 3.2. Công thức chung rút ra (để thuyết phục ban giám khảo)
@@ -77,6 +77,35 @@ Từ các game trên, 5 yếu tố lặp lại. **Không yếu tố nào là đ�
 | 3 | Miễn phí, nhẹ, ngắn | itch.io miễn phí | Bản web ~210 KB mã, chạy trên điện thoại | Mở bản công khai **ngay** |
 | 4 | Khoảnh khắc khiến người quay video phải phản ứng | Cú giật mình, chi tiết kỳ lạ | Kính Debug lộ người ẩn; cái máy điền sẵn "0 MW" cho khu nghèo | Thiết kế 2–3 khoảnh khắc "bình luận cho tao biết mày chọn gì" |
 | 5 | Cộng đồng tự lan truyền | Địa điểm giả trên Google Maps | Thẻ kết quả, Báo cáo kiểm toán | Thẻ kết quả dễ chụp màn hình, có câu "cà khịa" vui |
+
+### 3.3. Xu hướng "tâm linh số": Sansa, Niệm Phật Online, app gõ mõ "công đức +1"
+
+| Sản phẩm | Nơi, năm | Là gì | Kết quả | Nguồn |
+|---|---|---|---|---|
+| **Sansa** | Hàn Quốc, cuối 2025 | Chùa chỉ có trên mạng: lạy 108 lạy, lần tràng hạt, cầu nguyện ngay trên giường. Do một chàng trai 26 tuổi **đang tìm việc** làm bằng AI ("vibe coding") trong **<30 phút** | **~600.000 lượt ghé trong 3 ngày**; quá tải máy chủ, xếp hàng chờ chỗ; tăng số chỗ ngồi từ 20 lên 10.000 | [S34][S35] (B) |
+| **Niệm Phật Online** | Việt Nam | Không gian chùa 3D chạy trên trình duyệt, không cần cài; lễ Phật, niệm Phật, lần tràng hạt, thiền; "công đức" mang tính khích lệ | Được Phong Vũ, CellphoneS viết hướng dẫn (có độ quan tâm). **Chưa có số liệu người chơi** | [S38] (C) |
+| **App gõ mõ "Muyu"** | Trung Quốc, 2022 | Gõ mõ ảo, mỗi lần hiện "công đức +1"; giới trẻ dùng để giải tỏa căng thẳng, có phần tự giễu ("tiếng mõ át tiếng sếp") | Từng đứng **hạng 2 bảng ứng dụng miễn phí iOS** Trung Quốc; một nguồn ghi >4 triệu lượt tải iOS trong 1 tháng (**các nguồn chênh lệch**) | [S36][S37] (B/C) |
+| App gõ mõ, sám hối tại Việt Nam | Việt Nam | Tâm Trí Thiền, WoodenFish+, Sám Hối Online trên App Store | Chưa có số liệu phổ biến | App Store (C) |
+
+**Vì sao xu hướng này hút người trẻ** (rút từ các nguồn trên):
+
+1. **Một thao tác lặp lại cực đơn giản, "đã tay":** gõ, lạy, bấm, có âm thanh và rung.
+2. **Con số tích lũy hiển thị** ("công đức +1", số lạy) để khoe và chụp màn hình.
+3. **Mở bằng link, không cài, làm ngay trên giường.**
+4. **Giọng tự giễu gắn với nỗi lo thật của Gen Z:** thất nghiệp, áp lực, sếp.
+5. **Khan hiếm, xếp hàng tạo thêm tò mò** (Sansa phải xếp hàng chờ chỗ).
+6. **Chi phí làm rất thấp:** Sansa làm trong 30 phút bằng AI. Bằng chứng rõ nhất rằng **chất lượng đồ họa không phải rào cản**.
+
+**CIVI học gì** (chỉ học cơ chế, **không dùng yếu tố tôn giáo**):
+
+| Bài học | Áp dụng vào CIVI |
+|---|---|
+| Thao tác đã tay | **Con dấu ĐÃ DUYỆT/TỪ CHỐI** trên Bàn ánh sáng: âm thanh, rung màn hình (đã có trong bản web) |
+| Con số để khoe | Lật ngược meme: CIVI khen "Hiệu suất +1" khi bạn duyệt nhanh, nhưng con số thật là **"N người đã được đếm"** |
+| Nghi thức hằng ngày | **"Ca trực 5 phút mỗi ngày":** 4 lá đơn mới mỗi ngày (1 lá theo xu hướng mạng), chia sẻ "bảng công trạng" |
+| Tự giễu nỗi lo thật | Mai là **thực tập sinh**; nỗi lo thực tập, đi làm, KPI của sinh viên |
+| Xếp hàng tạo tò mò | Châm biếm trong game: "Bạn đang ở vị trí #8.412 trong hàng chờ xác minh". Biến chính "vòng lặp giấy tờ" của cốt truyện thành meme |
+| Làm nhanh, rẻ bằng AI | Bản web CIVI nhẹ (~210 KB mã), dựng nhân vật bằng code; chi phí sản xuất thấp |
 
 ---
 
