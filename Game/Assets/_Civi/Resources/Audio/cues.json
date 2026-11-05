@@ -1,0 +1,289 @@
+{
+"cues": [
+{
+"scene": 1,
+"at": 0.25,
+"clip": "C01_01__file_review"
+},
+{
+"scene": 1,
+"at": 0.761,
+"clip": "C01_01__typing_line1"
+},
+{
+"scene": 1,
+"at": 0.817,
+"clip": "C01_01__typing_line2"
+},
+{
+"scene": 1,
+"at": 0.872,
+"clip": "C01_01__typing_line3"
+},
+{
+"scene": 1,
+"at": 0.926,
+"clip": "C01_01__typing_line4"
+},
+{
+"scene": 1,
+"at": 1.0,
+"clip": "C01_01__green_mark"
+},
+{
+"scene": 2,
+"at": 0.62,
+"clip": "C01_02__power_panel_open"
+},
+{
+"scene": 2,
+"at": 0.653,
+"clip": "C01_02__power_keying"
+},
+{
+"scene": 2,
+"at": 0.714,
+"clip": "C01_02__power_submit"
+},
+{
+"scene": 2,
+"at": 1.0,
+"clip": "C01_02__power_approved"
+},
+{
+"scene": 3,
+"at": 0.096,
+"clip": "C01_03__report_desk"
+},
+{
+"scene": 3,
+"at": 0.274,
+"clip": "C01_03__report_open"
+},
+{
+"scene": 3,
+"at": 0.384,
+"clip": "C01_03__image_zoom"
+},
+{
+"scene": 3,
+"at": 0.46,
+"clip": "C01_03__query_open"
+},
+{
+"scene": 3,
+"at": 0.715,
+"clip": "C01_03__query_key"
+},
+{
+"scene": 3,
+"at": 0.904,
+"clip": "C01_03__write_field_note"
+},
+{
+"scene": 3,
+"at": 1.0,
+"clip": "C01_03__close_report"
+},
+{
+"scene": 4,
+"at": 0.052,
+"clip": "C01_04__review_requests"
+},
+{
+"scene": 4,
+"at": 0.097,
+"clip": "C01_04__open_warehouse_channel"
+},
+{
+"scene": 4,
+"at": 0.297,
+"clip": "C01_04__warehouse_report"
+},
+{
+"scene": 4,
+"at": 0.348,
+"clip": "C01_04__switch_daycare"
+},
+{
+"scene": 4,
+"at": 0.548,
+"clip": "C01_04__allocation_panel"
+},
+{
+"scene": 4,
+"at": 0.594,
+"clip": "C01_04__propose_reroute"
+},
+{
+"scene": 4,
+"at": 0.684,
+"clip": "C01_04__send_proposal"
+},
+{
+"scene": 4,
+"at": 0.787,
+"clip": "C01_04__note_transport_notice"
+},
+{
+"scene": 4,
+"at": 0.858,
+"clip": "C01_04__driver_returns_call"
+},
+{
+"scene": 4,
+"at": 1.0,
+"clip": "C01_04__new_alert"
+},
+{
+"scene": 5,
+"at": 0.132,
+"clip": "C01_05__spread_report"
+},
+{
+"scene": 5,
+"at": 0.302,
+"clip": "C01_05__draft_report"
+},
+{
+"scene": 5,
+"at": 0.509,
+"clip": "C01_05__sign_report"
+},
+{
+"scene": 5,
+"at": 0.66,
+"clip": "C01_05__file_report"
+},
+{
+"scene": 5,
+"at": 0.811,
+"clip": "C01_05__green_status"
+},
+{
+"scene": 5,
+"at": 1.0,
+"clip": "C01_05__next_item"
+},
+{
+"scene": 6,
+"at": 0.024,
+"clip": "C01_06__mai_steps"
+},
+{
+"scene": 6,
+"at": 1.0,
+"clip": "C01_06__group_leaves"
+},
+{
+"scene": 7,
+"at": 0.032,
+"clip": "C01_07__dish_arrive"
+},
+{
+"scene": 7,
+"at": 0.097,
+"clip": "C01_07__linh_push_peas"
+},
+{
+"scene": 7,
+"at": 0.298,
+"clip": "C01_07__small_cutlery"
+},
+{
+"scene": 7,
+"at": 0.911,
+"clip": "C01_07__after_conversation"
+},
+{
+"scene": 7,
+"at": 1.0,
+"clip": "C01_07__meeting_chime"
+},
+{
+"scene": 8,
+"at": 0.034,
+"clip": "C01_08__approach_steps"
+},
+{
+"scene": 8,
+"at": 0.548,
+"clip": "C01_08__put_away_transfer_form"
+},
+{
+"scene": 8,
+"at": 0.945,
+"clip": "C01_08__open_work_notebook"
+},
+{
+"scene": 8,
+"at": 1.0,
+"clip": "C01_08__write_question"
+},
+{
+"scene": 9,
+"at": 0.1,
+"clip": "C01_09__energy_map_focus"
+},
+{
+"scene": 9,
+"at": 0.725,
+"clip": "C01_09__show_evidence"
+},
+{
+"scene": 9,
+"at": 1.0,
+"clip": "C01_09__forward_for_verification"
+},
+{
+"scene": 10,
+"at": 0.063,
+"clip": "C01_10__prune_rosemary"
+},
+{
+"scene": 10,
+"at": 0.272,
+"clip": "C01_10__dry_rosemary_leaf"
+},
+{
+"scene": 11,
+"at": 0.728,
+"clip": "C01_10__take_photo_album"
+},
+{
+"scene": 11,
+"at": 0.781,
+"clip": "C01_10__turn_album_page"
+},
+{
+"scene": 11,
+"at": 1.0,
+"clip": "C01_10__album_between_them"
+},
+{
+"scene": 12,
+"at": 0.083,
+"clip": "C01_11__close_album"
+},
+{
+"scene": 12,
+"at": 0.345,
+"clip": "C01_11__open_work_notebook"
+},
+{
+"scene": 12,
+"at": 0.548,
+"clip": "C01_11__enter_timesheet_request"
+},
+{
+"scene": 12,
+"at": 0.667,
+"clip": "C01_11__submit_timesheet_request"
+},
+{
+"scene": 12,
+"at": 1.0,
+"clip": "C01_11__reopen_district_photo"
+}
+]
+}
