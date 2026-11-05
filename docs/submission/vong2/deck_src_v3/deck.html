@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><title>CIVI Pitch Deck</title>
+<style>
+:root{--ink:#1C3147;--ink2:#3E5568;--mut:#6B7F8E;--teal:#2B8A84;--teal2:#1F6E69;--amber:#C27C17;--coral:#B9503A;--line:rgba(28,49,71,.14);--card:rgba(255,253,247,.82)}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:1920px 1080px;margin:0}
+body{font-family:Inter,"DejaVu Sans",sans-serif;color:var(--ink)}
+.s{width:1920px;height:1080px;position:relative;overflow:hidden;background:url(bg2.jpg) center/cover no-repeat;page-break-after:always;padding:132px 110px 96px}
+.s:last-child{page-break-after:auto}
+.top{position:absolute;top:40px;left:110px;right:110px;display:flex;align-items:center;justify-content:space-between}
+.top img{height:62px}
+.kick{font-size:20px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.kick b{color:var(--teal);margin-right:14px}
+.foot{position:absolute;bottom:30px;left:110px;right:110px;display:flex;justify-content:space-between;align-items:flex-end;font-size:16px;color:var(--ink2);gap:40px}
+.foot .ax{font-weight:800;letter-spacing:.24em;color:var(--ink);white-space:nowrap}
+.foot .src{flex:1;text-align:right;line-height:1.35;background:rgba(255,253,247,.75);padding:4px 10px;border-radius:6px}
+h1{font-size:56px;line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--ink);max-width:1700px}
+h1 em{font-style:normal;color:var(--teal)} h1 i{font-style:normal;color:var(--amber)}
+.lead{font-size:26px;color:var(--ink2);margin-top:12px;line-height:1.4}
+.grid{display:grid;gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 30px;box-shadow:0 8px 28px rgba(28,49,71,.08)}
+.card.hl{background:linear-gradient(160deg,rgba(43,138,132,.16),rgba(255,253,247,.86));border-color:rgba(43,138,132,.45)}
+.card.am{background:linear-gradient(160deg,rgba(194,124,23,.16),rgba(255,253,247,.86));border-color:rgba(194,124,23,.45)}
+.card.dk{background:rgba(28,49,71,.92);color:#F6EEDF;border-color:transparent}
+.card.dk .p,.card.dk .t{color:#F6EEDF}
+.num{font-size:78px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--teal)}
+.num.a{color:var(--amber)} .num.c{color:var(--coral)} .num.k{color:var(--ink)}
+.lab{font-size:23px;line-height:1.42;color:var(--ink);margin-top:12px}
+.lab small{display:block;color:var(--mut);font-size:17px;margin-top:8px}
+.t{font-size:27px;font-weight:800;color:var(--ink);margin-bottom:8px;line-height:1.2}
+.t .n{color:var(--amber);margin-right:10px}
+.p{font-size:21px;line-height:1.45;color:var(--ink2)}
+.p b{color:var(--ink)}
+.tag{font-size:16px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.tag.a{color:var(--amber)} .tag.c{color:var(--coral)}
+.pill{display:inline-block;padding:9px 20px;border-radius:99px;border:1px solid var(--line);background:rgba(255,253,247,.85);font-size:19px;color:var(--ink);margin:0 8px 8px 0}
+.pill.t2{border-color:var(--teal);color:var(--teal2);font-weight:700}
+.quote{font-size:28px;font-weight:700;color:var(--ink);line-height:1.35;border-left:6px solid var(--amber);padding:14px 26px;background:rgba(255,253,247,.8);border-radius:0 14px 14px 0}
+.qr{width:150px;height:150px;border-radius:16px;border:2px dashed var(--ink2);display:flex;align-items:center;justify-content:center;text-align:center;font-size:17px;font-weight:800;color:var(--ink);background:rgba(255,253,247,.85)}
+.fill{color:var(--amber);border-bottom:3px dashed var(--amber)}
+table{border-collapse:collapse;width:100%}
+td,th{padding:13px 14px;font-size:20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.35;color:var(--ink2)}
+th{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:800}
+td b{color:var(--ink)} td.g{color:var(--teal2);font-weight:600}
+.badge{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff;background:var(--teal);flex:none}
+.badge.a{background:var(--amber)} .badge.c{background:var(--coral)} .badge.k{background:var(--ink)}
+.row{display:flex;gap:16px;align-items:flex-start}
+</style></head><body>
+
+<!-- COVER -->
+<section class="s" style="padding:0">
+ <div style="position:absolute;left:120px;top:120px;width:1000px">
+  <img src="logo_d.png" style="height:330px">
+  <div class="kick" style="margin-top:36px"><b>VSIC 2026</b>Vòng 2 · Forge · Đội AXIOM</div>
+  <h1 style="font-size:104px;margin-top:20px">Phân khu <em>0 người</em></h1>
+  <p class="lead" style="font-size:32px;color:var(--ink);max-width:900px">Game giải bí ẩn văn phòng hài hước về <b style="color:var(--amber)">công bằng trong thời đại thuật toán</b></p>
+  <div style="display:flex;gap:28px;align-items:center;margin-top:40px">
+   <div class="qr">QR<br>CHƠI THỬ</div>
+   <div><div class="t">Quét để chơi thử Chương 1</div><div class="p">3 chương · ~30 phút · Báo cáo kiểm toán cuối chương do AI viết</div></div>
+  </div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src" style="flex:none">01 / 14</span></div>
+</section>
+
+<!-- 1 PROBLEM -->
+<section class="s">
+ <div class="top"><span class="kick"><b>01</b>Vấn đề xã hội</span><img src="logo_d.png"></div>
+ <h1>Bất công hôm nay không cần kẻ xấu, chỉ cần <i>một ô dữ liệu bị bỏ trống</i></h1>
+ <div class="grid" style="grid-template-columns:1fr 1fr 1fr;margin-top:34px">
+  <div class="card hl"><div class="num">33,1tr</div><div class="lab">người làm việc <b>phi chính thức</b> (63,1% lao động có việc làm): làm thật nhưng nằm ngoài nhiều hệ thống ghi nhận<small>Cục Thống kê qua Báo Nhân Dân, 2025</small></div></div>
+  <div class="card am"><div class="num a">78%</div><div class="lab">người dùng mạng Việt Nam đã dùng AI trong 3 tháng: quyết định ngày càng do <b>máy chấm, máy chia</b><small>Decision Lab, Consumer AI in Vietnam 2025</small></div></div>
+  <div class="card"><div class="num c">105</div><div class="lab">tiết/năm môn Hoạt động trải nghiệm bắt buộc ở THPT, nhưng giáo viên khó tổ chức; chuyên gia đề xuất <b>“giảm dạy, tăng làm”</b><small>CT GDPT 2018 · Báo Giáo dục Việt Nam</small></div></div>
+ </div>
+ <div class="grid" style="grid-template-columns:1.2fr 1fr;margin-top:24px">
+  <div class="card"><div class="tag c">Khoảng trống giáo dục</div>
+   <div class="grid" style="grid-template-columns:1fr 1fr;gap:14px">
+    <div class="p"><b>Thiếu ngữ cảnh:</b> kết luận khi chưa biết chuyện gì xảy ra trước đó</div>
+    <div class="p"><b>Im lặng:</b> “không liên quan tới mình” vẫn đổi hướng câu chuyện</div>
+    <div class="p"><b>Cùng một luật:</b> không phải ai cũng bắt đầu từ cùng điều kiện</div>
+    <div class="p"><b>Hệ thống:</b> cứu một người dễ hơn sửa cái đã bỏ sót người</div>
+   </div></div>
+  <div class="quote" style="display:flex;align-items:center">Học sinh được nghe về công bằng, nhưng chưa từng được <span style="color:var(--teal)">&nbsp;thực hành&nbsp;</span> chọn lựa công bằng khi hệ thống đếm sai.</div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">02 / 14 · Bắt nạt và loại trừ ở vùng xám, người đứng ngoài im lặng: GSHS Việt Nam 2019 (WHO/Bộ Y tế/Bộ GD&ĐT)</span></div>
+</section>
+
+<!-- 2 ALTERNATIVES (NEW) -->
+<section class="s">
+ <div class="top"><span class="kick"><b>02</b>Giải pháp hiện có</span><img src="logo_d.png"></div>
+ <h1>Đã có nhiều cách dạy công bằng, nhưng <i>chưa ai cho người trẻ thực hành</i> với hệ thống</h1>
+ <div class="card" style="margin-top:30px;padding:10px 26px">
+  <table><tr><th style="width:22%">Giải pháp</th><th style="width:18%">Loại</th><th style="width:30%">Làm tốt</th><th>Còn thiếu</th></tr>
+   <tr><td><b>Bài giảng HĐTN, tham vấn học đường</b></td><td>Trong trường</td><td>Kiến thức, hỗ trợ cá nhân, phát hiện sớm</td><td>Học sinh chủ yếu <b>nghe</b>, ít được thực hành quyết định</td></tr>
+   <tr><td><b>Friendly ATTAC</b></td><td>Game giáo dục (RCT, 216 HS)</td><td>Tăng tự tin và ý định giúp đỡ người bị bắt nạt</td><td><b>Không đổi được hành vi thật</b> khi chỉ chơi, thiếu thảo luận</td></tr>
+   <tr><td><b>Bad News</b> (ĐH Cambridge)</td><td>Game trình duyệt</td><td>&gt;1 triệu lượt chơi; giảm 21% mức tin tin giả</td><td>Chủ đề tin giả, tiếng Anh, không phản chiếu riêng từng người</td></tr>
+   <tr><td><b>Papers, Please</b></td><td>Game thương mại</td><td>&gt;5 triệu bản; lựa chọn đạo đức với giấy tờ</td><td>Không dành cho lớp học, không tiếng Việt</td></tr>
+  </table>
+ </div>
+ <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:22px;gap:18px">
+  <div class="card hl"><div class="tag">CIVI bổ sung</div><div class="t">Tiếng Việt, ngụ ngôn gần đời sống</div></div>
+  <div class="card hl"><div class="tag">CIVI bổ sung</div><div class="t">Hài ở trên, bí ẩn ở dưới</div></div>
+  <div class="card hl"><div class="tag">CIVI bổ sung</div><div class="t">AI soi riêng từng người chơi</div></div>
+  <div class="card hl"><div class="tag">CIVI bổ sung</div><div class="t">Báo cáo lớp cho giáo viên</div></div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">03 / 14 · Nguồn: DeSmet et al., Computers in Human Behavior 2018 · University of Cambridge 2019 · Game Developer 2023</span></div>
+</section>
+
+<!-- 3 PRODUCT + AI -->
+<section class="s">
+ <div class="top"><span class="kick"><b>03</b>Sản phẩm (MVP) · Cách chơi · AI</span><img src="logo_d.png"></div>
+ <h1>Thuật toán nói Phân khu 8-12 có <em>0 người</em>. Đôi giày trẻ con nói <i>ngược lại</i>.</h1>
+ <p class="lead">Bạn là thực tập sinh IT ở Tầng 42 của một thành phố mái vòm. 3 chương · ~30 phút.</p>
+ <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:24px;gap:18px">
+  <div class="card"><div class="row"><div class="badge">1</div><div><div class="t">Duyệt</div><div class="p">Đóng dấu 4 lá đơn: bệnh viện, shop bỉm livestream, mèo xin số cư trú</div></div></div></div>
+  <div class="card"><div class="row"><div class="badge">2</div><div><div class="t">Soi</div><div class="p">Kính Debug lộ lớp dữ liệu ẩn: 3 dấu hiệu “có người ở”</div></div></div></div>
+  <div class="card"><div class="row"><div class="badge a">3</div><div><div class="t">Sửa</div><div class="p">Tìm dòng code làm người biến mất khỏi phép đếm</div></div></div></div>
+  <div class="card hl"><div class="row"><div class="badge c">4</div><div><div class="t">Chọn</div><div class="p">Đúng quy trình hay ra hiện trường: ai được điện, ai bị bỏ</div></div></div></div>
+ </div>
+ <div class="tag" style="margin-top:26px">AI không kể chuyện thay chúng tôi · AI kiểm toán chính bạn</div>
+ <div class="grid" style="grid-template-columns:1.2fr 1fr 1fr;gap:18px">
+  <div class="card dk"><div class="t">Báo cáo kiểm toán cá nhân</div><div class="p">Đọc lựa chọn + câu “vì sao” bạn tự gõ, chọc vui rồi soi thật: <i style="color:#F2B65C">“Bạn duyệt shop bỉm trong 2 giây nhưng để trạm lọc 19 chờ 40 giây.”</i></div></div>
+  <div class="card"><div class="t">Góc nhìn còn thiếu</div><div class="p">Kể lại cảnh từ người bạn đã bỏ qua (anh tài xế, người con ngoài giường bệnh), chỉ dùng dữ kiện có sẵn</div></div>
+  <div class="card am"><div class="t">Báo cáo lớp</div><div class="p">Tóm 40 câu trả lời thành 3 kiểu suy nghĩ + 3 câu hỏi thảo luận. <b>Đây là thứ trường trả tiền.</b></div></div>
+ </div>
+ <div style="margin-top:20px"><span class="pill">Không đổi cốt truyện</span><span class="pill">Chỉ dùng dữ liệu được cho phép</span><span class="pill t2">Kính Debug soi được AI ghi gì về bạn</span><span class="pill">Câu soạn sẵn khi AI lỗi</span><span class="pill t2">~0,0007 USD / báo cáo</span></div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">04 / 14 · Chi phí AI theo bảng giá Claude API (Haiku 5.5), tra cứu 05/11/2026</span></div>
+</section>
+
+<!-- 4 IMPROVEMENT + JOURNEY -->
+<section class="s">
+ <div class="top"><span class="kick"><b>04</b>Cải tiến so với Vòng 1 · Hành trình khách hàng</span><img src="logo_d.png"></div>
+ <h1>Giữ lõi, đổi lớp áo, để học sinh <i>muốn</i> chơi</h1>
+ <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:26px;margin-top:30px">
+  <div class="card" style="padding:8px 26px">
+   <table><tr><th></th><th>Vòng 1</th><th>Vòng 2</th><th>Vì sao đổi</th></tr>
+   <tr><td><b>Bối cảnh</b></td><td>Lớp 12, kỷ yếu</td><td class="g">Thành phố ngụ ngôn</td><td>Học đường dễ thành bài giảng, trùng giải pháp có sẵn</td></tr>
+   <tr><td><b>Chủ đề</b></td><td>Bạn bè bỏ rơi nhau</td><td class="g">Hệ thống bỏ sót người</td><td>Nâng lên tư duy hệ thống</td></tr>
+   <tr><td><b>Giọng</b></td><td>Trầm buồn</td><td class="g">Hài ở trên, đau ở dưới</td><td>Đúng gu 15–22 tuổi</td></tr>
+   <tr><td><b>Sản phẩm</b></td><td>Kịch bản</td><td class="g">3 chương chơi được</td><td>Có bản thật để kiểm chứng</td></tr>
+   <tr><td><b>AI</b></td><td>Ghi nhớ lựa chọn</td><td class="g">Soi lại người chơi + báo cáo lớp</td><td>Góp ý mentor: nỗi đau người trả tiền</td></tr>
+   <tr><td style="border:0"><b>Giữ</b></td><td colspan="3" style="border:0;color:var(--amber);font-weight:700">Lựa chọn vùng xám → hệ quả → góc nhìn → tư duy hệ thống · kênh trường học</td></tr></table>
+  </div>
+  <div class="grid" style="gap:12px">
+   <div class="card" style="padding:16px 22px"><div class="row"><div class="badge">1</div><div><div class="t" style="font-size:23px;margin:0">Nhận biết</div><div class="p" style="font-size:19px">Clip “Duyệt hay Từ chối?”; học sinh kể lại cho giáo viên</div></div></div></div>
+   <div class="card" style="padding:16px 22px"><div class="row"><div class="badge">2</div><div><div class="t" style="font-size:23px;margin:0">Quan tâm</div><div class="p" style="font-size:19px">Link một chạm; buổi trải nghiệm 30 phút cho giáo viên</div></div></div></div>
+   <div class="card" style="padding:16px 22px"><div class="row"><div class="badge a">3</div><div><div class="t" style="font-size:23px;margin:0">Trải nghiệm</div><div class="p" style="font-size:19px">Chơi Chương 1 trong 15 phút; gói thử ≤50 học viên</div></div></div></div>
+   <div class="card" style="padding:16px 22px"><div class="row"><div class="badge a">4</div><div><div class="t" style="font-size:23px;margin:0">Mua hàng</div><div class="p" style="font-size:19px">Trường mua gói năm; người chơi mua bản đầy đủ (năm 2)</div></div></div></div>
+   <div class="card hl" style="padding:16px 22px"><div class="row"><div class="badge c">5</div><div><div class="t" style="font-size:23px;margin:0">Trung thành, giới thiệu</div><div class="p" style="font-size:19px">Thẻ kết quả để chia sẻ; ca trực mới mỗi ngày; báo cáo cuối kỳ</div></div></div></div>
+  </div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">05 / 14 · Chi tiết: Customer Journey Map 2 hành trình (tài liệu đính kèm)</span></div>
+</section>
+
+<!-- 5 VALIDATION & TRACTION (NEW, merged) -->
+<section class="s">
+ <div class="top"><span class="kick"><b>05</b>Validation & Traction</span><img src="logo_d.png"></div>
+ <h1>Đã kiểm chứng được gì, và <em>đo tác động bằng hành vi</em></h1>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px">
+  <div class="grid" style="gap:18px">
+   <div class="card hl"><div class="tag">Kết quả người dùng thử (từ [ngày])</div>
+    <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:10px">
+     <div><div class="num" style="font-size:50px"><span class="fill">___</span></div><div class="p" style="font-size:18px">lượt chơi</div></div>
+     <div><div class="num a" style="font-size:50px"><span class="fill">__%</span></div><div class="p" style="font-size:18px">chơi hết Ch.1</div></div>
+     <div><div class="num c" style="font-size:50px"><span class="fill">__%</span></div><div class="p" style="font-size:18px">chia sẻ thẻ</div></div>
+     <div><div class="num k" style="font-size:50px"><span class="fill">__'</span></div><div class="p" style="font-size:18px">phút trung bình</div></div></div></div>
+   <div class="card"><div class="tag a">Kinh doanh · Đối tác</div><div class="p"><b><span class="fill">__</span> trường/trung tâm</b> đã xem thử hoặc gửi thư bày tỏ quan tâm · <b><span class="fill">__</span> phiếu khảo sát</b> mức sẵn sàng chi trả 39–49 nghìn</div></div>
+   <div class="card"><div class="tag k" style="color:var(--ink)">Sản phẩm đã làm ra</div><div class="p"><b>3 chương</b> chơi được từ đầu đến cuối · <b>21</b> nhân vật · <b>127</b> hiệu ứng âm thanh gắn kịch bản · bản PC 3D · AI có câu soạn sẵn dự phòng</div></div>
+   <div class="card am"><div class="tag a">Bằng chứng từ bên ngoài</div><div class="p">Game trình duyệt ngắn đo được thay đổi: <b>Bad News −21%</b> mức tin tin giả. Nhưng cần thảo luận có giáo viên mới đổi hành vi (<b>Friendly ATTAC</b>), nên CIVI bán gói lớp.</div></div>
+  </div>
+  <div class="card" style="padding:12px 26px">
+   <div class="tag" style="margin-top:12px">4 chỉ số tác động xã hội (giữ từ Vòng 1)</div>
+   <table><tr><th>Chỉ số</th><th>Game tự ghi (ẩn danh)</th><th>Ngoài game</th></tr>
+   <tr><td><b>Nhận diện</b> người bị bỏ sót</td><td>Tìm đủ 3 dấu hiệu “có người ở”</td><td>Khảo sát trước/sau</td></tr>
+   <tr><td><b>Góc nhìn</b> nhiều bên</td><td>Số người bị ảnh hưởng được chủ động hỏi</td><td>Giáo viên quan sát</td></tr>
+   <tr><td><b>Tìm bối cảnh</b> trước khi kết luận</td><td>Thời gian xem hồ sơ trước khi đóng dấu</td><td>Tình huống mới</td></tr>
+   <tr><td><b>Tư duy hệ thống</b></td><td>Sửa quy trình hay chỉ cấp ngoại lệ</td><td>Thảo luận lớp</td></tr></table>
+   <div class="p" style="margin-top:16px"><b>Mục tiêu đợt thử đầu:</b> ≥70% tìm đủ dấu hiệu · ≥50% đề xuất được một thay đổi quy trình · so Chương 1 với Chương 3 trên cùng người chơi</div>
+  </div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">06 / 14 · Phương pháp: thống kê truy cập bản web · khảo sát 5 phần (Mở đầu, Thói quen, Trải nghiệm, Cải tiến, Kết thúc) · phỏng vấn giáo viên</span></div>
+</section>
+
+<!-- 6 CUSTOMERS + MARKET -->
+<section class="s">
+ <div class="top"><span class="kick"><b>06</b>Thị trường · Khách hàng · Người hưởng lợi</span><img src="logo_d.png"></div>
+ <h1>Người chơi <i>không phải</i> người trả tiền</h1>
+ <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:30px;gap:18px">
+  <div class="card"><div class="num" style="font-size:58px">54tr</div><div class="p">người chơi game di động ở Việt Nam</div></div>
+  <div class="card"><div class="num k" style="font-size:58px">825tr$</div><div class="p">doanh thu game di động 2025</div></div>
+  <div class="card am"><div class="num a" style="font-size:58px">~15$</div><div class="p">chi/người/năm, chỉ 7–10% trả tiền → <b>không dựa vào bán cho học sinh</b></div></div>
+  <div class="card"><div class="num c" style="font-size:58px">2,9tr</div><div class="p">học sinh THPT; HĐTN bắt buộc 105 tiết/năm</div></div>
+ </div>
+ <div class="grid" style="grid-template-columns:1fr 1fr 1fr;margin-top:22px;gap:18px">
+  <div class="card"><div class="tag">Người hưởng lợi · 15–22 tuổi</div><div class="p"><b>Ai:</b> học sinh THPT, sinh viên; ưu tiên CNTT, kinh tế, người sẽ viết thuật toán tương lai<br><b>Cần:</b> chơi ngắn, hài, không bị giảng<br><b>Nhận:</b> bí ẩn + tiếng cười + thẻ kết quả</div></div>
+  <div class="card hl"><div class="tag">Người trả tiền · Trường, trung tâm</div><div class="p"><b>Ai:</b> trung tâm kỹ năng, THPT tư thục/quốc tế, Đoàn trường ở TP.HCM<br><b>Cần:</b> buổi học học sinh chịu tham gia, ít chuẩn bị, có báo cáo<br><b>Nhận:</b> game + giáo án + báo cáo lớp AI</div></div>
+  <div class="card am"><div class="tag a">Nhà tài trợ · Doanh nghiệp, NGO</div><div class="p"><b>Ai:</b> công nghệ, dữ liệu, giáo dục phi lợi nhuận<br><b>Cần:</b> tác động đo được, gắn “AI có trách nhiệm”<br><b>Nhận:</b> suất miễn phí cho trường công + báo cáo tác động</div></div>
+ </div>
+ <div class="quote" style="margin-top:22px;font-size:24px">Khởi đầu TP.HCM: 3 → 12 → 30 tổ chức (~300 → 2.400 → 7.500 học sinh) · [mục tiêu] 20.000 người chơi miễn phí năm 1</div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">07 / 14 · Nguồn: PocketGamer.biz 2025 · Gamota qua maf.ad · Cục Thống kê năm học 2025–2026</span></div>
+</section>
+
+<!-- 7 BUSINESS MODEL -->
+<section class="s">
+ <div class="top"><span class="kick"><b>07</b>Mô hình kinh doanh lai (Impact-driven)</span><img src="logo_d.png"></div>
+ <h1>Miễn phí để lan tỏa · tổ chức trả tiền cho kết quả · <em>tài trợ để mở rộng</em></h1>
+ <div style="display:grid;grid-template-columns:780px 1fr;gap:30px;margin-top:20px;align-items:center">
+  <svg viewBox="0 0 780 640" width="780" height="640" font-family="Inter">
+   <defs><marker id="ar" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#2B8A84"/></marker></defs>
+   <circle cx="390" cy="320" r="235" fill="rgba(255,253,247,.7)" stroke="rgba(43,138,132,.5)" stroke-width="3" stroke-dasharray="10 10"/>
+   <path d="M500 115 A235 235 0 0 1 612 255" fill="none" stroke="#2B8A84" stroke-width="5" marker-end="url(#ar)"/>
+   <path d="M600 405 A235 235 0 0 1 480 535" fill="none" stroke="#2B8A84" stroke-width="5" marker-end="url(#ar)"/>
+   <path d="M290 530 A235 235 0 0 1 170 390" fill="none" stroke="#2B8A84" stroke-width="5" marker-end="url(#ar)"/>
+   <path d="M175 240 A235 235 0 0 1 285 110" fill="none" stroke="#2B8A84" stroke-width="5" marker-end="url(#ar)"/>
+   <g text-anchor="middle">
+    <rect x="270" y="20" width="240" height="110" rx="20" fill="#2B8A84"/><text x="390" y="66" font-size="26" font-weight="800" fill="#fff">① CHƯƠNG 1</text><text x="390" y="102" font-size="21" fill="#fff">miễn phí · lan tỏa</text>
+    <rect x="530" y="265" width="240" height="110" rx="20" fill="#C27C17"/><text x="650" y="311" font-size="26" font-weight="800" fill="#fff">② TRƯỜNG</text><text x="650" y="347" font-size="21" fill="#fff">mua gói lớp</text>
+    <rect x="270" y="510" width="240" height="110" rx="20" fill="#B9503A"/><text x="390" y="556" font-size="23" font-weight="800" fill="#fff">③ SUẤT MIỄN PHÍ</text><text x="390" y="592" font-size="21" fill="#fff">+ chương mới</text>
+    <rect x="10" y="265" width="240" height="110" rx="20" fill="#1C3147"/><text x="130" y="311" font-size="26" font-weight="800" fill="#F6EEDF">④ BÁO CÁO</text><text x="130" y="347" font-size="21" fill="#F6EEDF">tác động → gia hạn</text>
+    <text x="390" y="305" font-size="24" font-weight="800" fill="#1C3147">Doanh thu</text><text x="390" y="338" font-size="22" fill="#3E5568">nuôi tác động,</text><text x="390" y="368" font-size="22" fill="#3E5568">tác động tạo niềm tin</text>
+   </g>
+  </svg>
+  <div class="grid" style="gap:16px">
+   <div class="card hl"><div class="tag">Giá trị thương mại</div><div class="p">Giáo viên đỡ soạn bài, học sinh tham gia thật, có số liệu báo cáo phụ huynh và nhà trường</div></div>
+   <div class="card"><div class="tag c">Giá trị xã hội</div><div class="p">Người trẻ thực hành quyết định công bằng khi dữ liệu sai; nhìn thấy “người không có trong dữ liệu”</div></div>
+   <div class="card"><div class="tag a">Nguồn thu (năm 1 → năm 3)</div><div class="p"><b>Tổ chức</b> 50% → 58% · <b>Tài trợ</b> 45% → 27% · <b>Người chơi</b> 5% → 15% (bản đầy đủ từ năm 2)</div></div>
+   <div class="card dk"><div class="t" style="font-size:23px">Tái đầu tư ≥50% lợi nhuận</div><div class="p">vào suất miễn phí trường công, vùng khó và chương mới · 30% dự phòng · 20% đội ngũ</div></div>
+  </div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">08 / 14 · Chi tiết 9 thành phần: SBMC (tài liệu đính kèm)</span></div>
+</section>
+
+<!-- 8 GTM 1 -->
+<section class="s">
+ <div class="top"><span class="kick"><b>08</b>Go-to-market 1/3 · Khác biệt & định vị</span><img src="logo_d.png"></div>
+ <h1>Đồ họa đơn giản vẫn bùng nổ, <i>nếu đúng công thức</i></h1>
+ <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:30px;gap:18px">
+  <div class="card hl"><div class="num" style="font-size:60px">650K+</div><div class="lab" style="font-size:21px"><b>Tiệm phở anh Hai</b>: lượt tải &lt;2 tuần (1 sinh viên, miễn phí)</div></div>
+  <div class="card am"><div class="num a" style="font-size:60px">~600K</div><div class="lab" style="font-size:21px"><b>Sansa</b>, chùa trực tuyến: lượt ghé trong 3 ngày, làm bằng AI trong 30 phút</div></div>
+  <div class="card"><div class="num c" style="font-size:60px">#2</div><div class="lab" style="font-size:21px"><b>App gõ mõ “công đức +1”</b>: bảng ứng dụng miễn phí iOS Trung Quốc</div></div>
+  <div class="card"><div class="num k" style="font-size:60px">5tr+</div><div class="lab" style="font-size:21px"><b>Papers, Please</b>: bản bán, 1 người làm, đề tài giấy tờ</div></div>
+ </div>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px">
+  <div class="card"><div class="tag">Công thức chung → CIVI có</div>
+   <table><tr><td><b>Thao tác đã tay</b></td><td class="g">gõ mõ ↔ đóng dấu hồ sơ</td></tr>
+   <tr><td><b>Con số để khoe</b></td><td class="g">công đức +1 ↔ “N người đã được đếm”</td></tr>
+   <tr><td><b>Mở bằng link</b></td><td class="g">không cần cài</td></tr>
+   <tr><td style="border:0"><b>Tự giễu, bí ẩn</b></td><td class="g" style="border:0">thực tập sinh + “Phân khu 0 người”</td></tr></table></div>
+  <div class="card dk"><div class="tag" style="color:#7FD1C9">Định vị</div><div class="t" style="font-size:30px;line-height:1.3">Hài như game giải trí + AI soi riêng từng người + công cụ cho giáo viên, bằng tiếng Việt</div><div class="p" style="margin-top:12px;opacity:.85">Game thương mại hay nhưng không dành cho lớp học; game giáo dục đo được tác động nhưng không tiếng Việt, không soi riêng từng người.</div></div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">09 / 14 · Nguồn: VietNamNet 2026 · Tiền Phong, Korea Herald 2025 · Sixth Tone · Game Developer 2023</span></div>
+</section>
+
+<!-- 9 GTM 2 -->
+<section class="s">
+ <div class="top"><span class="kick"><b>09</b>Go-to-market 2/3 · Giá & kênh phân phối</span><img src="logo_d.png"></div>
+ <h1>Giá theo giá trị cho tổ chức, <em>miễn phí trước, trả sau</em> cho người chơi</h1>
+ <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:26px;margin-top:30px">
+  <div class="grid" style="gap:18px">
+   <div class="card" style="padding:8px 26px">
+    <table><tr><th>Gói</th><th>Giá (giả định, đang kiểm chứng)</th></tr>
+    <tr><td><b>Thử nghiệm</b> ≤50 học viên</td><td>1,5–3 triệu · <span style="color:var(--teal2)">miễn phí 3 tổ chức đầu</span></td></tr>
+    <tr><td><b>Hằng năm</b> ~300 học viên</td><td>12–18 triệu · <span style="color:var(--teal2)">−50% trường công</span></td></tr>
+    <tr><td><b>Kịch bản bổ sung</b></td><td>3–5 triệu / đơn vị</td></tr>
+    <tr><td><b>Tài trợ suất miễn phí</b></td><td>30–100 triệu / gói</td></tr>
+    <tr><td style="border:0"><b>Bản đầy đủ</b> (năm 2)</td><td style="border:0">39–49 nghìn · tham chiếu Steam 39.000đ</td></tr></table></div>
+   <div class="card am"><div class="tag a">Cơ sở định giá</div><div class="p">So với chi phí một buổi kỹ năng thuê ngoài · người Việt chi ~15 USD/năm cho game · giá game indie Việt trên Steam</div></div>
+  </div>
+  <div class="grid" style="gap:12px">
+   <div class="card" style="padding:16px 22px"><div class="row"><div class="badge">1</div><div><div class="t" style="font-size:23px;margin:0">Biết đến</div><div class="p" style="font-size:19px">TikTok, Reels · Đoàn trường · hội thảo giáo viên</div></div></div></div>
+   <div class="card" style="padding:16px 22px"><div class="row"><div class="badge">2</div><div><div class="t" style="font-size:23px;margin:0">Quan tâm → Dùng thử</div><div class="p" style="font-size:19px">Link một chạm · trải nghiệm 30 phút · gói thử</div></div></div></div>
+   <div class="card" style="padding:16px 22px"><div class="row"><div class="badge a">3</div><div><div class="t" style="font-size:23px;margin:0">Mua</div><div class="p" style="font-size:19px">Hợp đồng gói năm · Steam (từ năm 2)</div></div></div></div>
+   <div class="card hl" style="padding:16px 22px"><div class="row"><div class="badge c">4</div><div><div class="t" style="font-size:23px;margin:0">Gắn bó, giới thiệu</div><div class="p" style="font-size:19px">Thẻ kết quả · ca trực mỗi ngày · báo cáo cuối kỳ</div></div></div></div>
+   <div class="card dk" style="padding:16px 22px"><div class="p"><b style="color:#F2B65C">Vì sao chọn kênh:</b> chi phí gần 0 · 76,2 triệu danh tính mạng xã hội tại Việt Nam · mạng lưới Đoàn và trung tâm mở rộng được</div></div>
+  </div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">10 / 14 · Nguồn: DataReportal Digital 2025 · Gamota · CellphoneS (giá Bánh Mì Bách Khoa)</span></div>
+</section>
+
+<!-- 10 GTM 3 + MILESTONES -->
+<section class="s">
+ <div class="top"><span class="kick"><b>10</b>Go-to-market 3/3 · Truyền thông · Lộ trình</span><img src="logo_d.png"></div>
+ <h1>“Ai đã bị <em>đếm sót</em>?”</h1>
+ <div class="grid" style="grid-template-columns:1fr 1fr 1fr;margin-top:26px;gap:18px">
+  <div class="card hl"><div class="tag">Mỗi tuần</div><div class="t">Video “Duyệt hay Từ chối?”</div><div class="p">1 lá đơn hài, người xem bình luận lựa chọn rồi bấm link vào game</div></div>
+  <div class="card"><div class="tag c">Mỗi ngày</div><div class="t">Ca trực 5 phút</div><div class="p">4 lá đơn mới, 1 lá theo trend; chia sẻ “bảng công trạng”</div></div>
+  <div class="card am"><div class="tag a">Cộng đồng</div><div class="t">Người làm nội dung + Đoàn</div><div class="p">Video phản ứng (như Tiệm phở anh Hai) · góc chơi thử ở ngày hội</div></div>
+ </div>
+ <div class="card" style="margin-top:22px;padding:22px 30px">
+  <div class="tag">Lộ trình 1–3 năm: kinh doanh đi cùng tác động</div>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px">
+   <div><div class="row"><div class="badge">N1</div><div><div class="t" style="font-size:24px">Ra mắt miễn phí</div><div class="p">3 tổ chức thử · [mục tiêu] 20.000 người chơi · khảo sát trước/sau ~300 HS</div></div></div></div>
+   <div><div class="row"><div class="badge a">N2</div><div><div class="t" style="font-size:24px">12 tổ chức · hòa vốn</div><div class="p">Bản đầy đủ trên Steam · nhà tài trợ đầu tiên · Chương 4–7</div></div></div></div>
+   <div><div class="row"><div class="badge c">N3</div><div><div class="t" style="font-size:24px">30 tổ chức</div><div class="p">Hà Nội, Đà Nẵng · bản tiếng Anh · đánh giá tác động độc lập · Chương 8–10</div></div></div></div>
+  </div>
+ </div>
+ <div class="quote" style="margin-top:22px;font-size:25px">Yếu tố xã hội: công khai cách AI dùng dữ liệu · kể chuyện “người ngoài dữ liệu” có xin phép · “Chiếc ô nhỏ chẳng che được cả bầu trời, nhưng đủ cho hai người nếu đứng gần nhau.”</div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">11 / 14 · Tiệm phở anh Hai lan tỏa nhờ video phản ứng: 3/12 video thịnh hành mục Gaming VN (Vietcetera)</span></div>
+</section>
+
+<!-- 11 FINANCE -->
+<section class="s">
+ <div class="top"><span class="kick"><b>11</b>Dự báo tài chính · Tầm nhìn</span><img src="logo_d.png"></div>
+ <h1>Hòa vốn năm 2, và <em>chi phí AI không phải rủi ro</em></h1>
+ <div style="display:grid;grid-template-columns:1fr 760px;gap:26px;margin-top:24px">
+  <div class="card" style="padding:18px 24px">
+  <div style="display:flex;gap:26px;font-size:19px;color:var(--ink2);margin-bottom:6px"><span><b style="color:var(--teal)">■</b> Doanh thu</span><span><b style="color:var(--amber)">■</b> Chi phí</span><span>triệu đồng, giả định kế hoạch</span></div>
+  <svg viewBox="0 0 900 520" width="100%" height="560" font-family="Inter">
+   <g stroke="rgba(28,49,71,.12)"><line x1="70" y1="40" x2="880" y2="40"/><line x1="70" y1="180" x2="880" y2="180"/><line x1="70" y1="320" x2="880" y2="320"/><line x1="70" y1="460" x2="880" y2="460" stroke="rgba(28,49,71,.35)"/></g>
+   <g font-size="18" fill="#6B7F8E" text-anchor="end"><text x="58" y="466">0</text><text x="58" y="326">300</text><text x="58" y="186">600</text><text x="58" y="46">900</text></g>
+   <rect x="120" y="409" width="90" height="51" rx="8" fill="#2B8A84"/><rect x="220" y="368" width="90" height="92" rx="8" fill="#C27C17"/>
+   <rect x="390" y="284" width="90" height="176" rx="8" fill="#2B8A84"/><rect x="490" y="287" width="90" height="173" rx="8" fill="#C27C17"/>
+   <rect x="660" y="47" width="90" height="413" rx="8" fill="#2B8A84"/><rect x="760" y="154" width="90" height="306" rx="8" fill="#C27C17"/>
+   <g font-size="22" font-weight="800" text-anchor="middle" fill="#1C3147"><text x="165" y="398">110</text><text x="265" y="357">198</text><text x="435" y="273">378</text><text x="535" y="276">371</text><text x="705" y="36">885</text><text x="805" y="143">655</text></g>
+   <g font-size="22" fill="#3E5568" text-anchor="middle" font-weight="700"><text x="215" y="500">Năm 1 · −88</text><text x="485" y="500">Năm 2 · +7</text><text x="755" y="500">Năm 3 · +230</text></g>
+  </svg></div>
+  <div class="grid" style="gap:16px">
+   <div class="card" style="padding:10px 24px"><table>
+    <tr><th>Chi phí chính</th><th>N1</th><th>N3</th></tr>
+    <tr><td><b>Con người</b> (nội dung)</td><td>90</td><td>360</td></tr>
+    <tr><td><b>Họa sĩ, âm thanh</b></td><td>40</td><td>80</td></tr>
+    <tr><td><b>Truyền thông + triển khai</b></td><td>35</td><td>110</td></tr>
+    <tr><td style="border:0"><b>AI</b></td><td style="border:0">2</td><td style="border:0">10</td></tr></table></div>
+   <div class="card hl"><div class="num" style="font-size:50px">11tr đ</div><div class="p">tiền AI cho 100.000 người chơi</div></div>
+   <div class="card am"><div class="num a" style="font-size:50px">~88tr đ</div><div class="p">cần cho năm 1: giải thưởng, quỹ ươm tạo, nhà tài trợ đầu tiên</div></div>
+   <div class="card dk"><div class="p"><b style="color:#F2B65C">Tầm nhìn:</b> biến việc học công bằng từ “được nghe điều đúng” thành “được trải nghiệm hậu quả trước khi phải trả giá ngoài đời”</div></div>
+  </div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">12 / 14 · Chi tiết giả định và bảng 3 năm: file Excel đính kèm</span></div>
+</section>
+
+<!-- 12 TEAM -->
+<section class="s">
+ <div class="top"><span class="kick"><b>12</b>Đội ngũ</span><img src="logo_d.png"></div>
+ <h1>Đội AXIOM đã làm ra sản phẩm chơi được, <i>cần thêm 3 mảnh ghép</i></h1>
+ <div class="grid" style="grid-template-columns:repeat(5,1fr);margin-top:34px;gap:18px">
+  <div class="card" style="text-align:center"><div style="width:140px;height:140px;border-radius:50%;margin:0 auto 14px;border:4px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:800;color:var(--teal);background:#fff">TH</div><div class="t">Thành</div><div class="p">Công nghệ, AI</div></div>
+  <div class="card" style="text-align:center"><div style="width:140px;height:140px;border-radius:50%;margin:0 auto 14px;border:4px solid var(--amber);display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:800;color:var(--amber);background:#fff">VT</div><div class="t">Việt</div><div class="p">Cốt truyện</div></div>
+  <div class="card" style="text-align:center"><div style="width:140px;height:140px;border-radius:50%;margin:0 auto 14px;border:4px solid var(--coral);display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:800;color:var(--coral);background:#fff">VI</div><div class="t">Vi</div><div class="p">Sản phẩm</div></div>
+  <div class="card" style="text-align:center"><div style="width:140px;height:140px;border-radius:50%;margin:0 auto 14px;border:4px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:800;color:var(--teal);background:#fff">VŨ</div><div class="t">Vũ</div><div class="p">Lập trình game</div></div>
+  <div class="card" style="text-align:center"><div style="width:140px;height:140px;border-radius:50%;margin:0 auto 14px;border:4px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:800;color:var(--ink);background:#fff">VH</div><div class="t">Vinh</div><div class="p">Kinh doanh, nghiên cứu</div></div>
+ </div>
+ <div class="grid" style="grid-template-columns:1.2fr 1fr 1fr 1fr;margin-top:22px;gap:18px">
+  <div class="card dk"><div class="tag" style="color:#7FD1C9">Đã làm trong Vòng 2</div><div class="p">3 chương chơi được · bản web + bản PC 3D · AI có dự phòng · bộ nghiên cứu thị trường 31 nguồn</div></div>
+  <div class="card hl"><div class="t"><span class="n">01</span>Cố vấn giáo dục</div><div class="p">Tâm lý vị thành niên, rà nội dung an toàn</div></div>
+  <div class="card"><div class="t"><span class="n">02</span>3 trường thử nghiệm</div><div class="p">Trung tâm kỹ năng, THPT tư thục ở TP.HCM</div></div>
+  <div class="card am"><div class="t"><span class="n">03</span>Họa sĩ giao diện</div><div class="p">Thay giao diện mặc định của bản PC</div></div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src">13 / 14</span></div>
+</section>
+
+<!-- CLOSING -->
+<section class="s" style="padding:0">
+ <div style="position:absolute;left:120px;top:110px;width:1100px">
+  <img src="logo_d.png" style="height:340px">
+  <div style="font-size:60px;font-weight:800;color:var(--ink);line-height:1.22;margin-top:40px">Chiếc ô nhỏ chẳng che được cả bầu trời.<br><span style="color:var(--teal)">Nhưng đủ cho hai người, nếu đứng gần nhau.</span></div>
+  <div style="display:flex;gap:28px;margin-top:44px;align-items:center">
+   <div class="qr">QR<br>CHƠI THỬ</div><div class="qr">QR<br>SỐ LIỆU</div>
+   <div><div class="t">anvi23052006@gmail.com · 0362699765</div><div class="p">Đang tìm: 3 trường thử nghiệm · cố vấn giáo dục · nhà tài trợ suất miễn phí</div></div>
+  </div>
+ </div>
+ <div class="foot"><span class="ax">AXIOM · VSIC 2026</span><span class="src" style="flex:none">14 / 14</span></div>
+</section>
+</body></html>
