@@ -1,0 +1,363 @@
+{
+  "files": [
+    {
+      "node": "C1",
+      "file": "Chuong_1_Ban_Duyet.md",
+      "scenes": 12,
+      "cues": 148,
+      "speech": 88,
+      "sha256": "1c2bf7a8427eaacfd115ec42663f49d5d67af14b7835e0128c346e3d332649e2",
+      "next": [
+        "C2"
+      ]
+    },
+    {
+      "node": "C2",
+      "file": "Chuong_2_Ban_Duyet.md",
+      "scenes": 11,
+      "cues": 182,
+      "speech": 103,
+      "sha256": "0c5aafc887f78086a4afedf45e9b26973e51df7f91e2a480cb478a9975c4e695",
+      "next": [
+        "C3"
+      ]
+    },
+    {
+      "node": "C3",
+      "file": "Chuong_3_Ban_Duyet.md",
+      "scenes": 10,
+      "cues": 159,
+      "speech": 70,
+      "sha256": "5d512c498480fa6ff827ea95f665e5a440d0b54c03f40819b581d1d75fcdc2cc",
+      "next": [
+        "C4"
+      ]
+    },
+    {
+      "node": "C4",
+      "file": "Chuong_4_Ban_Duyet.md",
+      "scenes": 14,
+      "cues": 209,
+      "speech": 124,
+      "sha256": "ff81a144fe44ba46a5e4b91f52b66d3db9910a8ecd51c8153c80d640e8a6e13f",
+      "next": [
+        "C5"
+      ]
+    },
+    {
+      "node": "C5",
+      "file": "Chuong_5_Ban_Duyet.md",
+      "scenes": 12,
+      "cues": 174,
+      "speech": 77,
+      "sha256": "19a246101ac26d2948c8935e829e2cb13ecd883f54669b013902b61343e9c176",
+      "next": [
+        "I_A",
+        "I_B"
+      ]
+    },
+    {
+      "node": "C6",
+      "file": "Chuong_6_Ban_Duyet.md",
+      "scenes": 8,
+      "cues": 284,
+      "speech": 160,
+      "sha256": "eac1862cb103ad7c127ac9287c87dc84752d38a83dd4fb40253d4190567cee65",
+      "next": [
+        "C7"
+      ]
+    },
+    {
+      "node": "C7",
+      "file": "Chuong_7_Ban_Duyet.md",
+      "scenes": 11,
+      "cues": 327,
+      "speech": 175,
+      "sha256": "99a77e4bace9a1cb14e83d59b5409645820b7ef6cc3df64f5acccb9954a42c1c",
+      "next": [
+        "II_A",
+        "II_B"
+      ]
+    },
+    {
+      "node": "C8",
+      "file": "Chuong_8_Ban_Duyet.md",
+      "scenes": 12,
+      "cues": 343,
+      "speech": 188,
+      "sha256": "a15ed245eb2ff601f34d872895b0a782c33d039500da7e7d102a96aa641bc352",
+      "next": [
+        "C9"
+      ]
+    },
+    {
+      "node": "C9",
+      "file": "Chuong_9_Ban_Duyet.md",
+      "scenes": 9,
+      "cues": 238,
+      "speech": 112,
+      "sha256": "685f872339888862f74173e4709a1fef378e2ce6eb2a3fe4226936a80b385942",
+      "next": [
+        "END_A",
+        "END_B",
+        "C9C"
+      ]
+    },
+    {
+      "node": "C10",
+      "file": "Chuong_10_Ban_Duyet.md",
+      "scenes": 13,
+      "cues": 392,
+      "speech": 169,
+      "sha256": "5a7c1960db1b21b765e5384c885ff87fa8769080a0a1a8ac52816d33850f51a6",
+      "next": []
+    },
+    {
+      "node": "I_A",
+      "file": "Nhanh_I-A_Ban_Duyet.md",
+      "scenes": 6,
+      "cues": 111,
+      "speech": 62,
+      "sha256": "cde52084991404cc46ae2dc388b09be7d51b72f7bd7b6de08b3e78cad6e31446",
+      "next": [
+        "C6"
+      ]
+    },
+    {
+      "node": "I_B",
+      "file": "Nhanh_I-B_Ban_Duyet.md",
+      "scenes": 6,
+      "cues": 112,
+      "speech": 49,
+      "sha256": "898b39a5abc44eff351210da48f77becc543813c7f78598903502579d88d18f8",
+      "next": [
+        "C6"
+      ]
+    },
+    {
+      "node": "II_A",
+      "file": "Nhanh_II-A_Ban_Duyet.md",
+      "scenes": 7,
+      "cues": 165,
+      "speech": 80,
+      "sha256": "ad10562303e802736f19c46d945c605f589dee14d5e7b7f8cb478a6059370d34",
+      "next": [
+        "C8"
+      ]
+    },
+    {
+      "node": "II_B",
+      "file": "Nhanh_II-B_Ban_Duyet.md",
+      "scenes": 7,
+      "cues": 172,
+      "speech": 79,
+      "sha256": "0d8de8c1df61a722477324312259cf4d6efe8b7c86789a2910924bb67f5997e2",
+      "next": [
+        "C8"
+      ]
+    },
+    {
+      "node": "END_A",
+      "file": "Ending_A_Ban_Duyet.md",
+      "scenes": 8,
+      "cues": 229,
+      "speech": 94,
+      "sha256": "be8da288ea41c772f59c9ef4ae7ebc74e80ee58cb0a8e5c3f4b50d28882d3951",
+      "next": []
+    },
+    {
+      "node": "END_B",
+      "file": "Ending_B_Ban_Duyet.md",
+      "scenes": 12,
+      "cues": 299,
+      "speech": 118,
+      "sha256": "462e2babaf68b9bec10996a19db0a81211a1de0521a645c9bc09b50e7f5ce2ac",
+      "next": []
+    },
+    {
+      "node": "C9C",
+      "file": "Ending_C_Ban_Duyet.md",
+      "scenes": 6,
+      "cues": 158,
+      "speech": 59,
+      "sha256": "824594c471dc43dc6ac8485d35d2e4f4620fdd7b5eb96308bda0d3b79b1f27ac",
+      "next": [
+        "C10"
+      ]
+    }
+  ],
+  "routes": [
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_A",
+      "C6",
+      "C7",
+      "II_A",
+      "C8",
+      "C9",
+      "END_A"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_A",
+      "C6",
+      "C7",
+      "II_A",
+      "C8",
+      "C9",
+      "END_B"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_A",
+      "C6",
+      "C7",
+      "II_A",
+      "C8",
+      "C9",
+      "C9C",
+      "C10"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_A",
+      "C6",
+      "C7",
+      "II_B",
+      "C8",
+      "C9",
+      "END_A"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_A",
+      "C6",
+      "C7",
+      "II_B",
+      "C8",
+      "C9",
+      "END_B"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_A",
+      "C6",
+      "C7",
+      "II_B",
+      "C8",
+      "C9",
+      "C9C",
+      "C10"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_B",
+      "C6",
+      "C7",
+      "II_A",
+      "C8",
+      "C9",
+      "END_A"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_B",
+      "C6",
+      "C7",
+      "II_A",
+      "C8",
+      "C9",
+      "END_B"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_B",
+      "C6",
+      "C7",
+      "II_A",
+      "C8",
+      "C9",
+      "C9C",
+      "C10"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_B",
+      "C6",
+      "C7",
+      "II_B",
+      "C8",
+      "C9",
+      "END_A"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_B",
+      "C6",
+      "C7",
+      "II_B",
+      "C8",
+      "C9",
+      "END_B"
+    ],
+    [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "I_B",
+      "C6",
+      "C7",
+      "II_B",
+      "C8",
+      "C9",
+      "C9C",
+      "C10"
+    ]
+  ]
+}

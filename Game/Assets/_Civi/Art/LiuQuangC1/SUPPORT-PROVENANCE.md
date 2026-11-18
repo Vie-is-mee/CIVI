@@ -1,9 +1,0 @@
-# Supporting cast
-
-Generated with built-in imagegen; original PNG copied unchanged as support.png. Transparent sprite cutouts are sliced in Unity. Prompt:
-
-Transparent PNG sprite atlas exactly 3 columns x2 rows with clean wide gutters. Original hand-painted anime storybook 2D RPG slight top-down orthographic front view, polished expressive detailed faces, ivory sage teal warm muted palette. Six independent full-body figures, feet aligned each cell, no text no grid no ground or shadows. Row1: Mai age8 small girl dark chin length bob, plain sage green dress brown shoes standing front; Mai's mother age35 wearing pale hospital gown sitting upright weakly with legs together bare feet, tired gentle face; boy age12 visiting museum wearing casual ochre sweater dark pants backpack facing front, curious questioning gesture. Row2: female museum guide age40 beige tailored vest teal trousers holding folder; male coworker age35 cream shirt rolled sleeves dark trousers smiling holding approved housing papers; woman hospital clerk age45 gray office tunic holding expired labor card. NO school uniform, no weapons. Equal cell spaces with ample margins. Carefully illustrated expressive humans, natural proportions, avoid chibi toddler adults. These support an adult civic story, not school adventure.
-
-Follow-up edit: Remove all the dark background and every diffuse halo/glow from this sprite atlas. Make background truly transparent alpha everywhere outside the six figures. Preserve each of the six figures, positions, clothes, faces, proportions, whole bodies, rows and columns exactly unchanged. Clean crisp sprite cutouts, no floor shadows. This is image editing for Unity sprites, not a new scene.
-
-No proprietary game assets used. Synthesized audio in CiviLiuChapter is original code-generated ambience and confirmation tones, with no sampled recording.

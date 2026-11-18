@@ -1,0 +1,26 @@
+name: Source checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  source-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Set up .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Python source syntax
+        run: python -m compileall -q tools
+      - name: Dialogue tests
+        run: python tools/test_dialogue_content.py
+      - name: Domain and chapter tests
+        run: dotnet run --project tools/ChapterTests

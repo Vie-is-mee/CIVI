@@ -6,24 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Civi/Scenes/CIVI-LiuQuang-Chapter1.unity
-    guid: 8e685f274fa88384680406d32dc5a7a8
-  - enabled: 0
-    path: Assets/_Civi/Scenes/CIVI-Chapter1-Courtyard.unity
-    guid: d2d9968dd1b2b3f4b9a5cef07b7ad0e7
-  - enabled: 0
-    path: Assets/_Civi/Scenes/CIVI-Chapter1-DesignRoom.unity
-    guid: a5dc50852cc8c2f4d863c7f46c4e2fbd
-  - enabled: 0
-    path: Assets/_Civi/Scenes/CIVI-School-VisualV2.unity
-    guid: 8650611df769a9141a2cf6bdd3243bc1
-  - enabled: 0
-    path: Assets/_Civi/Scenes/CIVI-School-DesignStudio-V2.unity
-    guid: e0d2d9426fb6fbf4497fcbefd71b3172
-  - enabled: 0
-    path: Assets/_Civi/Scenes/CIVI-School-SeamlessCampus.unity
-    guid: 04113b1f784a0c246afb130b36d8c208
-  - enabled: 0
-    path: Assets/_Civi/Scenes/CIVI-NewStory-FullCampaign.unity
-    guid: 8a26617534a04224bae570aa59c0f757
+    path: Assets/_Civi/Scenes/CIVI-Main.unity
+    guid: cb390090287c35844ad7c75405c7b456
   m_configObjects: {}

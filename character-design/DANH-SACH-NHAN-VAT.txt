@@ -1,0 +1,15 @@
+﻿CIVI — BỘ ĐỀ XUẤT TẠO HÌNH NHÂN VẬT
+Ngày 28/10/2026
+
+5 bảng PNG, mỗi ảnh 1536 × 1024, tổng 19 nhân vật:
+00 — Mai, An, Hạ.
+01 — Linh, Vinh, Khang, Thu.
+02 — Tường, Thắng, Phúc, cô giáo Nhi.
+03 — Ông Lâm, bà Bình, ông Hải, bà Oanh.
+04 — Tín, ông Trụ, bà Dung, mẹ Mai.
+
+Mỗi vai có hình toàn thân và hai biểu cảm. Mẹ Mai dùng bản đã chỉnh tuổi.
+Đây là bản phác thảo tạo bằng công cụ AI tích hợp để nhóm duyệt hướng mỹ thuật; chưa phải sprite, animation hoặc tài nguyên đã tích hợp game.
+Các chi tiết ngoại hình chưa được kịch bản quy định là đề xuất thiết kế. Cô giáo Nhi thuộc truyện mái vòm, không phải Nhi học sinh trong bản Trang 17.
+
+Gợi ý phản hồi: tên nhân vật / khuôn mặt / tuổi thể hiện / trang phục / điểm cần sửa.
