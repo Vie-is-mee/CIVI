@@ -20,8 +20,8 @@
 *.shader text eol=lf -whitespace
 *.hlsl text eol=lf -whitespace
 
-# Approved dialogue and archived planning text use Markdown hard line breaks.
-dialogue/*.md -whitespace
+# Preserve original dialogue bytes (CRLF) for SHA-256 provenance checks.
+dialogue/*.md -text !eol -whitespace
 docs/history/*.md -whitespace
 STORY.md -whitespace
 
