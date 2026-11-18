@@ -52,11 +52,11 @@ civi-ai-key.txt
 *.pem
 *.p12
 
-# Original, duplicated or non-redistributable audio packs.
-# Keep locally for development; verify rights before distributing.
-AUDIO/
+# Original high-resolution WAV production packs are not required for playback.
+# Keep these archives locally, not in the source checkout.
+/AUDIO/
 source-assets/audio/
-Game/Assets/_Civi/Resources/Audio/
+# Runtime Audio/Resources .ogg, cues.json and .meta are versioned.
 
 # Assets from abandoned semi-realistic character experiments.
 tools/vendor/

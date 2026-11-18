@@ -1,0 +1,1084 @@
+{
+"cues": [
+{
+"chapter": 1,
+"line": 2,
+"clip": "C01_01__file_review",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 6,
+"clip": "C01_01__typing_line1",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 6,
+"clip": "C01_01__typing_line2",
+"delay": 0.7
+},
+{
+"chapter": 1,
+"line": 6,
+"clip": "C01_01__typing_line3",
+"delay": 1.4
+},
+{
+"chapter": 1,
+"line": 6,
+"clip": "C01_01__typing_line4",
+"delay": 2.1
+},
+{
+"chapter": 1,
+"line": 6,
+"clip": "C01_01__green_mark",
+"delay": 3
+},
+{
+"chapter": 1,
+"line": 12,
+"clip": "C01_02__power_panel_open",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 12,
+"clip": "C01_02__power_keying",
+"delay": 0.8
+},
+{
+"chapter": 1,
+"line": 12,
+"clip": "C01_02__power_submit",
+"delay": 1.8
+},
+{
+"chapter": 1,
+"line": 17,
+"clip": "C01_03__report_desk",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 23,
+"clip": "C01_03__report_open",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 25,
+"clip": "C01_03__image_zoom",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 30,
+"clip": "C01_03__query_open",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 30,
+"clip": "C01_03__query_key",
+"delay": 0.8
+},
+{
+"chapter": 1,
+"line": 35,
+"clip": "C01_03__close_report",
+"delay": 2.5
+},
+{
+"chapter": 1,
+"line": 36,
+"clip": "C01_04__review_requests",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 38,
+"clip": "C01_04__open_warehouse_channel",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 42,
+"clip": "C01_04__warehouse_report",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 43,
+"clip": "C01_04__switch_daycare",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 47,
+"clip": "C01_04__allocation_panel",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 49,
+"clip": "C01_04__propose_reroute",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 53,
+"clip": "C01_04__note_transport_notice",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 54,
+"clip": "C01_04__driver_returns_call",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 62,
+"clip": "C01_04__new_alert",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 64,
+"clip": "C01_05__spread_report",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 66,
+"clip": "C01_05__draft_report",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 66,
+"clip": "C01_05__sign_report",
+"delay": 1
+},
+{
+"chapter": 1,
+"line": 66,
+"clip": "C01_05__file_report",
+"delay": 2
+},
+{
+"chapter": 1,
+"line": 66,
+"clip": "C01_05__green_status",
+"delay": 3
+},
+{
+"chapter": 1,
+"line": 66,
+"clip": "C01_05__next_item",
+"delay": 4
+},
+{
+"chapter": 1,
+"line": 67,
+"clip": "C01_06__mai_steps",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 82,
+"clip": "C01_06__group_leaves",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 84,
+"clip": "C01_07__dish_arrive",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 84,
+"clip": "C01_07__linh_push_peas",
+"delay": 1.2
+},
+{
+"chapter": 1,
+"line": 100,
+"clip": "C01_07__small_cutlery",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 100,
+"clip": "C01_07__after_conversation",
+"delay": 1.6
+},
+{
+"chapter": 1,
+"line": 101,
+"clip": "C01_07__meeting_chime",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 102,
+"clip": "C01_08__approach_steps",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 108,
+"clip": "C01_08__put_away_transfer_form",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 112,
+"clip": "C01_08__open_work_notebook",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 112,
+"clip": "C01_08__write_question",
+"delay": 0.8
+},
+{
+"chapter": 1,
+"line": 113,
+"clip": "C01_09__energy_map_focus",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 118,
+"clip": "C01_09__show_evidence",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 125,
+"clip": "C01_10__prune_rosemary",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 129,
+"clip": "C01_10__dry_rosemary_leaf",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 137,
+"clip": "C01_10__take_photo_album",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 143,
+"clip": "C01_10__turn_album_page",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 141,
+"clip": "C01_10__album_between_them",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 149,
+"clip": "C01_11__close_album",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 150,
+"clip": "C01_11__open_work_notebook",
+"delay": 0
+},
+{
+"chapter": 1,
+"line": 150,
+"clip": "C01_11__enter_timesheet_request",
+"delay": 0.8
+},
+{
+"chapter": 1,
+"line": 151,
+"clip": "C01_11__reopen_district_photo",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 3,
+"clip": "C02_01__wet_steps",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 11,
+"clip": "C02_01__rib_clamp",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 11,
+"clip": "C02_01__umbrella_test_1",
+"delay": 1.2
+},
+{
+"chapter": 2,
+"line": 11,
+"clip": "C02_01__umbrella_test_2",
+"delay": 2
+},
+{
+"chapter": 2,
+"line": 11,
+"clip": "C02_01__umbrella_test_3",
+"delay": 2.8
+},
+{
+"chapter": 2,
+"line": 24,
+"clip": "C02_02__stone_cross_line1",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 24,
+"clip": "C02_02__stone_cross_line2",
+"delay": 0.9
+},
+{
+"chapter": 2,
+"line": 32,
+"clip": "C02_02__take_notebook",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 39,
+"clip": "C02_02__turn_notebook",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 41,
+"clip": "C02_02__bridge_step",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 64,
+"clip": "C02_03__wire_handoff",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 69,
+"clip": "C02_03__serve_porridge_1",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 69,
+"clip": "C02_03__serve_porridge_2",
+"delay": 1.1
+},
+{
+"chapter": 2,
+"line": 76,
+"clip": "C02_03__stir_porridge",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 80,
+"clip": "C02_04__station_map_write",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 84,
+"clip": "C02_04__maintenance_log_handoff",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 85,
+"clip": "C02_04__maintenance_page_turn",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 90,
+"clip": "C02_04__mai_write_notes",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 95,
+"clip": "C02_05__umbrella_off_hook",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 95,
+"clip": "C02_05__patchwork_open",
+"delay": 1
+},
+{
+"chapter": 2,
+"line": 99,
+"clip": "C02_06__urgent_footsteps",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 100,
+"clip": "C02_06__bottle_drip_closeup",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 101,
+"clip": "C02_06__gasket_placement",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 105,
+"clip": "C02_06__pipe_recheck",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 109,
+"clip": "C02_06__hand_over_towel",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 120,
+"clip": "C02_07__shoes_in_corner",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 122,
+"clip": "C02_07__maintenance_photocopy",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 127,
+"clip": "C02_07__porridge_bowl",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 133,
+"clip": "C02_07__wash_hands",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 134,
+"clip": "C02_08__tin_lid_open",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 135,
+"clip": "C02_08__documents_in_sleeves",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 136,
+"clip": "C02_08__sort_documents",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 138,
+"clip": "C02_08__smooth_receipt",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 142,
+"clip": "C02_08__plastic_sleeve_second",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 150,
+"clip": "C02_09__old_photo_take",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 154,
+"clip": "C02_09__photo_put_away",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 162,
+"clip": "C02_09__notebook_open",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 163,
+"clip": "C02_09__tea_pour",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 168,
+"clip": "C02_09__mai_write_promise",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 169,
+"clip": "C02_10__feet_stop_near_bridge",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 177,
+"clip": "C02_11__invoice_query",
+"delay": 0
+},
+{
+"chapter": 2,
+"line": 180,
+"clip": "C02_11__leave_gate_steps",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 12,
+"clip": "C03_02__02_kiosk_missing_code",
+"delay": 1.5
+},
+{
+"chapter": 3,
+"line": 18,
+"clip": "C03_02__02_handbook_pages",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 27,
+"clip": "C03_02__02_pen_set_down",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 29,
+"clip": "C03_02__02_write_ha_request",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 30,
+"clip": "C03_02__02_information_receipt_stamp",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 31,
+"clip": "C03_03__train_door_close_v03",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 40,
+"clip": "C03_03__train_door_open_preview_v02",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 41,
+"clip": "C03_03__elevator_door_close_v03",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 41,
+"clip": "C03_03__elevator_door_open_v03",
+"delay": 6.5
+},
+{
+"chapter": 3,
+"line": 43,
+"clip": "C03_04__04_check_ha_dossier",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 43,
+"clip": "C03_04__04_refuse_request_button",
+"delay": 2.2
+},
+{
+"chapter": 3,
+"line": 51,
+"clip": "C03_05__05_pencil_math",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 51,
+"clip": "C03_05__small_classroom_applause_v03",
+"delay": 1.8
+},
+{
+"chapter": 3,
+"line": 57,
+"clip": "C03_05__05_chair_overturn",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 64,
+"clip": "C03_05__05_paper_left_doorstep",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 68,
+"clip": "C03_06__06_pull_empty_chair",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 80,
+"clip": "C03_06__06_calendar_handoff",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 85,
+"clip": "C03_06__06_books_to_bag",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 90,
+"clip": "C03_07__07_toolkit_from_under_bed",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 90,
+"clip": "C03_07__07_toolbox_contents",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 94,
+"clip": "C03_07__07_gauge_hold",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 100,
+"clip": "C03_07__07_toolbox_close",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 107,
+"clip": "C03_08__08_cards_scanned_by_other_teens",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 114,
+"clip": "C03_08__08_tear_paper_corner",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 121,
+"clip": "C03_08__08_ball_kicks_field__01",
+"delay": 1
+},
+{
+"chapter": 3,
+"line": 121,
+"clip": "C03_08__08_ball_kicks_field__02",
+"delay": 2.6
+},
+{
+"chapter": 3,
+"line": 121,
+"clip": "C03_08__08_ball_kicks_field__03",
+"delay": 4.2
+},
+{
+"chapter": 3,
+"line": 121,
+"clip": "C03_08__08_ball_kicks_field__04",
+"delay": 5.8
+},
+{
+"chapter": 3,
+"line": 123,
+"clip": "C03_09__09_exam_page_present",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 147,
+"clip": "C03_09__09_repaired_umbrella_move",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 152,
+"clip": "C03_10__10_send_suspend_request",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 153,
+"clip": "C03_10__10_system_notice_arrives",
+"delay": 0
+},
+{
+"chapter": 3,
+"line": 156,
+"clip": "C03_10__10_photo_paper_to_desk",
+"delay": 0
+}
+],
+"beds": [
+{
+"chapter": 2,
+"step": 0,
+"line": 0,
+"clips": [
+"C02_01__glass_ticks",
+"C02_01__metal_drops",
+"C02_01__pipe_condensate"
+]
+},
+{
+"chapter": 2,
+"step": 1,
+"line": 24,
+"clips": [
+"C02_02__irregular_drips",
+"C02_02__pipe_flow"
+]
+},
+{
+"chapter": 2,
+"step": 2,
+"line": 50,
+"clips": [
+"C02_03__district_pipe",
+"C02_03__market_murmur"
+]
+},
+{
+"chapter": 2,
+"step": 3,
+"line": 80,
+"clips": [
+"C02_04__market_exit"
+]
+},
+{
+"chapter": 2,
+"step": 4,
+"line": 91,
+"clips": [
+"C02_05__roof_specks",
+"C02_05__street_condensate"
+]
+},
+{
+"chapter": 2,
+"step": 5,
+"line": 98,
+"clips": [
+"C02_06__alley_machinerain",
+"C02_06__pipe_drip_again"
+]
+},
+{
+"chapter": 2,
+"step": 6,
+"line": 116,
+"clips": [
+"C02_07__ha_house_roomtone",
+"C02_07__remote_condensate"
+]
+},
+{
+"chapter": 2,
+"step": 7,
+"line": 134,
+"clips": [
+"C02_08__ha_roomtone_papers"
+]
+},
+{
+"chapter": 2,
+"step": 8,
+"line": 150,
+"clips": [
+"C02_09__condensate_through_wall",
+"C02_09__ha_home_quiet"
+]
+},
+{
+"chapter": 2,
+"step": 9,
+"line": 169,
+"clips": [
+"C02_10__bridge_pipewater",
+"C02_10__roof_distant_tips"
+]
+},
+{
+"chapter": 2,
+"step": 10,
+"line": 177,
+"clips": [
+"C02_11__mechanical_rain_behind",
+"C02_11__portable_audit_roomtone",
+"C02_11__roof_patter_far",
+"C02_11__terminal_vent"
+]
+},
+{
+"chapter": 2,
+"step": -1,
+"line": 84,
+"clips": [
+"C02_04__filter_fan_close",
+"C02_04__filter_vent_close",
+"C02_04__water_pump"
+]
+},
+{
+"chapter": 2,
+"step": -1,
+"line": 100,
+"clips": [
+"C02_06__dung_roomtone",
+"C02_06__pipe_drip_inside"
+]
+},
+{
+"chapter": 3,
+"step": 0,
+"line": 0,
+"clips": [
+"C03_01__B01__01__amb_office"
+]
+},
+{
+"chapter": 3,
+"step": 1,
+"line": 11,
+"clips": [
+"C03_02__B01__01__amb_public_wait",
+"C03_02__B01__02__amb_office"
+]
+},
+{
+"chapter": 3,
+"step": 2,
+"line": 31,
+"clips": [
+"C03_03__B01__01__amb_train"
+]
+},
+{
+"chapter": 3,
+"step": 3,
+"line": 42,
+"clips": [
+"C03_04__B01__01__amb_office"
+]
+},
+{
+"chapter": 3,
+"step": 4,
+"line": 49,
+"clips": [
+"C03_05__B01__01__amb_class_blurred_v02"
+]
+},
+{
+"chapter": 3,
+"step": 5,
+"line": 67,
+"clips": [
+"C03_06__B01__01__amb_class_blurred_v02"
+]
+},
+{
+"chapter": 3,
+"step": 6,
+"line": 89,
+"clips": [
+"C03_07__B01__01__amb_home",
+"C03_07__B01__02__amb_cooling_water"
+]
+},
+{
+"chapter": 3,
+"step": 7,
+"line": 104,
+"clips": [
+"C03_08__B01__01__amb_public_wait"
+]
+},
+{
+"chapter": 3,
+"step": 8,
+"line": 123,
+"clips": [
+"C03_09__B01__01__amb_rim_street"
+]
+},
+{
+"chapter": 3,
+"step": 9,
+"line": 149,
+"clips": [
+"C03_10__B01__01__amb_office"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 16,
+"clips": [
+"C03_02__B02__01__amb_office"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 41,
+"clips": [
+"C03_03__elevator_ride_real_motor_v03"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 53,
+"clips": [
+"C03_05__B02__01__amb_class_blurred_v02"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 58,
+"clips": [
+"C03_05__B03__01__amb_home"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 64,
+"clips": [
+"C03_05__B04__01__amb_home"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 80,
+"clips": [
+"C03_06__B02__01__amb_class_blurred_v02"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 114,
+"clips": [
+"C03_08__B02__01__amb_rim_street"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 121,
+"clips": [
+"C03_08__B03__01__amb_sports_field_authentic"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 143,
+"clips": [
+"C03_09__B02__01__sfx_fan_stutter",
+"C03_09__B02__02__amb_cooling_water"
+]
+},
+{
+"chapter": 3,
+"step": -1,
+"line": 157,
+"clips": [
+"C03_10__B02__01__amb_office"
+]
+}
+],
+"banks": [
+{
+"name": "HARD_DRY_RUN",
+"count": 10
+},
+{
+"name": "HARD_DRY_WALK",
+"count": 10
+},
+{
+"name": "MUD_SOIL_WALK",
+"count": 8
+},
+{
+"name": "PLASTIC_PANEL_WALK",
+"count": 8
+},
+{
+"name": "SHALLOW_WATER_WALK",
+"count": 8
+},
+{
+"name": "STAIRS_WALK",
+"count": 8
+},
+{
+"name": "WET_HARD_RUN",
+"count": 10
+},
+{
+"name": "WET_HARD_WALK",
+"count": 10
+}
+]
+}

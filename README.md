@@ -4,7 +4,7 @@
 
 **Project status:** playable prototype covering Chapters 1–3 · **Engine:** Unity `6000.4.0f1` (URP) · **Target:** Windows (x64) · **Language:** Vietnamese
 
-> This is a development project, not a production-ready commercial release. Audio licensing, final sound balancing, and additional chapters remain open.
+> This is a development prototype, not a production-ready commercial release. Final sound balancing, additional chapters and a fresh Unity build verification remain open.
 
 <p align="center">
   <img src="docs/screenshots/title-screen.jpg" alt="CIVI title screen showing the domed city" width="100%">
@@ -38,7 +38,9 @@
 2. For a **fresh Git clone**, install Unity **6000.4.0f1** with **Windows Build Support (IL2CPP)** and run the same launcher; it attempts to build the player if no executable exists.
 3. Keep the entire `release/CIVI/` directory together when sharing a local build. The executable alone is not sufficient.
 
-**Important:** the public-source layout intentionally does not include raw audio packs or generated audio clips while their redistribution rights remain unverified. For a fully voiced/sounded local build, authorized collaborators must provide the `AUDIO/` source packages and import them as described in [Development](docs/DEVELOPMENT.md). A fresh clone without those packs may run without the complete soundtrack.
+**Audio is included:** the repository tracks all 283 imported `.ogg` clips, their Unity `.meta` files, and `Audio/cues.json`. You do **not** need the original WAV production packages to build or play the existing scenes. Those large source packs remain outside Git and are only needed to regenerate the audio imports.
+
+**Verification status:** code/content checks run in CI; a fully clean Unity 6000.4.0f1 Windows build has not yet been verified on another machine.
 
 ### Controls
 
@@ -63,7 +65,7 @@ CIVI/
 ├── Game/                       # Unity project (Assets, Packages, ProjectSettings)
 │   └── Assets/_Civi/
 │       ├── Scripts/            # C# gameplay, state, interactions, editors
-│       ├── Resources/          # Chapter data and other Unity resources
+│       ├── Resources/          # Chapter data, runtime audio and textures
 │       ├── Models/             # Generated 3D assets
 │       └── Scenes/             # Generated Unity scene
 ├── dialogue/                   # Approved Vietnamese chapter scripts
@@ -108,7 +110,7 @@ The optional “Hỏi CIVI” feature looks for `ANTHROPIC_API_KEY` in the envir
 - Chapters 1–3 are the implemented playable scope; later chapters/branches are planned.
 - Stylized models and animation are predominantly generated from scripts rather than manually polished or motion captured.
 - Audio mixing has not been fully reviewed in real gameplay.
-- Source/redistribution rights for several original sound packs are **not yet verified**.
+- Original high-resolution WAV production archives are not in Git; the imported runtime audio needed to play is included.
 - Fresh Unity player builds require Unity 6000.4.0f1; later versions are not assumed compatible without testing.
 
 ## Documentation
@@ -118,4 +120,4 @@ The optional “Hỏi CIVI” feature looks for `ANTHROPIC_API_KEY` in the envir
 - [Asset and licensing policy](docs/ASSET_POLICY.md)
 - [Historical planning notes](docs/history/)
 
-**License status:** no blanket open-source license is granted by this repository. Game code, story, artwork, fonts, third-party packages, and audio may have different owners or licenses. Review permissions before publishing or redistributing builds.
+**Rights:** assets are published for this project's demo and evaluation. Any reuse beyond the CIVI project remains subject to the rights of their respective owners.

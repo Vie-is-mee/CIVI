@@ -22,5 +22,7 @@ jobs:
         run: python -m compileall -q tools
       - name: Dialogue tests
         run: python tools/test_dialogue_content.py
+      - name: Runtime asset inventory
+        run: python tools/check_runtime_assets.py
       - name: Domain and chapter tests
         run: dotnet run --project tools/ChapterTests

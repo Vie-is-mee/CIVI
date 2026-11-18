@@ -43,6 +43,6 @@ Authorized AUDIO/ packages ──► tools/import_audio.py (FFmpeg)
 
 ## Reproducibility boundary
 
-The Git repository stores the playable prototype's source assets and code, except potentially restricted media. Locally generated Unity `Library` data, temporary render/debug artifacts, editor state, and release build outputs remain outside version control.
+The Git repository stores the playable prototype's source assets and code, including the imported runtime Ogg audio, cues.json and Unity metadata. Locally generated Unity `Library` data, temporary render/debug artifacts, editor state, and release build outputs remain outside version control.
 
-The Windows build is validated separately from the pure source tests. Full audio recreation additionally requires authorized, externally supplied original sound packs and FFmpeg.
+The Windows build is validated separately from the pure source tests. Regenerating runtime audio from original WAV production packs requires the separately stored `AUDIO/` archives and FFmpeg; normal cloning/building does not.

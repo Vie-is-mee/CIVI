@@ -1,33 +1,31 @@
-# Assets, dependencies and redistribution
+# Source assets and distribution
 
-The source cleanup for GitHub keeps code and required Unity source structure while separating large, potentially unlicensed or reproducible files.
+CIVI's GitHub repository includes the assets required by the current Unity scenes, including imported runtime audio. The source layout separates playable content from generated build output and optional production archives.
 
-## Included in source
+## Included in Git
 
-- Unity scripts, packages/configuration, scenes, chapter JSON data, generated model assets and their `.meta` GUID files.
-- Story, approved dialogue, character-design references, small source art and technical documentation.
-- Domain/dialogue tests and reproducible generation scripts.
+- Unity scripts, packages, project settings, scenes, materials and their `.meta` GUID files.
+- All character and environment FBX models needed by the scene builder.
+- Chapter 1–3 dialogue JSON, fonts, images and other Unity Resources.
+- **283 runtime `.ogg` clips**, `Game/Assets/_Civi/Resources/Audio/cues.json`, and associated `.meta` files.
+- Narrative/source tests, tooling, documentation and nine game screenshots.
 
-## Excluded from Git (retained locally when useful)
+## Not included in Git
 
 | Path | Reason |
 | --- | --- |
-| `AUDIO/` | Source sound packages; redistribution rights not verified |
-| `Game/Assets/_Civi/Resources/Audio/` | Generated Ogg imports derived from the sound packs |
-| `source-assets/audio/` | Duplicate of the Chapter 1 package, removed from the cleaned local source |
-| `release/` | Generated Windows player/build output |
-| `Game/Library/`, `Game/Temp/`, `Game/Logs/` | Unity-created cache and logs |
-| `artifacts/` | Screenshots, QA dumps, rejected experiments |
-| `tools/vendor/` | Unreferenced assets from abandoned semi-realistic character experiments |
+| `AUDIO/` | Original high-resolution WAV production archives (`3 GB); not used by the existing game build |
+| `source-assets/audio/` | Previously duplicated production audio archives |
+| `release/` | Generated Windows player/build output; distribute the full build directory separately |
+| `Game/Library/`, `Game/Temp/`, `Game/Logs/` | Unity caches, temporary data and editor logs |
+| `artifacts/` | QA images, output and test runs; curated screenshots are in `docs/screenshots/` |
+| `tools/vendor/` | Unused legacy character-generation experiment assets |
 
-The raw sound packages have **not** been deleted from `AUDIO/` on the working machine. Removal of a duplicate does not grant permission to redistribute the surviving files.
+## Verification and release
 
-## Release checklist
+1. Run `python tools/check_runtime_assets.py` to ensure build-critical assets and audio references exist.
+2. Run the Python dialogue tests and .NET narrative/domain tests.
+3. Build and play in Unity 6000.4.0f1 to verify scenes, shaders, audio and progression.
+4. For a direct-play release, distribute the entire Windows build folder via GitHub Releases, not just the executable.
 
-1. Confirm ownership and distribution licenses for soundtrack/effects, fonts, third-party assets, and character references.
-2. Provide license texts and attribution in `licenses/` as required.
-3. Check that generated audio and unapproved media are not accidentally added to Git or a public release archive.
-4. Run source tests, Unity build, gameplay QA, and manual audio/visual review.
-5. Publish binaries or enable Git LFS **only after** verifying rights and storage policy.
-
-No general permission to reuse or redistribute the project's assets is implied by access to this repository.
+The CIVI team has indicated its game assets may be published as part of this project's demo. This does not imply a blanket license for unrelated reuse.
